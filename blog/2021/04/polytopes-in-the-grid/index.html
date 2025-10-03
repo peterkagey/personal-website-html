@@ -59,18 +59,40 @@
     
     <article>
       <p>Problems 21, 66, and 116 in my <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">Open Problem Collection</a> concern polytopes with lattice coordinates—that is, polygons, polyhedra, or higher-dimensional analogs with vertices the square or triangular grids. (In higher dimensions, I’m most interested in the <a href="https://en.wikipedia.org/wiki/Integer_lattice">\(n\)-dimensional integer lattice</a> and the <a href="https://en.wikipedia.org/wiki/Simplectic_honeycomb">\(n\)-simplex honeycomb</a>).</p>
-<p><img src="/assets/blog/2021-04-05/tettet.gif" alt=""></p>
-<p>The \(A334581(4) = 84\) ways to place an equilateral triangle on the tetrahedral grid with four points per side.</p>
-<p><img src="/assets/blog/2021-04-05/triangles_in_triangles.png" alt=""></p>
-<p>Illustration showing three of the \(\binom{7+2}{4} = 126\) equilateral triangles on a grid with seven points per side.</p>
-<p>This was largely inspired by one of my favorite mathematical facts: given a triangular grid with \(n\) points per side, you can find <a href="http://people.missouristate.edu/lesreid/POW03_01.html">exactly \(\binom{n+2}{4}\) equilateral triangles with vertices on the grid</a>. However, it turns out that there isn’t a similarly nice polynomial description of <a href="http://oeis.org/A269747">tetrahedra in a tetrahedron</a> or of <a href="http://oeis.org/A334581">triangles in a tetrahedron</a>. (Thanks to <a href="https://codegolf.stackexchange.com/a/204453/53884">Anders Kaseorg for his Rust program</a> that computed the number of triangles in all tetrahedra with 1000 or fewer points per side.)</p>
+<div class="columns">
+<figure>
+  <img src="/assets/blog/2021-04-05/tettet.gif" alt="The \\(A334581(4) = 84\\) ways to place an equilateral triangle on the tetrahedral grid with four points per side.">
+  <figcaption>The \\(A334581(4) = 84\\) ways to place an equilateral triangle on the tetrahedral grid with four points per side.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2021-04-05/triangles_in_triangles.png" alt="Illustration showing three of the \\(\\binom{7+2}{4} = 126\\) equilateral triangles on a grid with seven points per side.
+">
+  <figcaption>Illustration showing three of the \\(\\binom{7+2}{4} = 126\\) equilateral triangles on a grid with seven points per side.
+</figcaption>
+</figure>
+</div>
+<p>This was largely inspired by one of my favorite mathematical facts: given a triangular grid with \(n\) points per side, you can find exactly \(\binom{n+2}{4}\) equilateral triangles with vertices on the grid.</p>
+<blockquote>
+  Given a triangular array consisting of n rows, how many equilateral triangles can be formed using points in the array as vertices? Note that there is no restriction on the orientation of the triangle. Two examples of such triangles are shown in the figure below where \(n = 6\).
+  <figure>
+    <img src="/assets/blog/2021-04-05/Les_Reid_triangle_array.jpg">
+  </figure>
+  <cite>Lou Reid's <a href="http://web.archive.org/web/20210224140248/https://people.missouristate.edu/lesreid/POW03_01.html">Problem #3</a></cite>
+</blockquote>
+<p>However, it turns out that there isn’t a similarly nice polynomial description of <a href="http://oeis.org/A269747">tetrahedra in a tetrahedron</a> or of <a href="http://oeis.org/A334581">triangles in a tetrahedron</a>. (Thanks to <a href="https://codegolf.stackexchange.com/a/204453/53884">Anders Kaseorg for his Rust program</a> that computed the number of triangles in all tetrahedra with 1000 or fewer points per side.)</p>
 <p>The \(4\)-simplex (the \(4\)-dimensional analog of a triangle or tetrahedron) with \(n-1\) points per side, has a total of \(\binom{n+2}{4}\) points, so there is some correspondence between points in some \(4\)-dimensional polytope, and triangles in the triangular grid. This extends to other analogs of this problem: the number of squares in the square grid is the same as the number of points in a <a href="https://oeis.org/A002415">\(4\)-dimensional pyramid</a>.</p>
 <h2>The \(\binom{n+2}{4}\) equilateral triangles</h2>
 <p>I put a <a href="/apps/triangle_in_triangle/">Javascript applet on my webpage</a> that illustrates a bijection between size-\(4\) subsets of \(n+2\) objects and triangles in the \(n\)-points-per-side grid. You can choose different subsets and see the resulting triangles. (The applet does not work on mobile.)</p>
-<p><img src="/assets/blog/2021-04-05/triangle.png" alt=""></p>
-<p>The solid blue triangle corresponding to the subset \(\{4,5,8,15\} \subseteq \{1,2,\dots,16\}\).</p>
-<p><img src="/assets/blog/2021-04-05/explanation.png" alt=""></p>
-<p>The two smaller numbers in the subset give the size and orientation of the blue triangle, and the two larger numbers give the position.</p>
+<div class="columns">
+<figure>
+  <img src="/assets/blog/2021-04-05/triangle.png" alt="The solid blue triangle corresponding to the subset \(\{4,5,8,15\} \subseteq \{1,2,\dots,16\}\).">
+  <figcaption>The solid blue triangle corresponding to the subset \(\{4,5,8,15\} \subseteq \{1,2,\dots,16\}\).</figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2021-04-05/explanation.png" alt="The two smaller numbers in the subset give the size and orientation of the blue triangle, and the two larger numbers give the position.">
+  <figcaption>The two smaller numbers in the subset give the size and orientation of the blue triangle, and the two larger numbers give the position.</figcaption>
+</figure>
+</div>
 <h2>Polygons with vertices in \(\mathbb{Z}^n\)</h2>
 <p>This was also inspired by Mathologer video &quot;What does this prove? Some of the most gorgeous visual ‘shrink’ proofs ever invented&quot;, where Burkard Polster visually illustrates that the only regular polygons with vertices in \(\mathbb{Z}^n\) (and thus the \(n\)-simplex honeycomb) are equilateral triangles, squares, and regular hexagons.</p>
 <div class="video-container">
@@ -78,9 +100,11 @@
 </div>
 <h2>Polyhedra with vertices in \(\mathbb{Z}^3\)</h2>
 <p>There are some surprising examples of polyhedra in the grid, including cubes with no faces parallel to the \(xy\)-, \(xz\)-, or \(yz\)-planes.</p>
-<p><img src="/assets/blog/2021-04-05/crooked_cube2.gif" alt=""></p>
-<p>An example of a cube from <a href="https://arxiv.org/pdf/1003.4569.pdf">Ionascu and Obando</a>: the convex hull of \(\{(0,3,2),(1,1,4),(2,2,0),(2,5,3),(3,0,2),(3,3,5),(4,4,1),(5,2,3)\}\)</p>
-<p>While there are lots of polytopes that can be written with vertices in \(\mathbb{Z}^3\), Alaska resident and friend RavenclawPrefect cleverly uses <a href="https://en.wikipedia.org/wiki/Legendre%27s_three-square_theorem">Legendre’s three-square theorem</a> to <a href="https://math.stackexchange.com/a/4040124/121988">prove</a> that there’s no way to write the <a href="https://en.wikipedia.org/wiki/Triangular_prism#As_a_semiregular_(or_uniform)_polyhedron">uniform triangular prism</a> this way! However, he provides a cute embedding in \(\mathbb{Z}^5\): the convex hull of $$\scriptsize{\{(0,0,1,0,0),(0,1,0,0,0),(1,0,0,0,0),(0,0,1,1,1),(0,1,0,1,1),(1,0,0,1,1)}\}.$$</p>
+<figure>
+  <img src="/assets/blog/2021-04-05/crooked_cube2.gif">
+  <figcaption>An example of a cube from [Ionascu and Obando](https://arxiv.org/pdf/1003.4569.pdf): the convex hull of \(\{(0,3,2),(1,1,4),(2,2,0),(2,5,3),(3,0,2),(3,3,5),(4,4,1),(5,2,3)\}\)</figcaption>
+</figure>
+<p>While there are lots of polytopes that can be written with vertices in \(\mathbb{Z}^3\), Alaska resident and friend RavenclawPrefect cleverly uses <a href="https://en.wikipedia.org/wiki/Legendre%27s_three-square_theorem">Legendre’s three-square theorem</a> to <a href="https://math.stackexchange.com/a/4040124/121988">prove</a> that there’s no way to write the <a href="https://en.wikipedia.org/wiki/Triangular_prism#As_a_semiregular_(or_uniform)_polyhedron">uniform triangular prism</a> this way! However, he provides a cute embedding in \(\mathbb{Z}^5\): the convex hull of $${(0,0,1,0,0),(0,1,0,0,0),(1,0,0,0,0),(0,0,1,1,1),(0,1,0,1,1),(1,0,0,1,1)}.$$</p>
 <h2>Polygons on a &quot;centered \(n\)-gon&quot;</h2>
 <p>I asked a question on Math Stack Exchange, &quot;<a href="https://math.stackexchange.com/q/4082065/121988">When is it possible to find a regular \(k\)-gon in a centered \(n\)-gon</a>&quot;—where &quot;centered \(n\)-gon&quot; refers to the diagram that you get when illustrating <a href="https://oeis.org/wiki/Centered_polygonal_numbers">central polygonal numbers</a>. These diagrams are one of many possible generalizations of the triangular, square, and centered hexagonal grids. (Although it’s worth noting that the centered triangular grid is different from the ordinary triangular grid.)</p>
 <p>If you have any ideas about this, let me know on Twitter or post an answer to the Stack Exchange question above.</p>

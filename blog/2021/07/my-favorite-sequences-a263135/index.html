@@ -60,16 +60,28 @@
     <article>
       <p>This is the fourth in my installment of My Favorite Sequences. This post discusses sequence <a href="https://oeis.org/A263135">A263135</a> which counts penny-to-penny connections among \(n\) pennies on the vertices of a hexagonal grid. I published this sequence in October 2015 when I was thinking about hexagonal-grid analogs to the <a href="/blog/2021/06/my-favorite-sequences-a278299/">&quot;Not Equal&quot; grid</a>. The square-grid analog of this sequence is <a href="https://oeis.org/A123663">A123663</a>.</p>
 <h2><a href="https://oeis.org/A263135">A263135</a>: Placing Pennies</h2>
-<p>The sequences <a href="http://A047932">A047932</a> and <a href="https://oeis.org/A263135">A263135</a> are about placing pennies on a hexagonal grid in such a way that maximizes the number of penny-to-penny contacts, which occurs when you place the pennies in a spiral. A047932, counts the contacts when the pennies are placed on the faces of the grid; A263135 counts the contacts with the pennies placed on the vertices.</p>
-<p><img src="/assets/blog/2021-07-12/hexagon_faces.gif" alt=""></p>
-<p>Pattern of placing pennies in A047932.</p>
-<p><img src="/assets/blog/2021-07-12/hexagon_vertices.gif" alt=""></p>
-<p>Pattern of placing pennies in A263135.</p>
+<p>The sequences <a href="https://oeis.org/A047932">A047932</a> and <a href="https://oeis.org/A263135">A263135</a> are about placing pennies on a hexagonal grid in such a way that maximizes the number of penny-to-penny contacts, which occurs when you place the pennies in a spiral. A047932, counts the contacts when the pennies are placed on the faces of the grid; A263135 counts the contacts with the pennies placed on the vertices.</p>
+<div class="columns">
+<figure>
+  <img src="/assets/blog/2021-07-12/hexagon_faces.gif" alt="Pattern of placing pennies in A047932.">
+  <figcaption>Pattern of placing pennies in A047932.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2021-07-12/hexagon_vertices.gif" alt="Pattern of placing pennies in A263135.">
+  <figcaption>Pattern of placing pennies in A263135.</figcaption>
+</figure>
+</div>
 <p>While spiral shapes maximize the number of penny-to-penny contacts, there are sometimes non-spiral shapes that have the same number of contacts. For example, in the case of the square grid, there are <a href="https://oeis.org/A100092">\(A100092(n)\)</a> such ways to lay down \(n\) pennies on the square grid with the maximum number of connections. <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=109">Problem 108</a> in my Open Problem Collection asks about generalizing this OEIS sequence to other settings such as the hexagonal grid.</p>
-<p><a href="https://peterkagey.files.wordpress.com/2021/02/fpennies.png"><img src="/assets/blog/2021-07-12/fpennies.png" alt=""></a></p>
-<p>A047932(11) = 21</p>
-<p><a href="https://peterkagey.files.wordpress.com/2021/02/vpennies.png"><img src="/assets/blog/2021-07-12/vpennies.png" alt=""></a></p>
-<p>A263135(22) = 27</p>
+<div class="columns">
+<figure>
+  <img src="/assets/blog/2021-07-12/fpennies.png" alt="A047932(11) = 21.">
+  <figcaption>A047932(11) = 21</figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2021-07-12/vpennies.png" alt="A263135(22) = 27.">
+  <figcaption>A263135(22) = 27</figcaption>
+</figure>
+</div>
 <h4>Comparing contacts</h4>
 <p>Notice that the &quot;face&quot; pennies in A047932 can have a maximum of six neighbors, while the &quot;vertex&quot; pennies in A263135 can have a maximum of three. In the limit, most pennies are &quot;interior&quot; pennies with the maximum number of contacts, so \(A047932(n) \sim 3n\) and \(A263135(n) \sim \frac32n\).</p>
 <p>Looking at the comparative growth rates, it is natural to ask how the number of connections of \(n\) face pennies compares to the number of connections of \(2n\) vertex pennies. In October 2015 I made a conjecture on the OEIS that this difference grew like sequence <a href="https://oeis.org/A216256">A216256</a>.</p>
@@ -77,7 +89,7 @@
 <p>Conjecture: For \(n &gt; 0\), \[A263135(2n) – A047932(n) = \lceil\sqrt{3n – 3/4} – 1/2\rceil = A216256(n).\]</p>
 </blockquote>
 <p>I believe that the sequence A216256 on the right hand side appears to be the same as the sequence &quot;n appears \(\displaystyle\left\lfloor \frac{2n+1}{3} \right\rfloor\) times,&quot; but I’d have to crack open my <em><a href="https://en.wikipedia.org/wiki/Concrete_Mathematics">Concrete Mathematics</a></em> book to prove it.</p>
-<p>This is <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=21">Problem 20</a> in my <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">Open Problem Collection</a>, and I’ve placed a small, $5 bounty on solving this conjecture—so if you have an idea of how to prove this, let me know in exchange for a latte! I’ve asked about this in my Math Stack Exchange question <a href="https://math.stackexchange.com/q/4100221/121988">Circle-to-circle contacts on the hexagonal grid</a>—so feel free to answer there or let me know on Bluesky, <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a>.</p>
+<p>This is <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=21">Problem 20</a> in my <a href="/problems/">Open Problem Collection</a>, and I’ve placed a small, $5 bounty on solving this conjecture—so if you have an idea of how to prove this, let me know in exchange for a latte! I’ve asked about this in my Math Stack Exchange question <a href="https://math.stackexchange.com/q/4100221/121988">Circle-to-circle contacts on the hexagonal grid</a>—so feel free to answer there or let me know on Bluesky, <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a>.</p>
 
     </article>
   </main>
