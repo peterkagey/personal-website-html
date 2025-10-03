@@ -82,9 +82,8 @@
 <p><img src="/assets/blog/2021-04-26/Screen.2-DL5GWf7i6IeE.png" alt=""></p>
 <p>A screenshot showing a (fake) API Key and API Secret Key.</p>
 <p>We’re going to take these values and place them in a new file called <code>secrets.py</code>, which will look like this:</p>
-<pre><code class="language-python">API_KEY        = &quot;3x4MP1e4P1kEy&quot;
-API_SECRET_KEY = &quot;5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG&quot;
-</code></pre>
+<pre class="language-python"><code class="language-python">API_KEY        <span class="token operator">=</span> <span class="token string">"3x4MP1e4P1kEy"</span>
+API_SECRET_KEY <span class="token operator">=</span> <span class="token string">"5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG"</span></code></pre>
 <h3>Getting the Access Token</h3>
 <p>Once we close the API Key dialog, we’ll need to update our app to allow us to both read and write. We can do this by clicking on the gear to access our projects &quot;App settings&quot;.</p>
 <p><img src="/assets/blog/2021-04-26/Screen.3-oUuoOKRchQLH.png" alt=""></p>
@@ -98,39 +97,34 @@ API_SECRET_KEY = &quot;5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG&quot;
 <p>When you click &quot;Generate&quot; you should get an Access Token and a Access Token Secret, which you need to add to your <code>secrets.py</code> file.</p>
 <p><img src="/assets/blog/2021-04-26/Screen.5-Col00LnJ1RoT.png" alt=""></p>
 <p>Thus your <code>secrets.py</code> file should contain four lines:</p>
-<pre><code class="language-python">API_KEY             = &quot;3x4MP1e4P1kEy&quot;
-API_SECRET_KEY      = &quot;5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG&quot;
-ACCESS_TOKEN        = &quot;202104251234567890-exTrAacC3551Nf0&quot;
-ACCESS_TOKEN_SECRET = &quot;5eCr3t0KEnGibB3r15h&quot;
-</code></pre>
+<pre class="language-python"><code class="language-python">API_KEY             <span class="token operator">=</span> <span class="token string">"3x4MP1e4P1kEy"</span>
+API_SECRET_KEY      <span class="token operator">=</span> <span class="token string">"5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG"</span>
+ACCESS_TOKEN        <span class="token operator">=</span> <span class="token string">"202104251234567890-exTrAacC3551Nf0"</span>
+ACCESS_TOKEN_SECRET <span class="token operator">=</span> <span class="token string">"5eCr3t0KEnGibB3r15h"</span></code></pre>
 <h3>hello_twitter.py</h3>
 <p>Next, we’ll hook this up to the Twitter API via <a href="https://www.tweepy.org/">tweepy</a>, which I’ll install in the terminal using <code>pip</code>:</p>
-<pre><code class="language-bash">$ pip3 install tweepy
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ pip3 <span class="token function">install</span> tweepy</code></pre>
 <p>And make a file called <code>twitter_accessor.py</code> that looks exactly like this:</p>
-<pre><code class="language-python">from secrets import *
-import tweepy
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> secrets <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">import</span> tweepy
 
-class TwitterAccessor:
-  def __init__(self):
-    auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
-    auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-    self.api = tweepy.API(auth)
+<span class="token keyword">class</span> <span class="token class-name">TwitterAccessor</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    auth <span class="token operator">=</span> tweepy<span class="token punctuation">.</span>OAuthHandler<span class="token punctuation">(</span>API_KEY<span class="token punctuation">,</span> API_SECRET_KEY<span class="token punctuation">)</span>
+    auth<span class="token punctuation">.</span>set_access_token<span class="token punctuation">(</span>ACCESS_TOKEN<span class="token punctuation">,</span> ACCESS_TOKEN_SECRET<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>api <span class="token operator">=</span> tweepy<span class="token punctuation">.</span>API<span class="token punctuation">(</span>auth<span class="token punctuation">)</span>
 
-  def read_last_tweet(self):
-    timeline = self.api.user_timeline(count=1, exclude_replies=True, tweet_mode='extended')
-    return timeline[0].full_text
-</code></pre>
+  <span class="token keyword">def</span> <span class="token function">read_last_tweet</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    timeline <span class="token operator">=</span> self<span class="token punctuation">.</span>api<span class="token punctuation">.</span>user_timeline<span class="token punctuation">(</span>count<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> exclude_replies<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> tweet_mode<span class="token operator">=</span><span class="token string">'extended'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> timeline<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>full_text</code></pre>
 <p>Next, we’ll check that everything is working by making a file called <code>hello_twitter.py</code>:</p>
-<pre><code class="language-python">from twitter_accessor import TwitterAccessor
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> twitter_accessor <span class="token keyword">import</span> TwitterAccessor
 
-new_status = &quot;Hello Twitter!&quot;
-TwitterAccessor().api.update_status(new_status)
-print(&quot;Posted status: '&quot; + new_status + &quot;'&quot;)
-</code></pre>
+new_status <span class="token operator">=</span> <span class="token string">"Hello Twitter!"</span>
+TwitterAccessor<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>api<span class="token punctuation">.</span>update_status<span class="token punctuation">(</span>new_status<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Posted status: '"</span> <span class="token operator">+</span> new_status <span class="token operator">+</span> <span class="token string">"'"</span><span class="token punctuation">)</span></code></pre>
 <p>Run it via the command line:</p>
-<pre><code class="language-python">$ python3 hello_twitter.py
-</code></pre>
+<pre class="language-python"><code class="language-python">$ python3 hello_twitter<span class="token punctuation">.</span>py</code></pre>
 <p>If something looks broken, try to fix it. (If it’s broken because of something I’ve said, let me know.)</p>
 <h2>Reading and writing Tweets</h2>
 <p>Now you can delete your <code>hello_twitter.py</code> file, because we’re about to do this for real! In part 3, we’re going to wire this up to AWS Lambda, which has certain preferences for how we structure things. With this in mind, I’d recommend following my naming conventions, unless you have a reason not to.</p>
@@ -151,12 +145,11 @@ This estimates π ≈ 3.20, an error of 2.13%.</p>
 <li><code>post_tweet</code> uses the API in <code>TwitterAccessor</code> to send the tweet to Twitter, with an image to match.</li>
 </ul>
 <p>Most of these implementations are just details which <a href="https://github.com/peterkagey/BotfonsNeedles/blob/main/tweet_builder.py">can be found on Github</a>, but I want to highlight <code>post_tweet</code>, the function that is likely to be the most relevant to you.</p>
-<pre><code class="language-python">def post_tweet(self):
-  file_name = self.drawer.draw_image()
-  copy = self.tweet_copy()
-  self.accessor.api.update_with_media(filename=file_name, status=copy)
-  return copy
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">post_tweet</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  file_name <span class="token operator">=</span> self<span class="token punctuation">.</span>drawer<span class="token punctuation">.</span>draw_image<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  copy <span class="token operator">=</span> self<span class="token punctuation">.</span>tweet_copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  self<span class="token punctuation">.</span>accessor<span class="token punctuation">.</span>api<span class="token punctuation">.</span>update_with_media<span class="token punctuation">(</span>filename<span class="token operator">=</span>file_name<span class="token punctuation">,</span> status<span class="token operator">=</span>copy<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> copy</code></pre>
 <blockquote>
 <p>This trial dropped 100 needles, 69 of which crossed a line. This estimates π ≈ 2*(100/69) ≈ 2.89, an error of -7.74%.</p>
 <p>In total, 506 of 800 needles have crossed a line.
@@ -172,11 +165,10 @@ This estimates π ≈ 3.197, an error of 1.77%. <a href="https://t.co/M9eCi2Y8o1
 <h3>What’s next</h3>
 <p>In Part III, we’ll get this running in a Docker container and have it run on AWS Lambda.</p>
 <p>If you want to get a head start, make a file called <code>app.py</code> with a function called <code>handler</code>, which AWS Lambda will call. This function should return a string, which will get logged.</p>
-<pre><code class="language-python">from tweet_builder import TweetBuilder
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> tweet_builder <span class="token keyword">import</span> TweetBuilder
 
-def handler(event, context):
-  return TweetBuilder().post_tweet()
-</code></pre>
+<span class="token keyword">def</span> <span class="token function">handler</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> TweetBuilder<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>post_tweet<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>As usual, if you have any questions or ideas, there’s nothing I love more than collaborating. If you want help getting your bot off the ground, ask me about it on Twitter, <a href="https://twitter.com/PeterKagey">@PeterKagey</a>!</p>
 
     </article>

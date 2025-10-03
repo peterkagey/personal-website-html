@@ -163,43 +163,42 @@ frames = Table[
 </code></pre>
 <h2>Python Code</h2>
 <p>Here’s code that randomly picks one of the above tiles, and draws rotations and reflections of it in a n×m grid. (I saved the tile images under the path <code>/tiles/tile_000.png</code>.)</p>
-<pre><code class="language-python">from PIL import Image
-import random
-import os
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">import</span> random
+<span class="token keyword">import</span> os
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-tiling_path = current_dir + &quot;/generated/&quot;
-generation = len(os.listdir(tiling_path))
-gen_string = str(generation).zfill(3)
-random.seed(generation)
+current_dir <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">)</span>
+tiling_path <span class="token operator">=</span> current_dir <span class="token operator">+</span> <span class="token string">"/generated/"</span>
+generation <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>tiling_path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+gen_string <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>generation<span class="token punctuation">)</span><span class="token punctuation">.</span>zfill<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+random<span class="token punctuation">.</span>seed<span class="token punctuation">(</span>generation<span class="token punctuation">)</span>
 
-path = current_dir + &quot;/tiles/&quot;
-tile_name = random.choice([f for f in os.listdir(path) if f[-3:]==&quot;png&quot;])[0:-4]
-big_tile_design = Image.open(path + tile_name + &quot;.png&quot;)
-tile_design = big_tile_design.resize((180, 180), Image.LANCZOS)
+path <span class="token operator">=</span> current_dir <span class="token operator">+</span> <span class="token string">"/tiles/"</span>
+tile_name <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token punctuation">[</span>f <span class="token keyword">for</span> f <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token keyword">if</span> f<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">"png"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">]</span>
+big_tile_design <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>path <span class="token operator">+</span> tile_name <span class="token operator">+</span> <span class="token string">".png"</span><span class="token punctuation">)</span>
+tile_design <span class="token operator">=</span> big_tile_design<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Image<span class="token punctuation">.</span>LANCZOS<span class="token punctuation">)</span>
 
-(n,m) = (3,3) # n × m torus
-canvas = Image.new(&quot;RGB&quot;, (180*n*3, 180*m*3))
+<span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment"># n × m torus</span>
+canvas <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">"RGB"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">180</span><span class="token operator">*</span>n<span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token operator">*</span>m<span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-tile_symmetries = [
-  tile_design,
-  tile_design.rotate(90),
-  tile_design.rotate(180),
-  tile_design.rotate(270),
-  tile_design.transpose(Image.FLIP_LEFT_RIGHT),
-  tile_design.transpose(Image.FLIP_LEFT_RIGHT).rotate(90),
-  tile_design.transpose(Image.FLIP_LEFT_RIGHT).rotate(180),
-  tile_design.transpose(Image.FLIP_LEFT_RIGHT).rotate(270)
-]
-tiles = random.choices(tile_symmetries, k=n*m)
+tile_symmetries <span class="token operator">=</span> <span class="token punctuation">[</span>
+  tile_design<span class="token punctuation">,</span>
+  tile_design<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  tile_design<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  tile_design<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span><span class="token number">270</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  tile_design<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>Image<span class="token punctuation">.</span>FLIP_LEFT_RIGHT<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  tile_design<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>Image<span class="token punctuation">.</span>FLIP_LEFT_RIGHT<span class="token punctuation">)</span><span class="token punctuation">.</span>rotate<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  tile_design<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>Image<span class="token punctuation">.</span>FLIP_LEFT_RIGHT<span class="token punctuation">)</span><span class="token punctuation">.</span>rotate<span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  tile_design<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>Image<span class="token punctuation">.</span>FLIP_LEFT_RIGHT<span class="token punctuation">)</span><span class="token punctuation">.</span>rotate<span class="token punctuation">(</span><span class="token number">270</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+tiles <span class="token operator">=</span> random<span class="token punctuation">.</span>choices<span class="token punctuation">(</span>tile_symmetries<span class="token punctuation">,</span> k<span class="token operator">=</span>n<span class="token operator">*</span>m<span class="token punctuation">)</span>
 
-for j in range(m*3):
-  for i in range(n*3):
-    tile_choice = tiles[n*(j%m) + (i%n)]
-    canvas.paste(tile_choice, (i * 180, j * 180))
+<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tile_choice <span class="token operator">=</span> tiles<span class="token punctuation">[</span>n<span class="token operator">*</span><span class="token punctuation">(</span>j<span class="token operator">%</span>m<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>i<span class="token operator">%</span>n<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    canvas<span class="token punctuation">.</span>paste<span class="token punctuation">(</span>tile_choice<span class="token punctuation">,</span> <span class="token punctuation">(</span>i <span class="token operator">*</span> <span class="token number">180</span><span class="token punctuation">,</span> j <span class="token operator">*</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-canvas.save(tiling_path + &quot;tiling_&quot; + gen_string + &quot;.png&quot;)
-</code></pre>
+canvas<span class="token punctuation">.</span>save<span class="token punctuation">(</span>tiling_path <span class="token operator">+</span> <span class="token string">"tiling_"</span> <span class="token operator">+</span> gen_string <span class="token operator">+</span> <span class="token string">".png"</span><span class="token punctuation">)</span></code></pre>
 <p>Maybe I’ll make a bot? 😏</p>
 
     </article>

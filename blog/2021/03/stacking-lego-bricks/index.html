@@ -116,9 +116,16 @@
 <p>I <a href="https://math.stackexchange.com/q/2949131/121988">asked about this function</a> on Math Stack Exchange and wrote <a href="https://github.com/peterkagey/haskellOEIS/blob/master/src/BrickStacking/A320314.hs">a naive Haskell program</a> to compute the number of symmetric towers consisting of \(n \leq 19\) bricks, which I added to the OEIS as sequence <a href="https://oeis.org/A320314">A320314</a>. OEIS contributor Andrew Howroyd impressively extended the sequence by 21 more terms. I also added sequence <a href="https://oeis.org/A264746">\(A264746 = \frac 12 (3^{n-1}+A320314(n))\)</a>, which counts towers up to reflection, and <a href="https://oeis.org/A333650">A333650</a>, which is a table that gives the number of towers with \(n\) bricks and height \(k\).</p>
 <h2>Stacking Ordinary Bricks</h2>
 <p>It is also interesting to count the number of (stable) towers that can be made out of ordinary bricks without any sort of mortar. I <a href="https://math.stackexchange.com/q/2731692/121988">asked on Math Stack Exchange for a combinatorial rule</a> for determining when a stack of ordinary bricks is stable. MSE user <a href="https://math.stackexchange.com/questions/2731692/combinatorial-rule-for-a-stable-stack-of-bricks#comment5709420_2731692">Jens commented</a> that this problem is hard, and pointed to the OEIS sequence <a href="https://oeis.org/A168368">A168368</a> and the paper <a href="https://math.dartmouth.edu/~pw/papers/maxover.pdf">&quot;Maximum Overhang&quot; by Mike Paterson, Yuval Peres, Mikkel Thorup, Peter Winkler, and Uri Zwick</a>, which provides a surprising example of a tower that one might expect to be stable, but in fact is not.</p>
-<p><a href="https://blog.peterkagey.com/wp-content/uploads/2021/02/screen-shot-2021-02-26-at-4.10.10-pm-1.png"><img src="/assets/blog/2021-03-08/screen.10-ZLQEo0ELL6At.png" alt=""></a></p>
-<p>A surprising example of an unstable tower.
-See Figure 5 of the Paterson, Peres, Thorup, Winkler, and Zwick paper.</p>
+<div class="columns">
+  <figure>
+    <img src="/assets/blog/2021-03-08/unstable_tower_figure.png">
+    <figcaption>See Figure 5 of the Paterson, Peres, Thorup, Winkler, and Zwick paper.</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2021-03-08/unstable_tower_photo.png">
+    <figcaption>A surprising example of an unstable tower</figcaption>
+  </figure>
+</div>
 <p>I’d still like to find a combinatorial rule, or implement a small physics engine, to determine when a stack of bricks is stable.</p>
 <p>These problems and some generalizations can be found in <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=34">Problem 33</a> of <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">my Open Problem Collection</a>. If you’d like to collaborate on any of these problems, let me know on <a href="https://twitter.com/PeterKagey">Twitter</a>. If you find yourself working on your own, I’d love for you to keep me updated with your progress!</p>
 <p>(The graphics of LEGO bricks were rendered using the impressive and free LEGO <a href="https://www.bricklink.com/v3/studio/download.page">Studio from BrickLink</a>.)</p>

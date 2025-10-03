@@ -94,12 +94,11 @@ My Twitter bot @xorTriangles currently follows the same convention.</p>
 <p>One way to find a rotationally symmetric XOR triangle is by setting up a system of equations. Using the convention that the top row of the triangle is labeled \(x_0, x_1, \dots, x_n\), we can use the Pascal’s Triangle-like construction to set up a system of linear equations over \(\mathbb{Z}/2\mathbb{Z}\). The solutions of this system of equations are precisely those that correspond to the XOR triangle we care about! This allows us to write down a matrix whose null space is the set of such triangles:</p>
 <p>$$\begin{align}x_n &amp;= x_0\\x_{n-1} &amp;= x_0 + x_1\\x_{n-2} &amp;= x_0 + 2x_1 + x_2\\ &amp;\vdots \\ x_k &amp;= \sum_{i=0}^{n-k} \binom{n-k}{i}x_i \\ &amp;\vdots \\ x_0 &amp;= \binom{n}{1}x_0 + \binom{n}{1}x_1 + \dots + \binom{n}{n}x_n\end{align}$$</p>
 <p>Using Mathematica to find the null space works like this:</p>
-<pre><code class="language-plain">value[i_, j_, n_] := Binomial[i, j] - If[j == n - i, 1, 0];
+<pre class="language-plain"><code class="language-plain">value[i_, j_, n_] := Binomial[i, j] - If[j == n - i, 1, 0];
 xorSeedsBasis[n_] := NullSpace[
   Table[value[i, j, n], {i, 0, n}, {j, 0, n}],
-  Modulus -&gt; 2
-];
-</code></pre>
+  Modulus -> 2
+];</code></pre>
 <p>Because this is the null space of a \(n+1 \times n+1\) matrix over \(\mathbb{Z}/2\mathbb{Z}\), we know that there must be \(2^M\) rotationally symmetric XOR triangles, where \(M\) is an integer—which isn’t obvious from the original construction!</p>
 <h2><a href="https://oeis.org/wiki/Index_to_OEIS:_Section_X#XOR-triangles">Related OEIS sequences</a></h2>
 <p>If you’re interested in learning more about this construction, reach out to me or take a look at some of these related OEIS sequences:</p>

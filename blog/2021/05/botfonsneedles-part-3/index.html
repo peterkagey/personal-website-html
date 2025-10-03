@@ -93,7 +93,7 @@ Seed: 140 <a href="https://t.co/jKOKZqukFc">pic.twitter.com/jKOKZqukFc</a></p>
 <h3>Turn it into a Docker image</h3>
 <p>Next, we’ll package this up in a Docker image so that AWS Lambda has everything that it needs to run this function. Begin by <a href="https://docs.docker.com/get-started/">downloading Docker</a> if you don’t already have it installed.</p>
 <p>Next, we’re going to add a new file called <code>Dockerfile</code> from an <a href="https://docs.aws.amazon.com/lambda/latest/dg/python-image.html">AWS base image for Python</a>, which will look like this.</p>
-<pre><code class="language-plain">FROM amazon/aws-lambda-python:3.8
+<pre class="language-plain"><code class="language-plain">FROM amazon/aws-lambda-python:3.8
 
 RUN pip install tweepy
 RUN pip install Pillow -t .
@@ -105,8 +105,7 @@ COPY twitter_accessor.py ./
 COPY tweet_builder.py ./
 COPY app.py ./
 
-CMD [&quot;app.handler&quot;]
-</code></pre>
+CMD ["app.handler"]</code></pre>
 <ul>
 <li>The <code>FROM</code> line says that we’re going to use an Amazon Linux box that has been pre-configured to have Python 3.8.</li>
 <li>The <code>RUN</code> lines help us to install the Python libraries that we need.</li>
@@ -127,10 +126,9 @@ CMD [&quot;app.handler&quot;]
 <pre><code>docker container ls
 </code></pre>
 <p>which will return a <code>CONTAINER ID</code> such as <code>bb81431991sb</code>. You can use this ID to stop the container, remove the container, and remove the image.</p>
-<pre><code class="language-plain">$ docker stop bb81431991sb
+<pre class="language-plain"><code class="language-plain">$ docker stop bb81431991sb
 $ docker rm bb81431991sb
-$ docker image rm botfons-needles
-</code></pre>
+$ docker image rm botfons-needles</code></pre>
 <p>Then make your changes, and start again from the <code>docker build</code> step.</p>
 <blockquote>
 <p>Sequence A327913 was added to the OEIS by Andrew Howroyd in October 2019. <a href="https://t.co/LD5YYvZcpZ">https://t.co/LD5YYvZcpZ</a> <a href="https://t.co/qJW8UIxKBS">pic.twitter.com/qJW8UIxKBS</a></p>
@@ -143,16 +141,13 @@ $ docker image rm botfons-needles
 <p>This will bring up a place for you to create a repository name.</p>
 <p><img src="/assets/blog/2021-05-03/Screen.5-rrC3QDokCvTb.png" alt=""></p>
 <p>Now once there’s a repository available, we’re ready to push our local copy up. Start by downloading the <a href="https://aws.amazon.com/cli/">AWS Command Line Interface</a> and logging in to AWS. Notice that there are *two* references to the server location (<code>us-east-1</code>) and one reference to your account number (<code>123456789</code>).</p>
-<pre><code class="language-plain">aws ecr get-login-password --region us-east-1 \
+<pre class="language-plain"><code class="language-plain">aws ecr get-login-password --region us-east-1 \
 | docker login --username AWS \
-  --password-stdin 123456789.dkr.ecr.us-east-1.amazonaws.com
-</code></pre>
+  --password-stdin 123456789.dkr.ecr.us-east-1.amazonaws.com</code></pre>
 <p>Now all you need to do is tag your docker image and push it up. Get your Docker image ID with <code>docker image ls</code>, and (supposing it’s <code>1111111111</code>), tag it with the following command (again, making sure to specify the right server location and account number):</p>
-<pre><code class="language-plain">docker tag 1111111111 123456789.dkr.ecr.us-east-1.amazonaws.com/botfons-needles
-</code></pre>
+<pre class="language-plain"><code class="language-plain">docker tag 1111111111 123456789.dkr.ecr.us-east-1.amazonaws.com/botfons-needles</code></pre>
 <p>Now you’re ready to push! Simply change <code>123456789</code> to your account number and <code>us-east-1</code> to your server location in the following command and run it:</p>
-<pre><code class="language-plain">docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/botfons-needles
-</code></pre>
+<pre class="language-plain"><code class="language-plain">docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/botfons-needles</code></pre>
 <h3>Hook up to AWS Lambda</h3>
 <p>Now you’re ready to wire this up to a AWS Lambda function! Start by going to the <a href="https://console.aws.amazon.com/lambda/">AWS Lambda console</a> and click &quot;Create function&quot;</p>
 <p><img src="/assets/blog/2021-05-03/Screen.24-GkOQyql6QwOC.png" alt=""></p>

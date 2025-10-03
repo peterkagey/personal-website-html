@@ -62,7 +62,7 @@
 <p><img src="/assets/blog/2023-01-16/blog_example.gif" alt=""></p>
 <h2>TikZ code</h2>
 <p>In our first step toward making the above GIF, we’ll make a PDF where each frame contains one of the above circles on a transparent background. In this case, each circle is placed uniformly at random with its center in a \(10 \times 10\) box, with a radius in \([0,1]\), and whose color gets progressively more red and less green with a random amount of blue at each step.</p>
-<pre><code class="language-plain">\documentclass[tikz]{standalone}
+<pre class="language-plain"><code class="language-plain">\documentclass[tikz]{standalone}
 \usepackage{tikz}
 
 \begin{document}
@@ -74,8 +74,7 @@
     \fill[myColor] ({10*random()},{10*random()}) circle ({1+random()});
   \end{tikzpicture}
 }
-\end{document}
-</code></pre>
+\end{document}</code></pre>
 <p>Starting with <code>\documentclass[tikz]{standalone}</code> says to make each <code>tikzpicture</code> its own page in the resulting PDF.</p>
 <p>Next we loop through values of <code>\red</code> from <code>0</code> to <code>255</code>, each time setting <code>\green</code> to be equal to <code>255 - \red</code> so that with each step the amount of red goes up and the amount of green goes down.</p>
 <p>The command <code>\useasboundingbox (0,0) rectangle (10,10);</code> gives each frame a \(10 \times 10\) bounding box so that all of the frames are the same size and positioned the same way.</p>
@@ -83,8 +82,7 @@
 <p>The command <code>\fill[myColor] ({10*random()},{10*random()}) circle ({1+random()});</code> places a circle with its center randomly chosen in the \(10 \times 10\) box and with a radius between \(1\) and \(2\).</p>
 <h2>ImageMagick</h2>
 <p>When we compile this code, we get a PDF with one circle on each page. In order do turn this PDF into an animated GIF, we <a href="https://imagemagick.org/script/convert.php">convert the PDF using ImageMagick</a>, a powerful command-line utility for handling images. If we named our PDF <code>bubbles.pdf</code> then running the following command in the terminal (in the same directory as <code>bubbles.pdf</code>) will give us an animated GIF called <code>bubbles.gif</code>.</p>
-<pre><code class="language-plain">convert -density 300 -delay 8 -loop 0 -background white bubbles.pdf bubbles.gif
-</code></pre>
+<pre class="language-plain"><code class="language-plain">convert -density 300 -delay 8 -loop 0 -background white bubbles.pdf bubbles.gif</code></pre>
 <p>I hope that you use this blog post as a jumping off point for making animated GIFs of your own! If you do, please reach out to share them with me!</p>
 
     </article>

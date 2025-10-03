@@ -112,30 +112,29 @@
 <p>Next, it uses the angle and some plane geometry to compute the endpoints of the needle: \[\begin{bmatrix}x\\y\end{bmatrix} \pm \frac{\ell}{2}\begin{bmatrix}\cos(\theta)\\ \sin(\theta)\end{bmatrix}.\]</p>
 <p>The class’s first method is <code>crosses_line</code>, which checks to see that the \(x\)-values at either end of the needle are in different &quot;sections&quot;. Since we know that the parallel lines occur at all multiples of \(\ell\), we can just check that \[\left\lfloor\frac{x_\text{start}}{\ell}\right\rfloor \neq \left\lfloor\frac{x_\text{end}}{\ell}\right\rfloor.\]</p>
 <p>The class’s second method is <code>draw</code> which takes a <code>drawing_context</code> via Pillow and simply draws a line.</p>
-<pre><code class="language-python">import math
-import random
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> math
+<span class="token keyword">import</span> random
 
-class RandomNeedle:
-  def __init__(self, canvas_width, canvas_height, line_spacing):
-    theta = random.random()*math.pi
-    half_needle = line_spacing//2
-    self.x = random.randint(half_needle, canvas_width-half_needle)
-    self.y = random.randint(half_needle, canvas_height-half_needle)
-    self.del_x = half_needle * math.cos(theta)
-    self.del_y = half_needle * math.sin(theta)
-    self.spacing = line_spacing
+<span class="token keyword">class</span> <span class="token class-name">RandomNeedle</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> canvas_width<span class="token punctuation">,</span> canvas_height<span class="token punctuation">,</span> line_spacing<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    theta <span class="token operator">=</span> random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>pi
+    half_needle <span class="token operator">=</span> line_spacing<span class="token operator">//</span><span class="token number">2</span>
+    self<span class="token punctuation">.</span>x <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>half_needle<span class="token punctuation">,</span> canvas_width<span class="token operator">-</span>half_needle<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>y <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>half_needle<span class="token punctuation">,</span> canvas_height<span class="token operator">-</span>half_needle<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>del_x <span class="token operator">=</span> half_needle <span class="token operator">*</span> math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>theta<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>del_y <span class="token operator">=</span> half_needle <span class="token operator">*</span> math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>theta<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>spacing <span class="token operator">=</span> line_spacing
 
-  def crosses_line(self):
-    initial_sector = (self.x - self.del_x)//self.spacing
-    terminal_sector = (self.x + self.del_x)//self.spacing
-    return abs(initial_sector - terminal_sector) == 1
+  <span class="token keyword">def</span> <span class="token function">crosses_line</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    initial_sector <span class="token operator">=</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>x <span class="token operator">-</span> self<span class="token punctuation">.</span>del_x<span class="token punctuation">)</span><span class="token operator">//</span>self<span class="token punctuation">.</span>spacing
+    terminal_sector <span class="token operator">=</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>x <span class="token operator">+</span> self<span class="token punctuation">.</span>del_x<span class="token punctuation">)</span><span class="token operator">//</span>self<span class="token punctuation">.</span>spacing
+    <span class="token keyword">return</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>initial_sector <span class="token operator">-</span> terminal_sector<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span>
 
-  def draw(self, drawing_context):
-    color = &quot;red&quot; if self.crosses_line() else &quot;grey&quot;
-    initial_point  = (self.x-self.del_x, self.y-self.del_y)
-    terminal_point = (self.x+self.del_x, self.y+self.del_y)
-    drawing_context.line([initial_point, terminal_point], color, 10)
-</code></pre>
+  <span class="token keyword">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> drawing_context<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    color <span class="token operator">=</span> <span class="token string">"red"</span> <span class="token keyword">if</span> self<span class="token punctuation">.</span>crosses_line<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">"grey"</span>
+    initial_point  <span class="token operator">=</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>x<span class="token operator">-</span>self<span class="token punctuation">.</span>del_x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>y<span class="token operator">-</span>self<span class="token punctuation">.</span>del_y<span class="token punctuation">)</span>
+    terminal_point <span class="token operator">=</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>x<span class="token operator">+</span>self<span class="token punctuation">.</span>del_x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>y<span class="token operator">+</span>self<span class="token punctuation">.</span>del_y<span class="token punctuation">)</span>
+    drawing_context<span class="token punctuation">.</span>line<span class="token punctuation">(</span><span class="token punctuation">[</span>initial_point<span class="token punctuation">,</span> terminal_point<span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></code></pre>
 <p>By generating \(100\,000\) instances of the <code>RandomNeedle</code> class, and keeping a running estimation of (\pi) based on what percentage of the needles cross the line, you get a plot like the following:</p>
 <p><img src="/assets/blog/2021-04-19/moving_average.png" alt=""></p>
 <p>This estimates \(\pi\approx 2\left(\frac{10000}{63681}\right) \approx 3.1407\) an error of 0.03%.</p>
@@ -146,40 +145,39 @@ class RandomNeedle:
 <p>When an instance of the <code>NeedleDrawer</code> class is initialized, makes a &quot;floor&quot; and &quot;tosses&quot; 100 needles (by creating 100 instances of the <code>RandomNeedle</code> class).</p>
 <p>The main function in this class is <code>draw_image</code>, which makes a \(4096 \times 2048\) pixel canvas, draws the vertical lines, then draws each of the <code>RandomNeedle</code> instances.</p>
 <p>(It saves the files to the <code>/tmp</code> directory in root because that’s the only place we can write file to our Docker instance on AWS Lambda, which will be a step in part 2 of this series.)</p>
-<pre><code class="language-python">from PIL import Image, ImageDraw
-from random_needle import RandomNeedle
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image<span class="token punctuation">,</span> ImageDraw
+<span class="token keyword">from</span> random_needle <span class="token keyword">import</span> RandomNeedle
 
-class NeedleDrawer:
-  def __init__(self):
-    self.width   = 4096
-    self.height  = 2048
-    self.spacing = 256
-    self.random_needles = self.toss_needles(100)
+<span class="token keyword">class</span> <span class="token class-name">NeedleDrawer</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>width   <span class="token operator">=</span> <span class="token number">4096</span>
+    self<span class="token punctuation">.</span>height  <span class="token operator">=</span> <span class="token number">2048</span>
+    self<span class="token punctuation">.</span>spacing <span class="token operator">=</span> <span class="token number">256</span>
+    self<span class="token punctuation">.</span>random_needles <span class="token operator">=</span> self<span class="token punctuation">.</span>toss_needles<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
 
-  def draw_vertical_lines(self):
-    for x in range(self.spacing, self.width, self.spacing):
-      self.drawing_context.line([(x,0),(x,self.height)],width=10, fill=&quot;black&quot;)
+  <span class="token keyword">def</span> <span class="token function">draw_vertical_lines</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>spacing<span class="token punctuation">,</span> self<span class="token punctuation">.</span>width<span class="token punctuation">,</span> self<span class="token punctuation">.</span>spacing<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      self<span class="token punctuation">.</span>drawing_context<span class="token punctuation">.</span>line<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>self<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>width<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> fill<span class="token operator">=</span><span class="token string">"black"</span><span class="token punctuation">)</span>
 
-  def toss_needles(self, count):
-    return [RandomNeedle(self.width, self.height, self.spacing) for _ in range(count)]
+  <span class="token keyword">def</span> <span class="token function">toss_needles</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>RandomNeedle<span class="token punctuation">(</span>self<span class="token punctuation">.</span>width<span class="token punctuation">,</span> self<span class="token punctuation">.</span>height<span class="token punctuation">,</span> self<span class="token punctuation">.</span>spacing<span class="token punctuation">)</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">]</span>
 
-  def draw_needles(self):
-    for needle in self.random_needles:
-      needle.draw(self.drawing_context)
+  <span class="token keyword">def</span> <span class="token function">draw_needles</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> needle <span class="token keyword">in</span> self<span class="token punctuation">.</span>random_needles<span class="token punctuation">:</span>
+      needle<span class="token punctuation">.</span>draw<span class="token punctuation">(</span>self<span class="token punctuation">.</span>drawing_context<span class="token punctuation">)</span>
 
-  def count_needles(self):
-    cross_count = sum(1 for n in self.random_needles if n.crosses_line())
-    return (cross_count, len(self.random_needles))
+  <span class="token keyword">def</span> <span class="token function">count_needles</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    cross_count <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token keyword">for</span> n <span class="token keyword">in</span> self<span class="token punctuation">.</span>random_needles <span class="token keyword">if</span> n<span class="token punctuation">.</span>crosses_line<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>cross_count<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>random_needles<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-  def draw_image(self):
-    img = Image.new(&quot;RGB&quot;, (self.width, self.height), (255,255,255))
-    self.drawing_context = ImageDraw.Draw(img)
-    self.draw_vertical_lines()
-    self.draw_needles()
-    del self.drawing_context
-    img.save(&quot;/tmp/needle_drop.png&quot;)
-    return self.count_needles()
-</code></pre>
+  <span class="token keyword">def</span> <span class="token function">draw_image</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    img <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">"RGB"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>width<span class="token punctuation">,</span> self<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>drawing_context <span class="token operator">=</span> ImageDraw<span class="token punctuation">.</span>Draw<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>draw_vertical_lines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>draw_needles<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">del</span> self<span class="token punctuation">.</span>drawing_context
+    img<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"/tmp/needle_drop.png"</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> self<span class="token punctuation">.</span>count_needles<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h2>Next Steps</h2>
 <p>In the next part of this series, we’re going to add a new class that uses the Twitter API to post needle-drop experiments to Twitter. In the final part of the series, we’ll wire this up to AWS Lambda to post to Twitter on a timer.</p>
 

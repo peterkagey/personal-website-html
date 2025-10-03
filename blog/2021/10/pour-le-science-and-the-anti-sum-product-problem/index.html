@@ -126,7 +126,7 @@ And here is what I saw.</p>
 <p>Multiplication table illustrating \(A347498(8) = 11\).</p>
 <h3>A347499: Examples with minimized largest element</h3>
 <p>We wish to record examples of the sequences described in the above section. There are \(A348481(n)\) subsets of \(\{1,2,…,A347499(n)\}\) with the distinct product property, but we record the lexicographically earliest one in OEIS sequence <a href="https://oeis.org/A347499">A347499</a>.</p>
-<pre><code class="language-plain">n | Distinct product subset of {1,2,...,A347499(n)}
+<pre class="language-plain"><code class="language-plain">n | Distinct product subset of {1,2,...,A347499(n)}
 ---+-------------------------------------------------------
  1 | {1}
  2 | {1, 2}
@@ -141,13 +141,12 @@ And here is what I saw.</p>
 11 | {1, 2, 5, 7,  8,  9, 11, 12, 13, 15, 17}
 12 | {1, 2, 5, 7,  8,  9, 11, 12, 13, 15, 17, 19}
 13 | {1, 5, 6, 7,  9, 11, 13, 14, 15, 16, 17, 19, 20}
-14 | {1, 2, 5, 7, 11, 12, 13, 16, 17, 18, 19, 20, 21, 23}
-</code></pre>
+14 | {1, 2, 5, 7, 11, 12, 13, 16, 17, 18, 19, 20, 21, 23}</code></pre>
 <p>For all of the known values, the lexicographically earliest subset begins with \(1\). Is this true in general?</p>
 <h3>A347570: Sums with more terms</h3>
 <p>Perhaps instead of asking when all sums \(x + y\) are distinct for \(x \leq y\), we want to know when all sums \(x_1 + x_2 + \dots + x_n\) are distinct for \(x_1 \leq x_2\leq \dots \leq x_n\). This family of sequences are sometimes called <a href="https://mathworld.wolfram.com/B2-Sequence.html">\(B_n\)</a> sequences and have been studied by the likes of <a href="https://blog.peterkagey.com/2021/05/richard-guys-partition-sequence/">Richard Guy</a>.</p>
 <p>I’ve recorded the lexicographically earliest \(B_n\) sequences in OEIS sequence <a href="https://oeis.org/A347570">A347570</a>.</p>
-<pre><code class="language-plain">n\k | 1  2   3   4    5     6     7      8
+<pre class="language-plain"><code class="language-plain">n\k | 1  2   3   4    5     6     7      8
 ----+------------------------------------------
   1 | 1, 2,  3,  4,   5,    6,    7,     8, ...
   2 | 1, 2,  4,  8,  13,   21,   31,    45, ...
@@ -156,8 +155,7 @@ And here is what I saw.</p>
   5 | 1, 2,  7, 32, 109,  367,  927,  2287, ...
   6 | 1, 2,  8, 44, 155,  669, 2215,  6877, ...
   7 | 1, 2,  9, 58, 257, 1154, 4182, 14181, ...
-  8 | 1, 2, 10, 74, 334, 1823, 8044, 28297, ...
-</code></pre>
+  8 | 1, 2, 10, 74, 334, 1823, 8044, 28297, ...</code></pre>
 <p>I ask about this family of sequences in a recent <a href="https://codegolf.stackexchange.com/q/236471/53884">question on Code Golf Stack Exchange</a>.</p>
 <h3>Other ideas?</h3>
 <p>Did this post spark any related ideas? Let me know about them on Twitter <a href="https://twitter.com/PeterKagey">@PeterKagey</a>—I’d love to hear about them!</p>

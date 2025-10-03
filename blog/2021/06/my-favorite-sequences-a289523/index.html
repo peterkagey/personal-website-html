@@ -60,8 +60,10 @@
     <article>
       <p>This the second post in a recurring series, <a href="https://blog.peterkagey.com/category/my-favorite-sequences/"><em>My Favorite Sequences</em></a>. If you like this sort of thing, check out the <a href="https://aperiodical.com/category/columns/checkmyworking/integer-sequence-review-checkmyworking/">Integer Sequence Review</a> from <a href="https://aperiodical.com/about/">The Aperiodical</a>!</p>
 <h2>A289523: Packing Circles of Increasing Area</h2>
-<p><a href="https://blog.peterkagey.com/wp-content/uploads/2021/02/a289523_1-1.png"><img src="/assets/blog/2021-06-14/a289523_1.png" alt=""></a></p>
-<p>A plot of the circles in A289523.</p>
+<figure>
+<img src="/assets/blog/2021-06-14/a289523.png">
+<figcaption>A plot of the circles in A289523, with the \(y\)-axis pointing down</figcaption>
+</figure>
 <p>In July 2017, I added a mathematically-silly-but-visually-fun sequence, <a href="https://oeis.org/A289523">A289523</a>. The sequence works like this: place a circle of area \(\pi\) centered at \((1,1)\), then place a circle of area \(2\pi\) centered at \((2,a(2))\) where \(a(2) = 4\), the least positive integer such that the circle does not overlap with the first circle. Next, place a circle of area \(3\pi\) centered at \((3,a(3))\) where \(a(3) = 7\) is the least positive integer such that the circle does not overlap with the first two circle. Continue this pattern <em>ad infinitum</em>, creating the earliest infinite sequence of positive integers such that no two circles overlap with any others, and a circle centered at \((k, a(k))\) has area \(k\pi\).</p>
 <p>I haven’t done much mathematical analysis on this problem, but it would be interesting to see if it’s possible to compute (or put some bounds on) the packing density of the convex hull of the circles. Also, a glance at a plot of the points suggests that the sequence is bounded above by a linear function—is this the case?</p>
 <p>The sequence begins
@@ -69,19 +71,36 @@ $$1, 4, 7, 1, 11, 16, 5, 21, 27, 34, 10, 1, 41, 17, 49, 25, 57, 6, 33, 66, 43, 1
 <h3>Finding an upper bound</h3>
 <p>The scatter plot of <a href="https://oeis.org/A289523">A289523</a> suggests that the centers of the circles have a linear upper bound. This is to be expected! The areas of the circles increase linearly, and the packing density is (presumably) nonzero.</p>
 <p>What is the slope of the upper bound? And what is the packing density of these circles in the limit?</p>
-<p><a href="https://blog.peterkagey.com/wp-content/uploads/2021/02/graph.png"><img src="/assets/blog/2021-06-14/graph.png" alt=""></a></p>
-<p>A scatter plot of A289523.</p>
+<figure>
+  <a href="https://oeis.org/A289523/graph">
+    <img src="/assets/blog/2021-06-14/graph.png" alt="A scatterplot of OEIS sequence A289523">
+  </a>
+  <figcaption>A scatterplot of OEIS sequence A289523</figcaption>
+</figure>
 <h2>Related Construction</h2>
-<p>At the end of March, I posted a related puzzle, <a href="https://codegolf.stackexchange.com/q/222520/53884">&quot;Placing Circles Along a Square Spiral&quot;</a>, on Code Golf Stack Exchange. For the post, I made a few animated GIFs that explain the construction and tweeted about them.</p>
-<p>https://twitter.com/PeterKagey/status/1375960530863628290</p>
-<blockquote>
-<p>I made some animated GIFs and posted about this on Code Golf Stack Exchange. <a href="https://t.co/VksT5lCe5K">https://t.co/VksT5lCe5K</a> <a href="https://t.co/mDzkwlxKbF">pic.twitter.com/mDzkwlxKbF</a></p>
-<p>— Peter Kagey (@PeterKagey) <a href="https://twitter.com/PeterKagey/status/1376265685513293824?ref_src=twsrc%5Etfw">March 28, 2021</a></p>
-</blockquote>
-<p>Impressively, Code Golf Stack Exchange users <a href="https://codegolf.stackexchange.com/a/222570/53884">tsh</a>, <a href="https://codegolf.stackexchange.com/a/222543/53884">Arnauld</a>, and <a href="https://codegolf.stackexchange.com/a/222542/53884">A username</a> each wrote (deliberately terse) Javascript code that computes the placement of these circles.</p>
+<p>At the end of March, I posted a related puzzle, <a href="https://codegolf.stackexchange.com/q/222520/53884">&quot;Placing Circles Along a Square Spiral&quot;</a>, on Code Golf Stack Exchange. Impressively, Code Golf Stack Exchange users <a href="https://codegolf.stackexchange.com/a/222570/53884">tsh</a>, <a href="https://codegolf.stackexchange.com/a/222543/53884">Arnauld</a>, and <a href="https://codegolf.stackexchange.com/a/222542/53884">emanresu A</a> each wrote (deliberately terse) Javascript code that computes the placement of these circles.</p>
 <p>In fact, they compute something strictly harder! In the challenge, after laying down all of these circles (in blue), the challenge instructed them to go back to the start and greedily fill the gaps with (red) circles of increasing area. Next, they laid down a third (yellow) generation in the same fashion, and fourth (cyan) generation, and so on.</p>
-<p><img src="/assets/blog/2021-06-14/successive_generations.gif" alt=""></p>
-<p>An animation illustrating successive generations of circles on a square spiral.</p>
+<p>For the post, I made a few animated GIFs that explain the construction and tweeted about them. (Since I'm not on Twitter anymore, I have copied the tweets below.)</p>
+<div class="columns">
+  <figure>
+  <img src="/assets/blog/2021-06-14/spiral_0.png">
+  <figcaption>This image is the result of placing a circle of area π at the origin, then, moving along a square spiral, greedily placing circles of area 2π, 3π, 4π and so on in such a way that no two circles overlap.</figcaption>
+  </figure>
+  <figure>
+  <img src="/assets/blog/2021-06-14/spiral_1.gif">
+  <figcaption>I made some animated GIFs and posted about this on <a href="https://codegolf.stackexchange.com/q/222520/53884">Code Golf Stack Exchange</a>.</figcaption>
+  </figure>
+</div>
+<div class="columns">
+  <figure>
+  <img src="/assets/blog/2021-06-14/spiral_2.gif">
+  <figcaption>Then you can repeat this process again.</figcaption>
+  </figure>
+  <figure>
+  <img src="/assets/blog/2021-06-14/spiral_3.gif">
+  <figcaption>And again and again and again.</figcaption>
+  </figure>
+</div>
 <h4>Related questions</h4>
 <ul>
 <li>What is the packing density of the first (blue) generation?</li>
@@ -91,7 +110,7 @@ $$1, 4, 7, 1, 11, 16, 5, 21, 27, 34, 10, 1, 41, 17, 49, 25, 57, 6, 33, 66, 43, 1
 <li>How far can a circle be from its neighbors? Which circles are maximally far from their neighbors?</li>
 <li>How does this work if the path the circles follow is not the spiral? Can different paths have significantly different packing densities?</li>
 </ul>
-<p>If you have thoughts or ideas about any of this—or if you just want to make animated GIFs together—leave a comment or let me know on Twitter, <a href="https://twitter.com/PeterKagey">@PeterKagey</a>!</p>
+<p>If you have thoughts or ideas about any of this—or if you just want to make animated GIFs together—leave a comment or let me know on Bluesky, <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a>!</p>
 
     </article>
   </main>

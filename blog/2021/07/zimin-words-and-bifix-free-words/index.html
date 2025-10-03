@@ -99,13 +99,12 @@
 </div>
 <p>Binary solo from Bret at 1:26.</p>
 <p>I’ve written a Ruby script that generates a random string of length 29 and uses a regular expression to find the first instance of a substring matching the pattern \(Z_3 = ABACABA\). You can <a href="https://tio.run/##XYxNC4JAFEX3/opLbpRi/NgVtFChdbQsI6acbMJ5ysxESPTbTa1F9eDcC@9xnr4d265zseFU1KpqUQoSmlthwHGUxHULY7WkEvUZlaDSXhDPmaNH4fC5LYedlUoYpniDB3bhLNozw1VTCTzZtZbkTSa@0@BHdFysJBUG9iJwltpYbKWShHutCyRpkvX8S8ycOHmBx6b@QB69M4/zKPB34b5/uubWCk0LfE/Sk46djZki6boX">run it on TIO</a>, the impressive (and free!) tool from <a href="https://github.com/DennisMitchell">Dennis Mitchell</a>.</p>
-<pre><code class="language-ruby"># Randomly generates a binary string of length 29.
-random_string = 29.times.map { [0,1].sample }.join(&quot;&quot;)
+<pre class="language-ruby"><code class="language-ruby"><span class="token comment"># Randomly generates a binary string of length 29.</span>
+random_string <span class="token operator">=</span> <span class="token number">29.</span>times<span class="token punctuation">.</span>map <span class="token punctuation">{</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sample <span class="token punctuation">}</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token string-literal"><span class="token string">""</span></span><span class="token punctuation">)</span>
 p random_string
-# Finds the first Zimin word ABACABA
-p random_string.scan(/(.+)(.+)\1(.+)\1\2\1/)[0]
-# Pattern:             A   B   A C   A B A
-</code></pre>
+<span class="token comment"># Finds the first Zimin word ABACABA</span>
+p random_string<span class="token punctuation">.</span>scan<span class="token punctuation">(</span><span class="token regex-literal"><span class="token regex">/(.+)(.+)\1(.+)\1\2\1/</span></span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token comment"># Pattern:             A   B   A C   A B A</span></code></pre>
 <p>Why 29? Because all binary words of length 29 contain the pattern \(Z_3 = ABACABA\). However, <a href="https://people.math.sc.edu/cooper/FAUpaper.pdf">Joshua Cooper and Danny Rorabaugh’s paper</a> provides 48 words of length 28 that avoid that pattern (these and their reversals):</p>
 <p>1100000010010011011011111100
 1100000010010011111101101100

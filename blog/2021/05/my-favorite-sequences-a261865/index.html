@@ -66,7 +66,10 @@
 <blockquote>
 <p>\(A261865(n)\) is the least integer \(k\) such that some multiple of \(\sqrt k\) falls in the interval \((n, n+1)\).</p>
 </blockquote>
-<p><a href="https://blog.peterkagey.com/wp-content/uploads/2021/02/screen-shot-2021-02-26-at-9.29.29-pm.png"><img src="/assets/blog/2021-05-31/open_problem_v2_13_number_line.png" alt="An illustration of the first dozen terms of A261865"></a></p>
+<figure>
+  <img src="/assets/blog/2021-05-31/open_problem_v2_13_number_line.png">
+  <figcaption>An illustration of the first dozen terms of A261865</figcaption>
+</figure>
 <p>For example, \(A261865(3) = 3\) because there is no multiple of \(\sqrt 1\) in \((3,4)\) (since \(3 \sqrt{1} \leq 3\) and \(4 \sqrt{1} \geq 4\)); there is no multiple of \(\sqrt{2}\) in \((3,4)\) (since \(2 \sqrt{2} \leq 3\) and \(3 \sqrt 2 \geq 4\)); but there is a multiple of \(\sqrt 3\) in \((3,4)\), namely \(2\sqrt 3\).</p>
 <p>As indicated in the picture, the sequence begins $$\color{blue}{ 2,2,3,2,2},\color{red}{3},\color{blue}{2,2,2},\color{red}{3},\color{blue}{2,2},\color{red}{3},\color{blue}{2,2,2},\color{red}{3},\color{blue}{2,2},\color{red}{3},\color{blue}{2,2},\color{magenta}{7},\dots.$$</p>
 <p><img src="/assets/blog/2021-05-31/scatterplot_a261865.png" alt=""></p>
@@ -77,12 +80,11 @@
 <p>If this conjecture is true, then the following table gives approximate densities.</p>
 <table><thead><tr><th>\(i\)</th><th>\(d_i\)</th></tr></thead><tbody><tr><td>\(1\)</td><td>\(d_1 = 0\%\)</td></tr><tr><td>\(2\)</td><td>\(d_2 = 70.7\%\)</td></tr><tr><td>\(3\)</td><td>\(d_3 = 16.9\%\)</td></tr><tr><td>\(4\)</td><td>\(d_4 = 0\%\)</td></tr><tr><td>\(5\)</td><td>\(d_5 = 5.54\%\)</td></tr><tr><td>\(6\)</td><td>\(d_6 = 2.79\%\)</td></tr><tr><td>\(7\)</td><td>\(d_7 = 1.53\%\)</td></tr><tr><td>\(10\)</td><td>\(d_{10} = 0.797\%\)</td></tr><tr><td>\(11\)</td><td>\(d_{11} = 0.519\% \)</td></tr><tr><td>\(399\)</td><td>\(d_{399} = 3.53 \times 10^{-11} \%\)</td></tr></tbody></table>
 <p>This was computed with the Mathematica code:</p>
-<pre><code class="language-plain">d[i_] := (d[i] = If[
+<pre class="language-plain"><code class="language-plain">d[i_] := (d[i] = If[
   SquareFreeQ[i],
   N[(1 - Sum[d[j], {j, 2, i - 1}])/Sqrt[i], 50],
   0
-])
-</code></pre>
+])</code></pre>
 <h2>Finding Large Values</h2>
 <p>I’m interested in values of \(n\) such that \(A261865(n)\) is large, and I reckon that there are clever ways to construct these, perhaps by looking at some Diophantine approximations of \(\sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt{6}, \dots\). In February, I <a href="https://codegolf.stackexchange.com/q/219889/53884">posted a challenge</a> on Code Golf Stack Exchange to have folks compete in writing programs that can quickly find large values of \(A261865(n)\).</p>
 <p>Impressively, <a href="https://codegolf.stackexchange.com/a/219946/53884">Noodle9’s C++ program</a> won the challenge. In under a minute, this program found that the input \(n=1001313673399\) makes \(A261865\) particularly large: \(A261865(1001313673399) = 399\). Within the time limit, no other programs could find a value of \(n\) that makes \(A261865(n)\) larger.</p>
