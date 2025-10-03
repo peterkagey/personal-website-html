@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zimin Words and Bifixes</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>Zimin Words and Bifixes</h1>
+    
+    
+    <p>by Peter Kagey (2021-07-26)</p>
+    
+    <article>
+      <p>One of the earliest contributions to the On-Line Encyclopedia of Integer Sequences (OEIS) was a family sequences counting the number of words that begin (or don’t begin) with a palindrome:</p>
+<ul>
+<li>Let \(f_k(n)\) be the number of strings of length \(n\) over a \(k\)-letter alphabet that begin with a nontrivial palindrome&quot; for various values of \(k\).
+<ul>
+<li><a href="https://oeis.org/A248122">A248122</a> (k=3), <a href="https://oeis.org/A249629">A249629</a> (k=4), <a href="https://oeis.org/A249638">A249638</a> (k=5), <a href="https://oeis.org/A249639">A249639</a> (k=6), <a href="https://oeis.org/A249640">A249640</a> (k=7), <a href="https://oeis.org/A249641">A249641</a> (k=8), <a href="https://oeis.org/A249642">A249642</a> (k=9), <a href="https://oeis.org/A249643">A249643</a> (k=10)</li>
+</ul>
+</li>
+<li>Let \(g_k(n)\) be the number of strings of length n over a \(k\)-letter alphabet that do not begin with a nontrivial palindrome.
+<ul>
+<li><a href="https://oeis.org/A252697"></a><a href="https://oeis.org/A252696">A252696</a> (k=3), <a href="https://oeis.org/A252697">A252697</a> (k=4), <a href="https://oeis.org/A252698">A252698</a> (k=5), <a href="https://oeis.org/A252699">A252699</a> (k=6), <a href="https://oeis.org/A252700">A252700</a> (k=7), <a href="https://oeis.org/A252701">A252701</a> (k=8), <a href="https://oeis.org/A252702">A252702</a> (k=9), <a href="https://oeis.org/A252703">A252703</a> (k=10).</li>
+</ul>
+</li>
+<li>Number of binary strings of length \(n\) that begin with an odd-length palindrome. <a href="https://oeis.org/A254128">(A254128</a>)</li>
+</ul>
+<p>(If I had known better, I would have published fewer sequences in favor of <a href="https://oeis.org/A342237">a table</a>, and I would have requested contiguous blocks of A-numbers.)</p>
+<p>I must have written some Python code to compute some small terms of this sequence, and I knew that \(g_k(n) = k^n – f_k(n)\), but I remember being at in my friend Q’s bedroom when the recursion hit me for \(f_k(n)\): $$f_k(n) = kf_k(n-1) + k^{\lceil n/2 \rceil} – f_k\big(\lceil \frac n 2 \rceil \big)$$</p>
+<h2>&quot;Bifix-free&quot; words</h2>
+<p>One sequence that I didn’t add to the OEIS was the &quot;Number of binary strings of length n that begin with an even-length palindrome&quot;—that’s because this was already in the Encyclopedia under a different name:</p>
+<blockquote>
+<p><a href="https://oeis.org/A094536">A094536</a>: Number of binary words of length n that are not &quot;bifix-free&quot;.</p>
+<p><cite>0, 0, 2, 4, 10, 20, 44, 88, 182, 364, 740, 1480, 2980, 5960, …</cite></p>
+</blockquote>
+<p>A &quot;bifix&quot; is a shared prefix and suffix, so a &quot;bifix-free&quot; word is one such that all prefixes are different from all suffixes. More concretely, if the word is \(\alpha_1\alpha_2 \dots \alpha_n\), then \((\alpha_1, \alpha_2, \dots, \alpha_k) \neq (\alpha_{n-k+1},\alpha_{n-k+2},\dots,\alpha_n)\) for all \(k \geq 1\).</p>
+<p>The reason why the number of binary words of length \(n\) that begin with an even length palindrome is equal to the number of binary words of length \(n\) that have a bifix is because we have a bijection between the two sets. In particular, find the shortest palindromic prefix, cut it in half, and stick the first half at the end of the word, backward. I’ve asked for a <a href="https://math.stackexchange.com/q/4052001/121988">better bijection on Math Stack Exchange</a>, so if you have any ideas, please share them with me!</p>
+<p>In 2019–2020, Daniel Gabric, Jeffrey Shallit wrote a paper closely related to this called <a href="https://arxiv.org/abs/1906.03689">Borders, Palindrome Prefixes, and Square Prefixes</a>.</p>
+<h2>Zimin words</h2>
+<p>A <a href="https://en.wikipedia.org/wiki/Sesquipower">Zimin word</a> can be defined recursively, but I think it’s most suggestive to see some examples:</p>
+<ul>
+<li>\(Z_1 = A\)</li>
+<li>\(Z_2 = ABA\)</li>
+<li>\(Z_3 = ABACABA\)</li>
+<li>\(Z_4 = ABACABADABACABA\)</li>
+<li>\(Z_n = Z_{n-1} X Z_{n-1}\)</li>
+</ul>
+<p>All Zimin words \(Z_n\) are examples of &quot;unavoidable patterns&quot;, because every sufficiently long string with letters in <em>any</em> finite alphabet contains a substring that matches the \(Z_n\) pattern.</p>
+<p>For example the word \(0100010010111000100111000111001\) contains a substring that matches the Zimin word \(Z_3\). Namely, let \(A = 100\), \(B = 0\), and \(C = 1011\), visualized here with each \(A\) emboldened: \( 0(\mathbf{100}\,0\,\mathbf{100}\,1011\,\mathbf{100}\,0\,\mathbf{100})111000111001\).</p>
+<div class="video-container">
+  <iframe loading="lazy" title="The Humans Are Dead - Full version" width="500" height="375" src="https://www.youtube.com/embed/B1BdQcJ2ZYY?start=84&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div>
+<p>Binary solo from Bret at 1:26.</p>
+<p>I’ve written a Ruby script that generates a random string of length 29 and uses a regular expression to find the first instance of a substring matching the pattern \(Z_3 = ABACABA\). You can <a href="https://tio.run/##XYxNC4JAFEX3/opLbpRi/NgVtFChdbQsI6acbMJ5ysxESPTbTa1F9eDcC@9xnr4d265zseFU1KpqUQoSmlthwHGUxHULY7WkEvUZlaDSXhDPmaNH4fC5LYedlUoYpniDB3bhLNozw1VTCTzZtZbkTSa@0@BHdFysJBUG9iJwltpYbKWShHutCyRpkvX8S8ycOHmBx6b@QB69M4/zKPB34b5/uubWCk0LfE/Sk46djZki6boX">run it on TIO</a>, the impressive (and free!) tool from <a href="https://github.com/DennisMitchell">Dennis Mitchell</a>.</p>
+<pre><code class="language-ruby"># Randomly generates a binary string of length 29.
+random_string = 29.times.map { [0,1].sample }.join(&quot;&quot;)
+p random_string
+# Finds the first Zimin word ABACABA
+p random_string.scan(/(.+)(.+)\1(.+)\1\2\1/)[0]
+# Pattern:             A   B   A C   A B A
+</code></pre>
+<p>Why 29? Because all binary words of length 29 contain the pattern \(Z_3 = ABACABA\). However, <a href="https://people.math.sc.edu/cooper/FAUpaper.pdf">Joshua Cooper and Danny Rorabaugh’s paper</a> provides 48 words of length 28 that avoid that pattern (these and their reversals):</p>
+<p>1100000010010011011011111100
+1100000010010011111101101100
+1100000010101100110011111100
+1100000010101111110011001100
+1100000011001100101011111100
+1100000011001100111111010100
+1100000011011010010011111100
+1100000011011011111100100100
+1100000011111100100101101100
+1100000011111100110011010100
+1100000011111101010011001100
+1100000011111101101100100100</p>
+<p>1100100100000011011011111100
+1100100100000011111101101100
+1100100101101100000011111100
+1100110011000000101011111100
+1100110011000000111111010100
+1100110011010100000011111100
+1101010000001100110011111100
+1101010000001111110011001100
+1101010011001100000011111100
+1101101100000010010011111100
+1101101100000011111100100100
+1101101100100100000011111100</p>
+<h2>The Zimin Word \(Z_2 = ABA\) and Bifixes</h2>
+<p>The number of Zimin words of length \(n\) that match the pattern ABA is equal to the number of of words that begin with an odd-length palindrome. Analogously, the number of words with a bifix is equal to the number of words that begin with an even-length palindrome. The number of these agree when \(n\) is odd.</p>
+<p>I’ve added OEIS sequences <a href="https://oeis.org/A342510">A342510</a>–<a href="https://oeis.org/A342512">A342512</a> which relate to how numbers viewed as binary strings avoid—or fail to avoid—Zimin words. <a href="https://codegolf.stackexchange.com/q/220679/53884">I asked users to implement this on Code Golf Stack Exchange</a>.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

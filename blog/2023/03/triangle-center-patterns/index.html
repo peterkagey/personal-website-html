@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Triangle Center Patterns</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>Triangle Center Patterns</h1>
+    
+    
+    <p>by Peter Kagey (2023-03-14)</p>
+    
+    <article>
+      <p>I made a video that illustrates a particularly interesting &quot;<a href="https://en.wikipedia.org/wiki/Random_dynamical_system#Motivation_2:_Connection_to_Markov_Chain">discrete state random dynamical system</a>,&quot; which was inspired by a Tweet (and a mistake) that I saw.</p>
+<p>First, be hypnotized by this video, which I recommend you watch in 4K, and then scroll down to read about the inspiration and the cool math going on under the hood.</p>
+<div class="video-container">
+  <iframe loading="lazy" title="Triangle center patterns" width="500" height="375" src="https://www.youtube.com/embed/L9s1rq2kR5E?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div>
+<h2>Matt Henderson’s tweet</h2>
+<p>This whole exploration came from a &quot;<a href="https://www.youtube.com/watch?v=Ht9LMYivBnM">happy accident</a>&quot; that Matt Henderson made (and corrected) in the Tweets below. Watch the video in the first tweet, which shows an concrete example of the &quot;discrete state random dynamical system&quot; that I mentioned earlier.</p>
+<blockquote>
+<p>a mistake in the animation- it should say 'centroid' not 'incenter'. If you use the incenter, you create this pattern <a href="https://t.co/HPVrpvi9uv">pic.twitter.com/HPVrpvi9uv</a></p>
+<p>— Matt Henderson (@matthen2) <a href="https://twitter.com/matthen2/status/1268816506617544704?ref_src=twsrc%5Etfw">June 5, 2020</a></p>
+</blockquote>
+<p>Matt’s mistake got me interested! If the centroid and the incenter create such interesting and intricate designs, what about other triangle centers like the circumcenter or the orthocenter? In particular, I was interested in finding examples of interesting triangle centers from <a href="https://faculty.evansville.edu/ck6/encyclopedia/etc.html">Clark Kimberling’s Encyclopedia of Triangle Centers</a> (ETC), which is a database with over 53,000 named triangle centers, including all of those that you have heard about.</p>
+<h2>Patterns from other triangle centers</h2>
+<p>Instead of illustrating the results of this process on hexagons as Matt did in his tweet, I’ve done the iterative process on squares. Here are six examples illustrating the patterns for various triangle centers from <a href="https://faculty.evansville.edu/ck6/encyclopedia/etc.html">ETC</a>.</p>
+<p><img src="/assets/blog/2023-03-15/x1.png" alt=""></p>
+<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X1">X(1)</a></p>
+<p><img src="/assets/blog/2023-03-15/x10.png" alt=""></p>
+<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X58">X(10)</a></p>
+<p><img src="/assets/blog/2023-03-15/x31.png" alt=""></p>
+<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X31">X(31)</a></p>
+<p><img src="/assets/blog/2023-03-15/x8.png" alt=""></p>
+<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X244">X(8)</a></p>
+<p><img src="/assets/blog/2023-03-15/x11.png" alt=""></p>
+<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X11">X(11)</a></p>
+<p><img src="/assets/blog/2023-03-15/x37.png" alt=""></p>
+<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X141">X(37)</a></p>
+<h2>Some basics of triangle centers</h2>
+<p>In the video at the top, I interpolate between 20 chosen triangle centers in a continuous way so that we can see how the image transforms as we transform the choice of triangle center.</p>
+<p>In order to understand what’s going on, you have to understand something about coordinates. We can define a triangle center with a map \(f\colon \mathbb{R}^3 \to \mathbb{R}\) such that \(f(a,b,c)\) is symmetric in \(b\) and \(c\). What we do is take the triangle with vertices \(\vec{v}_1\), \(\vec{v}_2\), and \(\vec{v}_3\), define \(a = |\vec{v}_2 – \vec{v}_3|\), \(b = |\vec{v}_1 – \vec{v}_3|\), and \(c = |\vec{v}_1 – \vec{v}_2|\), and define the midpoint as the weighted average \[\frac{f(a,b,c) \vec{v}_1 + f(b,c,a)\vec{v}_2, + f(c,a,b)\vec{v}_3}{f(a,b,c) + f(b,c,a) + f(c,a,b)}.\] Whenever \(f(a,b,c)\), \(f(b,c,a)\), and \(f(c,a,b)\) are simultaneously positive, this will describe a point inside the triangle. This way of describing points in space is called a &quot;<a href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system">barycentric coordinate system</a>&quot;.</p>
+<p><img src="/assets/blog/2023-03-15/barycentric.png" alt=""></p>
+<p>An illustration of the vertices and sides.</p>
+<p>In the table below, I give examples of five triangle centers and their description in barycentric coordinates. In the case of \(X(2)\), the barycentric coodinates say that the centroid is just an honest average of the vertices. In all other cases, the other triangle centers are <em>weighted</em> averages of the vertices.</p>
+<table><tbody><tr><td>Triangle Center</td><td>Barycentric</td></tr><tr><td>X(1)&nbsp;=&nbsp;INCENTER</td><td>\(f(a,b,c) = a\)</td></tr><tr><td>X(2)&nbsp;=&nbsp;CENTROID</td><td>\(f(a,b,c) = 1\)</td></tr><tr><td>X(6)&nbsp;=&nbsp;SYMMEDIAN POINT</td><td>\(f(a,b,c) = a^2\)</td></tr><tr><td>X(10) = SPIEKER CENTER</td><td>\(f(a,b,c) = b + c\)</td></tr><tr><td>X(58) = ISOGONAL CONJUGATE OF X(10)</td><td>\(\displaystyle f(a,b,c) = \frac{a^2}{b + c}\)</td></tr></tbody></table>
+<p>A table of five triangle centers and the corresponding barycentric coordinates.</p>
+<h2>A curve of triangle centers</h2>
+<p>The triangle centers in the video are all described by functions of the form \[f(a,b,c) = a^{x_1}(b + c – a)^{x_2} (bc)^{x_3} (b^{x_4} + c^{x_4})^{x_5},\] where \((x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5\) and each frame follows a path in \(\mathbb{R}^5\), which intersects a triangle center from ETC for a single frame every ten seconds. In order to get this path in five-dimensional space, the code stitches together twenty piecewise-defined Bézier curves into a differentiable curve that goes through those twenty &quot;anchor points&quot;, as suggested by the following illustration. (Thankfully I could reuse some of the code I wrote for my Twitter bot <a href="https://twitter.com/BotzierCurves">@BotzierCurves</a>!)</p>
+<p><img src="/assets/blog/2023-03-15/connect_the_dots_inverted.png" alt=""></p>
+<p>A two-dimensional example of a curve through seven anchor points.</p>
+<p>In addition to choosing a slightly different triangle center in each frame, the colors of the points change throughout time as well. For example, in the picture below, the pixel is colored white if the same side is chosen twice in a row, red if the opposite side is chosen, and blue or green if the side to the left or right of the previous side is chosen. In the video, these colors change too, by following a Bézier curve through the three-dimensional <a href="https://en.wikipedia.org/wiki/RGB_color_spaces">RGB colorspace</a>.</p>
+<p><img src="/assets/blog/2023-03-15/x244.png" alt=""></p>
+<p>An illustration of a triangle center pattern where the color of the pixel depends on the order that the sides are chosen.</p>
+<p>You can download the code for yourself by visiting my <a href="https://github.com/peterkagey/MathArt">MathArt repository on Github</a>. If you have thoughts on this, if you want to play around with these ideas together, or if you just want to chat, please don’t hesitate to reach out!</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

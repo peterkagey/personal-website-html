@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A π-estimating Twitter bot: Part II</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>A π-estimating Twitter bot: Part II</h1>
+    
+    
+    <p>by Peter Kagey (2021-04-26)</p>
+    
+    <article>
+      <p>This is the second part of a three part series about making the Twitter bot @<a href="https://twitter.com/BotfonsNeedles">BotfonsNeedles</a>. <a href="https://blog.peterkagey.com/2021/04/botfonsneedles-part-1/">Click here for Part I</a>.</p>
+<p>In this part, I’ll explain how to use the Twitter API to</p>
+<ul>
+<li>post the images to Twitter via the Python library <a href="https://www.tweepy.org/">Tweepy</a>, and</li>
+<li>keep track of all of the Tweets to get an increasingly accurate estimate of <em>𝜋</em>.</li>
+</ul>
+<p>In the next part, I’ll explain how to</p>
+<ul>
+<li>Package all of this code up into a Docker container</li>
+<li>Push the Docker image to Amazon Web Services (AWS)</li>
+<li>Set up a function on AWS Lambda to run the code on a timer</li>
+</ul>
+<h3>Get access to the Twitter API</h3>
+<p>When I made my first Twitter bot, I followed the article &quot;<a href="https://towardsdatascience.com/how-to-make-a-twitter-bot-for-free-6bca8298f1ef">How to Make a Twitter Bot With Python</a>&quot;.</p>
+<p>In order to have your Python code post to your Twitter feed, you’ll need to register for a Twitter developer account, which you can do by going to <a href="https://developer.twitter.com/">https://developer.twitter.com/</a> and clicking apply. You’ll need to link the account to a phone number and fill out a few minutes of forms. For all four of my bots, (<a href="https://twitter.com/oeisTriangles">@oeisTriangles</a>, <a href="https://twitter.com/oeisTriangles">@xorTriangles</a>, <a href="https://twitter.com/RobotWalks">@RobotWalks</a>, and this bot) I’ve been approved right away.</p>
+<p><em>Keep in mind that you can only use your phone number on two Twitter accounts—so you’ll have to use a Google Voice number or something else if you want to make more than two bots.</em></p>
+<p>Once you’re approved, go to the Developer Portal, click on the Projects &amp; Apps Overview, and click on the blue &quot;+ New Project&quot; button. You will be given a series of short questions, but what you submit isn’t too important.</p>
+<p><img src="/assets/blog/2021-04-26/Screen.2-HhdwjaAlGKsh.png" alt=""></p>
+<p>Create a new project by clicking &quot;+ New Project&quot; via the Projects &amp; Apps overview</p>
+<h3>Getting the API Keys</h3>
+<p>Once you’ve filled out the form, you should be sent to a page with an API Key and API Secret Key. This is essentially the password to your account, so don’t share these values.</p>
+<p><img src="/assets/blog/2021-04-26/Screen.2-DL5GWf7i6IeE.png" alt=""></p>
+<p>A screenshot showing a (fake) API Key and API Secret Key.</p>
+<p>We’re going to take these values and place them in a new file called <code>secrets.py</code>, which will look like this:</p>
+<pre><code class="language-python">API_KEY        = &quot;3x4MP1e4P1kEy&quot;
+API_SECRET_KEY = &quot;5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG&quot;
+</code></pre>
+<h3>Getting the Access Token</h3>
+<p>Once we close the API Key dialog, we’ll need to update our app to allow us to both read and write. We can do this by clicking on the gear to access our projects &quot;App settings&quot;.</p>
+<p><img src="/assets/blog/2021-04-26/Screen.3-oUuoOKRchQLH.png" alt=""></p>
+<p>Click the gear to access the settings.</p>
+<p>Once you’re in, you’ll want to edit the App permissions to &quot;Read and Write&quot;.</p>
+<p><img src="/assets/blog/2021-04-26/Screen.3-2xiuqM49gyID.png" alt=""></p>
+<p>Click &quot;Edit&quot; to update from &quot;Read Only&quot; to &quot;Read and Write&quot;.</p>
+<p>Then go to the &quot;Keys and Tokens&quot; page (which you can do by clicking the key icon from the app settings page), and generate an Access Token and Secret.</p>
+<p><img src="/assets/blog/2021-04-26/Screen.4-ulhY4eH5CUOU.png" alt=""></p>
+<p>Click &quot;Generate&quot; to make an access token and secret.</p>
+<p>When you click &quot;Generate&quot; you should get an Access Token and a Access Token Secret, which you need to add to your <code>secrets.py</code> file.</p>
+<p><img src="/assets/blog/2021-04-26/Screen.5-Col00LnJ1RoT.png" alt=""></p>
+<p>Thus your <code>secrets.py</code> file should contain four lines:</p>
+<pre><code class="language-python">API_KEY             = &quot;3x4MP1e4P1kEy&quot;
+API_SECRET_KEY      = &quot;5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG&quot;
+ACCESS_TOKEN        = &quot;202104251234567890-exTrAacC3551Nf0&quot;
+ACCESS_TOKEN_SECRET = &quot;5eCr3t0KEnGibB3r15h&quot;
+</code></pre>
+<h3>hello_twitter.py</h3>
+<p>Next, we’ll hook this up to the Twitter API via <a href="https://www.tweepy.org/">tweepy</a>, which I’ll install in the terminal using <code>pip</code>:</p>
+<pre><code class="language-bash">$ pip3 install tweepy
+</code></pre>
+<p>And make a file called <code>twitter_accessor.py</code> that looks exactly like this:</p>
+<pre><code class="language-python">from secrets import *
+import tweepy
+
+class TwitterAccessor:
+  def __init__(self):
+    auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
+    auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+    self.api = tweepy.API(auth)
+
+  def read_last_tweet(self):
+    timeline = self.api.user_timeline(count=1, exclude_replies=True, tweet_mode='extended')
+    return timeline[0].full_text
+</code></pre>
+<p>Next, we’ll check that everything is working by making a file called <code>hello_twitter.py</code>:</p>
+<pre><code class="language-python">from twitter_accessor import TwitterAccessor
+
+new_status = &quot;Hello Twitter!&quot;
+TwitterAccessor().api.update_status(new_status)
+print(&quot;Posted status: '&quot; + new_status + &quot;'&quot;)
+</code></pre>
+<p>Run it via the command line:</p>
+<pre><code class="language-python">$ python3 hello_twitter.py
+</code></pre>
+<p>If something looks broken, try to fix it. (If it’s broken because of something I’ve said, let me know.)</p>
+<h2>Reading and writing Tweets</h2>
+<p>Now you can delete your <code>hello_twitter.py</code> file, because we’re about to do this for real! In part 3, we’re going to wire this up to AWS Lambda, which has certain preferences for how we structure things. With this in mind, I’d recommend following my naming conventions, unless you have a reason not to.</p>
+<p>Each Tweet should have copy that looks like this:</p>
+<blockquote>
+<p>This trial dropped 100 needles, 59 of which crossed a line. This estimates π ≈ 2*(100/59) ≈ 3.38, an error of 7.90%.</p>
+<p>In total, 374 of 600 needles have crossed a line.
+This estimates π ≈ 3.20, an error of 2.13%.</p>
+</blockquote>
+<p>BotfonsNeedles should parse the &quot;374 of 600&quot;, throw 100 more needles, and report on the updated estimate of \(\pi\).</p>
+<h3>An implementation</h3>
+<p>I’ve made a file called <code>tweet_builder.py</code>, with five functions:</p>
+<ul>
+<li><code>pi_digits_difference</code> takes an estimate of \(\pi\) and outputs an appropriate length string. For example, if the estimate is \(3.14192919\), then it will output <code>&quot;3.14192&quot;</code>, which are all of the correct digits, plus the first two that are wrong. If the estimate is \(3.20523\), then it will output &quot;<code>3.20&quot;</code>.</li>
+<li><code>error_estimate</code> takes an estimate of \(\pi\) and computes the right number of digits to show in its percent error. For example, if the estimate is \(3.20523\) (which is \(2.0256396\%\) too big) then it will output <code>&quot;2.02%&quot;</code>.</li>
+<li><code>get_running_estimate</code> uses the API in <code>TwitterAccessor</code> to look up the last tweet—then throws some needles, and outputs both the total number of needles tossed and the total number of needles that cross a line.</li>
+<li><code>tweet_copy</code> takes the information from <code>get_running_estimate</code>, formats it with <code>pi_digits_distance</code> and <code>error_estimate</code> and writes the text for the tweet.</li>
+<li><code>post_tweet</code> uses the API in <code>TwitterAccessor</code> to send the tweet to Twitter, with an image to match.</li>
+</ul>
+<p>Most of these implementations are just details which <a href="https://github.com/peterkagey/BotfonsNeedles/blob/main/tweet_builder.py">can be found on Github</a>, but I want to highlight <code>post_tweet</code>, the function that is likely to be the most relevant to you.</p>
+<pre><code class="language-python">def post_tweet(self):
+  file_name = self.drawer.draw_image()
+  copy = self.tweet_copy()
+  self.accessor.api.update_with_media(filename=file_name, status=copy)
+  return copy
+</code></pre>
+<blockquote>
+<p>This trial dropped 100 needles, 69 of which crossed a line. This estimates π ≈ 2*(100/69) ≈ 2.89, an error of -7.74%.</p>
+<p>In total, 506 of 800 needles have crossed a line.
+This estimates π ≈ 3.162, an error of 0.651%. <a href="https://t.co/MZtGQxyh2p">pic.twitter.com/MZtGQxyh2p</a></p>
+<p>— Botfon's Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386546547047821313?ref_src=twsrc%5Etfw">April 26, 2021</a></p>
+</blockquote>
+<blockquote>
+<p>This trial dropped 100 needles, 57 of which crossed a line. This estimates π ≈ 2*(100/57) ≈ 3.50, an error of 11.7%.</p>
+<p>In total, 563 of 900 needles have crossed a line.
+This estimates π ≈ 3.197, an error of 1.77%. <a href="https://t.co/M9eCi2Y8o1">pic.twitter.com/M9eCi2Y8o1</a></p>
+<p>— Botfon's Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386550166845497347?ref_src=twsrc%5Etfw">April 26, 2021</a></p>
+</blockquote>
+<h3>What’s next</h3>
+<p>In Part III, we’ll get this running in a Docker container and have it run on AWS Lambda.</p>
+<p>If you want to get a head start, make a file called <code>app.py</code> with a function called <code>handler</code>, which AWS Lambda will call. This function should return a string, which will get logged.</p>
+<pre><code class="language-python">from tweet_builder import TweetBuilder
+
+def handler(event, context):
+  return TweetBuilder().post_tweet()
+</code></pre>
+<p>As usual, if you have any questions or ideas, there’s nothing I love more than collaborating. If you want help getting your bot off the ground, ask me about it on Twitter, <a href="https://twitter.com/PeterKagey">@PeterKagey</a>!</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

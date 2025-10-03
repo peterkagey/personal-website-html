@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nerd sniped by Richard Stanley</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>Nerd sniped by Richard Stanley</h1>
+    
+    
+    <p>by Peter Kagey (2025-06-23)</p>
+    
+    <article>
+      <p>I got nerd sniped by this first open problem described in a <a href="https://mathoverflow.net/a/15306/104733">MathOverflow post by Richard Stanley</a>, which suggests that there’s good reason to suspect that an innocuous-seeming combinatorial function might grows faster than any recursive function!</p>
+<p><a href="https://mathoverflow.net/a/15306/104733"><img src="/assets/blog/2025-06-24/StanleyUndecidability.png" alt=""></a></p>
+<p>This sounds right up my alley, but I when I read this, I didn’t have any intuition for how to think about \(f(P)\) and \(p(n)\), so I wrote this post to investigate it for myself and share that with you. (After all, I tell my students: &quot;writing is thinking.&quot;)</p>
+<p>My first step was to write down some examples and search for the \(p\)-sequence in the OEIS. (After all, I tell my students: &quot;start by writing down some examples.&quot;)</p>
+<h1>Intuition from examples</h1>
+<ul>
+<li>(\(n=1\) and \(n=2\)) There’s only one \(1\)-omino, the square, and only one \(2\)-omino, the domino. Since both are rectangles, \(p(1) = p(2) = 1\).</li>
+<li>(\(n=3\)) There are two \(3\)-ominos:
+<ul>
+<li>We can tile a rectangle with one copy of <img src="/assets/blog/2025-06-24/polyomino_3b.png" class="inline-img" style="max-height: 0.75em;">.</li>
+<li>We can tile a rectangle with two copies of <img src="/assets/blog/2025-06-24/polyomino_3a.png" class="inline-img">.</li>
+<li>Therefore \(p(3) = 2\).</li>
+</ul>
+</li>
+<li>(\(n=4\)) There are five free \(3\)-ominos:
+<ul>
+<li>We can tile a rectangle with 1 copy of <img src="/assets/blog/2025-06-24/polyomino_4a.png" class="inline-img" style="max-height: 0.75em;">.</li>
+<li>We can tile a rectangle with 1 copy of <img src="/assets/blog/2025-06-24/polyomino_4d.png" class="inline-img">.</li>
+<li>We can tile a rectangle with 2 copies of <img src="/assets/blog/2025-06-24/polyomino_4b.png" class="inline-img">.</li>
+<li>We can tile a rectangle with 4 copies of <img src="/assets/blog/2025-06-24/polyomino_4c.png" class="inline-img">.</li>
+<li>We cannot tile a rectangle with any number of copies of <img src="/assets/blog/2025-06-24/polyomino_4e.png" class="inline-img">.</li>
+<li>Therefore \(p(4) = 4\).</li>
+</ul>
+</li>
+</ul>
+<h2>OEIS sequence A126140</h2>
+<p>I found <a href="https://oeis.org/A126140">OEIS sequence A126140</a> by searching for <code>1, 1, 2, 4 polyomino rectangle</code>.</p>
+<p><img src="/assets/blog/2025-06-24/OEIS_A126140.png" alt=""></p>
+<h2>Rectifiable polyominoes</h2>
+<p>The OEIS sequence led me to <a href="https://cflmath.com/Polyomino/rectifiable.html">Michael Reid’s website</a>, which led me to a host of resources studying these objects. Here’s a definition of rectifiable polyominoes and their orders that matches Richard Stanley’s definition.</p>
+<blockquote>
+<ul>
+<li>A polyomino is said to be <strong>rectifiable</strong> if a certain number of copies of the polyomino will together form a rectangle.</li>
+<li>The <strong>order</strong> of a polyomino is the smallest number of pieces needed to form a rectangle.</li>
+</ul>
+<p><cite><a href="http://www.recmath.com/PolyPages/PolyPages/index.htm?Rectif.htm">Archive of Recreational Mathematics: The Poly Pages</a></cite></p>
+</blockquote>
+<h3>Rectangular tilings</h3>
+<p>The following examples come from <a href="https://cflmath.com/Polyomino/rectifiable_data.html">Michael Reid’s data on rectifiable polyominoes</a> and WaybackMachine archive of <a href="https://web.archive.org/web/20100429001429/http://www2.stetson.edu/~efriedma/order/index.html">Erich Friedman’s list of &quot;Polyominoes in Rectangles.&quot;</a> Take a look at those links for more examples and background.</p>
+<h2>\(\operatorname{A126140}(5) = p(5) = 10\)</h2>
+<h2>\(\operatorname{A126140}(6) = p(6) = 92\)</h2>
+<p>The largest minimal rectangle of a \(5\)-omino is a \(10\times5\) packing:</p>
+<p>The <a href="https://peterkagey.com/?attachment_id=2095">first published example</a> of this that I could find was by <a href="https://www.fq.math.ca/Scanned/3-1/klarner.pdf">David A. Klarner in &quot;Some results concerning polyominoes&quot; in the <em>Fibonacci Quarterly</em> (1965)</a>.</p>
+<p>The largest minimal rectangle of a \(6\)-omino is a \(24\times23\) packing, which was first found by T.W. Marlow and published in <a href="https://www.mayhematics.com/che/chessics_23.pdf">Chessics #23 (1985)</a>, &quot;the journal of generalized chess.&quot;</p>
+<div class="columns">
+  <figure class="wide-column">
+    <img src="/assets/blog/2025-06-24/5omino10_5x10.png">
+    <figcaption>A \(5\times10\) packing of a \(5\)-omino</figcaption>
+  </figure>
+  <figure class="wide-column">
+    <img src="/assets/blog/2025-06-24/Y6-24x23-1.png">
+    <figcaption>A \(24\times23\) packing of a \(6\)-omino</figcaption>
+  </figure>
+</div>
+<p>The \(24\times23\) packing was independently discovered and published by Karl A Dahlke as &quot;<a href="https://doi.org/10.1016/0097-3165(89)90083-6">The Y-hexomino has order 92</a>&quot; in (the quite presigious) Journal of Combinatorial Theory, Series A.</p>
+<div class="columns">
+  <figure class="wide-column">
+    <a href="https://www.mayhematics.com/che/chessics_23.pdf"><img src="/assets/blog/2025-06-24/chessics_23_78.png"></a>
+    <figcaption>Chessics #23, Page 78</figcaption>
+  </figure>
+  <figure class="wide-column">
+    <a href="https://www.mayhematics.com/che/chessics_23.pdf"><img src="/assets/blog/2025-06-24/chessics_23_79.png"></a>
+    <figcaption>Chessics #23, Page 79</figcaption>
+  </figure>
+</div>
+<h2>\(\operatorname{A126140}(7)\), \(\operatorname{A126140}(8)\), and \(\operatorname{A126140}(9)\)</h2>
+<p>The largest minimal rectangle of a \(7\)-omino is a \(19\times28\) packing, which was first published by Karl A. Dahlke in JCTA in the 1989 article &quot;<a href="https://doi.org/10.1016/0097-3165(89)90084-8">A Heptomino of Order 76</a>.&quot;</p>
+<p>The largest minimal rectangle of a \(8\)-omino is a \(41\times48\) packing. It looks like <a href="http://www.eklhad.net/polyomino/index.html">Karl Dahlke</a> computes this and has the code on <a href="https://github.com/eklhad/trec">Github as &quot;trec.&quot;</a></p>
+<p>The largest minimal rectangle of a \(9\)-omino is \(6\times6\) or \(9\times4\). Many \(9\)-ominos have \(f(P) = 4\), but the \(9\times4\) rectangle seems to occur only for one \(9\)-omino.</p>
+<div class="columns">
+  <figure>
+    <a href="https://doi.org/10.1016/0097-3165(89)90084-8"><img src="/assets/blog/2025-06-24/7omino76_19x28.png"></a>
+    <figcaption>A \(19\times28\) packing of a \(7\)-omino</figcaption>
+  </figure>
+  <figure>
+    <a href="https://github.com/eklhad/trec/blob/master/pictures/f0e040.png"><img src="/assets/blog/2025-06-24/8omino246_41x48.png"></a>
+    <figcaption>A \(41\times48\) packing of a \(8\)-omino</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2025-06-24/9omino4_9x4.png">
+    <figcaption>A \(9\times4\) packing of a \(9\)-omino</figcaption>
+  </figure>
+</div>
+<h2>Other &quot;prime&quot;</h2>
+<p><a href="https://cflmath.com/Polyomino/rectifiable_data.html">Michael Reid’s data</a> gives larger polyominos with &quot;prime&quot; rectangles, those which do not contain any smaller rectangle. However, it’s not clear if these rectangles are claimed to be minimal (in which case, for example, \(p(10) \geq 138\)) or if all polyominoes have been checked. Nevertheless the packings are all visually interesting, so I’ve copied them here.</p>
+<div class="columns">
+  <figure class="wide-column">
+    <a href="/assets/blog/2025-06-24/10omino138_30x46.png"><img src="/assets/blog/2025-06-24/10omino138_30x46.png"></a>
+    <figcaption>10-omino (30 × 46)</figcaption>
+  </figure>
+  <figure class="wide-column">
+    <a href="/assets/blog/2025-06-24/14omino396_66x84.png"><img src="/assets/blog/2025-06-24/14omino396_66x84.png"></a>
+    <figcaption>11-omino (54 × 55)</figcaption>
+  </figure>
+  <figure class="wide-column">
+    <a href="/assets/blog/2025-06-24/12omino180_45x48.png"><img src="/assets/blog/2025-06-24/12omino180_45x48.png"></a>
+    <figcaption>12-omino (45 × 48)</figcaption>
+  </figure>
+  <figure class="wide-column">
+    <a href="/assets/blog/2025-06-24/15omino60_30x30.png"><img src="/assets/blog/2025-06-24/15omino60_30x30.png"></a>
+    <figcaption>15-omino (30 × 30)</figcaption>
+  </figure>
+</div>
+<h2>Bluesky</h2>
+<p>Want to chat more about this! Let me know on Bluesky!</p>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:6iqekgdgrt7o3hc5rwouj2de/app.bsky.feed.post/3ln6ktzrk2o2l" data-bluesky-cid="bafyreidc2hii5x4prbcpisfa32bgal2agx7ldpvybsaot3mccuy6tse57y" data-bluesky-embed-color-mode="system"><p lang="en">I got nerd sniped by Richard Stanley this week.
+<p>He answered a MathOverflow question about undecidable problems by suggesting that &quot;people in the area believe&quot; that it's undecidable whether or not a given polyomino, you can use it to tile a rectangle, as in the below picture.<br><br><a href="https://bsky.app/profile/did:plc:6iqekgdgrt7o3hc5rwouj2de/post/3ln6ktzrk2o2l?ref_src=embed">[image or embed]</a></p>— Peter Kagey (<a href="https://bsky.app/profile/did:plc:6iqekgdgrt7o3hc5rwouj2de?ref_src=embed">@peterkagey.com</a>) <a href="https://bsky.app/profile/did:plc:6iqekgdgrt7o3hc5rwouj2de/post/3ln6ktzrk2o2l?ref_src=embed">April 19, 2025 at 9:34 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script></p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

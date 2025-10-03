@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A π-estimating Twitter bot: Part I</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>A π-estimating Twitter bot: Part I</h1>
+    
+    
+    <p>by Peter Kagey (2021-04-18)</p>
+    
+    <article>
+      <p>This is the first part of a three part series about making the Twitter bot @BotfonsNeedles. In this part, I will write a Python 3 program that</p>
+<ul>
+<li>uses a Monte Carlo method to approximate \(\pi\) with <a href="https://en.wikipedia.org/wiki/Buffon%27s_needle_problem">Buffon’s needle problem</a>, and</li>
+<li>produces an image with the Python library <a href="https://python-pillow.org/">Pillow</a></li>
+</ul>
+<p>In <a href="https://blog.peterkagey.com/2021/04/botfonsneedles-part-2/">the second part</a>, I’ll explain how to use the Twitter API to</p>
+<ul>
+<li>post the images to Twitter via the Python library <a href="https://www.tweepy.org/">Tweepy</a>, and</li>
+<li>keep track of all of the Tweets to get an increasingly accurate estimate of \(\pi\).</li>
+</ul>
+<p>In the third part, I’ll explain how to</p>
+<ul>
+<li>Package all of this code up into a Docker container</li>
+<li>Push the Docker image to Amazon Web Services (AWS)</li>
+<li>Set up a function on AWS Lambda to run the code on a timer</li>
+</ul>
+<p><img src="/assets/blog/2021-04-19/drop_100.gif" alt=""></p>
+<p>An example of dropping 100 needles in Buffon’s needle problem. Needles that cross a vertical line are colored red.</p>
+<h3>Buffon’s needle problem</h3>
+<p><a href="https://mathworld.wolfram.com/BuffonsNeedleProblem.html">Buffon’s needle problem</a> is a surprising way of computing \(\pi\). It says that if you throw \(n\) needles of length \(\ell\) randomly onto a floor that has parallel lines that are a distance of \(\ell\) apart, then the expected number of needles that cross a line is \(\frac{2n}\pi\). Therefore one way to approximate (\pi) is to divide \(2n\) by the number of needles that cross a line.</p>
+<p>I had my computer simulate 400 needle tosses, and 258 of them crossed a line. Thus this experiment approximates \(\pi \approx 2\!\left(\frac{400}{258}\right) \approx 3.101\), about a 1.3% error from the true value.</p>
+<div class="columns">
+  <figure>
+    <img src="/assets/blog/2021-04-19/needle_drop.png" alt="63/100 needles cross a vertical line.">
+    <figcaption>63/100 needles cross a vertical line; approximates \(\pi \approx 200/63 \approx 3.174\).</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2021-04-19/needle_drop.png" alt="61/100 needles cross a vertical line.">
+    <figcaption>61/100 needles cross a vertical line; approximates \(\pi \approx 200/61 \approx 3.279\).</figcaption>
+  </figure>
+</div>
+<div class="columns">
+  <figure>
+    <img src="/assets/blog/2021-04-19/needle_drop.png" alt="68/100 needles cross a vertical line.">
+    <figcaption>68/100 needles cross a vertical line; approximates \(\pi \approx 200/68 \approx 2.941\).</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2021-04-19/needle_drop.png" alt="66/100 needles cross a vertical line.">
+    <figcaption>66/100 needles cross a vertical line; approximates \(\pi \approx 200/66 \approx 3.030\).</figcaption>
+  </figure>
+</div>
+<h3>Modeling in Python</h3>
+<p>Our goal is to write a Python program that can simulate tossing needles on the floor both numerically (e.g. &quot;258 of 400 needles crossed a line&quot;) and graphically (i.e. creates the PNG images like in the above example).</p>
+<h4>The <code>RandomNeedle</code> class.</h4>
+<p>We’ll start by defining a <code>RandomNeedle</code> class which takes</p>
+<ul>
+<li>a <code>canvas_width</code>, \(w\);</li>
+<li>a <code>canvas_height</code>, \(h\);</li>
+<li>and a <code>line_spacing,</code> \(\ell\).</li>
+</ul>
+<p>It then initializes by choosing a random angle (\theta \in [0,\pi]) and random placement for the center of the needle in \[(x,y) \in \left[\frac{\ell}{2}, w -\,\frac{\ell}{2}\right] \times \left[\frac{\ell}{2}, h -\,\frac{\ell}{2}\right]\] in order to avoid issues with boundary conditions.</p>
+<p>Next, it uses the angle and some plane geometry to compute the endpoints of the needle: \[\begin{bmatrix}x\\y\end{bmatrix} \pm \frac{\ell}{2}\begin{bmatrix}\cos(\theta)\\ \sin(\theta)\end{bmatrix}.\]</p>
+<p>The class’s first method is <code>crosses_line</code>, which checks to see that the \(x\)-values at either end of the needle are in different &quot;sections&quot;. Since we know that the parallel lines occur at all multiples of \(\ell\), we can just check that \[\left\lfloor\frac{x_\text{start}}{\ell}\right\rfloor \neq \left\lfloor\frac{x_\text{end}}{\ell}\right\rfloor.\]</p>
+<p>The class’s second method is <code>draw</code> which takes a <code>drawing_context</code> via Pillow and simply draws a line.</p>
+<pre><code class="language-python">import math
+import random
+
+class RandomNeedle:
+  def __init__(self, canvas_width, canvas_height, line_spacing):
+    theta = random.random()*math.pi
+    half_needle = line_spacing//2
+    self.x = random.randint(half_needle, canvas_width-half_needle)
+    self.y = random.randint(half_needle, canvas_height-half_needle)
+    self.del_x = half_needle * math.cos(theta)
+    self.del_y = half_needle * math.sin(theta)
+    self.spacing = line_spacing
+
+  def crosses_line(self):
+    initial_sector = (self.x - self.del_x)//self.spacing
+    terminal_sector = (self.x + self.del_x)//self.spacing
+    return abs(initial_sector - terminal_sector) == 1
+
+  def draw(self, drawing_context):
+    color = &quot;red&quot; if self.crosses_line() else &quot;grey&quot;
+    initial_point  = (self.x-self.del_x, self.y-self.del_y)
+    terminal_point = (self.x+self.del_x, self.y+self.del_y)
+    drawing_context.line([initial_point, terminal_point], color, 10)
+</code></pre>
+<p>By generating \(100\,000\) instances of the <code>RandomNeedle</code> class, and keeping a running estimation of (\pi) based on what percentage of the needles cross the line, you get a plot like the following:</p>
+<p><img src="/assets/blog/2021-04-19/moving_average.png" alt=""></p>
+<p>This estimates \(\pi\approx 2\left(\frac{10000}{63681}\right) \approx 3.1407\) an error of 0.03%.</p>
+<h2>The <code>NeedleDrawer</code> class</h2>
+<p>The <code>NeedleDrawer</code> class is all about running these simulations and drawing pictures of them. In order to draw the images, we use the Python library Pillow which I installed by running</p>
+<pre><code>pip3 install Pillow
+</code></pre>
+<p>When an instance of the <code>NeedleDrawer</code> class is initialized, makes a &quot;floor&quot; and &quot;tosses&quot; 100 needles (by creating 100 instances of the <code>RandomNeedle</code> class).</p>
+<p>The main function in this class is <code>draw_image</code>, which makes a \(4096 \times 2048\) pixel canvas, draws the vertical lines, then draws each of the <code>RandomNeedle</code> instances.</p>
+<p>(It saves the files to the <code>/tmp</code> directory in root because that’s the only place we can write file to our Docker instance on AWS Lambda, which will be a step in part 2 of this series.)</p>
+<pre><code class="language-python">from PIL import Image, ImageDraw
+from random_needle import RandomNeedle
+
+class NeedleDrawer:
+  def __init__(self):
+    self.width   = 4096
+    self.height  = 2048
+    self.spacing = 256
+    self.random_needles = self.toss_needles(100)
+
+  def draw_vertical_lines(self):
+    for x in range(self.spacing, self.width, self.spacing):
+      self.drawing_context.line([(x,0),(x,self.height)],width=10, fill=&quot;black&quot;)
+
+  def toss_needles(self, count):
+    return [RandomNeedle(self.width, self.height, self.spacing) for _ in range(count)]
+
+  def draw_needles(self):
+    for needle in self.random_needles:
+      needle.draw(self.drawing_context)
+
+  def count_needles(self):
+    cross_count = sum(1 for n in self.random_needles if n.crosses_line())
+    return (cross_count, len(self.random_needles))
+
+  def draw_image(self):
+    img = Image.new(&quot;RGB&quot;, (self.width, self.height), (255,255,255))
+    self.drawing_context = ImageDraw.Draw(img)
+    self.draw_vertical_lines()
+    self.draw_needles()
+    del self.drawing_context
+    img.save(&quot;/tmp/needle_drop.png&quot;)
+    return self.count_needles()
+</code></pre>
+<h2>Next Steps</h2>
+<p>In the next part of this series, we’re going to add a new class that uses the Twitter API to post needle-drop experiments to Twitter. In the final part of the series, we’ll wire this up to AWS Lambda to post to Twitter on a timer.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

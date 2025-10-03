@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Regular Truchet Tilings</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>Regular Truchet Tilings</h1>
+    
+    
+    <p>by Peter Kagey (2021-02-22)</p>
+    
+    <article>
+      <p>I recently made my first piece of math art for my apartment: a 30″×40″ canvas print based on putting <a href="https://en.wikipedia.org/wiki/Truchet_tiles">Truchet tiles</a> on the <a href="https://en.wikipedia.org/wiki/Truncated_trihexagonal_tiling">truncated trihexagonal tiling</a>.</p>
+<div class="columns">
+  <figure>
+    <img src="/assets/blog/2021-02-22/TrihexagonalTruchetCanvasPrintPhoto.jpg">
+    <figcaption>A photo of the <a href="https://www.canvaschamp.com/">canvas print</a>.</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2021-02-22/truncated_trihexagonal_gradient.png">
+    <figcaption>The original image.</figcaption>
+  </figure>
+</div>
+<p>I first became interested in these sorts of patterns after my former colleague <a href="https://twitter.com/ShaneDelmore">Shane</a> sent me a <a href="https://www.youtube.com/watch?v=m9joBLOZVEo&amp;t=24s">YouTube video</a> of the one-line Commodore 64 BASIC program:
+<code>10 PRINT CHR$(205.5+RND(1)); : GOTO 10</code></p>
+<div class="video-container">
+  <iframe loading="lazy" title="10 PRINT CHR$(205.5+RND(1)); : GOTO 10" width="500" height="375" src="https://www.youtube.com/embed/m9joBLOZVEo?start=24&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div>
+<p>I implemented <a href="http://www.peterkagey.com/mazes#show">a version of this program on my website</a>, with the added feature that you could click on a section to recolor the entire component, and this idea was also the basis of <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=3">Problem 2</a> and <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=32">Problem 31</a> in my <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">Open Problem Collection</a>.</p>
+<p>I saw this idea generalized by <a href="https://twitter.com/icecolbeveridge">Colin Beveridge</a> in the article &quot;<a href="http://chalkdustmagazine.com/features/too-good-to-be-truchet/">Too good to be Truchet</a>&quot; in Chalkdust Magazine. In this article, Colin counts the ways of drawing hexagons, octagons, and decagons with curves connecting the midpoints of edges, and regions colored in an alternating fashion. In the case of the hexagon, there are three ways to do it, one of which looks like <a href="https://en.wikipedia.org/wiki/Palago">Palago</a> tiles.</p>
+<p><img src="/assets/blog/2021-02-22/palago.png" alt=""></p>
+<p>An example of a hexagonal Truchet tiling. Cameron Browne would call this particular example a <a href="http://cambolbro.com/games/palago/creature-counts/">Palago &quot;creature</a>&quot;, which are counted by <a href="https://codegolf.stackexchange.com/a/193088/53884">Arnauld Chevallier</a>‘s brilliant program.</p>
+<p>It turns out that if you ignore the colors, <a href="https://math.stackexchange.com/q/284512/121988">the number of ways</a> to pair up midpoints of the sides of a \(2n\)-gon in such a way that the curves connecting the midpoints don’t overlap is given by <a href="https://oeis.org/A000108">the \(n\)-th Catalan number</a>. For example, there are \(C_4 = 14\) ways of connecting midpoints of the sides of an octagon, where different rotations are considered distinct.</p>
+<div class="columns">
+<div><img src="/assets/blog/2021-02-22/octagon_1.png" alt="Two distinct rotations"></div>
+<div><img src="/assets/blog/2021-02-22/octagon_2.png" alt="Eight distinct rotations"></div>
+<div><img src="/assets/blog/2021-02-22/octagon_3.png" alt="Four distinct rotations"></div>
+</div>
+There are three regular tilings of the plane by \\(2n\\)-gons, the [square tiling](https://en.wikipedia.org/wiki/Square_tiling), the [truncated square tiling](https://en.wikipedia.org/wiki/Truncated_square_tiling), and the [truncated trihexagonal tiling](https://en.wikipedia.org/wiki/Truncated_trihexagonal_tiling). Placing a Truchet tile uniformly at random over each of the \\(2n\\)-gons, results in a really lovely emergent structure.
+<div class="columns">
+  <figure>
+    <img src="/assets/blog/2021-02-22/square_tiling.png">
+    <figcaption>Square tiling.</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2021-02-22/truncated_square_tiling.png">
+    <figcaption>Truncated square tiling, randomly colored.</figcaption>
+  </figure>
+</div>
+<p>If you find these designs as lovely as I do, I’d recommend taking a look at the Twitter bots <a href="https://twitter.com/RandomTiling">@RandomTiling</a> by <a href="https://twitter.com/divbyzero">Dave Richeson</a> and <a href="https://twitter.com/Truchet_Nested">@Truchet_Nested</a>/<a href="https://twitter.com/Trichet_Nested">@Trichet_Nested</a> by <a href="https://twitter.com/SerinDelaunay">@SerinDelaunay</a> (based on a <a href="https://christophercarlson.com/portfolio/multi-scale-truchet-patterns/">idea from Christopher Carlson</a>) which feature a series of visually interesting generalizations of Truchet tilings and which are explained in Christopher’s blog post &quot;<a href="https://christophercarlson.com/portfolio/multi-scale-truchet-patterns/">Multi-scale Truchet Patterns</a>&quot;.</p>
+<p>https://twitter.com/Truchet_Nested/status/1363597959011655681</p>
+<div class="columns">
+<div>
+  <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:govmo6vhelgbszd3zz6shpnc/app.bsky.feed.post/3ly2twoqrhf2s" data-bluesky-cid="bafyreibsqj4itizrmohatwi4cj2piqyqzcuyuzgqmjfmxxxpwoha2iujdm" data-bluesky-embed-color-mode="system"><p lang=""> <br><br><a href="https://bsky.app/profile/did:plc:govmo6vhelgbszd3zz6shpnc/post/3ly2twoqrhf2s?ref_src=embed">[image or embed]</a></p>&mdash; Random Tiling Bot (<a href="https://bsky.app/profile/did:plc:govmo6vhelgbszd3zz6shpnc?ref_src=embed">@randomtiling.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:govmo6vhelgbszd3zz6shpnc/post/3ly2twoqrhf2s?ref_src=embed">September 4, 2025 at 9:43 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+</div>
+<div>
+  <img src="/assets/blog/2021-02-22/Truchet_Nested.png">
+</div>
+<div>
+  <img src="/assets/blog/2021-02-22/Trichet_Nested.png">
+</div>
+</div>
+<p>Edward Borlenghi has a blog post &quot;<a href="https://arearugscarpet.blogspot.com/2014/04/the-curse-of-truchets-tiles.html">The Curse of Truchet’s Tiles</a>&quot; about how he tried—mostly unsuccessfully—to sell products based on Truchet tiles, like carpet squares and refrigerator magnets (perhaps similar to <a href="https://shop.momath.org/home-96-magnets-for-creating-endless-designs.html">&quot;YoYo&quot; magnets from Magnetic Poetry</a>). The post is filled with lots of cool, alternative designs for square Truchet tiles and how they fit together. Edward <a href="https://patents.google.com/patent/US20070178286">got a patent</a> for some of his ideas, and his attempt to sell these very cool products feels like it could have been my experience in another life.</p>
+<p>If you want to see more pretty images and learn more about this, make sure to read <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.222.8243&amp;rep=rep1&amp;type=pdf">Truchet Tilings Revisited</a> by Robert J. Krawczyk! If you want to see what this looks like on a spherical geometry, check out <a href="https://twitter.com/matt_zucker/status/1340313802487820288?s=20">Matt Zucker’s tweet</a>. And if you want to try to draw some of these patterns for yourself, take a look at @Ayliean’s Truchet Tiles Zine.</p>
+<p><a href="https://twitter.com/Ayliean/status/1358532928565821445"><img src="/assets/blog/2021-02-22/Ayliean_TruchetZine.png"></a></p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

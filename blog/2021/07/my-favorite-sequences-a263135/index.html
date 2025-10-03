@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Favorite Sequences: A263135</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>My Favorite Sequences: A263135</h1>
+    
+    
+    <p>by Peter Kagey (2021-07-12)</p>
+    
+    <article>
+      <p>This is the fourth in my installment of <em><a href="https://blog.peterkagey.com/category/my-favorite-sequences/">My Favorite Sequences</a></em>. This post discusses sequence <a href="https://oeis.org/A263135">A263135</a> which counts penny-to-penny connections among \(n\) pennies on the vertices of a hexagonal grid. I published this sequence in October 2015 when I was thinking about hexagonal-grid analogs to the <a href="https://blog.peterkagey.com/2021/06/my-favorite-sequences-a278299/">&quot;Not Equal&quot; grid</a>. The square-grid analog of this sequence is <a href="https://oeis.org/A123663">A123663</a>.</p>
+<h2><a href="https://oeis.org/A263135">A263135</a>: Placing Pennies</h2>
+<p>The sequences <a href="http://A047932">A047932</a> and <a href="https://oeis.org/A263135">A263135</a> are about placing pennies on a hexagonal grid in such a way that maximizes the number of penny-to-penny contacts, which occurs when you place the pennies in a spiral. A047932, counts the contacts when the pennies are placed on the faces of the grid; A263135 counts the contacts with the pennies placed on the vertices.</p>
+<p><img src="/assets/blog/2021-07-12/hexagon_faces.gif" alt=""></p>
+<p>Pattern of placing pennies in A047932.</p>
+<p><img src="/assets/blog/2021-07-12/hexagon_vertices.gif" alt=""></p>
+<p>Pattern of placing pennies in A263135.</p>
+<p>While spiral shapes maximize the number of penny-to-penny contacts, there are sometimes non-spiral shapes that have the same number of contacts. For example, in the case of the square grid, there are <a href="https://oeis.org/A100092">\(A100092(n)\)</a> such ways to lay down \(n\) pennies on the square grid with the maximum number of connections. <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=109">Problem 108</a> in my Open Problem Collection asks about generalizing this OEIS sequence to other settings such as the hexagonal grid.</p>
+<p><a href="https://peterkagey.files.wordpress.com/2021/02/fpennies.png"><img src="/assets/blog/2021-07-12/fpennies.png" alt=""></a></p>
+<p>A047932(11) = 21</p>
+<p><a href="https://peterkagey.files.wordpress.com/2021/02/vpennies.png"><img src="/assets/blog/2021-07-12/vpennies.png" alt=""></a></p>
+<p>A263135(22) = 27</p>
+<h4>Comparing contacts</h4>
+<p>Notice that the &quot;face&quot; pennies in A047932 can have a maximum of six neighbors, while the &quot;vertex&quot; pennies in A263135 can have a maximum of three. In the limit, most pennies are &quot;interior&quot; pennies with the maximum number of contacts, so \(A047932(n) \sim 3n\) and \(A263135(n) \sim \frac32n\).</p>
+<p>Looking at the comparative growth rates, it is natural to ask how the number of connections of \(n\) face pennies compares to the number of connections of \(2n\) vertex pennies. In October 2015 I made a conjecture on the OEIS that this difference grew like sequence <a href="https://oeis.org/A216256">A216256</a>.</p>
+<blockquote>
+<p>Conjecture: For \(n &gt; 0\), \[A263135(2n) – A047932(n) = \lceil\sqrt{3n – 3/4} – 1/2\rceil = A216256(n).\]</p>
+</blockquote>
+<p>I believe that the sequence A216256 on the right hand side appears to be the same as the sequence &quot;n appears \(\displaystyle\left\lfloor \frac{2n+1}{3} \right\rfloor\) times,&quot; but I’d have to crack open my <em><a href="https://en.wikipedia.org/wiki/Concrete_Mathematics">Concrete Mathematics</a></em> book to prove it.</p>
+<p>This is <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=21">Problem 20</a> in my <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">Open Problem Collection</a>, and I’ve placed a small, $5 bounty on solving this conjecture—so if you have an idea of how to prove this, let me know in exchange for a latte! I’ve asked about this in my Math Stack Exchange question <a href="https://math.stackexchange.com/q/4100221/121988">Circle-to-circle contacts on the hexagonal grid</a>—so feel free to answer there or let me know on Twitter, <a href="https://twitter.com/PeterKagey">@PeterKagey</a>.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yan Zhang on power and Conway</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="blog">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    <h1>Yan Zhang on power and Conway</h1>
+    
+    
+    <p>by Peter Kagey (2025-05-04)</p>
+    
+    <article>
+      <p>You know that feeling when someone expresses a feeling that you have better than you ever could figure out how to articulate it? While archiving my old liked tweets, I noticed that Yan Zhang had done it. Twice.</p>
+<p>I wanted to make sure that I copied these notes down so that I could still reference these ideas even now that I’ve left Twitter.</p>
+<h2>On status</h2>
+<p>I learned about this thread via Francis Su. Here Yan writes about status and power inside (and outside) the mathematical universe, by sharing a painful story where he overheard a student dismissing his career path which emphasized teaching and mentoring.</p>
+<p><img src="/assets/blog/2025-05-05/FrancisSu_power.png" alt=""></p>
+<p>Here’s the story that Yan describes as &quot;a very personal traumatic experience that I am still working to overcome,&quot; and says, &quot;tl;dr; I have no regrets, except this single experience that represents a force in the world that is powerful, destructive, and unnerving.&quot;</p>
+<blockquote>
+<p>Nearly 100% of people w/ my background (elite-level math BA and PhD degrees) either went to high-tier (R1) research universities or exitted into finance, tech, or startups. I work at a state school and barely pay the bills. I am fulfilled by my job and side projects.</p>
+<p>One of those side projects is SPARC, a summer program I run for gifted youth. I helped organize it for over 10 years. (For people not in the know, doing this stuff is *not* helpful for your CV in academia; it’s like teaching awards — your hiring committee won’t care.</p>
+<p>Weird — why don’t *universities* care about teaching? The way the status sausage is made is people want &quot;objective&quot; proofs of ability to bring objective money and fame to the dept. Teaching is &quot;nice&quot; but doesn’t bring money and fame to the dept. So they don’t care, QED.)</p>
+<p>Anyway, I’m at a non-elite place where people actually appreciate (or at least doesn’t actively scoff at) these things; I spend a lot of time mentoring my &quot;normal&quot; students there and &quot;gifted&quot; students at SPARC. A diversified portfolio, since *both* types are important!</p>
+<p>I spent a lot of time on one of the SPARC students. To hide identity, let’s say it’s a &quot;he.&quot; I was the one who interviewed him. I felt he was super talented, though socially awkward. Through some deliberation, we ended up accepting him. We got what we expected: smart, but loud and often detrimental to the discussions. I personally spent a ton of extra hours on him to help him &quot;play nice&quot; with the community, since the community offered him a lot of love and support. We repeated this for another year, it was exhausting, but I had hope.</p>
+<p>In particular, I had hope that the values of our community got to him: it’s not just about how smart you are or what your &quot;intellectual status&quot; is. It’s about seeing each other as people, nurturing each other, doing good things in the world.</p>
+<p>I thought I got through to him.</p>
+<p>Seasoned educators would sigh here: &quot;you never ‘really get through’ to people. Reality isn’t that clean.&quot; I know, I know. This example was a case in point. Clearly this lesson never &quot;got through&quot; to myself. 😩</p>
+<p>Fast forward a couple of years, I meet him at some event with a few other MIT kids, some SPARC alumni and a few new faces. I was in a mentor role, so I was mostly sharing my experiences. Tired, but having a good time. Then I overhear him talking w/ some other kids.</p>
+<p>It started off generic: the same old stuff about grades, grad school, how to succeed later, conversations he probably have (and I probably myself had) hundreds of times. He’s going to be a PhD at an elite place and he wants to be a professor afterwards. I did too.</p>
+<p>&quot;Yeah, I really want to avoid ending up where Yan is.&quot; (even typing these (probably inaccurate) words made my stomach ache. I get that feeling very rarely. It reminded me of heartbreak or tilting away hundreds of dollars on a poker hand: Sickness. &quot;Why?&quot; Regret. Anger.)</p>
+<p>Then, just to twist the knife a bit, another SPARC alum nodded and agreed with him. &quot;Yeah I know what you mean.&quot; Countless things flooded my mind: My high school contest successes. My &quot;elite&quot; degrees. When I got my teaching award. When a colleague belittled my award. When I left math for finance. When I decided to return, trading $ for beauty, for happiness. Smiling SPARC kids, talking about emotions and lives instead of &quot;success.&quot; My inspirations (like <a href="https://x.com/FedericoArdila">@FedericoArdila</a> and <a href="https://x.com/mathyawp">@mathyawp</a> ) who put love in teaching instead of CV-boosting SPARC kids who told me &quot;thanks for showing me there are things other than competition&quot;. My amazing state school students who learned math while supporting their parents. My R1 colleague who unironally boasted about scaring students off so he can work during office hours.</p>
+<p>I sat down somewhere and just cried.</p>
+<p>The tears wouldn’t stop coming out.</p>
+<p>I’m crying myself typing these words. It’s just too complicated.</p>
+<p>&quot;Regret&quot; is probably the wrong word. It’s more &quot;powerlessness.&quot;</p>
+<p>Status, or &quot;proof of success,&quot; gives us humans ability to recognize work. It also gives us an objective metric to optimize. With optimization comes the rat race. It’s like money. Money gives us ability to trade liquidly. And also an objective metric to optimize.</p>
+<p>Status leads many, many talented youth to chase a few small things. All that energy to outcompete your friends so you can get to a stronger school. All that energy to get to a better postdoc. All that energy to get to a higher position at Google.</p>
+<p>And like all ideological fetishes, it protects itself. If someone wise person tries to show me that I was blinded by status, my first instinct is probably to check that person’s status to see if he should be &quot;allowed&quot; to speak.</p>
+<p>It felt like fighting an Elder God, like Poverty or Inequality. I couldn’t just destroy a core. I was wrestling against human nature and the cold, hard truths of incentives. Before Status, I felt (and still feel) powerless.</p>
+</blockquote>
+<p>I think I’ve found myself doing a lot of sense-making over the past few years with respect to Yan’s lens here—and it seems to have especial explanatory power for me now in grappling with the the post-2024 political landscape.</p>
+<h2>&quot;Why John Conway gets no recognition&quot;</h2>
+<p>I want to put that thread in conversation with another thread that Yan wrote a few months earlier—the way that the pursuit of status (and jobs) manifests in the math research world sometimes devalues certain kinds of intellectual pursuits that aren’t &quot;serious,&quot; even if the corresponding problems are every bit as difficult, and especially when the problems are interesting to a non-specialist audience.</p>
+<p>The thread comes in response to the article &quot;<a href="https://www.quantamagazine.org/john-conway-solved-mathematical-problems-with-his-bare-hands-20200420/">John Conway Solved Mathematical Problems With His Bare Hands</a>&quot; in <em>Quanta</em> by <a href="https://www.quantamagazine.org/authors/kevin-hartnett/">Kevin Hartnett</a>.</p>
+<p><img src="/assets/blog/2025-05-05/GrahamFarmelo_Conway.png" alt=""></p>
+<p><img src="/assets/blog/2025-05-05/YanZhang_Conway.png" alt=""></p>
+<blockquote>
+<p>Thread to explain why Conway gets no recognition. Thesis: what is considered &quot;important&quot; in pure mathematics is purely a social construct. Corollary: why Conway doesn’t get recognition from mathematicians. Now that I have triggered some, I’ll explain.</p>
+<p>First, pure mathematicians are not (usually) conspiring to make pyramid schemes — in fact, most of them are good-hearted people earnestly trying to ask themselves fundamental questions. However, this does not mean they’re immune to groupthink and idea-incest.</p>
+<p>Second, pure math fundamentally lacks &quot;skin in the game&quot; in form of a relationship with the real world (and as we often see from physics or statistics, even those fields entangled with the real world can fail spectacularly when the incentive structures aren’t well-designed).</p>
+<p>Third, pure math has a very high barrier to entry, and thus lacks critics who are knowledgeable enough to say something interesting. This means most criticism must come from its own practitioners, which creates incest. Now, let’s see what happens when we mix these three.</p>
+<p>First, a field gains initial success, solving 90% of the fundamental questions (that are often quite &quot;easy&quot; technically). Then, they become pyramid schemes (often, but not always, with no sociopathic figurehead), this is self-justified since you need new Ph D. students.</p>
+<p>Finally, the language and *taste* calcifies. Now there’s an idea of what math is &quot;good&quot; or &quot;cool.&quot; These aren’t testable or objective. They can’t be. These are organic social constructs.</p>
+<p>In short, when wise people say &quot;math is a social construct,&quot; they don’t mean the *veracity* of math. They’re talking about the *importance*. Here is where Conway falters (for his colleagues) and delights (for everyone else): Conway did any mathematics he thought interesting.</p>
+<p>By doing this, he is showing irreverence for the social norms other mathematicians have created as &quot;important.&quot; As all of us know, when you act as if you don’t care about what others seem &quot;cool,&quot; you become &quot;uncool.&quot; And that’s exactly what happened with (some) mathematicians.</p>
+<p>They know he has technical chops and is an excellent problem solver *and* theory builder. But he’s doing those things with games, pictures, weird number sequences. He’s not doing those things with cohomology, sheaves, derived functors.</p>
+<p>They aren’t necessarily even jealous; they’re just confused. &quot;Why isn’t someone who is *able* to do these things doing them? Why is he wasting time?&quot;</p>
+<p>Sometimes they will (again, with completely good intentions) tell Conway and/or people like him &quot;you know, with your talents you can probably do some pretty important work.&quot; (I myself have gotten these comments, while doing &quot;unimportant&quot; work like consulting or blockchain)</p>
+<p>So when Conway does his (amazing) work, he’s really doing it as a &quot;people’s mathematician.&quot; He’s doing what *he* sees as fun and important, which makes it a more &quot;vulgar&quot; form of mathematics. For professional mathematicians trained on &quot;classy&quot; mathematics, their taste buds have also been trained (from their socially-constructed groups) to see &quot;vulgar&quot; math as less important, much in the way that a 90’s classical TV critic may judge South Park or the Simpsons as &quot;mainstream trash,&quot; or, as something deeply close to my heart, people saying that &quot;videogames cannot be art.&quot; When they play videogames, their brain is *trained* to tell them that this is *supposed* to be bad, because &quot;respectable&quot; people are not playings games but are reading books, or so they think. We mathematicians are no different. RIP.</p>
+</blockquote>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="default">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+    <p>
+      <a href="/blog">blog</a>
+      : <a href="/about">about</a>
+      : <a href="/cv">cv</a>
+      : <a href="/art">art</a>
+      : <a href="/apps">apps</a>
+      : <a href="/problems">problems</a>
+      <!--: <a href="/shop">shop</a>-->
+      : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+    </p>
+    <p>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
+    </p>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    
+    <article>
+      <table class="cv">
+<tr>
+  <td><h1>Peter Kagey</h1></td>
+  <td style="vertical-align: middle;">(<a href="https://raw.githubusercontent.com/peterkagey/academic/main/cv/cv.pdf">Download as PDF</a>)</td>
+</tr>
+</table>
+<p style="margin:0;">
+<b>Email</b>: <a href="mailto:pkagey@cpp.edu">pkagey@cpp.edu</a><br>
+<b>Last updated</b>: September 28, 2025<br>
+</p>
+<hr>
+<h2>Work</h2>
+<table class="cv">
+<tr>
+  <td>
+    <b>California State Polytechnic University, Pomona</b>
+    <br>
+    Assistant Professor of Mathematics
+  </td>
+  <td>August 2024&ndash;present</td>
+<tr>
+<tr>
+  <td>
+    <b>Harvey Mudd College</b>
+    <br>
+    Visiting Assistant Professor of Mathematics
+  </td>
+  <td>July 2022&ndash;June 2024</td>
+<tr>
+<tr>
+  <td>
+    <b>University of Southern California</b>
+    <br>
+    Assistant Lecturer and Teaching Assistant
+  </td>
+  <td>August 2017&ndash;July 2022</td>
+<tr>
+<tr>
+  <td>
+    <b>Dexcom</b>
+    <br>
+    Software Engineer
+  </td>
+  <td>December 2014&ndash;August 2017</td>
+<tr>
+</table>
+<hr>
+<h2>Education</h2>
+<table class="cv">
+  <tr>
+    <td>
+      <b>University of Southern California</b><br>
+      Ph.D. in Mathematics<br>
+      Dissertation: "Permutations, Statistics, and Switches"<br>
+      Advisor: Sami Assaf
+    </td>
+    <td>August 2017&ndash;July 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Oregon State University</b><br>
+      B.S. in Mathematics
+    </td>
+    <td>September 2011&ndash;June 2014</td>
+  </tr>
+</table>
+<hr>
+<h2>Teaching</h2>
+<table class="cv">
+  <tr>
+    <th colspan="2">Cal Poly Pomona</th>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.cpp.edu/preview_course.php?catoid=69&coid=370092">MAT 4200</a></b>: Differential Geometry
+    </td>
+    <td><i>S26</i></td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.cpp.edu/preview_course.php?catoid=69&coid=369521">MAT 4170</a></b>: Introduction to Abstract Algebra I
+    </td>
+    <td><i>S26</i></td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.cpp.edu/preview_course.php?catoid=69&coid=371677">MAT 4111A</a></b>: Putnam Preparation
+    </td>
+    <td>F25</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.cpp.edu/preview_course.php?catoid=69&coid=369513">MAT 3100W</a></b>: Introduction to Mathematical Proof
+    </td>
+    <td>F25</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.cpp.edu/preview_course.php?catoid=68&coid=356938">MAT 4180</a></b>: Introduction to Abstract Algebra II
+    </td>
+    <td>S25</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.cpp.edu/preview_course.php?catoid=68&coid=356356">MAT 4170</a></b>: Introduction to Abstract Algebra I
+    </td>
+    <td>F24</td>
+  </tr>
+  <tr>
+    <th colspan="2">Harvey Mudd College</th>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7297">MATH 106</a></b>: Combinatorics
+    </td>
+    <td>S24</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7331">MATH 189AH</a></b>: Making Mathematics
+    </td>
+    <td>S24</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7334">MATH 197</a></b>: Senior Thesis in Mathematics
+    </td>
+    <td>S24</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7335">MATH 198</a></b>: Math Forum
+    </td>
+    <td>S24</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7461">MATH 019</a></b>: Single and Multivariable Calculus
+    </td>
+    <td>F23</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7333">MATH 196</a></b>: Independent Study (Information and Complexity Theory)
+    </td>
+    <td>F23</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7334">MATH 197</a></b>: Senior Thesis in Mathematics
+    </td>
+    <td>F23</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=22&coid=7335">MATH 198</a></b>: Math Forum
+    </td>
+    <td>F23</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=20&coid=6966">MATH 062</a></b>: Probability and Statistics
+    </td>
+    <td>S23</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=20&coid=6815">MATH 197</a></b>: Senior Thesis in Mathematics
+    </td>
+    <td>S23</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=20&coid=6816">MATH 198</a></b>: Math Forum
+    </td>
+    <td>S23</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=20&coid=6943">MATH 019</a></b>: Single and Multivariable Calculus
+    </td>
+    <td>F22</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=20&coid=6815">MATH 197</a></b>: Senior Thesis in Mathematics
+    </td>
+    <td>F22</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://catalog.hmc.edu/preview_course.php?catoid=20&coid=6816">MATH 198</a></b>: Math Forum
+    </td>
+    <td>F22</td>
+  </tr>
+  <tr>
+    <th colspan="2">University of Southern California</th>
+  </tr>
+  <tr>
+    <td><b>MATH 408</b>: Mathematical Statistics</td>
+    <td>S22</td>
+  </tr>
+  <tr>
+    <td><b>MATH 407</b>: Probability Theory</td>
+    <td>F21</td>
+  </tr>
+  <tr>
+    <td><b>MATH 432</b>: Applied Combinatorics</td>
+    <td>S21</td>
+  </tr>
+  <tr>
+    <td><b>MATH 226</b>: Calculus III</td>
+    <td>F20</td>
+  </tr>
+  <tr>
+    <td><b>MATH 040</b>: Basic Mathematical Skills (Instructor of Record)</td>
+    <td>S20</td>
+  </tr>
+  <tr>
+    <td><b>MATH 225</b>: Linear Algebra and Linear Differential Equations</td>
+    <td>F19</td>
+  </tr>
+  <tr>
+    <td><b>MATH 229</b>: Calculus III for Engineers and Scientists</td>
+    <td>F18</td>
+  </tr>
+  <tr>
+    <td><b>MATH 126</b>: Calculus II</td>
+    <td>S18</td>
+  </tr>
+</table>
+<hr>
+<h2>Papers</h2>
+<ol>
+<li>
+<p>Peter Kagey. <a href="https://doi.org/10.1016/j.dam.2024.05.010">Ranking and unranking restricted permutations</a>. Discrete Applied Mathematics, 355:247–261, October 2024.</p>
+</li>
+<li>
+<p>Peter Kagey and William Keehn. <a href="https://cs.uwaterloo.ca/journals/JIS/VOL27/Kagey/kagey6.html">Counting tilings of the \(n \times m\) grid, cylinder, and torus</a>. Journal of Integer Sequences, 27, June 2024.</p>
+</li>
+<li>
+<p>Peter Kagey. <a href="https://doi.org/10.1016/j.jcta.2023.105795">Spinning switches on a wreath product</a>. Journal of Combinatorial Theory, Series A, 200:105795, November 2023.</p>
+</li>
+</ol>
+<!-- 4. Peter Kagey. <a href="https://digitallibrary.usc.edu/">Permutations, Statistics, and Switches</a>. PhD thesis, University of Southern California, 2022. -->
+<ol start="5">
+<li>
+<p>Braxton Carrigan, Joseph O’Brien, and Peter Kagey. <a href="https://geombina.uccs.edu/past-issues/volume-xxvii">Minimizing positive integer sequences without duplicate substrings</a>. Geombinatorics, 27(3):109–120, January 2018.</p>
+</li>
+<li>
+<p>Braxton Carrigan, Peter Kagey, and Joseph O’Brien. <a href="https://combinatorialpress.com/cn/">Further results on minimizing positive integer sequences without duplicate substrings</a>. Congressus Numerantium, 228:295–303, 2017</p>
+</li>
+</ol>
+<h3>Pre-prints</h3>
+<ol>
+<li>Jasper Bown, Peter Kagey, Alan Kappler, Michael E. Orrison, Jayden Thadani, <a href="https://arxiv.org/abs/2507.11701">Preference-restricted parking functions</a>, arXiv:2507.11701.</li>
+<li>Peter Kagey and Krishna Rajesh, <a href="https://arxiv.org/abs/2410.04728">On a Conjecture about Ron Graham’s Sequence</a>, arXiv:2410.04728.</li>
+<li>Peter Kagey, <a href="https://arxiv.org/abs/2211.00186">A Proof Without Words: Triangles in a Triangular Grid</a>, arXiv:2211.00186.</li>
+<li>Peter Kagey, <a href="https://arxiv.org/abs/2112.05281">Permutations with a given number of k-cycles</a>, arXiv:2112.05281.</li>
+</ol>
+<hr>
+<h1>Talks</h1>
+<table class="cv">
+  <tr>
+    <td>
+      <b>ICERM (Illustrating Mathematics: Reunion/Expansion)</b><br>
+      <a href="https://icerm.brown.edu/video_archive/4293">Enumerating Truchet tiles on the faces of polyhedra</a>
+    </td>
+    <td>August 2025</td>
+  </tr>
+  <tr>
+    <td>
+      <b>National Math Camps: Camp Conway</b><br>
+      Conway's Game of Life
+    </td>
+    <td>June 2025</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Joint Mathematics Meetings</b><br>
+      <i>AMS Special Session: Using 3D-Printed [...] Objects in the Mathematics Classroom</i><br>
+      <a href="https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/39471">Embodied Mathematics: Reflections on Teaching "Making Mathematics"</a>
+    </td>
+    <td>January 2025</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Cal Poly Pomona Math and Stats Colloquium</b><br>
+      <a href="https://www.cpp.edu/sci/mathematics-statistics/colloquium-and-newsletter/2024_2025_peter_kagey.pdf">Counting Lyndon words with a given prefix</a>
+    </td>
+    <td>October 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>MAA SoCal/Nevada F24 Section Meeting</b><br>
+      <a href="http://sections.maa.org/socalnv/MeetingFall_2024_program.pdf">On Ron Graham's Sequence and a Longstanding Conjecture</a>
+    </td>
+    <td>October 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>MathFest</b><br>
+      <i>MAA Invited Paper Session on Mathematics and Art</i><br>
+      <a href="https://maa.org/wp-content/uploads/2025/08/MF2024AbstractsBookletWeb.pdf">Enumerating Truchet Tilings and Afghan Squares</a>
+    </td>
+    <td>August 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Algebra/Number Theory/Combinatorics Seminar of the Claremont Colleges</b><br>
+      <a href="https://colleges.claremont.edu/ccms/event/antc-talk-peter-kagey-hmc-2/">Building TOWARD Geometry: Truncated Octahedra Work As Rhombic Dodecahedra</a>
+    </td>
+    <td>April 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Guest lecture at the University of Pennsylvania</b><br>
+      The Art and Mathematics of Story-centered Research
+    </td>
+    <td>March 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Gathering 4 Gardner</b><br>
+      <a href="https://www.youtube.com/watch?v=zb17NhnCUVM">Spinning Switches on a Wreath Product</a>
+    </td>
+    <td>February 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Whittier College</b><br>
+      Recreational Math and Combinatorial Algorithms
+    </td>
+    <td>February 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Cal Poly Pomona Math and Stats Colloquium (Invited)</b><br>
+      Math as Art and Recreation
+    </td>
+    <td>January 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Joint Mathematics Meetings</b><br>
+      <i>AMS Special Session: Using 3D-Printed [...] Objects in the Mathematics Classroom</i><br>
+      <a href="https://meetings.ams.org/math/jmm2024/meetingapp.cgi/Paper/32419">Illustrating Multivariable Calculus Concepts In The Makerspace</a>
+    </td>
+    <td>January 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Joint Mathematics Meetings</b><br>
+      <i>AMS Contributed Paper Session on Combinatorics</i><br>
+      <a href="https://meetings.ams.org/math/jmm2024/meetingapp.cgi/Paper/32384">Counting Arbitrary Tilings of the \(n \times m\) Square Grid, Cylinder, and Torus</a>
+    </td>
+    <td>January 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC Probability/Statistics Seminar (Invited)</b><br>
+      <a href="https://dornsife.usc.edu/mathematics/undergraduate-focused-talks/">Permutations with a given number of \(k\)-cycles</a>
+    </td>
+    <td>November 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Southern California Discrete Math Conference</b><br>
+      Ranking and Unranking Restricted Words
+    </td>
+    <td>November 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Guest lecture at Cal State LA</b><br>
+      Math is for People: A Conversation About Math Anxiety
+    </td>
+    <td>October 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b>MAA SoCal/Nevada meeting</b><br>
+      Counting arbitrary tilings of the \(n \times m\) grid under topological identifications
+    </td>
+    <td>October 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Rutgers Virtual Seminar for Open Problems</b><br>
+      A Collection of Open Problems
+    </td>
+    <td>November 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Cal Poly Pomona Math and Stats Colloquium</b><br>
+      Spinning switches on a wreath product
+    </td>
+    <td>October 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b>ANTC Seminar of the Claremont Colleges</b><br>
+      <a href="https://colleges.claremont.edu/ccms/event/antc-talk-peter-kagey-hmc/">Spinning switches on a wreath product</a>
+    </td>
+    <td>September 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Joint Mathematics Meetings</b><br>
+      The expected value of letters in permutations with a given number of \(k\)-cycles
+    </td>
+    <td>April 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC's Graduate Student Colloquium</b><br>
+      Convex Polyhedra with Regular Polygonal Faces and Vertices in \(\mathbb Z^n\)
+    </td>
+    <td>September 2021</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Graduate Student Combinatorics Conference</b><br>
+      A Generalized Spinning Switches Puzzle
+    </td>
+    <td>April 2021</td>
+  </tr>
+  <tr>
+    <td>
+      <b>24-hour Maths Magic Show</b><br>
+      <a href="https://youtu.be/VsG4Cy4DBB8">Communicating the Card: An Example of Hall's Theorem</a>
+    </td>
+    <td>October 2020</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC Graduate Geometry Seminar</b><br>
+      Polytopes and Tilings of the Hyperbolic Plane: Schläfli symbols and Conway notation
+    </td>
+    <td>February 2020</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC's Graduate Algebra Seminar</b><br>
+      Enumerating States in the Tile Game "Palago" with Burnside's Lemma
+    </td>
+    <td>October 2019</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Graduate Student Combinatorics Conference</b><br>
+      Counting Subgraph Structures of the \(n \times k\) Grid Graph
+    </td>
+    <td>April 2019</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Graduate Student Combinatorics Conference</b><br>
+      Extending Ron Graham's Sequence and Other Explorations in the OEIS
+    </td>
+    <td>April 2018</td>
+  </tr>
+</table>
+<hr>
+<h2>Service and Outreach</h2>
+<table class="cv">
+  <tr>
+    <td>
+      <b><a href="https://www.prisonmathproject.org/volunteers">Prison Mathematics Project</a></b><br>
+      Mentor
+    </td>
+    <td>October 2022&ndash;present</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://oeis.org/search?q=kagey">On-Line Encyclopedia of Integer Sequences</a></b><br>
+      Associate Editor with over 900 contributions
+    </td>
+    <td>May 2019&ndash;present</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://nationalmathcamps.org/camp-conway/">National Math Camps: Camp Conway</a></b><br>
+      Faculty
+    </td>
+    <td>June 2025</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Claremont Colleges Women's Association for Computing Machinery</b><br>
+      Workshop Leader
+    </td>
+    <td>November 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://colleges.claremont.edu/ccms/gems/">Gateway to Exploring Mathematical Sciences</a></b><br>
+      Workshop Designer/Leader
+    </td>
+    <td>November 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC's Directed Reading for Undergraduates Program</b><br>
+      Graduate Student Mentor
+    </td>
+    <td>Spring 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Bridge to Enter Advanced Mathematics</b><br>
+      Volunteer Tutor
+    </td>
+    <td>May 2020&ndash;December 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://dornsife.usc.edu/mgsa/">USC Mathematics Graduate Student Association</a></b><br>
+      President
+    </td>
+    <td>August 2018&ndash;June 2021</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC Graduate Student Colloquium</b><br>
+      Co-organizer
+    </td>
+    <td>Fall 2021</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC Graduate Geometry Seminar</b><br>
+      Co-organizer
+    </td>
+    <td>Spring 2020</td>
+  </tr>
+  <tr>
+    <td>
+      <b>USC Graduate Algebra Seminar</b><br>
+      Co-organizer
+    </td>
+    <td>Fall 2019</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Venice Math Circle</b><br>
+      Volunteer
+    </td>
+    <td>Fall 2018</td>
+  </tr>
+  <tr>
+    <td>
+      <b><a href="https://projecteuler.net/">Project Euler</a></b><br>
+      Problem Contributor, <a href="https://projecteuler.net/problem=619">Problem 619</a>
+    </td>
+    <td>January 2018</td>
+  </tr>
+</table>
+<hr>
+<h2>Awards and Mentions</h2>
+<table class="cv">
+  <tr>
+    <td>
+      <b>Joint Mathematics Meeting: Bridges Art Exhibition</b><br>
+      <a href="https://gallery.bridgesmathart.org/exhibitions/2025-jmm-art-exhibition/peter-kagey">Hinged Stellation</a>
+    </td>
+    <td>January 2025</td>
+  </tr>
+  <tr>
+    <td>
+      <b>MAA Project NExT Fellow</b><br>
+      Blue '24
+    </td>
+    <td>2024–2025</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Sundeman Scholar Award</b><br>
+      Harvey Mudd College
+    </td>
+    <td>February 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Joint Mathematics Meeting: Bridges Art Exhibition</b><br>
+      <a href="https://gallery.bridgesmathart.org/exhibitions/2024-joint-mathematics-meetings/peter-kagey">Triangle Center Fractals</a>
+    </td>
+    <td>January 2024</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Finalist for Faculty Leadership Award</b><br>
+      Harvey Mudd College, (1 of 4 finalists)
+    </td>
+    <td>Spring 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b>HMC Department of Mathematics Art Exhibition&ndash;Quod Erat Ars</b><br>
+      <a href="https://arts.hmc.edu/HMC-Mathematics">Truncated Trihexagonal Truchet Tiling</a>
+    </td>
+    <td>Spring 2023</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Dennis Ray Estes Teaching Prize</b><br>
+      University of Southern California Math Department
+    </td>
+    <td>Spring 2022</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Mentioned in <i>Pour La Science</i></b><br>
+      <a href="https://www.pourlascience.fr/sr/logique-calcul/addition-et-multiplication-des-tables-qui-intriguent-21615.php">Addition et multiplication, des tables qui intriguent</a>
+    </td>
+    <td>March 2021</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Graduate School Fellowship</b><br>
+      USC Dornsife College of Letters, Arts and Sciences
+    </td>
+    <td>Fall 2017, Spring 2019</td>
+  </tr>
+  <tr>
+    <td>
+      <b>US National Collegiate Mathematics Championship</b><br>
+      Fifth place winner
+    </td>
+    <td>July 2014</td>
+  </tr>
+  <tr>
+    <td>
+      <b>Botand Gabor Eross Scholarship for Outstanding Work in Mathematics</b><br>
+      Oregon State University
+    </td>
+    <td>2014</td>
+  </tr>
+  <tr>
+    <td>
+      <b>William Lowell Putnam Mathematical Competition</b><br>
+      Oregon State University top scorer award
+    </td>
+    <td>2013</td>
+  </tr>
+</table>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>
