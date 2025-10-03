@@ -102,6 +102,11 @@ video, img {
   height: auto;
 }
 
+figure img {
+  display: block;
+  margin: 0 auto;
+}
+
 figcaption {
   font-size: 0.875rem;
   color: #555;

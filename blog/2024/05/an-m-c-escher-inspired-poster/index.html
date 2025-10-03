@@ -58,11 +58,15 @@
     <p>by Peter Kagey (2024-05-20)</p>
     
     <article>
-      <p>I wanted an excuse to use Harvey Mudd’s large format printer, so I made a movie-sized (27″×40″) poster for my office based on the second term of OEIS sequence <a href="https://oeis.org/A368138">A368138(n)</a>: \(A368138(2) = 154\). The idea here is that you have a a collection of tiles like <img src="/assets/blog/2024-05-20/tile_example.png" alt="">, which you can rotate and mirror; you then choose a \(n \times n\) grid of these tiles, and repeat that pattern infinitely over the plane. I recently learned that this particular example (for \(n = 2\)) was first enumerated in a 1996 paper by Dan Davis, <a href="https://doi.org/10.37236/1338">On a Tiling Scheme from M. C. Escher</a>, in <em>The Electronic Journal of Combinatorics</em>.</p>
-<p><img src="/assets/blog/2024-05-20/A368138_poster.svg" alt=""></p>
+      <p>I wanted an excuse to use Harvey Mudd’s large format printer, so I made a movie-sized (27″×40″) poster for my office based on the second term of OEIS sequence <a href="https://oeis.org/A368138">A368138(n)</a>: \(A368138(2) = 154\). The idea here is that you have a a collection of tiles like <img class="inline-img" src="/assets/blog/2024-05-20/tile_example.png">, which you can rotate and mirror; you then choose a \(n \times n\) grid of these tiles, and repeat that pattern infinitely over the plane. I recently learned that this particular example (for \(n = 2\)) was first enumerated in a 1996 paper by Dan Davis, <a href="https://doi.org/10.37236/1338">On a Tiling Scheme from M. C. Escher</a>, in <em>The Electronic Journal of Combinatorics</em>.</p>
+<img src="/assets/blog/2024-05-20/A368138_poster.svg">
 <p>In my paper, &quot;<a href="https://arxiv.org/abs/2311.13072">Counting Tilings of the \(n \times m\) Grid, Cylinder, and Torus</a>,&quot; we give a method for counting these kinds of problems in full generality. While revising the paper, I learned from Doris Schattschneider’s 1990 book <em>Visions of Symmetry</em> (pp 44-48) that the artist M.C. Escher was perhaps the first person to attempt counting this. (In particular, Escher successfully enumerated <a href="https://oeis.org/A368145">A368145(2) = 23</a>.)</p>
-<p><img src="/assets/blog/2024-05-20/Screenshot.42-9krKO0gxgTjz.png" alt=""></p>
-<p>Figure 3 from Bill Keehn’s and my paper &quot;<a href="https://arxiv.org/abs/2311.13072">Counting Tilings of the \(n \times m\) Grid, Cylinder, and Torus</a>&quot;, which illustrates that there are many equivalent choices when repeating a \(2 \times 2\) pattern when ignoring the boundary.</p>
+<figure>
+  <img src="/assets/blog/2024-05-20/equivalent_tori.png">
+  <figcaption>
+    Figure 3 from Bill Keehn’s and my paper "<a href="https://arxiv.org/abs/2311.13072">Counting Tilings of the \(n \times m\) Grid, Cylinder, and Torus</a>", which illustrates that there are many equivalent choices when repeating a \(2 \times 2\) pattern when ignoring the boundary.
+  </figcaption>
+</figure>
 <p>Notice how the whitespace and the black space are \(180^\circ\) rotations of each other. Ami Radunskaya pointed out to me that this looks like &quot;<a href="https://en.wikipedia.org/wiki/Op_art">op art</a>.&quot;</p>
 <p>If you had to choose one of these patterns to tile your bathroom floor, which would you pick?</p>
 

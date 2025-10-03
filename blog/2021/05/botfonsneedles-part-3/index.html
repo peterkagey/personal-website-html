@@ -68,8 +68,8 @@ This estimates π ≈ 3.191, an error of 1.59%. <a href="https://t.co/2VkUu6mmqb
 </blockquote>
 <h2>The plan</h2>
 <ul>
-<li>In <a href="https://blog.peterkagey.com/botfonsneedles-part-1/">Part I of this series</a>, we wrote the Python code that outputs Tweets (with images) for <a href="https://twitter.com/BotfonsNeedles">@BotfonsNeedles</a>.</li>
-<li>In <a href="https://blog.peterkagey.com/botfonsneedles-part-2/">Part II of this series</a>, we got a Twitter API key and hooked it up to the program with Tweepy.</li>
+<li>In <a href="/blog/2021/04/botfonsneedles-part-1/">Part I of this series</a>, we wrote the Python code that outputs Tweets (with images) for <a href="https://twitter.com/BotfonsNeedles">@BotfonsNeedles</a>.</li>
+<li>In <a href="/blog/2021/04/botfonsneedles-part-2/">Part II of this series</a>, we got a Twitter API key and hooked it up to the program with Tweepy.</li>
 </ul>
 <p>And in this final part, we will</p>
 <ul>
@@ -134,7 +134,7 @@ $ docker image rm botfons-needles</code></pre>
 <p>Sequence A327913 was added to the OEIS by Andrew Howroyd in October 2019. <a href="https://t.co/LD5YYvZcpZ">https://t.co/LD5YYvZcpZ</a> <a href="https://t.co/qJW8UIxKBS">pic.twitter.com/qJW8UIxKBS</a></p>
 <p>— Parity Triangles Bot (@oeisTriangles) <a href="https://twitter.com/oeisTriangles/status/1380316227462107141?ref_src=twsrc%5Etfw">April 9, 2021</a></p>
 </blockquote>
-<p>My first Twitter bot, @oeisTriangles. Read about this in my blog post, &quot;<a href="https://blog.peterkagey.com/parity-bitmaps-from-the-oeis/">Parity Bitmaps from the OEIS</a>&quot;.</p>
+<p>My first Twitter bot, @oeisTriangles. Read about this in my blog post, &quot;<a href="/blog/2021/03/parity-bitmaps-from-the-oeis/">Parity Bitmaps from the OEIS</a>&quot;.</p>
 <h3>Push to Amazon ECR</h3>
 <p>In this step, we’ll push our Docker image up to Amazon. So <a href="https://console.aws.amazon.com/ecr/home">go to Amazon ECR</a>, log in or create an account, navigate to the ECR console, and select &quot;Create repository&quot; in the upper right-hand corner.</p>
 <p><img src="/assets/blog/2021-05-03/Screen.49-BgIkHr6nDoR1.png" alt=""></p>
@@ -166,7 +166,7 @@ $ docker image rm botfons-needles</code></pre>
 <p>If things are running smoothly, then all that’s left to do is to set up a trigger. Do this by selecting &quot;Triggers&quot; in the &quot;Configuration&quot; tab, clicking &quot;Add Trigger&quot;, selecting &quot;EventBridge (CloudWatch Events)&quot;, and making a new rule with schedule expression <code>rate(12 hours)</code>.</p>
 <p><img src="/assets/blog/2021-05-03/Screen.57-0iftlzwvnBYW.png" alt=""></p>
 <p>That’s it! AWS Lambda should trigger your bot on the interval you specified!</p>
-<p>There’s only one step left: send me a message or tag me on Twitter <a href="https://twitter.com/PeterKagey">@PeterKagey</a> so that I can follow your new bot!</p>
+<p>There’s only one step left: send me a message or tag me on Bluesky <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a> so that I can follow your new bot!</p>
 
     </article>
   </main>
