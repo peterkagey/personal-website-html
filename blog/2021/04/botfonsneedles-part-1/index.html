@@ -74,8 +74,10 @@
 <li>Push the Docker image to Amazon Web Services (AWS)</li>
 <li>Set up a function on AWS Lambda to run the code on a timer</li>
 </ul>
-<p><img src="/assets/blog/2021-04-19/drop_100.gif" alt=""></p>
-<p>An example of dropping 100 needles in Buffon’s needle problem. Needles that cross a vertical line are colored red.</p>
+<figure>
+  <img src="/assets/blog/2021-04-19/drop_100.gif" alt="An example of dropping 100 needles in Buffon’s needle problem. Needles that cross a vertical line are colored red.">
+  <figcaption>An example of dropping 100 needles in Buffon’s needle problem. Needles that cross a vertical line are colored red.</figcaption>
+</figure>
 <h3>Buffon’s needle problem</h3>
 <p><a href="https://mathworld.wolfram.com/BuffonsNeedleProblem.html">Buffon’s needle problem</a> is a surprising way of computing \(\pi\). It says that if you throw \(n\) needles of length \(\ell\) randomly onto a floor that has parallel lines that are a distance of \(\ell\) apart, then the expected number of needles that cross a line is \(\frac{2n}\pi\). Therefore one way to approximate (\pi) is to divide \(2n\) by the number of needles that cross a line.</p>
 <p>I had my computer simulate 400 needle tosses, and 258 of them crossed a line. Thus this experiment approximates \(\pi \approx 2\!\left(\frac{400}{258}\right) \approx 3.101\), about a 1.3% error from the true value.</p>
