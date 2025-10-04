@@ -71,9 +71,27 @@
   <figcaption>An illustration of the first dozen terms of A261865</figcaption>
 </figure>
 <p>For example, \(A261865(3) = 3\) because there is no multiple of \(\sqrt 1\) in \((3,4)\) (since \(3 \sqrt{1} \leq 3\) and \(4 \sqrt{1} \geq 4\)); there is no multiple of \(\sqrt{2}\) in \((3,4)\) (since \(2 \sqrt{2} \leq 3\) and \(3 \sqrt 2 \geq 4\)); but there is a multiple of \(\sqrt 3\) in \((3,4)\), namely \(2\sqrt 3\).</p>
-<p>As indicated in the picture, the sequence begins $$\color{blue}{ 2,2,3,2,2},\color{red}{3},\color{blue}{2,2,2},\color{red}{3},\color{blue}{2,2},\color{red}{3},\color{blue}{2,2,2},\color{red}{3},\color{blue}{2,2},\color{red}{3},\color{blue}{2,2},\color{magenta}{7},\dots.$$</p>
-<p><img src="/assets/blog/2021-05-31/scatterplot_a261865.png" alt=""></p>
-<p>A scatterplot of \(A261865(n)\). Notice the records at \(A261865(184)=38\) and \(A261865(8091)=43\).</p>
+<p>
+  As indicated in the picture, the sequence begins $$
+    \color{blue} 2,2,3,2,2,
+    \color{red}{3},
+    \color{blue}{2,2,2},
+    \color{red}{3},
+    \color{blue}{2,2},
+    \color{red}{3},
+    \color{blue}{2,2,2},
+    \color{red}{3},
+    \color{blue}{2,2},
+    \color{red}{3},
+    \color{blue}{2,2},
+    \color{magenta}{7}
+    \color{black},\dots.
+  $$
+</p>
+<figure>
+  <a href="https://oeis.org/A261865/graph"><img src="/assets/blog/2021-05-31/scatterplot_a261865.png" alt="A scatterplot of A261865"></a>
+  <figcaption>A scatterplot of \(A261865(n)\). Notice the records at \(A261865(184)=38\) and \(A261865(8091)=43\).</figcaption>
+</figure>
 <h2>A conjecture about density</h2>
 <p>As the example illustrates, \(1\) does not appear in the sequence. And almost by definition, asymptotically \(1/\sqrt 2\) of the values are \(2\)s.</p>
 <p>Let’s denote the asymptotic density of terms that are equal to \(n\) by \(d_n\). It’s easy to check that \(d_1 = 0\), (because multiples of \(\sqrt 1\) are never between any integers) and \(d_2 = 1/\sqrt 2\), because multiples of \(\sqrt 2\) are always inserted. I conjecture in <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=14">Problem 13 of my Open Problem Collection</a> that $$a_n = \begin{cases}\displaystyle\frac{1}{\sqrt n}\left(1 – \sum_{i=1}^{n-1} a_i\right) &amp; n \text{ is squarefree}\\[5mm] 0 &amp; \text{otherwise}\end{cases}$$</p>

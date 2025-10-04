@@ -60,12 +60,11 @@
     <article>
       <p>In the final part of this three-part series, I’ll give technical step-by-step instructions for how to wire up our Twitter bot, <a href="https://twitter.com/BotfonsNeedles">@BotfonsNeedles</a>, to Docker and deploy it on the free tier of AWS Lambda, so that it can run until the end of time. I’ll also include some tips that I wish I knew when I got started.</p>
 <p>If you’d like to make a Twitter bot, but find this guide intimidating, you can fork the repository and follow the README on the <a href="https://github.com/peterkagey/oeisTriangles/">GitHub page for my other bot, @oeisTriangles</a>. Or better yet, I would <em>love</em> to set up a call and walk you through it step-by-step! Just let me know on Twitter.</p>
-<blockquote>
-<p>This trial dropped 100 needles, 58 of which crossed a line. This estimates π ≈ 2*(100/58) ≈ 3.44, an error of 9.76%.</p>
-<p>In total, 752 of 1200 needles have crossed a line.
-This estimates π ≈ 3.191, an error of 1.59%. <a href="https://t.co/2VkUu6mmqb">pic.twitter.com/2VkUu6mmqb</a></p>
-<p>— Botfon's Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1388946701726146570?ref_src=twsrc%5Etfw">May 2, 2021</a></p>
-</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="columns">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 69 of which crossed a line. This estimates π ≈ 2*(100/69) ≈ 2.89, an error of -7.74%.<br><br>In total, 506 of 800 needles have crossed a line.<br>This estimates π ≈ 3.162, an error of 0.651%. <a href="https://t.co/MZtGQxyh2p">pic.twitter.com/MZtGQxyh2p</a></p>&mdash; Botfon&#39;s Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386546547047821313?ref_src=twsrc%5Etfw">April 26, 2021</a></blockquote>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 60 of which crossed a line. This estimates π ≈ 2*(100/60) ≈ 3.33, an error of 6.10%.<br><br>In total, 19990 of 31400 needles have crossed a line.<br>This estimates π ≈ 3.141570, an error of -0.000696%. <a href="https://t.co/NEUzP77QgS">pic.twitter.com/NEUzP77QgS</a></p>&mdash; Botfon&#39;s Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1443447986642722816?ref_src=twsrc%5Etfw">September 30, 2021</a></blockquote>
+</div>
 <h2>The plan</h2>
 <ul>
 <li>In <a href="/blog/2021/04/botfonsneedles-part-1/">Part I of this series</a>, we wrote the Python code that outputs Tweets (with images) for <a href="https://twitter.com/BotfonsNeedles">@BotfonsNeedles</a>.</li>
@@ -78,18 +77,16 @@ This estimates π ≈ 3.191, an error of 1.59%. <a href="https://t.co/2VkUu6mmqb
 <li>hook up the Docker image to an AWS Lambda function, and</li>
 <li>configure the function to run on a timer in perpetuity.</li>
 </ul>
-<blockquote>
-<p>Step size: 1/8.
-Step pattern: LRLLLLLRRRRLLLLLLRR <a href="https://t.co/q12Mew6Tsz">pic.twitter.com/q12Mew6Tsz</a></p>
-<p>— Robot Walks (@RobotWalks) <a href="https://twitter.com/RobotWalks/status/1380755749299646465?ref_src=twsrc%5Etfw">April 10, 2021</a></p>
-</blockquote>
-<p>My Twitter bot, @RobotWalks, deployed using the techniques in this article.</p>
-<blockquote>
-<p>Size: 10
-Seed: 140 <a href="https://t.co/jKOKZqukFc">pic.twitter.com/jKOKZqukFc</a></p>
-<p>— XOR Triangles (@xorTriangles) <a href="https://twitter.com/xorTriangles/status/1386915478161985536?ref_src=twsrc%5Etfw">April 27, 2021</a></p>
-</blockquote>
-<p>My Twitter bot, @xorTriangles, which posts every 12 hours via AWS Lambda.</p>
+<div class="columns">
+<figure>
+  <blockquote class="twitter-tweet"><p lang="tr" dir="ltr">Step size: 1/8.<br>Step pattern: LRLLLLLRRRRLLLLLLRR <a href="https://t.co/q12Mew6Tsz">pic.twitter.com/q12Mew6Tsz</a></p>&mdash; Robot Walks (@RobotWalks) <a href="https://twitter.com/RobotWalks/status/1380755749299646465?ref_src=twsrc%5Etfw">April 10, 2021</a></blockquote>
+  <figcaption>My Twitter bot, @RobotWalks, deployed using the techniques in this article.</figcaption>
+</figure>
+<figure>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Size: 10<br>Seed: 140 <a href="https://t.co/jKOKZqukFc">pic.twitter.com/jKOKZqukFc</a></p>&mdash; XOR Triangles (@xorTriangles) <a href="https://twitter.com/xorTriangles/status/1386915478161985536?ref_src=twsrc%5Etfw">April 27, 2021</a></blockquote>
+  <figcaption>My Twitter bot, @xorTriangles, which used to post every 12 hours via AWS Lambda.</figcaption>
+</figure>
+</div>
 <h3>Turn it into a Docker image</h3>
 <p>Next, we’ll package this up in a Docker image so that AWS Lambda has everything that it needs to run this function. Begin by <a href="https://docs.docker.com/get-started/">downloading Docker</a> if you don’t already have it installed.</p>
 <p>Next, we’re going to add a new file called <code>Dockerfile</code> from an <a href="https://docs.aws.amazon.com/lambda/latest/dg/python-image.html">AWS base image for Python</a>, which will look like this.</p>
@@ -130,16 +127,19 @@ CMD ["app.handler"]</code></pre>
 $ docker rm bb81431991sb
 $ docker image rm botfons-needles</code></pre>
 <p>Then make your changes, and start again from the <code>docker build</code> step.</p>
-<blockquote>
-<p>Sequence A327913 was added to the OEIS by Andrew Howroyd in October 2019. <a href="https://t.co/LD5YYvZcpZ">https://t.co/LD5YYvZcpZ</a> <a href="https://t.co/qJW8UIxKBS">pic.twitter.com/qJW8UIxKBS</a></p>
-<p>— Parity Triangles Bot (@oeisTriangles) <a href="https://twitter.com/oeisTriangles/status/1380316227462107141?ref_src=twsrc%5Etfw">April 9, 2021</a></p>
-</blockquote>
-<p>My first Twitter bot, @oeisTriangles. Read about this in my blog post, &quot;<a href="/blog/2021/03/parity-bitmaps-from-the-oeis/">Parity Bitmaps from the OEIS</a>&quot;.</p>
+<figure>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sequence A327913 was added to the OEIS by Andrew Howroyd in October 2019. <a href="https://t.co/LD5YYvZcpZ">https://t.co/LD5YYvZcpZ</a> <a href="https://t.co/qJW8UIxKBS">pic.twitter.com/qJW8UIxKBS</a></p>&mdash; Parity Triangles Bot (@oeisTriangles) <a href="https://twitter.com/oeisTriangles/status/1380316227462107141?ref_src=twsrc%5Etfw">April 9, 2021</a></blockquote>
+  <figcaption>My first Twitter bot, @oeisTriangles. Read about this in my blog post, "[Parity Bitmaps from the OEIS](/blog/2021/03/parity-bitmaps-from-the-oeis/)".</figcaption>
+</figure>
 <h3>Push to Amazon ECR</h3>
 <p>In this step, we’ll push our Docker image up to Amazon. So <a href="https://console.aws.amazon.com/ecr/home">go to Amazon ECR</a>, log in or create an account, navigate to the ECR console, and select &quot;Create repository&quot; in the upper right-hand corner.</p>
-<p><img src="/assets/blog/2021-05-03/Screen.49-BgIkHr6nDoR1.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-05-03/ECR_console.png" alt="ECR console screenshot">
+</figure>
 <p>This will bring up a place for you to create a repository name.</p>
-<p><img src="/assets/blog/2021-05-03/Screen.5-rrC3QDokCvTb.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-05-03/Create_respository.png" alt="a place for you to create a repository name">
+</figure>
 <p>Now once there’s a repository available, we’re ready to push our local copy up. Start by downloading the <a href="https://aws.amazon.com/cli/">AWS Command Line Interface</a> and logging in to AWS. Notice that there are *two* references to the server location (<code>us-east-1</code>) and one reference to your account number (<code>123456789</code>).</p>
 <pre class="language-plain"><code class="language-plain">aws ecr get-login-password --region us-east-1 \
 | docker login --username AWS \
@@ -150,21 +150,33 @@ $ docker image rm botfons-needles</code></pre>
 <pre class="language-plain"><code class="language-plain">docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/botfons-needles</code></pre>
 <h3>Hook up to AWS Lambda</h3>
 <p>Now you’re ready to wire this up to a AWS Lambda function! Start by going to the <a href="https://console.aws.amazon.com/lambda/">AWS Lambda console</a> and click &quot;Create function&quot;</p>
-<p><img src="/assets/blog/2021-05-03/Screen.24-GkOQyql6QwOC.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-05-03/Functions.png" alt="AWS Lambda console">
+</figure>
 <p>To create a function from the AWS Lambda console, click &quot;Create function&quot; in the upper right-hand corner.</p>
 <p>This will take you to a page where you’ll want to select the third option &quot;Container image&quot; at the top, give your function a name (e.g. myTwitterBot) and select the Container image URI by clicking &quot;Browse images&quot; and selecting the Docker image you pushed up.</p>
-<p><img src="/assets/blog/2021-05-03/Screen.5-XrFD2CFFue55.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-05-03/Create_function.png" alt="Function creation page">
+</figure>
 <p>Search for the image you just pushed up, choose the latest tag, and &quot;Select image&quot;.</p>
-<p><img src="/assets/blog/2021-05-03/Screen.5-2duKL0E231SI.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-05-03/Select_container_image.png" alt="Amazon ECR image repo">
+</figure>
 <p>Then the dialog will go away, and you can click &quot;Create function&quot;, after which your function will start to build—although it may take a while!</p>
 <p>Next, you’ll want to test your function to make sure that it’s able to post to Twitter properly!</p>
-<p><img src="/assets/blog/2021-05-03/Screen.49-kRWSxHW0cKXj.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-05-03/Test_event.png" alt="Page to test event">
+</figure>
 <p>With the default RAM and time limit, it’s likely to time out. If the only thing that you’re using AWS for is posting this Twitter bot, then it doesn’t hurt to go to the &quot;Configuration&quot; tab and increase the memory and timeout under &quot;General configuration&quot;. (I usually increase Memory to 1024 MB and Timeout to 15 seconds, which has always been more than enough for me.)</p>
-<p><img src="/assets/blog/2021-05-03/Screen.52-IebFPUrivxQo.png" alt=""></p>
-<p>Increase memory to 1024 MB and timeout to 15 seconds.</p>
+<figure>
+  <img src="/assets/blog/2021-05-03/General_configuration.png" alt="General configuration page">
+  <figcaption>Increase memory to 1024 MB and timeout to 15 seconds.</figcaption>
+</figure>
 <h3>Run it on a timer</h3>
 <p>If things are running smoothly, then all that’s left to do is to set up a trigger. Do this by selecting &quot;Triggers&quot; in the &quot;Configuration&quot; tab, clicking &quot;Add Trigger&quot;, selecting &quot;EventBridge (CloudWatch Events)&quot;, and making a new rule with schedule expression <code>rate(12 hours)</code>.</p>
-<p><img src="/assets/blog/2021-05-03/Screen.57-0iftlzwvnBYW.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-05-03/Add_trigger.png" alt="Trigger configuration">
+</figure>
 <p>That’s it! AWS Lambda should trigger your bot on the interval you specified!</p>
 <p>There’s only one step left: send me a message or tag me on Bluesky <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a> so that I can follow your new bot!</p>
 

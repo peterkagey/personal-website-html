@@ -58,7 +58,7 @@
     <p>by Peter Kagey (2021-04-26)</p>
     
     <article>
-      <p>This is the second part of a three part series about making the Twitter bot @<a href="https://twitter.com/BotfonsNeedles">BotfonsNeedles</a>. <a href="/blog/2021/04/botfonsneedles-part-1/">Click here for Part I</a>.</p>
+      <p>This is the second part of a three part series about making the Twitter bot <a href="https://twitter.com/BotfonsNeedles">@BotfonsNeedles</a>. <a href="/blog/2021/04/botfonsneedles-part-1/">Click here for Part I</a>. <a href="/blog/2021/05/botfonsneedles-part-3/">Click here for Part III</a>.</p>
 <p>In this part, I’ll explain how to use the Twitter API to</p>
 <ul>
 <li>post the images to Twitter via the Python library <a href="https://www.tweepy.org/">Tweepy</a>, and</li>
@@ -75,27 +75,40 @@
 <p>In order to have your Python code post to your Twitter feed, you’ll need to register for a Twitter developer account, which you can do by going to <a href="https://developer.twitter.com/">https://developer.twitter.com/</a> and clicking apply. You’ll need to link the account to a phone number and fill out a few minutes of forms. For all four of my bots, (<a href="https://twitter.com/oeisTriangles">@oeisTriangles</a>, <a href="https://twitter.com/oeisTriangles">@xorTriangles</a>, <a href="https://twitter.com/RobotWalks">@RobotWalks</a>, and this bot) I’ve been approved right away.</p>
 <p><em>Keep in mind that you can only use your phone number on two Twitter accounts—so you’ll have to use a Google Voice number or something else if you want to make more than two bots.</em></p>
 <p>Once you’re approved, go to the Developer Portal, click on the Projects &amp; Apps Overview, and click on the blue &quot;+ New Project&quot; button. You will be given a series of short questions, but what you submit isn’t too important.</p>
-<p><img src="/assets/blog/2021-04-26/Screen.2-HhdwjaAlGKsh.png" alt=""></p>
-<p>Create a new project by clicking &quot;+ New Project&quot; via the Projects &amp; Apps overview</p>
+<figure>
+  <img src="/assets/blog/2021-04-26/Developer_Portal.png" alt="">
+  <figcaption>Create a new project by clicking "+ New Project" via the Projects & Apps overview</figcaption>
+</figure>
 <h3>Getting the API Keys</h3>
 <p>Once you’ve filled out the form, you should be sent to a page with an API Key and API Secret Key. This is essentially the password to your account, so don’t share these values.</p>
 <p><img src="/assets/blog/2021-04-26/Screen.2-DL5GWf7i6IeE.png" alt=""></p>
-<p>A screenshot showing a (fake) API Key and API Secret Key.</p>
+<figure>
+  <img src="/assets/blog/2021-04-26/API_key.png" alt="">
+  <figcaption>A screenshot showing a (fake) API Key and API Secret Key.</figcaption>
+</figure>
 <p>We’re going to take these values and place them in a new file called <code>secrets.py</code>, which will look like this:</p>
 <pre class="language-python"><code class="language-python">API_KEY        <span class="token operator">=</span> <span class="token string">"3x4MP1e4P1kEy"</span>
 API_SECRET_KEY <span class="token operator">=</span> <span class="token string">"5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG"</span></code></pre>
 <h3>Getting the Access Token</h3>
 <p>Once we close the API Key dialog, we’ll need to update our app to allow us to both read and write. We can do this by clicking on the gear to access our projects &quot;App settings&quot;.</p>
-<p><img src="/assets/blog/2021-04-26/Screen.3-oUuoOKRchQLH.png" alt=""></p>
-<p>Click the gear to access the settings.</p>
+<figure>
+  <img src="/assets/blog/2021-04-26/Project_App.png" alt="">
+  <figcaption>Click the gear to access the settings.</figcaption>
+</figure>
 <p>Once you’re in, you’ll want to edit the App permissions to &quot;Read and Write&quot;.</p>
-<p><img src="/assets/blog/2021-04-26/Screen.3-2xiuqM49gyID.png" alt=""></p>
-<p>Click &quot;Edit&quot; to update from &quot;Read Only&quot; to &quot;Read and Write&quot;.</p>
+<figure>
+  <img src="/assets/blog/2021-04-26/App_permissions.png" alt="">
+  <figcaption>Click "Edit" to update from "Read Only" to "Read and Write".</figcaption>
+</figure>
 <p>Then go to the &quot;Keys and Tokens&quot; page (which you can do by clicking the key icon from the app settings page), and generate an Access Token and Secret.</p>
-<p><img src="/assets/blog/2021-04-26/Screen.4-ulhY4eH5CUOU.png" alt=""></p>
-<p>Click &quot;Generate&quot; to make an access token and secret.</p>
+<figure>
+  <img src="/assets/blog/2021-04-26/Access_Token.png" alt="">
+  <figcaption>Click "Generate" to make an access token and secret.</figcaption>
+</figure>
 <p>When you click &quot;Generate&quot; you should get an Access Token and a Access Token Secret, which you need to add to your <code>secrets.py</code> file.</p>
-<p><img src="/assets/blog/2021-04-26/Screen.5-Col00LnJ1RoT.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-04-26/Access_Token2.png" alt="">
+</figure>
 <p>Thus your <code>secrets.py</code> file should contain four lines:</p>
 <pre class="language-python"><code class="language-python">API_KEY             <span class="token operator">=</span> <span class="token string">"3x4MP1e4P1kEy"</span>
 API_SECRET_KEY      <span class="token operator">=</span> <span class="token string">"5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG"</span>
@@ -150,18 +163,10 @@ This estimates π ≈ 3.20, an error of 2.13%.</p>
   copy <span class="token operator">=</span> self<span class="token punctuation">.</span>tweet_copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
   self<span class="token punctuation">.</span>accessor<span class="token punctuation">.</span>api<span class="token punctuation">.</span>update_with_media<span class="token punctuation">(</span>filename<span class="token operator">=</span>file_name<span class="token punctuation">,</span> status<span class="token operator">=</span>copy<span class="token punctuation">)</span>
   <span class="token keyword">return</span> copy</code></pre>
-<blockquote>
-<p>This trial dropped 100 needles, 69 of which crossed a line. This estimates π ≈ 2*(100/69) ≈ 2.89, an error of -7.74%.</p>
-<p>In total, 506 of 800 needles have crossed a line.
-This estimates π ≈ 3.162, an error of 0.651%. <a href="https://t.co/MZtGQxyh2p">pic.twitter.com/MZtGQxyh2p</a></p>
-<p>— Botfon's Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386546547047821313?ref_src=twsrc%5Etfw">April 26, 2021</a></p>
-</blockquote>
-<blockquote>
-<p>This trial dropped 100 needles, 57 of which crossed a line. This estimates π ≈ 2*(100/57) ≈ 3.50, an error of 11.7%.</p>
-<p>In total, 563 of 900 needles have crossed a line.
-This estimates π ≈ 3.197, an error of 1.77%. <a href="https://t.co/M9eCi2Y8o1">pic.twitter.com/M9eCi2Y8o1</a></p>
-<p>— Botfon's Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386550166845497347?ref_src=twsrc%5Etfw">April 26, 2021</a></p>
-</blockquote>
+<div class="columns">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 69 of which crossed a line. This estimates π ≈ 2*(100/69) ≈ 2.89, an error of -7.74%.<br><br>In total, 506 of 800 needles have crossed a line.<br>This estimates π ≈ 3.162, an error of 0.651%. <a href="https://t.co/MZtGQxyh2p">pic.twitter.com/MZtGQxyh2p</a></p>&mdash; Botfon&#39;s Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386546547047821313?ref_src=twsrc%5Etfw">April 26, 2021</a></blockquote>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 60 of which crossed a line. This estimates π ≈ 2*(100/60) ≈ 3.33, an error of 6.10%.<br><br>In total, 19990 of 31400 needles have crossed a line.<br>This estimates π ≈ 3.141570, an error of -0.000696%. <a href="https://t.co/NEUzP77QgS">pic.twitter.com/NEUzP77QgS</a></p>&mdash; Botfon&#39;s Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1443447986642722816?ref_src=twsrc%5Etfw">September 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 <h3>What’s next</h3>
 <p>In Part III, we’ll get this running in a Docker container and have it run on AWS Lambda.</p>
 <p>If you want to get a head start, make a file called <code>app.py</code> with a function called <code>handler</code>, which AWS Lambda will call. This function should return a string, which will get logged.</p>
