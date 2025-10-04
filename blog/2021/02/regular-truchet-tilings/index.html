@@ -76,7 +76,9 @@
 </div>
 <p>I implemented <a href="/apps/truchet_maze/">a version of this program on my website</a>, with the added feature that you could click on a section to recolor the entire component, and this idea was also the basis of <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=3">Problem 2</a> and <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=32">Problem 31</a> in my <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">Open Problem Collection</a>.</p>
 <p>I saw this idea generalized by <a href="https://twitter.com/icecolbeveridge">Colin Beveridge</a> in the article &quot;<a href="http://chalkdustmagazine.com/features/too-good-to-be-truchet/">Too good to be Truchet</a>&quot; in Chalkdust Magazine. In this article, Colin counts the ways of drawing hexagons, octagons, and decagons with curves connecting the midpoints of edges, and regions colored in an alternating fashion. In the case of the hexagon, there are three ways to do it, one of which looks like <a href="https://en.wikipedia.org/wiki/Palago">Palago</a> tiles.</p>
-<p><img src="/assets/blog/2021-02-22/palago.png" alt=""></p>
+<figure>
+  <img src="/assets/blog/2021-02-22/palago.png" alt="Palago tiles.">
+</figure>
 <p>An example of a hexagonal Truchet tiling. Cameron Browne would call this particular example a <a href="http://cambolbro.com/games/palago/creature-counts/">Palago &quot;creature</a>&quot;, which are counted by <a href="https://codegolf.stackexchange.com/a/193088/53884">Arnauld Chevallier</a>‘s brilliant program.</p>
 <p>It turns out that if you ignore the colors, <a href="https://math.stackexchange.com/q/284512/121988">the number of ways</a> to pair up midpoints of the sides of a \(2n\)-gon in such a way that the curves connecting the midpoints don’t overlap is given by <a href="https://oeis.org/A000108">the \(n\)-th Catalan number</a>. For example, there are \(C_4 = 14\) ways of connecting midpoints of the sides of an octagon, where different rotations are considered distinct.</p>
 <div class="columns">

@@ -136,8 +136,10 @@
     terminal_point <span class="token operator">=</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>x<span class="token operator">+</span>self<span class="token punctuation">.</span>del_x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>y<span class="token operator">+</span>self<span class="token punctuation">.</span>del_y<span class="token punctuation">)</span>
     drawing_context<span class="token punctuation">.</span>line<span class="token punctuation">(</span><span class="token punctuation">[</span>initial_point<span class="token punctuation">,</span> terminal_point<span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></code></pre>
 <p>By generating \(100\,000\) instances of the <code>RandomNeedle</code> class, and keeping a running estimation of (\pi) based on what percentage of the needles cross the line, you get a plot like the following:</p>
-<p><img src="/assets/blog/2021-04-19/moving_average.png" alt=""></p>
-<p>This estimates \(\pi\approx 2\left(\frac{10000}{63681}\right) \approx 3.1407\) an error of 0.03%.</p>
+<p>&lt;<figure>
+<img src="/assets/blog/2021-04-19/moving_average.png" alt="Estimate of pi."></p>
+  <figcaption>This estimates \(\pi\approx 2\left(\frac{10000}{63681}\right) \approx 3.1407\) an error of 0.03%.</figcaption>
+</figure>>
 <h2>The <code>NeedleDrawer</code> class</h2>
 <p>The <code>NeedleDrawer</code> class is all about running these simulations and drawing pictures of them. In order to draw the images, we use the Python library Pillow which I installed by running</p>
 <pre><code>pip3 install Pillow
