@@ -326,6 +326,13 @@ img.art-thumbnail {
   font-size: 10px;
   padding: 0;
 }
+
+pre code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 /* Copied from https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.css */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML

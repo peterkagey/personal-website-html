@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>Polytopes with Lattice Coordinates</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   
     
     <meta property="og:title" content="Polytopes with Lattice Coordinates">
@@ -42,8 +43,8 @@
       : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
     </p>
     <p>
-      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
-      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg></a>
       <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
     </p>
     </div>
@@ -52,12 +53,12 @@
 
   <main>
     
-    <h1>Polytopes with Lattice Coordinates</h1>
+    <h1 id="polytopes-with-lattice-coordinates">Polytopes with Lattice Coordinates</h1>
     
     
     <p>by Peter Kagey (2021-04-05)</p>
     
-    <article>
+    <heading-anchors>
       <p>Problems 21, 66, and 116 in my <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">Open Problem Collection</a> concern polytopes with lattice coordinates—that is, polygons, polyhedra, or higher-dimensional analogs with vertices the square or triangular grids. (In higher dimensions, I’m most interested in the <a href="https://en.wikipedia.org/wiki/Integer_lattice">\(n\)-dimensional integer lattice</a> and the <a href="https://en.wikipedia.org/wiki/Simplectic_honeycomb">\(n\)-simplex honeycomb</a>).</p>
 <div class="columns">
 <figure>
@@ -81,7 +82,7 @@
 </blockquote>
 <p>However, it turns out that there isn’t a similarly nice polynomial description of <a href="http://oeis.org/A269747">tetrahedra in a tetrahedron</a> or of <a href="http://oeis.org/A334581">triangles in a tetrahedron</a>. (Thanks to <a href="https://codegolf.stackexchange.com/a/204453/53884">Anders Kaseorg for his Rust program</a> that computed the number of triangles in all tetrahedra with 1000 or fewer points per side.)</p>
 <p>The \(4\)-simplex (the \(4\)-dimensional analog of a triangle or tetrahedron) with \(n-1\) points per side, has a total of \(\binom{n+2}{4}\) points, so there is some correspondence between points in some \(4\)-dimensional polytope, and triangles in the triangular grid. This extends to other analogs of this problem: the number of squares in the square grid is the same as the number of points in a <a href="https://oeis.org/A002415">\(4\)-dimensional pyramid</a>.</p>
-<h2>The \(\binom{n+2}{4}\) equilateral triangles</h2>
+<h2 id="the-binom-n-2-4-equilateral-triangles">The \(\binom{n+2}{4}\) equilateral triangles</h2>
 <p>I put a <a href="/apps/triangle_in_triangle/">Javascript applet on my webpage</a> that illustrates a bijection between size-\(4\) subsets of \(n+2\) objects and triangles in the \(n\)-points-per-side grid. You can choose different subsets and see the resulting triangles. (The applet does not work on mobile.)</p>
 <div class="columns">
 <figure>
@@ -93,22 +94,22 @@
   <figcaption>The two smaller numbers in the subset give the size and orientation of the blue triangle, and the two larger numbers give the position.</figcaption>
 </figure>
 </div>
-<h2>Polygons with vertices in \(\mathbb{Z}^n\)</h2>
+<h2 id="polygons-with-vertices-in-mathbb-z-n">Polygons with vertices in \(\mathbb{Z}^n\)</h2>
 <p>This was also inspired by Mathologer video &quot;What does this prove? Some of the most gorgeous visual ‘shrink’ proofs ever invented&quot;, where Burkard Polster visually illustrates that the only regular polygons with vertices in \(\mathbb{Z}^n\) (and thus the \(n\)-simplex honeycomb) are equilateral triangles, squares, and regular hexagons.</p>
 <div class="video-container">
   <iframe loading="lazy" title="What does this prove? Some of the most gorgeous visual &quot;shrink&quot; proofs ever invented" width="500" height="281" src="https://www.youtube.com/embed/sDfzCIWpS7Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 </div>
-<h2>Polyhedra with vertices in \(\mathbb{Z}^3\)</h2>
+<h2 id="polyhedra-with-vertices-in-mathbb-z-3">Polyhedra with vertices in \(\mathbb{Z}^3\)</h2>
 <p>There are some surprising examples of polyhedra in the grid, including cubes with no faces parallel to the \(xy\)-, \(xz\)-, or \(yz\)-planes.</p>
 <figure>
   <img src="/assets/blog/2021-04-05/crooked_cube2.gif">
   <figcaption>An example of a cube from [Ionascu and Obando](https://arxiv.org/pdf/1003.4569.pdf): the convex hull of \(\{(0,3,2),(1,1,4),(2,2,0),(2,5,3),(3,0,2),(3,3,5),(4,4,1),(5,2,3)\}\)</figcaption>
 </figure>
 <p>While there are lots of polytopes that can be written with vertices in \(\mathbb{Z}^3\), Alaska resident and friend RavenclawPrefect cleverly uses <a href="https://en.wikipedia.org/wiki/Legendre%27s_three-square_theorem">Legendre’s three-square theorem</a> to <a href="https://math.stackexchange.com/a/4040124/121988">prove</a> that there’s no way to write the <a href="https://en.wikipedia.org/wiki/Triangular_prism#As_a_semiregular_(or_uniform)_polyhedron">uniform triangular prism</a> this way! However, he provides a cute embedding in \(\mathbb{Z}^5\): the convex hull of $${(0,0,1,0,0),(0,1,0,0,0),(1,0,0,0,0),(0,0,1,1,1),(0,1,0,1,1),(1,0,0,1,1)}.$$</p>
-<h2>Polygons on a &quot;centered \(n\)-gon&quot;</h2>
+<h2 id="polygons-on-a-centered-n-gon">Polygons on a &quot;centered \(n\)-gon&quot;</h2>
 <p>I asked a question on Math Stack Exchange, &quot;<a href="https://math.stackexchange.com/q/4082065/121988">When is it possible to find a regular \(k\)-gon in a centered \(n\)-gon</a>&quot;—where &quot;centered \(n\)-gon&quot; refers to the diagram that you get when illustrating <a href="https://oeis.org/wiki/Centered_polygonal_numbers">central polygonal numbers</a>. These diagrams are one of many possible generalizations of the triangular, square, and centered hexagonal grids. (Although it’s worth noting that the centered triangular grid is different from the ordinary triangular grid.)</p>
 <p>If you have any ideas about this, let me know on Twitter or post an answer to the Stack Exchange question above.</p>
-<h2>A catalog of polytopes and grids</h2>
+<h2 id="a-catalog-of-polytopes-and-grids">A catalog of polytopes and grids</h2>
 <p>On my <a href="http://oeis.org/w/index.php?title=User:Peter_Kagey&amp;oldid=1643082">OEIS wiki page</a>, I’ve created some tables that show different kinds of polytopes in different kinds of grids. There are quite a number of combinations of polygons/polyhedra and grids that either don’t have an OEIS sequence or that I have been unable to find.</p>
 <table><tbody><tr><th>&nbsp;</th><th style="font-size: small; text-align: center;">Square</th><th style="font-size: small; text-align: center;">Rectangular</th><th style="font-size: small; text-align: center;">Centered Square</th><th style="font-size: small; text-align: center;">Triangular</th><th style="font-size: small; text-align: center;">Centered Hexagonal</th></tr><tr><td>Equilateral Triangle</td><td>–</td><td>–</td><td>–</td><td><a href="http://oeis.org/A000332">A000332</a></td><td><a href="http://oeis.org/A008893">A008893</a></td></tr><tr><td>Square</td><td><a href="http://oeis.org/A002415">A002415</a></td><td><a href="http://oeis.org/A130684">A130684</a></td><td><a href="http://oeis.org/A006324">A006324</a></td><td>–</td><td>–</td></tr><tr><td>Regular Hexagon</td><td>–</td><td>–</td><td>–</td><td><a href="http://oeis.org/A011779">A011779</a></td><td><a href="http://oeis.org/A000537">A000537</a></td></tr><tr><td>Regular Polygon</td><td><a href="http://oeis.org/A002415">A002415</a></td><td><a href="http://oeis.org/A130684">A130684</a></td><td><a href="http://oeis.org/A006324">A006324</a></td><td>&nbsp;?</td><td><a href="http://oeis.org/A339483">A339483</a>*</td></tr><tr><td>Triangle</td><td><a href="http://oeis.org/A045996">A045996</a></td><td><a href="http://oeis.org/A334705">A334705</a></td><td>&nbsp;?</td><td>&nbsp;?</td><td><a href="http://oeis.org/A241223">A241223</a></td></tr><tr><td>Rectangle</td><td><a href="http://oeis.org/A085582">A085582</a></td><td><a href="http://oeis.org/A289832">A289832</a></td><td>&nbsp;?</td><td>–</td><td>–</td></tr><tr><td>Right Triangle</td><td><a href="http://oeis.org/A077435">A077435</a></td><td>&nbsp;?</td><td>&nbsp;?</td><td>&nbsp;?</td><td><a href="http://oeis.org/A241225">A241225</a></td></tr></tbody></table>
 <p>OEIS sequences for polygons on 2-dimensional grids.
@@ -118,7 +119,7 @@ Sequences marked with &quot;*&quot; are ones that I’ve authored, cells marked 
 Sequences marked with &quot;*&quot; are ones that I’ve authored, and cells marked with &quot;?&quot; do not have a corresponding sequence that I know of.</p>
 <p>If you’re interested in working on filling in some of the gaps in this table, I’d love it if you let me now! And if you’d like to collaborate or could use help getting started, <a href="https://bsky.app/profile/peterkagey.com">send me a message on Bluesky</a>!</p>
 
-    </article>
+    </heading-anchors>
   </main>
 
   <footer>

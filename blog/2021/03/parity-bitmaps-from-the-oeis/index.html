@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>Parity Bitmaps from the OEIS</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   
     
     <meta property="og:title" content="Parity Bitmaps from the OEIS">
@@ -42,8 +43,8 @@
       : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
     </p>
     <p>
-      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
-      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg></a>
       <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
     </p>
     </div>
@@ -52,12 +53,12 @@
 
   <main>
     
-    <h1>Parity Bitmaps from the OEIS</h1>
+    <h1 id="parity-bitmaps-from-the-oeis">Parity Bitmaps from the OEIS</h1>
     
     
     <p>by Peter Kagey (2021-03-22)</p>
     
-    <article>
+    <heading-anchors>
       <p>My friend <a href="https://oeis.org/search?q=alec%2Cjones">Alec Jones</a> and I wrote a <a href="https://github.com/peterkagey/TableParity">Python script</a> that takes a <a href="https://oeis.org/wiki/Clear-cut_examples_of_keywords#tabl">two-dimensional sequence</a> in the <a href="https://oeis.org/">On-Line Encyclopedia of Integer Sequences</a> and uses it to create a one-bit-per-pixel (1BPP) &quot;parity <a href="https://en.wikipedia.org/wiki/BMP_file_format">bitmaps</a>&quot;. The program is simple: it colors a given pixel is black or white depending on whether the corresponding value is even or odd.</p>
 <div class="columns">
 <figure>
@@ -69,7 +70,7 @@
   <figcaption><a href="https://oeis.org/A207409">A207409</a> parity bitmap.</figcaption>
 </figure>
 </div>
-<h3>An Unexpected Fractal</h3>
+<h3 id="an-unexpected-fractal">An Unexpected Fractal</h3>
 <p>We’ve now run the script on over a thousand sequences, but we still both agree on our favorite: the fractal generated by OEIS sequence <a href="https://oeis.org/A279212">A279212</a>.</p>
 <blockquote>
 <p>Fill an array by antidiagonals upwards; in the top left cell enter \(a(0)=1\); thereafter, in the \(n\)-th cell, enter the sum of the entries of those earlier cells that can be &quot;seen&quot; from that cell.</p>
@@ -85,14 +86,14 @@
   <figcaption>2048 rows and 1024 columns of <a href="https://oeis.org/A279212">A279212</a>.</figcaption>
 </figure>
 </div>
-<h4>The Construction of the Sequence</h4>
+<h4 id="the-construction-of-the-sequence">The Construction of the Sequence</h4>
 <p>The sequence is built up by &quot;antidiagonals&quot;, as shown in the GIF below. In the definition, &quot;seen&quot; means every direction a chess queen can move that already has numbers written down (i.e. north, west, northwest, or southwest). That is, look at all of the positions you can move to, add them all up, write that number in your square, move to the next square, and repeat. (The number in cell \(C\) also counts the number of paths a queen can make from \(C\) to the northwest corner using only N, NW, W, SW moves.)</p>
 <figure>
     <img src="/assets/blog/2021-03-22/A279212_animation.gif" alt="A279212 construction">
     <figcaption>Animation of A279212 construction</figcaption>
 </figure>
 <p>(Interestingly, but only tangentially related: <a href="https://codegolf.stackexchange.com/a/176651/53884">Code Golf Stack Exchange User flawr noticed</a> that the number of north/west rook walks is related to the number of ways of partitioning a \(1 \times n\) grid into triangles.)</p>
-<h2>Parity Bitmaps for Other Sequences</h2>
+<h2 id="parity-bitmaps-for-other-sequences">Parity Bitmaps for Other Sequences</h2>
 <p>It’s worth noting that many sequences are all black, consist of simple repeating patterns, or look like static. However, chess-type constructions, as illustrated by the GIF above, the one above yield images that look like the <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle">Sierpiński triangle</a>. (See <a href="https://oeis.org/A132439">A132439</a> and <a href="https://oeis.org/A334017">A334017</a> below, and look at <a href="https://oeis.org/A334016">A334016</a> and <a href="http://oeis.org/A334745">A334745</a> via their OEIS entries.) Look below for a couple other sequences with interesting images too.</p>
 <div class="columns">
 <figure>
@@ -119,7 +120,7 @@
   <img src="/assets/blog/2021-03-22/imagejpeg_0.jpg" alt="Alec’s fractal, framed above his fountain pen ink and tasteful books.">
   <figcaption>Alec’s fractal, framed above his fountain pen ink and tasteful books.</figcaption>
 </figure>
-<h2>Some ideas for further exploration:</h2>
+<h2 id="some-ideas-for-further-exploration">Some ideas for further exploration:</h2>
 <ul>
 <li>See more images I’ve already generated, <a href="https://github.com/peterkagey/TableParity/tree/master/images/bulk_lookup">I have hundreds of images available for download on my Github page</a>.</li>
 <li>Check out my Twitter bot <a href="https://twitter.com/OeisTriangles/">@oeisTriangles</a> that tweets related images.</li>
@@ -129,16 +130,16 @@
 <div class="columns">
   <div>
     <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:bw5vyhjzrf2wp5lsz42dlikf/app.bsky.feed.post/3lr4vh2e6ls2y" data-bluesky-cid="bafyreiesvgb4ynqj74josrbkilcvmjz3kcyep5vwpb52lhl6qejftnkapi" data-bluesky-embed-color-mode="system"><p lang="en">OEIS sequence A289251 by Rémy Sigrist (June 2017).
-<p>(Even terms are drawn as dark hexagons and odd terms are drawn as light hexagons.)<br><br><a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3lr4vh2e6ls2y?ref_src=embed">[image or embed]</a></p>— OEIS Parity Triangles (<a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf?ref_src=embed">@oeistriangles.peterkagey.com</a>) <a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3lr4vh2e6ls2y?ref_src=embed">June 8, 2025 at 3:19 PM</a></blockquote></p>
+</p><p>(Even terms are drawn as dark hexagons and odd terms are drawn as light hexagons.)<br><br><a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3lr4vh2e6ls2y?ref_src=embed">[image or embed]</a></p>— OEIS Parity Triangles (<a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf?ref_src=embed">@oeistriangles.peterkagey.com</a>) <a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3lr4vh2e6ls2y?ref_src=embed">June 8, 2025 at 3:19 PM</a></blockquote><p></p>
   </div>
   <div>
     <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:bw5vyhjzrf2wp5lsz42dlikf/app.bsky.feed.post/3ly4ox44m4s2z" data-bluesky-cid="bafyreicsek7ia4uevdmhvvjko5nfvf2totxupzrbngt2tzhi5cgvxw6y3u" data-bluesky-embed-color-mode="system"><p lang="en">OEIS sequence A120105 by Paul Barry (June 2006).
-<p>(Even terms are drawn as dark hexagons and odd terms are drawn as light hexagons.)<br><br><a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3ly4ox44m4s2z?ref_src=embed">[image or embed]</a></p>— OEIS Parity Triangles (<a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf?ref_src=embed">@oeistriangles.peterkagey.com</a>) <a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3ly4ox44m4s2z?ref_src=embed">September 5, 2025 at 3:19 PM</a></blockquote></p>
+</p><p>(Even terms are drawn as dark hexagons and odd terms are drawn as light hexagons.)<br><br><a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3ly4ox44m4s2z?ref_src=embed">[image or embed]</a></p>— OEIS Parity Triangles (<a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf?ref_src=embed">@oeistriangles.peterkagey.com</a>) <a href="https://bsky.app/profile/did:plc:bw5vyhjzrf2wp5lsz42dlikf/post/3ly4ox44m4s2z?ref_src=embed">September 5, 2025 at 3:19 PM</a></blockquote><p></p>
   </div>
-  <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+  <script async="" src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 </div>
 
-    </article>
+    </heading-anchors>
   </main>
 
   <footer>

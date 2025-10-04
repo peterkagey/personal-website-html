@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>XOR Triangles</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   
     
     <meta property="og:title" content="XOR Triangles">
@@ -42,8 +43,8 @@
       : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
     </p>
     <p>
-      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
-      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg></a>
       <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
     </p>
     </div>
@@ -52,12 +53,12 @@
 
   <main>
     
-    <h1>XOR Triangles</h1>
+    <h1 id="xor-triangles">XOR Triangles</h1>
     
     
     <p>by Peter Kagey (2023-01-02)</p>
     
-    <article>
+    <heading-anchors>
       <p>In this post, I’ll explore the math behind one of my Twitter bots, <a href="https://twitter.com/xorTriangles">@xorTriangles</a>. This bot was inspired by the MathOverflow question &quot;<a href="https://mathoverflow.net/q/359138/104733">Number triangle</a>,&quot; asked by user DSM posted in May 2020.</p>
 <p>(I gave an overview of my Twitter bots <a href="https://twitter.com/oeisTriangles">@oeisTriangles</a> in my post &quot;<a href="/blog/2021/03/parity-bitmaps-from-the-oeis/">Parity Bitmaps from the OEIS</a>&quot;. And if you want to build your own bot, I showed the steps for building <a href="https://twitter.com/BotfonsNeedles">@BotfonsNeedles</a> in parts <a href="/blog/2021/04/botfonsneedles-part-1/">I</a>, <a href="/blog/2021/04/botfonsneedles-part-2/">II</a>, and <a href="/blog/2021/05/botfonsneedles-part-3/">III</a> of my three-part series &quot;A π-estimating Twitter bot&quot;.)</p>
 <blockquote>
@@ -82,15 +83,15 @@ Seed: 153476919841200757800960 <a href="https://t.co/JPB1jc4OD1">pic.twitter.com
   1\quad0\\
   1
 \]
-<p>
-<p>We’re especially interested in understanding the triangles with rotationally symmetric boundaries (and consequently insides)! <a href="https://oeis.org/A334556">OEIS sequence A334556</a> enumerates all of the rotationally symmetric triangles with a \(1\) in the upper left corner.</p>
-<h2>@xorTriangles</h2>
+</p><p>
+</p><p>We’re especially interested in understanding the triangles with rotationally symmetric boundaries (and consequently insides)! <a href="https://oeis.org/A334556">OEIS sequence A334556</a> enumerates all of the rotationally symmetric triangles with a \(1\) in the upper left corner.</p>
+<h2 id="xortriangles">@xorTriangles</h2>
 <p>My Twitter bot <a href="https://twitter.com/xorTriangles">@xorTriangles</a> posts these triangles four times a day, alternating between the triangles described above and a &quot;mod \(3\)&quot; analog. If you want to see how it works, you can <a href="https://github.com/peterkagey/TwitterBots/tree/main/xor_triangles">check it out on Github</a>.</p>
 <p>Here is an illustration by Michael De Vlieger that shows many small XOR triangles and which is available on the OEIS.</p>
 <p><img src="/assets/blog/2023-01-02/a334556.png" alt=""></p>
 <p><a href="https://oeis.org/A334556/a334556.png">Michael De Vlieger’s image on the OEIS</a>.
 My Twitter bot @xorTriangles currently follows the same convention.</p>
-<h2>Mathematica</h2>
+<h2 id="mathematica">Mathematica</h2>
 <p>One way to find a rotationally symmetric XOR triangle is by setting up a system of equations. Using the convention that the top row of the triangle is labeled \(x_0, x_1, \dots, x_n\), we can use the Pascal’s Triangle-like construction to set up a system of linear equations over \(\mathbb{Z}/2\mathbb{Z}\). The solutions of this system of equations are precisely those that correspond to the XOR triangle we care about! This allows us to write down a matrix whose null space is the set of such triangles:</p>
 <p>$$\begin{align}x_n &amp;= x_0\\x_{n-1} &amp;= x_0 + x_1\\x_{n-2} &amp;= x_0 + 2x_1 + x_2\\ &amp;\vdots \\ x_k &amp;= \sum_{i=0}^{n-k} \binom{n-k}{i}x_i \\ &amp;\vdots \\ x_0 &amp;= \binom{n}{1}x_0 + \binom{n}{1}x_1 + \dots + \binom{n}{n}x_n\end{align}$$</p>
 <p>Using Mathematica to find the null space works like this:</p>
@@ -100,7 +101,7 @@ xorSeedsBasis[n_] := NullSpace[
   Modulus -> 2
 ];</code></pre>
 <p>Because this is the null space of a \(n+1 \times n+1\) matrix over \(\mathbb{Z}/2\mathbb{Z}\), we know that there must be \(2^M\) rotationally symmetric XOR triangles, where \(M\) is an integer—which isn’t obvious from the original construction!</p>
-<h2><a href="https://oeis.org/wiki/Index_to_OEIS:_Section_X#XOR-triangles">Related OEIS sequences</a></h2>
+<h2 id="related-oeis-sequences"><a href="https://oeis.org/wiki/Index_to_OEIS:_Section_X#XOR-triangles">Related OEIS sequences</a></h2>
 <p>If you’re interested in learning more about this construction, reach out to me or take a look at some of these related OEIS sequences:</p>
 <ul>
 <li><a href="https://oeis.org/A334596">A334596</a>: Number rotationally symmetric triangles of size \(n\) with \(1\)s in the corners.</li>
@@ -111,7 +112,7 @@ xorSeedsBasis[n_] := NullSpace[
 <li><a href="https://oeis.org/A334930">A334930</a>: Numbers that generate rotationally symmetrical XOR-triangles featuring singleton zero bits in a hexagonal arrangement. (from <a href="https://oeis.org/wiki/User:Michael_De_Vlieger">Michael De Vlieger</a>, see <a href="https://oeis.org/A334930/a334930.png">his illustration</a>)</li>
 </ul>
 
-    </article>
+    </heading-anchors>
   </main>
 
   <footer>

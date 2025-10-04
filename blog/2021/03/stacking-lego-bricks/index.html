@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>Stacking LEGO Bricks</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   
     
     <meta property="og:title" content="Stacking LEGO Bricks">
@@ -42,8 +43,8 @@
       : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
     </p>
     <p>
-      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
-      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg></a>
       <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
     </p>
     </div>
@@ -52,12 +53,12 @@
 
   <main>
     
-    <h1>Stacking LEGO Bricks</h1>
+    <h1 id="stacking-lego-bricks">Stacking LEGO Bricks</h1>
     
     
     <p>by Peter Kagey (2021-03-08)</p>
     
-    <article>
+    <heading-anchors>
       <p>Back in May, I participated in <a href="https://aperiodical.com/category/the-big-internet-math-off/the-big-lock-down-math-off/">The Big Lock-Down Math-Off</a> from The Aperiodical. In the Math-Off, I went head-to-head against Colin Beveridge (who has, hands-down, my favorite Twitter handle: <a href="https://twitter.com/icecolbeveridge/">@icecolbeveridge</a>). <a href="https://aperiodical.com/2020/05/the-big-lock-down-math-off-match-15/">Colin wrote</a> about using generating functions to do combinatorics about Peter Rowlett’s toy Robot Caterpillar. Coincidentally and delightfully, I wrote about using generating functions to do combinatorics about Peter Kagey’s toy LEGOs.</p>
 <p>Counting LEGO configurations is a problem dating back to at least 1974, when Jørgen Kirk Kristiansen counted that there are 102,981,500 ways to stack six 2×4 LEGOs of the same color into a tower of height six. <a href="http://web.math.ku.dk/~eilers/lego.html#howgetright">According to Søren Eilers</a>, Jørgen undercounted by 4!</p>
 <p><a href="/assets/blog/2021-03-08/rotating_LEGO_stack.gif"><img src="/assets/blog/2021-03-08/rotating_LEGO_stack.gif" alt="Animated GIF of rotating LEGO stack"></a></p>
@@ -78,7 +79,7 @@
   <div><img src="/assets/blog/2021-03-08/model_7.png"></div>
   <div><img src="/assets/blog/2021-03-08/model_8.png"></div>
 </div>
-<h2>The Rules</h2>
+<h2 id="the-rules">The Rules</h2>
 <ol>
 <li>The bricks must lie in a single plane.</li>
 <li>No brick can be directly on top of any other.</li>
@@ -104,7 +105,7 @@
   </figure>
 </div>
 <p><a href="https://www.sciencedirect.com/science/article/pii/0196885888900176?via%3Dihub#!">Gouyou-Beauchamps and Viennot</a> first proved this result in their <a href="https://doi.org/10.1016/0196-8858(88)90017-6">1988 statistical mechanics paper</a>, but the nicest proof that I know of can be found in <a href="https://books.google.com/books?id=j3kZBwAAQBAJ">Miklós Bóna’s Handbook of Enumerative Combinatorics</a> (page 26). This proof decomposes the stacks of blocks in a clever way and then uses a bit of generating function magic.</p>
-<h2>Other rules</h2>
+<h2 id="other-rules">Other rules</h2>
 <p>In preparation for the Math-Off piece, I <a href="https://math.stackexchange.com/q/3659431/121988">asked a question</a> on Math Stack Exchange about counting the number of towers without Rule 2. The user <a href="https://math.stackexchange.com/a/3659526/121988">joriki</a> provided a small and delightful modification of Bóna’s proof that proves that there are \(4^{n-1}\) towers if only rules 1, 3, and 4 are followed.</p>
 <p>It might also be interesting to consider the 14 other subsets of the rules. I encourage you to compute the number of corresponding towers and add any new sequences to the <a href="https://oeis.org/">On-Line Encyclopedia of Integer Sequences</a>. If you do so, please let me know! And I’d be happy to work with you if you’d like to contribute to the OEIS but don’t know how to get started.</p>
 <p>Another natural question to ask: How many different towers can you build out of \(n\) bricks if you consider mirror images to be the same? In the example above with the red bricks, there are six different towers, because there are three pairs of mirror images. By <a href="https://en.wikipedia.org/wiki/Burnside%27s_lemma">Burnside’s Lemma</a> (or a simpler combinatorial argument) this is equivalent to counting the number of symmetric brick stacks. If there are \(s(n)\) symmetric towers with \(n\) bricks, then there are \(\displaystyle \frac 12 (3^{n-1}+s(n))\) towers. For \(n = 4\), there are three such towers, shown below in blue.</p>
@@ -114,7 +115,7 @@
 <div><img src="/assets/blog/2021-03-08/4_brick_3.png"></div>
 </div>
 <p>I <a href="https://math.stackexchange.com/q/2949131/121988">asked about this function</a> on Math Stack Exchange and wrote <a href="https://github.com/peterkagey/haskellOEIS/blob/master/src/BrickStacking/A320314.hs">a naive Haskell program</a> to compute the number of symmetric towers consisting of \(n \leq 19\) bricks, which I added to the OEIS as sequence <a href="https://oeis.org/A320314">A320314</a>. OEIS contributor Andrew Howroyd impressively extended the sequence by 21 more terms. I also added sequence <a href="https://oeis.org/A264746">\(A264746 = \frac 12 (3^{n-1}+A320314(n))\)</a>, which counts towers up to reflection, and <a href="https://oeis.org/A333650">A333650</a>, which is a table that gives the number of towers with \(n\) bricks and height \(k\).</p>
-<h2>Stacking Ordinary Bricks</h2>
+<h2 id="stacking-ordinary-bricks">Stacking Ordinary Bricks</h2>
 <p>It is also interesting to count the number of (stable) towers that can be made out of ordinary bricks without any sort of mortar. I <a href="https://math.stackexchange.com/q/2731692/121988">asked on Math Stack Exchange for a combinatorial rule</a> for determining when a stack of ordinary bricks is stable. MSE user <a href="https://math.stackexchange.com/questions/2731692/combinatorial-rule-for-a-stable-stack-of-bricks#comment5709420_2731692">Jens commented</a> that this problem is hard, and pointed to the OEIS sequence <a href="https://oeis.org/A168368">A168368</a> and the paper <a href="https://math.dartmouth.edu/~pw/papers/maxover.pdf">&quot;Maximum Overhang&quot; by Mike Paterson, Yuval Peres, Mikkel Thorup, Peter Winkler, and Uri Zwick</a>, which provides a surprising example of a tower that one might expect to be stable, but in fact is not.</p>
 <div class="columns">
   <figure>
@@ -130,7 +131,7 @@
 <p>These problems and some generalizations can be found in <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=34">Problem 33</a> of <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf">my Open Problem Collection</a>. If you’d like to collaborate on any of these problems, let me know on <a href="https://bsky.app/profile/peterkagey.com">Bluesky</a>. If you find yourself working on your own, I’d love for you to keep me updated with your progress!</p>
 <p>(The graphics of LEGO bricks were rendered using the impressive and free LEGO <a href="https://www.bricklink.com/v3/studio/download.page">Studio from BrickLink</a>.)</p>
 
-    </article>
+    </heading-anchors>
   </main>
 
   <footer>

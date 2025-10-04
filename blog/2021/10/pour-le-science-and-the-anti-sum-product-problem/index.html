@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>Pour Le Science and the anti-Sum-Product Problem</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   
     
     <meta property="og:title" content="Pour Le Science and the anti-Sum-Product Problem">
@@ -42,8 +43,8 @@
       : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
     </p>
     <p>
-      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg></a>
-      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"/></svg></a>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg></a>
       <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
     </p>
     </div>
@@ -52,12 +53,12 @@
 
   <main>
     
-    <h1>Pour Le Science and the anti-Sum-Product Problem</h1>
+    <h1 id="pour-le-science-and-the-anti-sum-product-problem">Pour Le Science and the anti-Sum-Product Problem</h1>
     
     
     <p>by Peter Kagey (2021-10-20)</p>
     
-    <article>
+    <heading-anchors>
       <p>In March 2021, I got an out-of-the-blue email from OEIS editor Michel Marcus which totally delighted me. He wrote:</p>
 <blockquote>
 <p>This afternoon I went to the library.
@@ -68,7 +69,7 @@ And here is what I saw.</p>
 <p>He included this photo of an excerpt of an article, which on the first line mentioned an OEIS sequence of mine (with my name slightly misspelled):</p>
 <p><img src="/assets/blog/2021-10-21/pour_le_science.jpg" alt=""></p>
 <p>Michel Marcus’s photo of an article in <em>Pour La Science</em>. (Translated below)</p>
-<h2>The article, translated</h2>
+<h2 id="the-article-translated">The article, translated</h2>
 <p>Michel had sent me a snippet of the article &quot;<a href="https://www.pourlascience.fr/sr/logique-calcul/addition-et-multiplication-des-tables-qui-intriguent-21615.php">Addition et multiplication, des tables qui intriguent</a>&quot; by French Computer Science professor <a href="https://oeis.org/wiki/User:Jean-Paul_Delahaye">Jean-Paul Delahaye</a>. I read French quite clumsily, so I sent it to my friend Alec, and he volunteered a translation.</p>
 <blockquote>
 <p>Sloane [verb not pictured] of my sequence <a href="https://oeis.org/A337655">A337655</a>, Peter Kagey, who must have been informed of changes to the encyclopedia, proposed this second way of accounting for addition and multiplication. This has yielded a new entry in the encyclopedia, the following <a href="https://oeis.org/A337946">A337946</a>:</p>
@@ -78,7 +79,7 @@ And here is what I saw.</p>
 <p>&quot;There exist two constants \(C&gt;0\) and \(e &gt; 0\) such that, for the set \(E\) of real numbers of […]</p>
 <p><cite>Translation by Alec Jones</cite></p>
 </blockquote>
-<h2>A Sum-Product Problem</h2>
+<h2 id="a-sum-product-problem">A Sum-Product Problem</h2>
 <p>The article—or at least the part that I could make sense of—is about the <em>opposite</em> of <a href="https://www.quantamagazine.org/the-sum-product-problem-shows-how-addition-and-multiplication-constrain-each-other-20190206/">Erdos’s Sum-Product Problem</a>. This article explores questions about the <em>greatest</em> number of different values in the corresponding addition and multiplication tables for different sequences of positive integers.</p>
 <div class="columns">
 <figure>
@@ -116,15 +117,15 @@ And here is what I saw.</p>
   <figcaption>Multiplication table for A337946.</figcaption>
 </figure>
 </div>
-<h2>Some related sequences</h2>
+<h2 id="some-related-sequences">Some related sequences</h2>
 <p>I’ve recently added some new sequences to the OEIS related to these sequences.</p>
 <p>One way of thinking of <a href="https://oeis.org/A066720">A066720</a> is that it’s the lexicographically earliest infinite sequence \(S = \(a_i\)_{i=1}^{\infty}\) such that for all \(n\) the set \(S_n = \{a_i\}_{i=1}^{n}\) consisting of the first \(n\) terms of \(S\) has the property that \(S_n \times S_n = \{xy \mid x, y \in S_n\}\) has exactly \(\binom{n+1}{2}\) elements—the most possible.</p>
-<h3>A347498: minimize the largest term</h3>
+<h3 id="a347498-minimize-the-largest-term">A347498: minimize the largest term</h3>
 <p>If instead of minimizing the lexicographic order, we instead minimize the size of the largest element, we get OEIS sequence A347498: for each \(n\), find the least \(m\) such that there exists a subset \(T_n \subseteq \{1, 2, \dots, m\}\) with \(n\) elements such that \(|T_n \times T_n| = \binom{n+1}{2}\). \(A347498(n)\) records the value of the \(m\)s.</p>
 <p>For example, \(A347498(8) = 11\) as illustrated by the table below.</p>
 <img src="/assets/blog/2021-10-21/multiplication_table_4.png">
 <p>Multiplication table illustrating \(A347498(8) = 11\).</p>
-<h3>A347499: Examples with minimized largest element</h3>
+<h3 id="a347499-examples-with-minimized-largest-element">A347499: Examples with minimized largest element</h3>
 <p>We wish to record examples of the sequences described in the above section. There are \(A348481(n)\) subsets of \(\{1,2,…,A347499(n)\}\) with the distinct product property, but we record the lexicographically earliest one in OEIS sequence <a href="https://oeis.org/A347499">A347499</a>.</p>
 <pre class="language-plain"><code class="language-plain">n | Distinct product subset of {1,2,...,A347499(n)}
 ---+-------------------------------------------------------
@@ -143,7 +144,7 @@ And here is what I saw.</p>
 13 | {1, 5, 6, 7,  9, 11, 13, 14, 15, 16, 17, 19, 20}
 14 | {1, 2, 5, 7, 11, 12, 13, 16, 17, 18, 19, 20, 21, 23}</code></pre>
 <p>For all of the known values, the lexicographically earliest subset begins with \(1\). Is this true in general?</p>
-<h3>A347570: Sums with more terms</h3>
+<h3 id="a347570-sums-with-more-terms">A347570: Sums with more terms</h3>
 <p>Perhaps instead of asking when all sums \(x + y\) are distinct for \(x \leq y\), we want to know when all sums \(x_1 + x_2 + \dots + x_n\) are distinct for \(x_1 \leq x_2\leq \dots \leq x_n\). This family of sequences are sometimes called <a href="https://mathworld.wolfram.com/B2-Sequence.html">\(B_n\)</a> sequences and have been studied by the likes of <a href="/blog/2021/05/richard-guys-partition-sequence/">Richard Guy</a>.</p>
 <p>I’ve recorded the lexicographically earliest \(B_n\) sequences in OEIS sequence <a href="https://oeis.org/A347570">A347570</a>.</p>
 <pre class="language-plain"><code class="language-plain">n\k | 1  2   3   4    5     6     7      8
@@ -157,10 +158,10 @@ And here is what I saw.</p>
   7 | 1, 2,  9, 58, 257, 1154, 4182, 14181, ...
   8 | 1, 2, 10, 74, 334, 1823, 8044, 28297, ...</code></pre>
 <p>I ask about this family of sequences in a recent <a href="https://codegolf.stackexchange.com/q/236471/53884">question on Code Golf Stack Exchange</a>.</p>
-<h3>Other ideas?</h3>
+<h3 id="other-ideas">Other ideas?</h3>
 <p>Did this post spark any related ideas? Let me know about them on Bluesky <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a>—I’d love to hear about them!</p>
 
-    </article>
+    </heading-anchors>
   </main>
 
   <footer>
