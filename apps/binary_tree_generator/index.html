@@ -45,92 +45,61 @@
     
     <article>
       
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Binary Tree Generator</title>
-  <style>
-    body {
-      font-family: monospace;
-      background: #f8f8f8;
-      padding: 20px;
-    }
-    #controls {
-      margin-bottom: 15px;
-    }
-    #tree-output {
-      font-family:Menlo;
-      line-height: 125%;
-      font-size: 10px;
-      padding: 0;
-    }
-    #text-container {
-      align-items: center;
-    }
-    label {
-      margin-right: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Binary Tree Generator</h1>
-  This generates binary trees uniformly at random!
-  <div id="controls">
-    <label>
-      Size:
-      <input type="range" id="size-slider" min="1" max="39" value="20" style="width: 100%;">
-      <br>
-      <span id="size-value">n = 10</span>;
-      <span id="catalan">A000108(10) = 16796</span>
-    </label>
+<h1>Binary Tree Generator</h1>
+This generates binary trees uniformly at random!
+<div style="margin-bottom: 15px;">
+  <label>
+    Size:
+    <input type="range" id="size-slider" min="1" max="39" value="20" style="width: 100%;">
     <br>
-    <button id="regen-btn">Regenerate Tree</button>
-  </div>
-  <div class="text-container">
-    <pre id="tree-output"></pre>
-  </div>
+    <span id="size-value">n = 10</span>;
+    <span id="catalan">A000108(10) = 16796</span>
+  </label>
+  <br>
+  <button id="regenerate-button">Regenerate Tree</button>
+</div>
+<div class="text-container">
+  <pre id="binary-tree-output"></pre>
+</div>
 
-  <script type="module">
-    import { Tree } from '../scripts/binary_tree_generator.js';
+<script type="module">
+  import { Tree } from '../scripts/binary_tree_generator.js';
 
-    const output = document.getElementById('tree-output');
-    const slider = document.getElementById('size-slider');
-    const sizeValue = document.getElementById('size-value');
-    const catalan = document.getElementById('catalan');
-    const regenBtn = document.getElementById('regen-btn');
+  const output = document.getElementById('binary-tree-output');
+  const slider = document.getElementById('size-slider');
+  const sizeValue = document.getElementById('size-value');
+  const catalan = document.getElementById('catalan');
+  const regenerateButton = document.getElementById('regenerate-button');
 
-    function renderTree(size) {
-      const t = Tree.build(size);
-      output.textContent = t.toString();
-    }
+  function renderTree(size) {
+    const t = Tree.build(size);
+    output.textContent = t.toString();
+  }
 
-    function catalanDP(n) {
-      const cat = Array(n + 1).fill(0);
-      cat[0] = cat[1] = 1;
-      for (let i = 2; i <= n; i++) {
-        for (let j = 0; j < i; j++) {
-          cat[i] += cat[j] * cat[i - j - 1];
-        }
+  function A000108(n) {
+    const cat = Array(n + 1).fill(0);
+    cat[0] = cat[1] = 1;
+    for (let i = 2; i <= n; i++) {
+      for (let j = 0; j < i; j++) {
+        cat[i] += cat[j] * cat[i - j - 1];
       }
-      return cat[n];
     }
+    return cat[n];
+  }
 
-    slider.addEventListener('input', () => {
-      sizeValue.textContent = "n = " + slider.value;
-      catalan.textContent = "A000108(" + slider.value + ") = " + catalanDP(+slider.value);
-      renderTree(parseInt(slider.value, 10));
-    });
-
-    regenBtn.addEventListener('click', () => {
-      renderTree(parseInt(slider.value, 10));
-    });
-
-    // Initial render
+  slider.addEventListener('input', () => {
+    sizeValue.textContent = "n = " + slider.value;
+    catalan.textContent = "A000108(" + slider.value + ") = " + A000108(+slider.value);
     renderTree(parseInt(slider.value, 10));
-  </script>
-</body>
-</html>
+  });
+
+  regenerateButton.addEventListener('click', () => {
+    renderTree(parseInt(slider.value, 10));
+  });
+
+  // Initial render
+  renderTree(parseInt(slider.value, 10));
+</script>
 
     </article>
   </main>
