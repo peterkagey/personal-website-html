@@ -32,13 +32,13 @@
     </div>
     <div class="header-right">
     <p>
-      <a href="/blog">blog</a>
-      : <a href="/about">about</a>
-      : <a href="/cv">cv</a>
-      : <a href="/art">art</a>
-      : <a href="/apps">apps</a>
-      : <a href="/problems">problems</a>
-      <!--: <a href="/shop">shop</a>-->
+      <a href="/blog/">blog</a>
+      : <a href="/about/">about</a>
+      : <a href="/cv/">cv</a>
+      : <a href="/art/">art</a>
+      : <a href="/apps/">apps</a>
+      : <a href="/problems/">problems</a>
+      <!--: <a href="/shop/">shop</a>-->
       : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
     </p>
     <p>
@@ -72,33 +72,53 @@
 <p>Matt’s mistake got me interested! If the centroid and the incenter create such interesting and intricate designs, what about other triangle centers like the circumcenter or the orthocenter? In particular, I was interested in finding examples of interesting triangle centers from <a href="https://faculty.evansville.edu/ck6/encyclopedia/etc.html">Clark Kimberling’s Encyclopedia of Triangle Centers</a> (ETC), which is a database with over 53,000 named triangle centers, including all of those that you have heard about.</p>
 <h2>Patterns from other triangle centers</h2>
 <p>Instead of illustrating the results of this process on hexagons as Matt did in his tweet, I’ve done the iterative process on squares. Here are six examples illustrating the patterns for various triangle centers from <a href="https://faculty.evansville.edu/ck6/encyclopedia/etc.html">ETC</a>.</p>
-<p><img src="/assets/blog/2023-03-15/x1.png" alt=""></p>
-<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X1">X(1)</a></p>
-<p><img src="/assets/blog/2023-03-15/x10.png" alt=""></p>
-<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X58">X(10)</a></p>
-<p><img src="/assets/blog/2023-03-15/x31.png" alt=""></p>
-<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X31">X(31)</a></p>
-<p><img src="/assets/blog/2023-03-15/x8.png" alt=""></p>
-<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X244">X(8)</a></p>
-<p><img src="/assets/blog/2023-03-15/x11.png" alt=""></p>
-<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X11">X(11)</a></p>
-<p><img src="/assets/blog/2023-03-15/x37.png" alt=""></p>
-<p><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X141">X(37)</a></p>
+<div class="columns">
+  <figure>
+    <img src="/assets/blog/2023-03-15/x1.png">
+    <figcaption><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X1">X(1)</a></figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2023-03-15/x10.png">
+    <figcaption><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X58">X(10)</a></figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2023-03-15/x31.png">
+    <figcaption><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X31">X(31)</a></figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2023-03-15/x8.png">
+    <figcaption><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X244">X(8)</a></figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2023-03-15/x11.png">
+    <figcaption><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X11">X(11)</a></figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/blog/2023-03-15/x37.png">
+    <figcaption><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html#X141">X(37)</a></figcaption>
+  </figure>
+</div>
 <h2>Some basics of triangle centers</h2>
 <p>In the video at the top, I interpolate between 20 chosen triangle centers in a continuous way so that we can see how the image transforms as we transform the choice of triangle center.</p>
 <p>In order to understand what’s going on, you have to understand something about coordinates. We can define a triangle center with a map \(f\colon \mathbb{R}^3 \to \mathbb{R}\) such that \(f(a,b,c)\) is symmetric in \(b\) and \(c\). What we do is take the triangle with vertices \(\vec{v}_1\), \(\vec{v}_2\), and \(\vec{v}_3\), define \(a = |\vec{v}_2 – \vec{v}_3|\), \(b = |\vec{v}_1 – \vec{v}_3|\), and \(c = |\vec{v}_1 – \vec{v}_2|\), and define the midpoint as the weighted average \[\frac{f(a,b,c) \vec{v}_1 + f(b,c,a)\vec{v}_2, + f(c,a,b)\vec{v}_3}{f(a,b,c) + f(b,c,a) + f(c,a,b)}.\] Whenever \(f(a,b,c)\), \(f(b,c,a)\), and \(f(c,a,b)\) are simultaneously positive, this will describe a point inside the triangle. This way of describing points in space is called a &quot;<a href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system">barycentric coordinate system</a>&quot;.</p>
-<p><img src="/assets/blog/2023-03-15/barycentric.png" alt=""></p>
-<p>An illustration of the vertices and sides.</p>
+<figure>
+  <img src="/assets/blog/2023-03-15/barycentric.png" alt="An illustration of the vertices and sides.">
+  <figcaption>An illustration of the vertices and sides.</figcaption>
+</figure>
 <p>In the table below, I give examples of five triangle centers and their description in barycentric coordinates. In the case of \(X(2)\), the barycentric coodinates say that the centroid is just an honest average of the vertices. In all other cases, the other triangle centers are <em>weighted</em> averages of the vertices.</p>
 <table><tbody><tr><td>Triangle Center</td><td>Barycentric</td></tr><tr><td>X(1)&nbsp;=&nbsp;INCENTER</td><td>\(f(a,b,c) = a\)</td></tr><tr><td>X(2)&nbsp;=&nbsp;CENTROID</td><td>\(f(a,b,c) = 1\)</td></tr><tr><td>X(6)&nbsp;=&nbsp;SYMMEDIAN POINT</td><td>\(f(a,b,c) = a^2\)</td></tr><tr><td>X(10) = SPIEKER CENTER</td><td>\(f(a,b,c) = b + c\)</td></tr><tr><td>X(58) = ISOGONAL CONJUGATE OF X(10)</td><td>\(\displaystyle f(a,b,c) = \frac{a^2}{b + c}\)</td></tr></tbody></table>
 <p>A table of five triangle centers and the corresponding barycentric coordinates.</p>
 <h2>A curve of triangle centers</h2>
 <p>The triangle centers in the video are all described by functions of the form \[f(a,b,c) = a^{x_1}(b + c – a)^{x_2} (bc)^{x_3} (b^{x_4} + c^{x_4})^{x_5},\] where \((x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5\) and each frame follows a path in \(\mathbb{R}^5\), which intersects a triangle center from ETC for a single frame every ten seconds. In order to get this path in five-dimensional space, the code stitches together twenty piecewise-defined Bézier curves into a differentiable curve that goes through those twenty &quot;anchor points&quot;, as suggested by the following illustration. (Thankfully I could reuse some of the code I wrote for my Twitter bot <a href="https://twitter.com/BotzierCurves">@BotzierCurves</a>!)</p>
-<p><img src="/assets/blog/2023-03-15/connect_the_dots_inverted.png" alt=""></p>
-<p>A two-dimensional example of a curve through seven anchor points.</p>
+<figure>
+  <img src="/assets/blog/2023-03-15/connect_the_dots_inverted.png">
+  <figcaption>A two-dimensional example of a curve through seven anchor points.</figcaption>
+</figure>
 <p>In addition to choosing a slightly different triangle center in each frame, the colors of the points change throughout time as well. For example, in the picture below, the pixel is colored white if the same side is chosen twice in a row, red if the opposite side is chosen, and blue or green if the side to the left or right of the previous side is chosen. In the video, these colors change too, by following a Bézier curve through the three-dimensional <a href="https://en.wikipedia.org/wiki/RGB_color_spaces">RGB colorspace</a>.</p>
-<p><img src="/assets/blog/2023-03-15/x244.png" alt=""></p>
-<p>An illustration of a triangle center pattern where the color of the pixel depends on the order that the sides are chosen.</p>
+<figure>
+  <img src="/assets/blog/2023-03-15/x244.png">
+  <figcaption>An illustration of a triangle center pattern where the color of the pixel depends on the order that the sides are chosen.</figcaption>
+</figure>
 <p>You can download the code for yourself by visiting my <a href="https://github.com/peterkagey/MathArt">MathArt repository on Github</a>. If you have thoughts on this, if you want to play around with these ideas together, or if you just want to chat, please don’t hesitate to reach out!</p>
 
     </article>
