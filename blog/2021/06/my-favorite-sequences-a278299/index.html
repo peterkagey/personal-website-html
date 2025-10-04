@@ -75,8 +75,8 @@
 </blockquote>
 <p>(In May 2019, Alec’s student Ryan Lee found the \(11\)th term: \(A278299(11) = 34\). \(A278299(12)\) is still unknown.)</p>
 <img src="/assets/blog/2021-06-28/transparent_square_game.png">
-<p>A screenshot from <a href="http://www.peterkagey.com/square_games">my game</a> illustrating the largest known term: <a href="http://www.peterkagey.com/square_games/356">\(A278299(14) = 56\)</a>. Every number is connected to every other number. The red edges refer to redundant connections.</p>
-<p>We found these terms by establishing some lower bounds (as explained below) and then implementing a <a href="http://www.peterkagey.com/square_games">Javascript game (which you can play here)</a> with a <a href="https://github.com/peterkagey/circle-games">Ruby on Rails backend</a> to allow people to submit their hand-crafted attempts. Each solution was constructive proof of an upper bound, so when a user submitted a solution that matched the lower bound, we were able to confirm that term of the sequence.</p>
+<p>A screenshot from <a href="http://peterkagey.com/apps/square_games">my game</a> illustrating the largest known term: <a href="http://peterkagey.com/apps/square_games/?id=356">\(A278299(14) = 56\)</a>. Every number is connected to every other number. The red edges refer to redundant connections.</p>
+<p>We found these terms by establishing some lower bounds (as explained below) and then implementing a <a href="http://peterkagey.com/apps/square_games">Javascript game (which you can play here)</a> with a <a href="https://github.com/peterkagey/circle-games">Ruby on Rails backend</a> to allow people to submit their hand-crafted attempts. Each solution was constructive proof of an upper bound, so when a user submitted a solution that matched the lower bound, we were able to confirm that term of the sequence.</p>
 <p>(One heuristic for making minimal configurations is to start with the construction in OEIS sequence <a href="https://oeis.org/A260643">A260643</a> and add cells as necessary in an <em>ad hoc</em> fashion.)</p>
 <h2>Lower bounds</h2>
 <p>There are a few different ways of proving lower bounds.</p>
@@ -86,13 +86,13 @@
 <li>For the cases of \(n = 5\) and \(n=9\), the lower bounds were proved using <em>ad hoc</em> methods, by looking at how many cells would need to have a given number of neighbors.</li>
 </ul>
 <h2>Upper Bounds</h2>
-<p>Besides the upper bound that comes from the 1-dimensional version of the problem, that only upper bounds that I know of come from hand-crafted submissions on my <a href="http://www.peterkagey.com/square_games">Javascript game on my website</a>.</p>
+<p>Besides the upper bound that comes from the 1-dimensional version of the problem, that only upper bounds that I know of come from hand-crafted submissions on my <a href="http://peterkagey.com/apps/square_games">Javascript game on my website</a>.</p>
 <p>Do you have any ideas for an explicit and efficient algorithm for constructing such solutions? If so, let me know on Bluesky <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a>.</p>
 <h2>Asymptotics</h2>
 <p>The lower and upper bounds show that this is asymptotically bounded between \(n^2/4\) and \(n^2/2\). It’s possible that this doesn’t have a limit at all, but it would be interesting to bound the liminf and limsup further. My intuition is that \(n^2/4\) is the right answer, can you prove or disprove this?</p>
 <h2>Generalizations</h2>
 <ul>
-<li>We could play this <a href="http://www.peterkagey.com/triangle_games">game on the triangular grid</a>, or in the 3-dimensional cubic grid. Do you have ideas of other graphs that you could do this on?</li>
+<li>We could play this game on the triangular grid, or in the 3-dimensional cubic grid. Do you have ideas of other graphs that you could do this on?</li>
 <li>This game came from Tommy’s analysis of looking at &quot;not equal to&quot; as a symmetric, non-reflexive, non-transitive relation. Can you do a similar analysis on other kinds of relations?</li>
 <li>Is there a good way of defining what it means for two solutions to be the same? For a given number of variables, how many essentially different solutions exist? (Related: <a href="https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=109">Open problem #108</a>.)</li>
 <li>What if we think of left-right connections as being different from up-down connections, and want both? Or what if we want each variable \(x\) to be neighbors with another \(x\)?</li>

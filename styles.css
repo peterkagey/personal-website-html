@@ -314,6 +314,12 @@ img.art-thumbnail {
   font-size: 2rem;
 }
 
+.center {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;    /* vertical centering */
+}
+
 /* Copied from https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.css */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
