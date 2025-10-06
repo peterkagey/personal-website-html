@@ -67,11 +67,11 @@
 <p>Back in May 2025, I <a href="https://bsky.app/profile/peterkagey.com/post/3lp6lpnw7tk2z">posted on Bluesky about a puzzle</a> I designed based on partitioning faces of the <a href="https://en.wikipedia.org/wiki/Pentagonal_icositetrahedron">pentagonal icositetrahedron</a>, a polyhedron with 24 identical pentagonal faces. There are precisely eight different ways of choosing a connected component of three faces (up to rotation of the polyhedron), which suggests the question: Can you partition the faces into exactly these eight parts?</p>
 <div class="columns">
   <figure>
-    <video autoplay="" controls="" loop="" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/Puzzle.mp4"></video>
+    <video autoplay="" controls="" loop="" src="/assets/blog/2025-10-05/Puzzle.mp4"></video>
     <figcaption><a href="https://bsky.app/profile/peterkagey.com/post/3lp6lppb7ss2z">May 14, 2025 tweet</a>:<br> "I've thought of a puzzle in the style of <a href="https://bsky.app/profile/did:plc:kitutlxzq5hjgzkvegw5xtll">Alexandre Muñiz</a>'s puzzles.<br><br>There are 8 ways of choosing a connected subset of 3 faces of the pentagonal icositetrahedron, showed above. This is perfect, because it has 24 faces. Can we use them to tile?<br><br>I've fit seven out of eight!"</figcaption>
   </figure>
   <figure>
-    <video autoplay="" controls="" loop="" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/PuzzleSolution.mp4"></video>
+    <video autoplay="" controls="" loop="" src="/assets/blog/2025-10-05/PuzzleSolution.mp4"></video>
     <figcaption><a href="https://bsky.app/profile/peterkagey.com/post/3lpy47kahxs2z">May 25, 2025 tweet</a>:<br>"I solved it! 😊"</figcaption>
   </figure>
 </div>
@@ -79,50 +79,50 @@
 <p>Initially, to try out the puzzle, I cut out a <a href="https://www.polyhedra.net/en/model.php?name-en=pentagonal-icositetrahedron">polyhedral net</a> of the polygon, along with paper models of the eight distinct connected components of three faces and some masking tape. I tried for about fifteen minutes to solve the puzzle, but I had no luck---and the flimsy paper model wasn't helping either.</p>
 <div class="columns">
   <figure>
-    <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/pentagonal_icositetrahedron_faces.png">
+    <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_faces.png">
     <figcaption>Illustration of the eight ways of choosing a connected component of three faces on a pentagonal icositetrahedron</figcaption>
   </figure>
   <figure>
-    <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/paper_model.jpeg">
+    <img src="/assets/blog/2025-10-05/paper_model.jpeg">
     <figcaption>Paper model</figcaption>
   </figure>
 </div>
 Here are the eight ways of choosing three faces if you want to print them out yourself:
 <div class="columns">
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face1.svg">
+  <img src="/assets/blog/2025-10-05/face1.svg">
 </figure>
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face2.svg">
+  <img src="/assets/blog/2025-10-05/face2.svg">
 </figure>
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face3.svg">
+  <img src="/assets/blog/2025-10-05/face3.svg">
 </figure>
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face4.svg">
+  <img src="/assets/blog/2025-10-05/face4.svg">
 </figure>
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face5.svg">
+  <img src="/assets/blog/2025-10-05/face5.svg">
 </figure>
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face6.svg">
+  <img src="/assets/blog/2025-10-05/face6.svg">
 </figure>
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face7.svg">
+  <img src="/assets/blog/2025-10-05/face7.svg">
 </figure>
 <figure>
-  <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face8.svg">
+  <img src="/assets/blog/2025-10-05/face8.svg">
 </figure>
 </div>
 <h2 id="solved-puzzle">Solved puzzle</h2>
-<p>After being frustrated by the paper model, I <em>almost</em> convinced myself that no solution exists, but I proved that intuition wrong when I found a solution in 21 seconds via a <a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/puzzle_solution_backtracking.wl">backtracking algorithm in Mathematica</a>.</p>
+<p>After being frustrated by the paper model, I <em>almost</em> convinced myself that no solution exists, but I proved that intuition wrong when I found a solution in 21 seconds via a <a href="/assets/blog/2025-10-05/puzzle_solution_backtracking.wl">backtracking algorithm in Mathematica</a>.</p>
 <div class="columns">
   <figure>
-    <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/Puzzle2a.glb"></model-viewer>
+    <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/Puzzle2a.glb"></model-viewer>
     <figcaption>A 3D model of the solution, solved via the backtracking algorithm in 21 seconds.</figcaption>
   </figure>
   <figure>
-    <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/3D_printed_model.png">
+    <img src="/assets/blog/2025-10-05/3D_printed_model.png">
     <figcaption>A 3D printed puzzle solution, solved via brute-force in about two hours.</figcaption>
   </figure>
 </div>
@@ -130,42 +130,42 @@ Here are the eight ways of choosing three faces if you want to print them out yo
 <p>Here are some 3D models of the pieces (and STL files for <a href="https://bsky.app/profile/mikegeogebra.bsky.social/post/3lzy6vssvck2w">Michael Borcherds</a>.)</p>
 <div class="columns">
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece1.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece1.stl">STL for piece #1</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece1.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece1.stl">STL for piece #1</a></figcaption>
 </figure>
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece2.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece2.stl">STL for piece #2</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece2.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece2.stl">STL for piece #2</a></figcaption>
 </figure>
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece3.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece3.stl">STL for piece #3</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece3.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece3.stl">STL for piece #3</a></figcaption>
 </figure>
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece4.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece4.stl">STL for piece #4</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece4.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece4.stl">STL for piece #4</a></figcaption>
 </figure>
 </div>
 <div class="columns">
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece5.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece5.stl">STL for piece #5</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece5.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece5.stl">STL for piece #5</a></figcaption>
 </figure>
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece6.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece6.stl">STL for piece #6</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece6.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece6.stl">STL for piece #6</a></figcaption>
 </figure>
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece7.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece7.stl">STL for piece #7</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece7.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece7.stl">STL for piece #7</a></figcaption>
 </figure>
 <figure>
-  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece8.glb"></model-viewer>
-  <figcaption><a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/piece8.stl">STL for piece #8</a></figcaption>
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece8.glb"></model-viewer>
+  <figcaption><a href="/assets/blog/2025-10-05/piece8.stl">STL for piece #8</a></figcaption>
 </figure>
 </div>
 <h3 id="openscad-files">OpenSCAD files</h3>
-<p>These STL models were generated with <a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/puzzle_pieces_no_magnets.scad">this OpenSCAD file</a>, a snippet of which can be found below. I've also designed some prototype faces for use with magnets <a href="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/face_magnets.scad">in another OpenSCAD file</a>.</p>
+<p>These STL models were generated with <a href="/assets/blog/2025-10-05/puzzle_pieces_no_magnets.scad">this OpenSCAD file</a>, a snippet of which can be found below. I've also designed some prototype faces for use with magnets <a href="/assets/blog/2025-10-05/face_magnets.scad">in another OpenSCAD file</a>.</p>
 <pre><code>t=0.25;
 scale([20,20,20]){
   multmatrix([
@@ -189,11 +189,11 @@ scale([20,20,20]){
 <p>After modeling my Pentagonal Icositetrahedron faces, I found these magnetic faces with an STL and OpenSCAD file by eshira on Thingiverse, which have been downloaded approximately 1000 times.</p>
 <div class="columns">
   <figure>
-    <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/eshira_pentagonal_icositetrahedron_1.jpeg">
+    <img src="/assets/blog/2025-10-05/eshira_pentagonal_icositetrahedron_1.jpeg">
     <figcaption>Photo of a 3D-printed <a href="https://www.thingiverse.com/thing:820309">Pentagonal Icositetrahedron Magnetic Tile</a> published on Thingiverse by <a href="https://www.thingiverse.com/eshira/designs">eshira</a></figcaption>
   </figure>
   <figure>
-    <img src="/assets/blog/2025-10-05/pentagonal_icositetrahedron_puzzle/eshira_pentagonal_icositetrahedron_2.jpeg">
+    <img src="/assets/blog/2025-10-05/eshira_pentagonal_icositetrahedron_2.jpeg">
     <figcaption>Photo of a degree-3 vertex</figcaption>
   </figure>
 </div>
