@@ -102,7 +102,7 @@ model-viewer {
 
 .columns > .wide-column {
   flex: 1;
-  min-width: 234px;
+  min-width: 300px;
   align-content: center;
   justify-content: center;
 }
