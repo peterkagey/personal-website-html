@@ -13,6 +13,10 @@ body {
   max-width: 700px;
 }
 
+.draft {
+  max-width: 700px;
+}
+
 .about {
   max-width: 1000px;
 }
