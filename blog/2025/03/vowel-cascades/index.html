@@ -11,12 +11,14 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
-  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script> <!-- TODO: serve this -->
   
     
     <meta property="og:title" content="Vowel cascades">
     
     
+    
+    <meta property="og:image" content="https://peterkagey.com/assets/blog/2025-03-31/cover_1200x630.png">
     
     <meta property="og:url" content="https://peterkagey.com/blog/2025/03/vowel-cascades/">
     <meta property="og:type" content="article">
@@ -43,8 +45,8 @@
       : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
     </p>
     <p>
-      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a>
-      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg></a>
+      <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a>
+      <a href="https://bsky.app/profile/peterkagey.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg></a>
       <a href="https://stackexchange.com/users/3870024"><svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg></a>
       <a href="/feed.xml"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246 246"><rect width="246" height="246" rx="50" ry="50" fill="#F49C52"></rect><circle cx="63" cy="184" r="24" fill="#FFF"></circle><path d="m155 208h-34a82 82 0 0 0-82-82v-34a116 116 0 0 1 116 116z" fill="#FFF"></path><path d="m179 208a140 140 0 0 0-140-140v-35a175 175 0 0 1 175 175z" fill="#FFF"></path></svg></a>
     </p>
@@ -60,52 +62,64 @@
     <p>by Peter Kagey (2025-03-30)</p>
     
     <heading-anchors>
-      <p>I saw a post on Bluesky that proposed a problem that I had been thinking about for a long time!</p>
-<p><img src="/assets/blog/2025-03-31/DavidKButler_vowel_cascades.png" alt=""></p>
+      <script async="" src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<p>I saw a post on Bluesky that proposed a problem that I had been thinking about for a long time!</p>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:62z5zvrhttrg3dtn5j3myks3/app.bsky.feed.post/3lj3ppemlus22" data-bluesky-cid="bafyreie7fmzq6ckjnkjw75m4xllyx3dwyuq75ybybmyfzyxysczlqh36ge" data-bluesky-embed-color-mode="system"><p lang="en">The string F@ND can have the @ replaced with four of the five vowels A, E, I, O, U to make a real word each time.
+I wonder: Is there a string where you can replace the @ with all five vowels? For any collection of vowels you think of, is there a string that works just for those vowels?</p>&mdash; David K Butler (<a href="https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3?ref_src=embed">@davidkbutler.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3/post/3lj3ppemlus22?ref_src=embed">February 26, 2025 at 7:42 AM</a></blockquote>
 <p>I figured that with the help of dictionary and a Python script, I could find the desired examples.</p>
-<h2 id="one-vowel">One vowel</h2>
-<ul>
-<li>A: t_lk</li>
-<li>E: wh_n</li>
-<li>I: w_th</li>
-<li>O: fr_m</li>
-<li>U: cl_b</li>
-</ul>
-<h2 id="two-vowels">Two vowels</h2>
-<ul>
-<li>AE: sm_ll</li>
-<li>AI: th_nks</li>
-<li>AO: d_wn</li>
-<li>AU: b_nk</li>
-<li>EI: m_nd</li>
-<li>EO: kn_w</li>
-<li>EU: j_st</li>
-<li>IO: sh_rt</li>
-<li>IU: sk_lls</li>
-<li>OU: sp_rt</li>
-</ul>
-<h2 id="three-vowels">Three vowels</h2>
-<ul>
-<li>AEI: w_ll</li>
-<li>AEO: l_ss</li>
-<li>AEU: fl_sh</li>
-<li>AIO: t_p</li>
-<li>AIU: st_ff</li>
-<li>AOU: c_ts</li>
-<li>EIO: m_ld</li>
-<li>EIU: d_sk</li>
-<li>EOU: c_lts</li>
-<li>IOU: p_lls</li>
-</ul>
-<h2 id="four-vowels">Four vowels</h2>
-<ul>
-<li>AEIO: r_d</li>
-<li>AEIU: b_ll</li>
-<li>AEOU: l_gs</li>
-<li>AIOU: m_st</li>
-<li>EIOU: d_ll</li>
-<li>AEIOU: b_t</li>
-</ul>
+<div class="columns">
+  <div style="align-content: flex-start;">
+  <h4 id="one-vowel">One vowel</h4>
+  <ul>
+    <li>A: t_lk</li>
+    <li>E: wh_n</li>
+    <li>I: w_th</li>
+    <li>O: fr_m</li>
+    <li>U: cl_b</li>
+  </ul>
+  </div>
+  <div style="align-content: flex-start;">
+  <h4 id="two-vowels">Two vowels</h4>
+  <ul>
+    <li>AE: sm_ll</li>
+    <li>AI: th_nks</li>
+    <li>AO: d_wn</li>
+    <li>AU: b_nk</li>
+    <li>EI: m_nd</li>
+    <li>EO: kn_w</li>
+    <li>EU: j_st</li>
+    <li>IO: sh_rt</li>
+    <li>IU: sk_lls</li>
+    <li>OU: sp_rt</li>
+  </ul>
+  </div>
+<div style="align-content: flex-start;">
+  <h4 id="three-vowels">Three vowels</h4>
+  <ul>
+    <li>AEI: w_ll</li>
+    <li>AEO: l_ss</li>
+    <li>AEU: fl_sh</li>
+    <li>AIO: t_p</li>
+    <li>AIU: st_ff</li>
+    <li>AOU: c_ts</li>
+    <li>EIO: m_ld</li>
+    <li>EIU: d_sk</li>
+    <li>EOU: c_lts</li>
+    <li>IOU: p_lls</li>
+  </ul>
+  </div>
+<div style="align-content: flex-start;">
+  <h4 id="four-vowels">Four vowels</h4>
+  <ul>
+    <li>AEIO: r_d</li>
+    <li>AEIU: b_ll</li>
+    <li>AEOU: l_gs</li>
+    <li>AIOU: m_st</li>
+    <li>EIOU: d_ll</li>
+    <li>AEIOU: b_t</li>
+  </ul>
+  </div>
+</div>
 <h2 id="python-code">Python code</h2>
 <p>Here’s my quick Python script to help find these. The dictionary has some words that I’m not familiar with (e.g. &quot;cen,&quot; &quot;wir,&quot; etc.) so I had to manually audit the results.</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">from</span> wordfreq <span class="token keyword">import</span> top_n_list
@@ -115,27 +129,27 @@
 common_words <span class="token operator">=</span> top_n_list<span class="token punctuation">(</span><span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token number">50000</span><span class="token punctuation">)</span>
 
 <span class="token keyword">def</span> <span class="token function">vowels</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'[aeiouy]'</span><span class="token punctuation">,</span> word<span class="token punctuation">,</span> re<span class="token punctuation">.</span>IGNORECASE<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'[aeiouy]'</span><span class="token punctuation">,</span> word<span class="token punctuation">,</span> re<span class="token punctuation">.</span>IGNORECASE<span class="token punctuation">)</span>
 
 <span class="token keyword">def</span> <span class="token function">has_one_vowel</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>vowels<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span>
+  <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>vowels<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span>
 
 <span class="token keyword">def</span> <span class="token function">first_vowel</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> vowels<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token keyword">return</span> vowels<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 
 <span class="token keyword">def</span> <span class="token function">replace_vowels</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'[aeiouyAEIOUY]'</span><span class="token punctuation">,</span> <span class="token string">'_'</span><span class="token punctuation">,</span> word<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'[aeiouyAEIOUY]'</span><span class="token punctuation">,</span> <span class="token string">'_'</span><span class="token punctuation">,</span> word<span class="token punctuation">)</span>
 
 one_vowel_words <span class="token operator">=</span> <span class="token builtin">filter</span><span class="token punctuation">(</span>has_one_vowel<span class="token punctuation">,</span> common_words<span class="token punctuation">)</span>
 <span class="token builtin">dict</span> <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span>
 
 <span class="token keyword">for</span> w <span class="token keyword">in</span> one_vowel_words<span class="token punctuation">:</span>
-    <span class="token builtin">dict</span><span class="token punctuation">[</span>replace_vowels<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span><span class="token builtin">dict</span><span class="token punctuation">[</span>replace_vowels<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">[</span>first_vowel<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token builtin">dict</span><span class="token punctuation">[</span>replace_vowels<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span><span class="token builtin">dict</span><span class="token punctuation">[</span>replace_vowels<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">[</span>first_vowel<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
 vowel_subsets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'i'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 
 <span class="token keyword">for</span> vs <span class="token keyword">in</span> vowel_subsets<span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>vs<span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">":"</span><span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>k <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> <span class="token builtin">dict</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> v <span class="token operator">==</span> vs<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>vs<span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">":"</span><span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>k <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> <span class="token builtin">dict</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> v <span class="token operator">==</span> vs<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 
     </heading-anchors>
   </main>

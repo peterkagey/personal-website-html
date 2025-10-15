@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1000">
+<g  transform="scale(200)">
+<path d="M0 0h4v1h-2v1h-1v-1h-1z" stroke-width="0.1" stroke="#000" fill="#59b26e"/>
+<path d="M4 0h1v1h1v1h-4v-1h2z" stroke-width="0.1" stroke="#000" fill="#5c59b2"/>
+<path d="M5 0h4v1h-2v1h-1v-1h-1z" stroke-width="0.1" stroke="#000" fill="#b25968"/>
+<path d="M9 0h1v4h-1v-2h-1v-1h1z" stroke-width="0.1" stroke="#000" fill="#7ab259"/>
+<path d="M0 1h1v2h1v1h-1v1h-1Z" stroke-width="0.1" stroke="#000" fill="#598cb2"/>
+<path d="M7 1h1v1h1v1h-4v-1h2Z" stroke-width="0.1" stroke="#000" fill="#b2599d"/>
+<path d="M1 2h4v1h-2v1h-1v-1h-1z" stroke-width="0.1" stroke="#000" fill="#afb259"/>
+<path d="M4 3h4v1h-2v1h-1v-1h-1z" stroke-width="0.1" stroke="#000" fill="#59b2a4"/>
+<path d="M3 3h1v1h1v1h-4v-1h2Z" stroke-width="0.1" stroke="#000" fill="#9259b2"/>
+<path d="M8 3h1v1h1v1h-4v-1h2Z" stroke-width="0.1" stroke="#000" fill="#b28059"/>
+</g>
+</svg>

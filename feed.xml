@@ -802,9 +802,9 @@ frames = Manipulate[
     initialStyle,
     AddForms[HexTri /@ OrderIt[Range[n]], 1 - Sqrt[1 - t^2], OrderIt]
     ],
-   PlotRange -&amp;gt; {{0, 2}, {0, Sqrt[3]}},
+   PlotRange -&amp;gt; List[{0, 2}, {0, Sqrt[3]}],
    ImageSize -&amp;gt; 500],
-  {{t, 1/2}, 0, 1, 1/119}
+  List[{t, 1/2}, 0, 1, 1/119]
   ]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;second-animation&quot;&gt;Second animation&lt;/h3&gt;
@@ -821,8 +821,8 @@ frames = Table[
     {Opacity[0], EdgeForm[Opacity[0.5]]}~Join~
      Table[{EdgeForm[Thickness[Interp[i, t]]], EdgeForm[colors[[i]]]}~
        Join~HexTri[i], {i, 1, n}],
-    PlotRange -&amp;gt; {{0 - ((width - 2)/2),
-       2 + ((width - 2)/2)}, {-(Sqrt[3]/3), Sqrt[3]}},
+    PlotRange -&amp;gt; List[{0 - ((width - 2)/2),
+       2 + ((width - 2)/2)}, {-(Sqrt[3]/3), Sqrt[3]}],
     AspectRatio -&amp;gt; 1,
     ImageSize -&amp;gt; 1080,
     Background -&amp;gt; Black
@@ -888,7 +888,7 @@ I used a Cricut to cut out the shapes of the cards, and then I draw them using a
 &lt;p&gt;Fast forward a couple of years, I meet him at some event with a few other MIT kids, some SPARC alumni and a few new faces. I was in a mentor role, so I was mostly sharing my experiences. Tired, but having a good time. Then I overhear him talking w/ some other kids.&lt;/p&gt;
 &lt;p&gt;It started off generic: the same old stuff about grades, grad school, how to succeed later, conversations he probably have (and I probably myself had) hundreds of times. He’s going to be a PhD at an elite place and he wants to be a professor afterwards. I did too.&lt;/p&gt;
 &lt;p&gt;&amp;quot;Yeah, I really want to avoid ending up where Yan is.&amp;quot; (even typing these (probably inaccurate) words made my stomach ache. I get that feeling very rarely. It reminded me of heartbreak or tilting away hundreds of dollars on a poker hand: Sickness. &amp;quot;Why?&amp;quot; Regret. Anger.)&lt;/p&gt;
-&lt;p&gt;Then, just to twist the knife a bit, another SPARC alum nodded and agreed with him. &amp;quot;Yeah I know what you mean.&amp;quot; Countless things flooded my mind: My high school contest successes. My &amp;quot;elite&amp;quot; degrees. When I got my teaching award. When a colleague belittled my award. When I left math for finance. When I decided to return, trading $ for beauty, for happiness. Smiling SPARC kids, talking about emotions and lives instead of &amp;quot;success.&amp;quot; My inspirations (like &lt;a href=&quot;https://x.com/FedericoArdila&quot;&gt;@FedericoArdila&lt;/a&gt; and &lt;a href=&quot;https://x.com/mathyawp&quot;&gt;@mathyawp&lt;/a&gt; ) who put love in teaching instead of CV-boosting SPARC kids who told me &amp;quot;thanks for showing me there are things other than competition&amp;quot;. My amazing state school students who learned math while supporting their parents. My R1 colleague who unironally boasted about scaring students off so he can work during office hours.&lt;/p&gt;
+&lt;p&gt;Then, just to twist the knife a bit, another SPARC alum nodded and agreed with him. &amp;quot;Yeah I know what you mean.&amp;quot; Countless things flooded my mind: My high school contest successes. My &amp;quot;elite&amp;quot; degrees. When I got my teaching award. When a colleague belittled my award. When I left math for finance. When I decided to return, trading $ for beauty, for happiness. Smiling SPARC kids, talking about emotions and lives instead of &amp;quot;success.&amp;quot; My inspirations (like &lt;a href=&quot;https://twitter.com/FedericoArdila&quot;&gt;@FedericoArdila&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/mathyawp&quot;&gt;@mathyawp&lt;/a&gt; ) who put love in teaching instead of CV-boosting SPARC kids who told me &amp;quot;thanks for showing me there are things other than competition&amp;quot;. My amazing state school students who learned math while supporting their parents. My R1 colleague who unironally boasted about scaring students off so he can work during office hours.&lt;/p&gt;
 &lt;p&gt;I sat down somewhere and just cried.&lt;/p&gt;
 &lt;p&gt;The tears wouldn’t stop coming out.&lt;/p&gt;
 &lt;p&gt;I’m crying myself typing these words. It’s just too complicated.&lt;/p&gt;
@@ -1141,7 +1141,7 @@ I used a Cricut to cut out the shapes of the cards, and then I draw them using a
   <entry>
     <title>JMM Exhibition of Mathematical Art</title>
     <link href="https://peterkagey.com/blog/2025/04/jmm-exhibition-of-mathematical-art/" />
-    <updated>2025-04-07T15:00:00Z</updated>
+    <updated>2025-04-07T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/04/jmm-exhibition-of-mathematical-art/</id>
     <content type="html">&lt;p&gt;I was going through some old saved tweets during my move to Bluesky, and my favorite tweets to come across were those that mean something different to me know than they did when I saved them. In particular, this tweet from 2021 shows that 2021 JMM Exhibition of Mathematical Art catalog, and little did I know that just three years later, I’d be making art and finding my own pieces in the 2024 and 2025 versions.&lt;/p&gt;
 &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-04-07/Dan_Bach_tweet.png&quot; alt=&quot;Dan Bach&#39;s photo&quot;&gt;
@@ -1192,52 +1192,64 @@ I used a Cricut to cut out the shapes of the cards, and then I draw them using a
     <link href="https://peterkagey.com/blog/2025/03/vowel-cascades/" />
     <updated>2025-03-31T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/03/vowel-cascades/</id>
-    <content type="html">&lt;p&gt;I saw a post on Bluesky that proposed a problem that I had been thinking about for a long time!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2025-03-31/DavidKButler_vowel_cascades.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;script async=&quot;&quot; src=&quot;https://embed.bsky.app/static/embed.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;I saw a post on Bluesky that proposed a problem that I had been thinking about for a long time!&lt;/p&gt;
+&lt;blockquote class=&quot;bluesky-embed&quot; data-bluesky-uri=&quot;at://did:plc:62z5zvrhttrg3dtn5j3myks3/app.bsky.feed.post/3lj3ppemlus22&quot; data-bluesky-cid=&quot;bafyreie7fmzq6ckjnkjw75m4xllyx3dwyuq75ybybmyfzyxysczlqh36ge&quot; data-bluesky-embed-color-mode=&quot;system&quot;&gt;&lt;p lang=&quot;en&quot;&gt;The string F@ND can have the @ replaced with four of the five vowels A, E, I, O, U to make a real word each time.
+I wonder: Is there a string where you can replace the @ with all five vowels? For any collection of vowels you think of, is there a string that works just for those vowels?&lt;/p&gt;&amp;mdash; David K Butler (&lt;a href=&quot;https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3?ref_src=embed&quot;&gt;@davidkbutler.bsky.social&lt;/a&gt;) &lt;a href=&quot;https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3/post/3lj3ppemlus22?ref_src=embed&quot;&gt;February 26, 2025 at 7:42 AM&lt;/a&gt;&lt;/blockquote&gt;
 &lt;p&gt;I figured that with the help of dictionary and a Python script, I could find the desired examples.&lt;/p&gt;
-&lt;h2 id=&quot;one-vowel&quot;&gt;One vowel&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;A: t_lk&lt;/li&gt;
-&lt;li&gt;E: wh_n&lt;/li&gt;
-&lt;li&gt;I: w_th&lt;/li&gt;
-&lt;li&gt;O: fr_m&lt;/li&gt;
-&lt;li&gt;U: cl_b&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;two-vowels&quot;&gt;Two vowels&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE: sm_ll&lt;/li&gt;
-&lt;li&gt;AI: th_nks&lt;/li&gt;
-&lt;li&gt;AO: d_wn&lt;/li&gt;
-&lt;li&gt;AU: b_nk&lt;/li&gt;
-&lt;li&gt;EI: m_nd&lt;/li&gt;
-&lt;li&gt;EO: kn_w&lt;/li&gt;
-&lt;li&gt;EU: j_st&lt;/li&gt;
-&lt;li&gt;IO: sh_rt&lt;/li&gt;
-&lt;li&gt;IU: sk_lls&lt;/li&gt;
-&lt;li&gt;OU: sp_rt&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;three-vowels&quot;&gt;Three vowels&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AEI: w_ll&lt;/li&gt;
-&lt;li&gt;AEO: l_ss&lt;/li&gt;
-&lt;li&gt;AEU: fl_sh&lt;/li&gt;
-&lt;li&gt;AIO: t_p&lt;/li&gt;
-&lt;li&gt;AIU: st_ff&lt;/li&gt;
-&lt;li&gt;AOU: c_ts&lt;/li&gt;
-&lt;li&gt;EIO: m_ld&lt;/li&gt;
-&lt;li&gt;EIU: d_sk&lt;/li&gt;
-&lt;li&gt;EOU: c_lts&lt;/li&gt;
-&lt;li&gt;IOU: p_lls&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;four-vowels&quot;&gt;Four vowels&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AEIO: r_d&lt;/li&gt;
-&lt;li&gt;AEIU: b_ll&lt;/li&gt;
-&lt;li&gt;AEOU: l_gs&lt;/li&gt;
-&lt;li&gt;AIOU: m_st&lt;/li&gt;
-&lt;li&gt;EIOU: d_ll&lt;/li&gt;
-&lt;li&gt;AEIOU: b_t&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&quot;columns&quot;&gt;
+  &lt;div style=&quot;align-content: flex-start;&quot;&gt;
+  &lt;h4 id=&quot;one-vowel&quot;&gt;One vowel&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;A: t_lk&lt;/li&gt;
+    &lt;li&gt;E: wh_n&lt;/li&gt;
+    &lt;li&gt;I: w_th&lt;/li&gt;
+    &lt;li&gt;O: fr_m&lt;/li&gt;
+    &lt;li&gt;U: cl_b&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;align-content: flex-start;&quot;&gt;
+  &lt;h4 id=&quot;two-vowels&quot;&gt;Two vowels&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;AE: sm_ll&lt;/li&gt;
+    &lt;li&gt;AI: th_nks&lt;/li&gt;
+    &lt;li&gt;AO: d_wn&lt;/li&gt;
+    &lt;li&gt;AU: b_nk&lt;/li&gt;
+    &lt;li&gt;EI: m_nd&lt;/li&gt;
+    &lt;li&gt;EO: kn_w&lt;/li&gt;
+    &lt;li&gt;EU: j_st&lt;/li&gt;
+    &lt;li&gt;IO: sh_rt&lt;/li&gt;
+    &lt;li&gt;IU: sk_lls&lt;/li&gt;
+    &lt;li&gt;OU: sp_rt&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;div style=&quot;align-content: flex-start;&quot;&gt;
+  &lt;h4 id=&quot;three-vowels&quot;&gt;Three vowels&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;AEI: w_ll&lt;/li&gt;
+    &lt;li&gt;AEO: l_ss&lt;/li&gt;
+    &lt;li&gt;AEU: fl_sh&lt;/li&gt;
+    &lt;li&gt;AIO: t_p&lt;/li&gt;
+    &lt;li&gt;AIU: st_ff&lt;/li&gt;
+    &lt;li&gt;AOU: c_ts&lt;/li&gt;
+    &lt;li&gt;EIO: m_ld&lt;/li&gt;
+    &lt;li&gt;EIU: d_sk&lt;/li&gt;
+    &lt;li&gt;EOU: c_lts&lt;/li&gt;
+    &lt;li&gt;IOU: p_lls&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;div style=&quot;align-content: flex-start;&quot;&gt;
+  &lt;h4 id=&quot;four-vowels&quot;&gt;Four vowels&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;AEIO: r_d&lt;/li&gt;
+    &lt;li&gt;AEIU: b_ll&lt;/li&gt;
+    &lt;li&gt;AEOU: l_gs&lt;/li&gt;
+    &lt;li&gt;AIOU: m_st&lt;/li&gt;
+    &lt;li&gt;EIOU: d_ll&lt;/li&gt;
+    &lt;li&gt;AEIOU: b_t&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h2 id=&quot;python-code&quot;&gt;Python code&lt;/h2&gt;
 &lt;p&gt;Here’s my quick Python script to help find these. The dictionary has some words that I’m not familiar with (e.g. &amp;quot;cen,&amp;quot; &amp;quot;wir,&amp;quot; etc.) so I had to manually audit the results.&lt;/p&gt;
 &lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; wordfreq &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; top_n_list
@@ -1247,27 +1259,27 @@ I used a Cricut to cut out the shapes of the cards, and then I draw them using a
 common_words &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; top_n_list&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;en&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;vowels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; re&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;findall&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;r&#39;[aeiouy]&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; word&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; re&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;IGNORECASE&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; re&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;findall&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;r&#39;[aeiouy]&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; word&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; re&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;IGNORECASE&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;has_one_vowel&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;first_vowel&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;replace_vowels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; re&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sub&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;r&#39;[aeiouyAEIOUY]&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;_&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; re&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sub&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;r&#39;[aeiouyAEIOUY]&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;_&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; word&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 one_vowel_words &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;has_one_vowel&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; common_words&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; defaultdict&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; w &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; one_vowel_words&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;replace_vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;replace_vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;first_vowel&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;replace_vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;replace_vowels&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;first_vowel&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;w&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 vowel_subsets &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;i&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;u&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; vs &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; vowel_subsets&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;upper&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;k &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; v &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;items&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; v &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; vs&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;upper&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;k &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; v &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;items&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; v &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; vs&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
   <entry>
@@ -1345,7 +1357,7 @@ Export[&amp;quot;frame_000.png&amp;quot;, frames, &amp;quot;VideoFrames&amp;quot
   <entry>
     <title>Saved video tweets (3 of 3)</title>
     <link href="https://peterkagey.com/blog/2025/03/saved-video-tweets-part-3/" />
-    <updated>2025-03-17T15:00:00Z</updated>
+    <updated>2025-03-17T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/03/saved-video-tweets-part-3/</id>
     <content type="html">&lt;p&gt;As I discussed in &lt;a href=&quot;https://peterkagey.com/blog/2025/03/saved-video-tweets-part-1/&quot;&gt;Part 1&lt;/a&gt; and &lt;a href=&quot;https://peterkagey.com/blog/2025/03/saved-video-tweets-part-2/&quot;&gt;Part 2&lt;/a&gt;, I’m going through my old saved tweets and documenting them as I move to Bluesky (&lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;). Here are four (secretly five!) of those tweets (all of which had video/GIF embeddings):&lt;/p&gt;
 &lt;ul&gt;
@@ -1374,7 +1386,7 @@ fs:=Table[
 frames=Table[
     ParametricPlot[
         fs,{t,-&#92;[Pi]/4,tf},
-        Background-&amp;gt;Black, PlotRange-&amp;gt;{{-2,2},{-3,2}}, Axes-&amp;gt;False,
+        Background-&amp;gt;Black, PlotRange-&amp;gt;List[{-2,2},{-3,2}], Axes-&amp;gt;False,
         PlotStyle-&amp;gt;({JoinForm[&amp;quot;Round&amp;quot;],CapForm[&amp;quot;Round&amp;quot;],Thickness[0.02],#}&amp;amp;/@colors)
     ],
     {tf,-&#92;[Pi]/4+0.01,2&#92;[Pi]-3&#92;[Pi]/4,0.05}
@@ -1414,7 +1426,7 @@ Export[NotebookDirectory[] &amp;lt;&amp;gt; &amp;quot;geometric_paint.mp4&amp;qu
   <entry>
     <title>Saved video tweets (2 of 3)</title>
     <link href="https://peterkagey.com/blog/2025/03/saved-video-tweets-part-2/" />
-    <updated>2025-03-09T15:00:00Z</updated>
+    <updated>2025-03-09T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/03/saved-video-tweets-part-2/</id>
     <content type="html">&lt;p&gt;As I discussed in &lt;a href=&quot;https://peterkagey.com/blog/2025/03/saved-video-tweets-part-1/&quot;&gt;Part 1&lt;/a&gt;, I’m going through my old saved tweets and documenting them as I move to Bluesky (&lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;). Here are four of those tweets (all of which had video/GIF embeddings):&lt;/p&gt;
 &lt;ul&gt;
@@ -1480,7 +1492,7 @@ Export[NotebookDirectory[] &amp;lt;&amp;gt; &amp;quot;geometric_paint.mp4&amp;qu
   <entry>
     <title>Saved video tweets (1 of 3)</title>
     <link href="https://peterkagey.com/blog/2025/03/saved-video-tweets-part-1/" />
-    <updated>2025-03-01T16:00:00Z</updated>
+    <updated>2025-03-01T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/03/saved-video-tweets-part-1/</id>
     <content type="html">&lt;p&gt;As I discussed &lt;a href=&quot;https://peterkagey.com/blog/2025/02/some-saved-tweets/&quot;&gt;previously&lt;/a&gt;, I’m going through my old saved tweets and documenting them as I move to Bluesky (&lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;). Here are four of those tweets (all of which had video/GIF embeddings):&lt;/p&gt;
 &lt;ul&gt;
@@ -1551,7 +1563,7 @@ Export[NotebookDirectory[] &amp;lt;&amp;gt; &amp;quot;geometric_paint.mp4&amp;qu
   <entry>
     <title>Some saved tweets</title>
     <link href="https://peterkagey.com/blog/2025/02/some-saved-tweets/" />
-    <updated>2025-02-24T07:39:47Z</updated>
+    <updated>2025-02-24T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/02/some-saved-tweets/</id>
     <content type="html">&lt;p&gt;I’ve been off Twitter for a while now, but I thought it would be useful to archive my saved posts somewhere. Here are a subset of my saved posts, which I think are mostly self-explanatory.&lt;/p&gt;
 &lt;div class=&quot;columns&quot;&gt;
@@ -1614,7 +1626,7 @@ Export[NotebookDirectory[] &amp;lt;&amp;gt; &amp;quot;geometric_paint.mp4&amp;qu
   <entry>
     <title>An M.C. Escher-inspired poster</title>
     <link href="https://peterkagey.com/blog/2024/05/an-m-c-escher-inspired-poster/" />
-    <updated>2024-05-20T14:32:34Z</updated>
+    <updated>2024-05-20T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2024/05/an-m-c-escher-inspired-poster/</id>
     <content type="html">&lt;p&gt;I wanted an excuse to use Harvey Mudd’s large format printer, so I made a movie-sized (27″×40″) poster for my office based on the second term of OEIS sequence &lt;a href=&quot;https://oeis.org/A368138&quot;&gt;A368138(n)&lt;/a&gt;: &#92;(A368138(2) = 154&#92;). The idea here is that you have a a collection of tiles like &lt;img class=&quot;inline-img&quot; src=&quot;https://peterkagey.com/assets/blog/2024-05-20/tile_example.png&quot;&gt;, which you can rotate and mirror; you then choose a &#92;(n &#92;times n&#92;) grid of these tiles, and repeat that pattern infinitely over the plane. I recently learned that this particular example (for &#92;(n = 2&#92;)) was first enumerated in a 1996 paper by Dan Davis, &lt;a href=&quot;https://doi.org/10.37236/1338&quot;&gt;On a Tiling Scheme from M. C. Escher&lt;/a&gt;, in &lt;em&gt;The Electronic Journal of Combinatorics&lt;/em&gt;.&lt;/p&gt;
 &lt;img src=&quot;https://peterkagey.com/assets/blog/2024-05-20/A368138_poster.svg&quot;&gt;
@@ -1632,19 +1644,19 @@ Export[NotebookDirectory[] &amp;lt;&amp;gt; &amp;quot;geometric_paint.mp4&amp;qu
   <entry>
     <title>Triangle center patterns</title>
     <link href="https://peterkagey.com/blog/2023/03/triangle-center-patterns/" />
-    <updated>2023-03-15T01:58:21Z</updated>
+    <updated>2023-03-15T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2023/03/triangle-center-patterns/</id>
-    <content type="html">&lt;p&gt;I made a video that illustrates a particularly interesting &amp;quot;&lt;a href=&quot;https://en.wikipedia.org/wiki/Random_dynamical_system#Motivation_2:_Connection_to_Markov_Chain&quot;&gt;discrete state random dynamical system&lt;/a&gt;,&amp;quot; which was inspired by a Tweet (and a mistake) that I saw.&lt;/p&gt;
+    <content type="html">&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;I made a video that illustrates a particularly interesting &amp;quot;&lt;a href=&quot;https://en.wikipedia.org/wiki/Random_dynamical_system#Motivation_2:_Connection_to_Markov_Chain&quot;&gt;discrete state random dynamical system&lt;/a&gt;,&amp;quot; which was inspired by a Tweet (and a mistake) that I saw.&lt;/p&gt;
 &lt;p&gt;First, be hypnotized by this video, which I recommend you watch in 4K, and then scroll down to read about the inspiration and the cool math going on under the hood.&lt;/p&gt;
 &lt;div class=&quot;video-container&quot;&gt;
   &lt;iframe loading=&quot;lazy&quot; title=&quot;Triangle center patterns&quot; width=&quot;500&quot; height=&quot;375&quot; src=&quot;https://www.youtube.com/embed/L9s1rq2kR5E?feature=oembed&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;h2 id=&quot;matt-henderson-s-tweet&quot;&gt;Matt Henderson’s tweet&lt;/h2&gt;
 &lt;p&gt;This whole exploration came from a &amp;quot;&lt;a href=&quot;https://www.youtube.com/watch?v=Ht9LMYivBnM&quot;&gt;happy accident&lt;/a&gt;&amp;quot; that Matt Henderson made (and corrected) in the Tweets below. Watch the video in the first tweet, which shows an concrete example of the &amp;quot;discrete state random dynamical system&amp;quot; that I mentioned earlier.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;a mistake in the animation- it should say &#39;centroid&#39; not &#39;incenter&#39;. If you use the incenter, you create this pattern &lt;a href=&quot;https://t.co/HPVrpvi9uv&quot;&gt;pic.twitter.com/HPVrpvi9uv&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;— Matt Henderson (@matthen2) &lt;a href=&quot;https://twitter.com/matthen2/status/1268816506617544704?ref_src=twsrc%5Etfw&quot;&gt;June 5, 2020&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;figure&gt;
+  &lt;blockquote class=&quot;twitter-tweet&quot; data-media-max-width=&quot;500&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;a mistake in the animation- it should say &amp;#39;centroid&amp;#39; not &amp;#39;incenter&amp;#39;. If you use the incenter, you create this pattern &lt;a href=&quot;https://t.co/HPVrpvi9uv&quot;&gt;pic.twitter.com/HPVrpvi9uv&lt;/a&gt;&lt;/p&gt;&amp;mdash; Matt Henderson (@matthen2) &lt;a href=&quot;https://twitter.com/matthen2/status/1268816506617544704?ref_src=twsrc%5Etfw&quot;&gt;June 5, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/figure&gt;
 &lt;p&gt;Matt’s mistake got me interested! If the centroid and the incenter create such interesting and intricate designs, what about other triangle centers like the circumcenter or the orthocenter? In particular, I was interested in finding examples of interesting triangle centers from &lt;a href=&quot;https://faculty.evansville.edu/ck6/encyclopedia/etc.html&quot;&gt;Clark Kimberling’s Encyclopedia of Triangle Centers&lt;/a&gt; (ETC), which is a database with over 53,000 named triangle centers, including all of those that you have heard about.&lt;/p&gt;
 &lt;h2 id=&quot;patterns-from-other-triangle-centers&quot;&gt;Patterns from other triangle centers&lt;/h2&gt;
 &lt;p&gt;Instead of illustrating the results of this process on hexagons as Matt did in his tweet, I’ve done the iterative process on squares. Here are six examples illustrating the patterns for various triangle centers from &lt;a href=&quot;https://faculty.evansville.edu/ck6/encyclopedia/etc.html&quot;&gt;ETC&lt;/a&gt;.&lt;/p&gt;
@@ -1701,7 +1713,7 @@ Export[NotebookDirectory[] &amp;lt;&amp;gt; &amp;quot;geometric_paint.mp4&amp;qu
   <entry>
     <title>How to make animated math GIFs: LaTeX + TikZ</title>
     <link href="https://peterkagey.com/blog/2023/01/how-to-make-animated-math-gifs-latex-tikz/" />
-    <updated>2023-01-16T09:00:00Z</updated>
+    <updated>2023-01-16T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2023/01/how-to-make-animated-math-gifs-latex-tikz/</id>
     <content type="html">&lt;p&gt;The first animated GIF that I ever made was made with the LaTeX package TikZ and the command line utility ImageMagick. In this post, I’ll give a quick example of how to make a simple GIF that works by layering images with transparent backgrounds on top of each other repeatedly.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2023-01-16/blog_example.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -1734,20 +1746,19 @@ Export[NotebookDirectory[] &amp;lt;&amp;gt; &amp;quot;geometric_paint.mp4&amp;qu
   <entry>
     <title>XOR triangles</title>
     <link href="https://peterkagey.com/blog/2023/01/xor-triangles/" />
-    <updated>2023-01-02T09:00:00Z</updated>
+    <updated>2023-01-02T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2023/01/xor-triangles/</id>
-    <content type="html">&lt;p&gt;In this post, I’ll explore the math behind one of my Twitter bots, &lt;a href=&quot;https://twitter.com/xorTriangles&quot;&gt;@xorTriangles&lt;/a&gt;. This bot was inspired by the MathOverflow question &amp;quot;&lt;a href=&quot;https://mathoverflow.net/q/359138/104733&quot;&gt;Number triangle&lt;/a&gt;,&amp;quot; asked by user DSM posted in May 2020.&lt;/p&gt;
+    <content type="html">&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;In this post, I’ll explore the math behind one of my Twitter bots, &lt;a href=&quot;https://twitter.com/xorTriangles&quot;&gt;@xorTriangles&lt;/a&gt;. This bot was inspired by the MathOverflow question &amp;quot;&lt;a href=&quot;https://mathoverflow.net/q/359138/104733&quot;&gt;Number triangle&lt;/a&gt;,&amp;quot; asked by user DSM posted in May 2020.&lt;/p&gt;
 &lt;p&gt;(I gave an overview of my Twitter bots &lt;a href=&quot;https://twitter.com/oeisTriangles&quot;&gt;@oeisTriangles&lt;/a&gt; in my post &amp;quot;&lt;a href=&quot;https://peterkagey.com/blog/2021/03/parity-bitmaps-from-the-oeis/&quot;&gt;Parity bitmaps from the OEIS&lt;/a&gt;&amp;quot;. And if you want to build your own bot, I showed the steps for building &lt;a href=&quot;https://twitter.com/BotfonsNeedles&quot;&gt;@BotfonsNeedles&lt;/a&gt; in parts &lt;a href=&quot;https://peterkagey.com/blog/2021/04/botfonsneedles-part-1/&quot;&gt;I&lt;/a&gt;, &lt;a href=&quot;https://peterkagey.com/blog/2021/04/botfonsneedles-part-2/&quot;&gt;II&lt;/a&gt;, and &lt;a href=&quot;https://peterkagey.com/blog/2021/05/botfonsneedles-part-3/&quot;&gt;III&lt;/a&gt; of my three-part series &amp;quot;A π-estimating Twitter bot&amp;quot;.)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Size: 12
-Seed: 2359 &lt;a href=&quot;https://t.co/MtYPFY4Stk&quot;&gt;pic.twitter.com/MtYPFY4Stk&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;— XOR Triangles (@xorTriangles) &lt;a href=&quot;https://twitter.com/xorTriangles/status/1390376312506834945?ref_src=twsrc%5Etfw&quot;&gt;May 6, 2021&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Size: 101
-Seed: 153476919841200757800960 &lt;a href=&quot;https://t.co/JPB1jc4OD1&quot;&gt;pic.twitter.com/JPB1jc4OD1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;— XOR Triangles (@xorTriangles) &lt;a href=&quot;https://twitter.com/xorTriangles/status/1382686339196465156?ref_src=twsrc%5Etfw&quot;&gt;April 15, 2021&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;columns&quot;&gt;
+  &lt;figure&gt;
+    &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Size: 12&lt;br&gt;Seed: 2359 &lt;a href=&quot;https://t.co/MtYPFY4Stk&quot;&gt;pic.twitter.com/MtYPFY4Stk&lt;/a&gt;&lt;/p&gt;&amp;mdash; XOR Triangles (@xorTriangles) &lt;a href=&quot;https://twitter.com/xorTriangles/status/1390376312506834945?ref_src=twsrc%5Etfw&quot;&gt;May 6, 2021&lt;/a&gt;&lt;/blockquote&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Base: 2&lt;br&gt;Size: 30&lt;br&gt;Seed: 100001111111100111111000011111 &lt;a href=&quot;https://t.co/r6HUmfDumK&quot;&gt;pic.twitter.com/r6HUmfDumK&lt;/a&gt;&lt;/p&gt;&amp;mdash; XOR Triangles (@xorTriangles) &lt;a href=&quot;https://twitter.com/xorTriangles/status/1825076523323551746?ref_src=twsrc%5Etfw&quot;&gt;August 18, 2024&lt;/a&gt;&lt;/blockquote&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 &lt;p&gt;In May 2020, MathOverflow user DSM posted a question &amp;quot;&lt;a href=&quot;https://mathoverflow.net/q/359138/104733&quot;&gt;Number triangle&lt;/a&gt;&amp;quot; where they asked about the following construction:&lt;/p&gt;
 &lt;p&gt;Start with a list of &#92;(n&#92;) bits (&#92;(0&#92;)s and &#92;(1&#92;)s), and to get the next row, combine all adjacent pairs via the &lt;a href=&quot;https://en.wikipedia.org/wiki/Exclusive_or&quot;&gt;XOR operation&lt;/a&gt;, &#92;(&#92;oplus&#92;). (A mathematician might call this &amp;quot;addition modulo &#92;(2&#92;).&amp;quot;) That is $$&#92;begin{alignat*}{2} 0 &#92;oplus 0 &amp;amp;= 1 &#92;oplus 1 &amp;amp;&amp;amp;= 0 &#92;quad&#92;text{and} &#92;&#92; 0 &#92;oplus 1 &amp;amp;= 1 &#92;oplus 0 &amp;amp;&amp;amp;= 1.&#92;end{alignat*}$$&lt;/p&gt;
 &lt;p&gt;For example, starting with the row &#92;(110101&#92;), the resulting triangle is&lt;/p&gt;
@@ -1793,9 +1804,10 @@ xorSeedsBasis[n_] := NullSpace[
   <entry>
     <title>Robot walks</title>
     <link href="https://peterkagey.com/blog/2022/12/robot-walks/" />
-    <updated>2022-12-20T15:37:19Z</updated>
+    <updated>2022-12-20T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2022/12/robot-walks/</id>
-    <content type="html">&lt;p&gt;I’ve gotten a lot of mathematical inspiration from &lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; questions, but perhaps the question that has gotten me thinking the most is &lt;a href=&quot;https://projecteuler.net/problem=208&quot;&gt;Project Euler Problem 208: Robot Walks&lt;/a&gt;. In this problem, a robot takes steps either to the right or the left, and at each step, it turns &#92;(&#92;frac 15&#92;) of the way of a circle.&lt;/p&gt;
+    <content type="html">&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;I’ve gotten a lot of mathematical inspiration from &lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; questions, but perhaps the question that has gotten me thinking the most is &lt;a href=&quot;https://projecteuler.net/problem=208&quot;&gt;Project Euler Problem 208: Robot Walks&lt;/a&gt;. In this problem, a robot takes steps either to the right or the left, and at each step, it turns &#92;(&#92;frac 15&#92;) of the way of a circle.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2022-12-20/Problem208_screenshot.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Project Euler Problem 208&lt;/p&gt;
 &lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
@@ -1823,16 +1835,14 @@ xorSeedsBasis[n_] := NullSpace[
 &lt;/div&gt;
 &lt;h2 id=&quot;robotwalks&quot;&gt;@RobotWalks&lt;/h2&gt;
 &lt;p&gt;Twice each day, my Twitter Bot &lt;a href=&quot;https://twitter.com/RobotWalks/&quot;&gt;@RobotWalks&lt;/a&gt; tweets a randomly generated Robot Walk cycle. Check out the &lt;a href=&quot;https://github.com/peterkagey/TwitterBots&quot;&gt;Github code&lt;/a&gt; if you want to see how it works, and read my &lt;a href=&quot;https://peterkagey.com/blog/2021/04/botfonsneedles-part-1/&quot;&gt;series on&lt;/a&gt; &lt;a href=&quot;https://peterkagey.com/blog/2021/04/botfonsneedles-part-2/&quot;&gt;making a&lt;/a&gt; &lt;a href=&quot;https://peterkagey.com/blog/2021/05/botfonsneedles-part-3/&quot;&gt;Twitter Bot&lt;/a&gt; if you want to make something like it for yourself.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Step size: 1/7.
-Step pattern: RRLLLLLLL. &lt;a href=&quot;https://t.co/9XhE3l6NcI&quot;&gt;pic.twitter.com/9XhE3l6NcI&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;— Robot Walks (@RobotWalks) &lt;a href=&quot;https://twitter.com/RobotWalks/status/1380949869456719873?ref_src=twsrc%5Etfw&quot;&gt;April 10, 2021&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Step size: 1/3.
-Step pattern: RLLRRLRLLRL. &lt;a href=&quot;https://t.co/9sCzNUm8r0&quot;&gt;pic.twitter.com/9sCzNUm8r0&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;— Robot Walks (@RobotWalks) &lt;a href=&quot;https://twitter.com/RobotWalks/status/1380947732441931776?ref_src=twsrc%5Etfw&quot;&gt;April 10, 2021&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;columns&quot;&gt;
+  &lt;figure&gt;
+    &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Step size: 1/7.&lt;br&gt;Step pattern: RRLLLLLLL. &lt;a href=&quot;https://t.co/9XhE3l6NcI&quot;&gt;pic.twitter.com/9XhE3l6NcI&lt;/a&gt;&lt;/p&gt;&amp;mdash; Robot Walks (@RobotWalks) &lt;a href=&quot;https://twitter.com/RobotWalks/status/1380949869456719873?ref_src=twsrc%5Etfw&quot;&gt;April 10, 2021&lt;/a&gt;&lt;/blockquote&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;tr&quot; dir=&quot;ltr&quot;&gt;Step size: 1/3.&lt;br&gt;Step pattern: RLLRRLRLLRL. &lt;a href=&quot;https://t.co/9sCzNUm8r0&quot;&gt;pic.twitter.com/9sCzNUm8r0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Robot Walks (@RobotWalks) &lt;a href=&quot;https://twitter.com/RobotWalks/status/1380947732441931776?ref_src=twsrc%5Etfw&quot;&gt;April 10, 2021&lt;/a&gt;&lt;/blockquote&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 &lt;h2 id=&quot;jessica-s-robot-walk-prints&quot;&gt;Jessica’s Robot Walk Prints&lt;/h2&gt;
 &lt;p&gt;I ordered some canvas prints of some numerologically significant walks for my friend Jessica, which she hung behind her TV. There’s no doubt that this caused her to form a deep mental association between me and &lt;em&gt;The Good Place&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2022-12-20/RobotWalksPrints.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -1849,7 +1859,7 @@ Step pattern: RLLRRLRLLRL. &lt;a href=&quot;https://t.co/9sCzNUm8r0&quot;&gt;pic
   <entry>
     <title>Pour Le Science and the anti-sum-product problem</title>
     <link href="https://peterkagey.com/blog/2021/10/pour-le-science-and-the-anti-sum-product-problem/" />
-    <updated>2021-10-21T02:35:24Z</updated>
+    <updated>2021-10-21T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2021/10/pour-le-science-and-the-anti-sum-product-problem/</id>
     <content type="html">&lt;p&gt;In March 2021, I got an out-of-the-blue email from OEIS editor Michel Marcus which totally delighted me. He wrote:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1957,7 +1967,7 @@ And here is what I saw.&lt;/p&gt;
   <entry>
     <title>Zimin words and bifixes</title>
     <link href="https://peterkagey.com/blog/2021/07/zimin-words-and-bifix-free-words/" />
-    <updated>2021-07-26T08:00:00Z</updated>
+    <updated>2021-07-26T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2021/07/zimin-words-and-bifix-free-words/</id>
     <content type="html">&lt;p&gt;One of the earliest contributions to the On-Line Encyclopedia of Integer Sequences (OEIS) was a family sequences counting the number of words that begin (or don’t begin) with a palindrome:&lt;/p&gt;
 &lt;ul&gt;
@@ -2007,30 +2017,10 @@ p random_string
 p random_string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;scan&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex-literal&quot;&gt;&lt;span class=&quot;token regex&quot;&gt;/(.+)(.+)&#92;1(.+)&#92;1&#92;2&#92;1/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# Pattern:             A   B   A C   A B A&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Why 29? Because all binary words of length 29 contain the pattern &#92;(Z_3 = ABACABA&#92;). However, &lt;a href=&quot;https://people.math.sc.edu/cooper/FAUpaper.pdf&quot;&gt;Joshua Cooper and Danny Rorabaugh’s paper&lt;/a&gt; provides 48 words of length 28 that avoid that pattern (these and their reversals):&lt;/p&gt;
-&lt;p&gt;1100000010010011011011111100
-1100000010010011111101101100
-1100000010101100110011111100
-1100000010101111110011001100
-1100000011001100101011111100
-1100000011001100111111010100
-1100000011011010010011111100
-1100000011011011111100100100
-1100000011111100100101101100
-1100000011111100110011010100
-1100000011111101010011001100
-1100000011111101101100100100&lt;/p&gt;
-&lt;p&gt;1100100100000011011011111100
-1100100100000011111101101100
-1100100101101100000011111100
-1100110011000000101011111100
-1100110011000000111111010100
-1100110011010100000011111100
-1101010000001100110011111100
-1101010000001111110011001100
-1101010011001100000011111100
-1101101100000010010011111100
-1101101100000011111100100100
-1101101100100100000011111100&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-07-26/zimin.png&quot; alt=&quot;1100000010010011011011111100, 1100000010010011111101101100, 1100000010101100110011111100, 1100000010101111110011001100, 1100000011001100101011111100, 1100000011001100111111010100, 1100000011011010010011111100, 1100000011011011111100100100, 1100000011111100100101101100, 1100000011111100110011010100, 1100000011111101010011001100, 1100000011111101101100100100, 1100100100000011011011111100, 1100100100000011111101101100, 1100100101101100000011111100, 1100110011000000101011111100, 1100110011000000111111010100, 1100110011010100000011111100, 1101010000001100110011111100, 1101010000001111110011001100, 1101010011001100000011111100, 1101101100000010010011111100, 1101101100000011111100100100, 1101101100100100000011111100&quot;&gt;
+  &lt;figcaption&gt;The 48 pattern-avoiding words of length 28&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;h2 id=&quot;the-zimin-word-z-2-aba-and-bifixes&quot;&gt;The Zimin Word &#92;(Z_2 = ABA&#92;) and Bifixes&lt;/h2&gt;
 &lt;p&gt;The number of Zimin words of length &#92;(n&#92;) that match the pattern ABA is equal to the number of of words that begin with an odd-length palindrome. Analogously, the number of words with a bifix is equal to the number of words that begin with an even-length palindrome. The number of these agree when &#92;(n&#92;) is odd.&lt;/p&gt;
 &lt;p&gt;I’ve added OEIS sequences &lt;a href=&quot;https://oeis.org/A342510&quot;&gt;A342510&lt;/a&gt;–&lt;a href=&quot;https://oeis.org/A342512&quot;&gt;A342512&lt;/a&gt; which relate to how numbers viewed as binary strings avoid—or fail to avoid—Zimin words. &lt;a href=&quot;https://codegolf.stackexchange.com/q/220679/53884&quot;&gt;I asked users to implement this on Code Golf Stack Exchange&lt;/a&gt;.&lt;/p&gt;
@@ -2039,7 +2029,7 @@ p random_string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sca
   <entry>
     <title>My favorite sequences: A263135</title>
     <link href="https://peterkagey.com/blog/2021/07/my-favorite-sequences-a263135/" />
-    <updated>2021-07-12T08:00:00Z</updated>
+    <updated>2021-07-12T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2021/07/my-favorite-sequences-a263135/</id>
     <content type="html">&lt;p&gt;This is the fourth in my installment of My favorite sequences. This post discusses sequence &lt;a href=&quot;https://oeis.org/A263135&quot;&gt;A263135&lt;/a&gt; which counts penny-to-penny connections among &#92;(n&#92;) pennies on the vertices of a hexagonal grid. I published this sequence in October 2015 when I was thinking about hexagonal-grid analogs to the &lt;a href=&quot;https://peterkagey.com/blog/2021/06/my-favorite-sequences-a278299/&quot;&gt;&amp;quot;Not Equal&amp;quot; grid&lt;/a&gt;. The square-grid analog of this sequence is &lt;a href=&quot;https://oeis.org/A123663&quot;&gt;A123663&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;a263135-placing-pennies&quot;&gt;&lt;a href=&quot;https://oeis.org/A263135&quot;&gt;A263135&lt;/a&gt;: Placing Pennies&lt;/h2&gt;
@@ -2078,7 +2068,7 @@ p random_string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sca
   <entry>
     <title>My favorite sequences: &quot;Not Equal&quot; Grid</title>
     <link href="https://peterkagey.com/blog/2021/06/my-favorite-sequences-a278299/" />
-    <updated>2021-06-28T08:00:00Z</updated>
+    <updated>2021-06-28T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2021/06/my-favorite-sequences-a278299/</id>
     <content type="html">&lt;p&gt;This is the third installment in a recurring series, My favorite sequences. This post discusses OEIS sequence &lt;a href=&quot;https://oeis.org/A278299&quot;&gt;A278299&lt;/a&gt;, a sequence that took over two years to compute enough terms to add to the OEIS with confidence that it was distinct.&lt;/p&gt;
 &lt;p&gt;This sequence is discussed in &lt;a href=&quot;https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=24&quot;&gt;Problem #23&lt;/a&gt; of my Open Problem Collection, which asks for the smallest polyomino (by number of cells) whose cells you can color with &#92;(n&#92;) different colors such that any two different colors are adjacent somewhere in the polyomino. As illustrated below, when there are &#92;(n=5&#92;) colors (say, green, brown, blue, purple, and magenta) there is a &#92;(13&#92;)-cell polyomino which has a green cell adjacent to a blue cell and a purple cell adjacent to a brown cell and so on for every color combination. This is the smallest polyomino with the &#92;(5&#92;)-coloring property.&lt;/p&gt;
@@ -2125,7 +2115,7 @@ p random_string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sca
   <entry>
     <title>My favorite sequences: A289523</title>
     <link href="https://peterkagey.com/blog/2021/06/my-favorite-sequences-a289523/" />
-    <updated>2021-06-14T08:00:00Z</updated>
+    <updated>2021-06-14T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2021/06/my-favorite-sequences-a289523/</id>
     <content type="html">&lt;p&gt;This the second post in a recurring series, My favorite sequences. If you like this sort of thing, check out the &lt;a href=&quot;https://aperiodical.com/category/columns/checkmyworking/integer-sequence-review-checkmyworking/&quot;&gt;Integer Sequence Review&lt;/a&gt; from &lt;a href=&quot;https://aperiodical.com/about/&quot;&gt;The Aperiodical&lt;/a&gt;!&lt;/p&gt;
 &lt;h2 id=&quot;a289523-packing-circles-of-increasing-area&quot;&gt;A289523: Packing Circles of Increasing Area&lt;/h2&gt;
@@ -2185,7 +2175,7 @@ $$1, 4, 7, 1, 11, 16, 5, 21, 27, 34, 10, 1, 41, 17, 49, 25, 57, 6, 33, 66, 43, 1
   <entry>
     <title>My favorite sequences: A261865</title>
     <link href="https://peterkagey.com/blog/2021/05/my-favorite-sequences-a261865/" />
-    <updated>2021-05-31T12:00:00Z</updated>
+    <updated>2021-05-31T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2021/05/my-favorite-sequences-a261865/</id>
     <content type="html">&lt;p&gt;This is the first installment in a new series, &amp;quot;My favorite sequences&amp;quot;. In this series, I will write about sequences from the &lt;a href=&quot;https://oeis.org/&quot;&gt;On-Line Encyclopedia of Integer Sequences&lt;/a&gt; that I’ve authored or spent a lot of time thinking about.&lt;/p&gt;
 &lt;p&gt;I’ve been contributing to the On-Line Encyclopedia of Integer Sequences since I was an undergraduate. In December 2013, I submitted sequence &lt;a href=&quot;https://oeis.org/A233421&quot;&gt;A233421&lt;/a&gt; based on &lt;a href=&quot;https://artofproblemsolving.com/community/c7h566363p3315664&quot;&gt;problem A2 from the 2013 Putnam Exam&lt;/a&gt;—which is itself based on &amp;quot;Ron Graham’s Sequence&amp;quot; (&lt;a href=&quot;https://oeis.org/A006255&quot;&gt;A006255&lt;/a&gt;)—a surprising bijection from the natural numbers to the non-primes. As of today, &lt;a href=&quot;https://oeis.org/search?q=author%3Akagey&quot;&gt;I’ve authored over 475 sequences&lt;/a&gt; based on puzzles that I’ve heard about and problems that I’ve dreamed up.&lt;/p&gt;
