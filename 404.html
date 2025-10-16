@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found | peterkagey.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #fafafa;
+      color: #222;
+      padding: 3rem 1rem;
+      margin: 0 auto;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    pre {
+      background: #f6f8fa;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: left;
+      overflow-x: auto;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="404-page-not-found">404 &mdash; Page Not Found</h1>
+  <p>Sorry, the page you're looking for doesn't exist on <strong>peterkagey.com</strong>.</p>
+  <p>If you clicked a link on the web and it brought you here, it's likely because I broke some links when I migrated my website.</p>
+  <p>If you have a GitHub account, it would really help me out if you took 15 seconds to <a id="report-link" href="#">report the issue</a>.</p>
+
+  <pre><code id="snippet">**Missing page:** (auto-filled)
+**Source:** The URL of the website that was linking to this page.</code></pre>
+
+  <script>
+    const currentUrl = window.location.href;
+    const issueTitle = encodeURIComponent("Missing page: " + currentUrl);
+    const issueBody = encodeURIComponent(`**Missing page:**\n${currentUrl}\n\n**Source:** The URL of the website that was linking to this page.`);
+    const issueUrl = `https://github.com/peterkagey/personal-website-html/issues/new?title=${issueTitle}&body=${issueBody}`;
+
+    document.getElementById('report-link').setAttribute('href', issueUrl);
+    document.getElementById('snippet').textContent =
+      `**Missing page:** ${currentUrl}\n**Source:** The URL of the website that was linking to this page.`;
+  </script>
+</body>
+</html>
