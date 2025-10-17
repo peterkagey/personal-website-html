@@ -353,6 +353,7 @@ img.art-thumbnail {
   .hp.cols {
     flex-direction: column; /* stack vertically instead of side-by-side */
     max-height: none;       /* remove height limit so content can expand */
+    height: auto;
   }
 
   .hp.left.col,
