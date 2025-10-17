@@ -14,8 +14,26 @@
       line-height: 1.6;
       max-width: 700px;
     }
+    #missing-url {
+      font-weight: 600;
+    }
+    #four-oh-four {
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 1000;
+      font-size: clamp(1rem, 40vw, 20rem);
+      padding:0rem;
+      line-height: 0.8;
+    }
+    #not-found {
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 100;
+      font-size: clamp(2rem, 8vw, 4rem);
+      padding:0;
+    }
     h1 {
-      font-size: 3rem;
+      font-size: 10rem;
       margin-bottom: 0.5rem;
     }
     p {
@@ -35,33 +53,26 @@
       text-align: left;
       overflow-x: auto;
     }
-    a {
-      color: #0366d6;
+    #not-found > a {
+      color: #222;
       text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1 id="404-page-not-found">404 &mdash; Page Not Found</h1>
-  <p>Sorry, the page you're looking for doesn't exist on <strong>peterkagey.com</strong>.</p>
-  <p>If you clicked a link on the web and it brought you here, it's likely because I broke some links when I migrated my website.</p>
-  <p>If you have a GitHub account, it would really help me out if you took 15 seconds to <a id="report-link" href="#">report the issue</a>.</p>
-
-  <pre><code id="snippet">**Missing page:** (auto-filled)
-**Source:** The URL of the website that was linking to this page.</code></pre>
+  <div id="four-oh-four">404</div>
+  <div id="not-found"><a href="https://en.wikipedia.org/wiki/HTTP_404">Not Found</a></div>
+  <p>Sorry, <span id="missing-url">peterkagey.com</span> is missing!</p>
+  <p>If you clicked a link on the web and it brought you here, it's likely because I broke some links when I migrated my website. If you have a GitHub account, it would help me out if you took 15 seconds to <a id="report-link" href="#">report the issue</a> (auto-filled).</p>
 
   <script>
     const currentUrl = window.location.href;
     const issueTitle = encodeURIComponent("Missing page: " + currentUrl);
-    const issueBody = encodeURIComponent(`**Missing page:**\n${currentUrl}\n\n**Source:** The URL of the website that was linking to this page.`);
+    const issueBody = encodeURIComponent(`**Missing page:** ${currentUrl}\n\n**Source:** [URL of page with broken link.]`);
     const issueUrl = `https://github.com/peterkagey/personal-website-html/issues/new?title=${issueTitle}&body=${issueBody}`;
 
     document.getElementById('report-link').setAttribute('href', issueUrl);
-    document.getElementById('snippet').textContent =
-      `**Missing page:** ${currentUrl}\n**Source:** The URL of the website that was linking to this page.`;
+    document.getElementById('missing-url').textContent = currentUrl;
   </script>
 </body>
 </html>
