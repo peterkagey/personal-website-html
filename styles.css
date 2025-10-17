@@ -276,62 +276,99 @@ img.art-thumbnail {
 }
 
 /* Home page */
-.hp-cols {
-  width: min(1000px,100%);
-  padding: 0;
+.hp.cols {
+  width: min(900px, 100%);
   margin: 0 auto;
+  padding: 0rem;
+  box-sizing: border-box;
   display: flex;
-  gap: 20px;
+  height: calc(100vh - 300px);
+  min-height: 400px;
+  gap:1em;
 }
 
-.hp-col-left {
-  width: 333px;
-  position: static;
-  top: auto;
+.hp.col {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
-.hp-col-right {
-  width: 667px;
-  max-height: 80vh;
+.hp.left.col {
+  flex: 0 0 33.3%;
+  box-sizing: border-box;
   overflow-y: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
-.hp-col-right > * {
-  flex: 0 0 auto;
+.hp.right.col {
+  flex: 0 0 66.7%;
+  background: #eee;
+  border-style: groove;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-@media (max-width: 767px) {
-  .hp-cols {
-    flex-direction: column;
-    width: auto;
-    padding: 20px;
-  }
-
-  .hp-col-left,
-  .hp-col-right {
-    width: 100%;
-    max-height: none;
-  }
-}
-
-.hp-button {
-  background-color:#345;
-  border-radius: 12px;
-  flex: 1 1 200px;
-  min-width: 200px;
-  max-width: 400px;
-  padding:1rem;
+.grid {
   display: grid;
-  align-items: center;
-  text-align: center;
+  gap: 0.5rem;
 }
 
-.hp-button > a {
-  color:white;
-  font-size: 2rem;
+.blog.grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.art.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hp.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.hp.left.col #hp-toward {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.hp.blog-title-card-text {
+  font-size: 1.4em;
+}
+
+.hp.section h1 {
+  color:#333;
+  font-size: 3rem;
+  text-align: center;
+  border-bottom-style: dashed;
+  border-top-style: dashed;
+}
+
+@media (max-width: 726px) {
+  .hp.cols {
+    flex-direction: column; /* stack vertically instead of side-by-side */
+    max-height: none;       /* remove height limit so content can expand */
+  }
+
+  .hp.left.col,
+  .hp.right.col {
+    flex: 1 1 auto;         /* allow both to take full width */
+    width: 100%;            /* ensure each spans the full width */
+  }
+
+  /* Optional: adjust grid on mobile for smaller images */
+  .blog.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .art.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .center {
