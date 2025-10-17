@@ -335,7 +335,7 @@ img.art-thumbnail {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.hp > .blog.grid img {
+.hp .blog.grid img {
   width: 100%;
   height: auto;
   display: block;
