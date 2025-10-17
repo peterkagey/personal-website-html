@@ -36,8 +36,12 @@ a:hover {
 
 header, footer {
   text-align: center;
-  margin: 2rem 0;
+  margin: 0rem 0;
   color: #555;
+}
+
+footer p {
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -196,9 +200,8 @@ table.cv th {
 }
 
 svg.icon {
-    width: 24px;
-    height: 1.5rem;
-    vertical-align: middle;
+  width: 1.5em;
+  vertical-align: middle;
 }
 
 #coefficients-display {
@@ -235,32 +238,40 @@ a.home-page-link {
 
 .header-columns {
   display: flex;
-  justify-content: space-between; /* left-right alignment on wide screens */
-  align-items: center;            /* vertical centering */
-  flex-wrap: wrap;                /* allow stacking on small screens */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0 1rem;
 }
 
-/* Default (mobile / stacked) */
 .header-left,
 .header-right {
-  flex: 1 1 100%;     /* full width when stacked */
-  text-align: center; /* center text when stacked */
+  flex: 0 0 auto;
 }
 
-/* Desktop / wider screens */
-@media (min-width: 768px) {
+.header-left {
+  text-align: left;
+}
+
+.header-right {
+  text-align: right;
+}
+
+svg.icon {
+  width: 1.5em;
+  padding: 0.1em;
+  vertical-align: middle;
+}
+
+@media (max-width: 726px) {
   .header-left,
   .header-right {
-    flex: 0 0 auto;   /* shrink to fit content horizontally */
+    flex: 1 1 100%;
+    text-align: center;
   }
-
-  .header-left {
-    text-align: left;
-  }
-
-  .header-right {
-    text-align: right;
+  svg.icon {
+    width: 2.5em;
+    padding: 0.3em;
   }
 }
 
@@ -276,15 +287,19 @@ img.art-thumbnail {
 }
 
 /* Home page */
-.hp.cols {
+.cols {
   width: min(900px, 100%);
   margin: 0 auto;
   padding: 0rem;
   box-sizing: border-box;
   display: flex;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 200px);
   min-height: 400px;
   gap:1em;
+}
+
+.hp h1 {
+  margin:0;
 }
 
 .hp.col {
@@ -292,13 +307,13 @@ img.art-thumbnail {
   padding-right: 0.5em;
 }
 
-.hp.left.col {
+.hp .left.col {
   flex: 0 0 33.3%;
   box-sizing: border-box;
   overflow-y: auto;
 }
 
-.hp.right.col {
+.hp .right.col {
   flex: 0 0 66.7%;
   background: #eee;
   border-style: groove;
@@ -320,7 +335,7 @@ img.art-thumbnail {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.hp.grid img {
+.hp > .blog.grid img {
   width: 100%;
   height: auto;
   display: block;
@@ -329,7 +344,7 @@ img.art-thumbnail {
 }
 
 
-.hp.left.col #hp-toward {
+.hp .left.col #hp-toward {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -337,32 +352,33 @@ img.art-thumbnail {
   height: auto;
 }
 
-.hp.blog-title-card-text {
+.hp .left p {
+  margin:0;
+}
+
+.hp .blog-title-card-text {
   font-size: 1.4em;
 }
 
-.hp.section h1 {
+.hp .section h1 {
   color:#333;
   font-size: 3rem;
   text-align: center;
-  border-bottom-style: dashed;
-  border-top-style: dashed;
 }
 
 @media (max-width: 726px) {
   .hp.cols {
-    flex-direction: column; /* stack vertically instead of side-by-side */
-    max-height: none;       /* remove height limit so content can expand */
+    flex-direction: column;
+    max-height: none;
     height: auto;
   }
 
-  .hp.left.col,
-  .hp.right.col {
-    flex: 1 1 auto;         /* allow both to take full width */
-    width: 100%;            /* ensure each spans the full width */
+  .hp .left.col,
+  .hp .right.col {
+    flex: 1 1 auto;
+    width: 100%;
   }
 
-  /* Optional: adjust grid on mobile for smaller images */
   .blog.grid {
     grid-template-columns: 1fr;
   }
