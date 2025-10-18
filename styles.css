@@ -1,7 +1,7 @@
 /* Basic typography */
 body {
   font-family: system-ui, sans-serif;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
   line-height: 1.6;
@@ -18,7 +18,7 @@ body {
 }
 
 .about {
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 body.full-screen {
@@ -231,8 +231,7 @@ svg.icon {
 
 a.home-page-link {
   color: #333;
-  font-size: 4rem;
-  text-transform: capitalize;
+  font-size: 3rem;
   font-weight: 700;
   font-variant: small-caps;
 }
@@ -246,7 +245,7 @@ a.home-page-link:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .header-left,
@@ -300,7 +299,6 @@ img.art-thumbnail {
   display: flex;
   height: calc(100vh - 200px);
   min-height: 400px;
-  gap:1em;
 }
 
 .hp .section h1 {
@@ -318,14 +316,14 @@ img.art-thumbnail {
   text-decoration: none;
 }
 
-.hp.col {
+.hp .col {
   padding-left: 0.5em;
   padding-right: 0.5em;
+  box-sizing: border-box;
 }
 
 .hp .left.col {
   flex: 0 0 33.3%;
-  box-sizing: border-box;
   overflow-y: auto;
 }
 
@@ -334,7 +332,6 @@ img.art-thumbnail {
   padding: 0.5em;
   background: #eee;
   border-radius: 12px;
-  box-sizing: border-box;
   overflow-y: auto;
 }
 
@@ -343,11 +340,19 @@ img.art-thumbnail {
   gap: 0.5rem;
 }
 
+.blog-posts.grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .blog.grid {
   grid-template-columns: repeat(2, 1fr);
 }
 
 .art.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.art-list.grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -362,6 +367,7 @@ img.art-thumbnail {
 .hp .left.col #hp-toward {
   display: block;
   margin: 0 auto;
+  margin-bottom: 0.5em;
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -388,7 +394,15 @@ img.art-thumbnail {
     width: 100%;
   }
 
+  .art-list.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .blog.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-posts.grid {
     grid-template-columns: 1fr;
   }
 
@@ -442,7 +456,6 @@ blockquote cite {
 }
 
 .blog-title-card-image {
-  width: 450px;
   height: auto;
   border-radius: 12px;
 }
