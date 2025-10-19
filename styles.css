@@ -26,7 +26,7 @@ body.full-screen {
 }
 
 a {
-  color: #0066cc;
+  color: #346a5b;
   text-decoration: none;
 }
 
@@ -109,7 +109,7 @@ model-viewer {
   align-items: center;
 }
 
-.columns > .wide-column {
+.columns .wide-column {
   flex: 1;
   min-width: 300px;
   align-content: center;
@@ -199,11 +199,6 @@ table.cv th {
   border: none;
 }
 
-svg.icon {
-  width: 1.5em;
-  vertical-align: middle;
-}
-
 #coefficients-display {
   font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
 }
@@ -259,6 +254,10 @@ a.home-page-link:hover {
 
 .header-right {
   text-align: right;
+}
+
+.header-icons a:hover {
+  text-decoration: none;
 }
 
 svg.icon {
