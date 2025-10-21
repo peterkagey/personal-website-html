@@ -348,6 +348,14 @@ img.art-thumbnail {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.cv.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.problems.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .art-list.grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -403,6 +411,14 @@ img.art-thumbnail {
   }
 
   .art.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cv.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .problems.grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
