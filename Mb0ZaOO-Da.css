@@ -340,6 +340,14 @@ img.art-thumbnail {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.three-two.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.two-one.grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .blog.grid {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -420,6 +428,14 @@ img.art-thumbnail {
 
   .problems.grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .three-two.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .two-one.grid {
+    grid-template-columns: 1fr;
   }
 }
 

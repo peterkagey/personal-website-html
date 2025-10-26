@@ -4,12 +4,66 @@
   <subtitle>Peter Kagey&#39;s math blog</subtitle>
   <link href="https://peterkagey.com/feed.xml" rel="self" />
   <link href="https://peterkagey.com/" />
-  <updated>2025-10-05T00:00:00Z</updated>
+  <updated>2025-10-26T00:00:00Z</updated>
   <id>https://peterkagey.com/</id>
   <author>
     <name>Peter Kagey</name>
     <email>peterkagey@gmail.com</email>
   </author>
+  <entry>
+    <title>RSS for the OEIS</title>
+    <link href="https://peterkagey.com/blog/2025/10/oeis_rss/" />
+    <updated>2025-10-26T00:00:00Z</updated>
+    <id>https://peterkagey.com/blog/2025/10/oeis_rss/</id>
+    <content type="html">&lt;p&gt;I&#39;ve added an &lt;a href=&quot;https://en.wikipedia.org/wiki/RSS&quot;&gt;RSS&lt;/a&gt; feed to my site that allows you to subscribe to a search in the &lt;a href=&quot;https://oeis.org/&quot;&gt;On-Line Encyclopedia of Integer Sequences&lt;/a&gt; (OEIS). For example, if you want to subscribe to an RSS feed of all of my latest sequences, just add this to your feed reader:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Akagey&quot;&gt;&lt;code&gt;https://api.peterkagey.com/oeis_feed.xml?q=author%3Akagey&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here&#39;s how it works: Go to the OEIS, and make a search, such as &lt;code&gt;author:don,knuth&lt;/code&gt;. (It may be helpful to know about the &lt;a href=&quot;https://oeis.org/hints.html&quot;&gt;OEIS search hints&lt;/a&gt;.)&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-10-26/don_knuth_search_1200x630.png&quot; alt=&quot;A screenshot of a browser with an OEIS search for &#39;author:don,knuth&#39; and the URL displaying the escaped version of this search.&quot;&gt;
+  &lt;figcaption&gt;An example OEIS search and the corresponding URL&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;If you look at the URL on the OEIS, you should see something like this&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://oeis.org/search?q=author%3Adon%2Cknuth&amp;amp;language=english&amp;amp;go=Search
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;select everything after the &lt;code&gt;q=&lt;/code&gt; but before the &lt;code&gt;&amp;amp;language&lt;/code&gt;, and paste that at the end of my new API endpoint:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://api.peterkagey.com/oeis_feed.xml?q=author%3Adon%2Cknuth
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Subscribe using your favorite RSS reader (I use &lt;a href=&quot;https://feeder.co&quot;&gt;feeder.co&lt;/a&gt;) and get updates every time a new sequence is added that matches your search criteria.&lt;/p&gt;
+&lt;div class=&quot;grid two-one&quot;&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-10-26/oeis_rss_pk.png&quot; alt=&quot;A screenshot of an RSS feed for the OEIS with author:kagey.&quot;&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-10-26/oeis_rss_nice.png&quot; alt=&quot;A screenshot of an RSS feed for the OEIS with keyword:nice.&quot;&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;under-the-hood&quot;&gt;Under the hood&lt;/h2&gt;
+&lt;p&gt;The RSS works by searching the OEIS using the &lt;a href=&quot;https://oeis.org/search?q=author%3adon%2cknuth&amp;amp;fmt=json&quot;&gt;&lt;code&gt;fmt=json&lt;/code&gt;&lt;/a&gt; query param, and then doing a conversion of the JSON into RSS-compatible XML.&lt;/p&gt;
+&lt;p&gt;I have added the &lt;code&gt;sort=created&lt;/code&gt; to return sequences in order of how recently they were added to the OEIS.&lt;/p&gt;
+&lt;p&gt;I have also sanitized the searches to only allow letters, numbers, spaces, and &lt;code&gt;,&lt;/code&gt;, &lt;code&gt;:&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;&#39;&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, and &lt;code&gt;&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
+&lt;p&gt;Here&#39;s a list of the searches I&#39;m currently following:&lt;/p&gt;
+&lt;div class=&quot;grid three-two&quot;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Akagey&quot;&gt;Peter Kagey&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=keyword%3Anice&quot;&gt;keyword:nice&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Aalec%2Cjones&quot;&gt;Alec Jones&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3AEliud&quot;&gt;César Eliud Lozada&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Adon%2Cknuth&quot;&gt;Don Knuth&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Adrake%2Cthomas&quot;&gt;Drake Thomas&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Aed%2Cpegg&quot;&gt;Ed Pegg Jr.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Ascroggs&quot;&gt;Matthew Scroggs&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;previous-rss-on-the-oeis&quot;&gt;Previous RSS on the OEIS&lt;/h2&gt;
+&lt;p&gt;Russ Cox, the president of the OEIS has a &amp;quot;to do&amp;quot; item to &lt;a href=&quot;https://oeis.org/wiki/User:Russ_Cox/OEIS_Server_Features&quot;&gt;&amp;quot;add recent new sequences RSS feed&amp;quot;&lt;/a&gt;. If you want this, you can now add it with &lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=keyword%3Anew&quot;&gt;&lt;code&gt;https://api.peterkagey.com/oeis_feed.xml?q=keyword%3Anew&lt;/code&gt;&lt;/a&gt;—but with roughly 34 new sequences added each day, this feed will be chatty!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/OEIS/comments/68nqwa/rss_feed_for_new_oeis_sequences/&quot;&gt;Eight years ago&lt;/a&gt;, I had made a similar RSS feed, but it broke a few years ago when I migrated my website. I&#39;ve added redirects for those old feeds to the new API, so that if you were using it before, it should be working again.&lt;/p&gt;
+&lt;p&gt;If you spot a bug or if there&#39;s a feature you want, let me know on Bluesky &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you read this far, it&#39;s likely you use RSS! If so, I encourage you to subscribe to my &lt;a href=&quot;https://peterkagey.com/feed.xml&quot;&gt;blog&#39;s RSS feed&lt;/a&gt; too!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Pentagonal icositetrahedron puzzle</title>
     <link href="https://peterkagey.com/blog/2025/10/pentagonal_icositetrahedron_puzzle/" />
@@ -2170,75 +2224,6 @@ $$1, 4, 7, 1, 11, 16, 5, 21, 27, 34, 10, 1, 41, 17, 49, 25, 57, 6, 33, 66, 43, 1
 &lt;li&gt;How does this work if the path the circles follow is not the spiral? Can different paths have significantly different packing densities?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you have thoughts or ideas about any of this—or if you just want to make animated GIFs together—leave a comment or let me know on Bluesky, &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;!&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>My favorite sequences: A261865</title>
-    <link href="https://peterkagey.com/blog/2021/05/my-favorite-sequences-a261865/" />
-    <updated>2021-05-31T00:00:00Z</updated>
-    <id>https://peterkagey.com/blog/2021/05/my-favorite-sequences-a261865/</id>
-    <content type="html">&lt;p&gt;This is the first installment in a new series, &amp;quot;My favorite sequences&amp;quot;. In this series, I will write about sequences from the &lt;a href=&quot;https://oeis.org/&quot;&gt;On-Line Encyclopedia of Integer Sequences&lt;/a&gt; that I’ve authored or spent a lot of time thinking about.&lt;/p&gt;
-&lt;p&gt;I’ve been contributing to the On-Line Encyclopedia of Integer Sequences since I was an undergraduate. In December 2013, I submitted sequence &lt;a href=&quot;https://oeis.org/A233421&quot;&gt;A233421&lt;/a&gt; based on &lt;a href=&quot;https://artofproblemsolving.com/community/c7h566363p3315664&quot;&gt;problem A2 from the 2013 Putnam Exam&lt;/a&gt;—which is itself based on &amp;quot;Ron Graham’s Sequence&amp;quot; (&lt;a href=&quot;https://oeis.org/A006255&quot;&gt;A006255&lt;/a&gt;)—a surprising bijection from the natural numbers to the non-primes. As of today, &lt;a href=&quot;https://oeis.org/search?q=author%3Akagey&quot;&gt;I’ve authored over 475 sequences&lt;/a&gt; based on puzzles that I’ve heard about and problems that I’ve dreamed up.&lt;/p&gt;
-&lt;h2 id=&quot;a261865-multiples-of-square-roots&quot;&gt;&lt;a href=&quot;https://oeis.org/A261865&quot;&gt;A261865&lt;/a&gt;: Multiples of square roots&lt;/h2&gt;
-&lt;p&gt;(This problem is closely related to &lt;a href=&quot;https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=14&quot;&gt;Problem 13 in my Open Problem Collection&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;In September 2015, I submitted sequence &lt;a href=&quot;https://oeis.org/A261865&quot;&gt;A261865&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&#92;(A261865(n)&#92;) is the least integer &#92;(k&#92;) such that some multiple of &#92;(&#92;sqrt k&#92;) falls in the interval &#92;((n, n+1)&#92;).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-05-31/open_problem_v2_13_number_line.png&quot;&gt;
-  &lt;figcaption&gt;An illustration of the first dozen terms of A261865&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;For example, &#92;(A261865(3) = 3&#92;) because there is no multiple of &#92;(&#92;sqrt 1&#92;) in &#92;((3,4)&#92;) (since &#92;(3 &#92;sqrt{1} &#92;leq 3&#92;) and &#92;(4 &#92;sqrt{1} &#92;geq 4&#92;)); there is no multiple of &#92;(&#92;sqrt{2}&#92;) in &#92;((3,4)&#92;) (since &#92;(2 &#92;sqrt{2} &#92;leq 3&#92;) and &#92;(3 &#92;sqrt 2 &#92;geq 4&#92;)); but there is a multiple of &#92;(&#92;sqrt 3&#92;) in &#92;((3,4)&#92;), namely &#92;(2&#92;sqrt 3&#92;).&lt;/p&gt;
-&lt;p&gt;
-  As indicated in the picture, the sequence begins $$
-    &#92;color{blue} 2,2,3,2,2,
-    &#92;color{red}{3},
-    &#92;color{blue}{2,2,2},
-    &#92;color{red}{3},
-    &#92;color{blue}{2,2},
-    &#92;color{red}{3},
-    &#92;color{blue}{2,2,2},
-    &#92;color{red}{3},
-    &#92;color{blue}{2,2},
-    &#92;color{red}{3},
-    &#92;color{blue}{2,2},
-    &#92;color{magenta}{7}
-    &#92;color{black},&#92;dots.
-  $$
-&lt;/p&gt;
-&lt;figure&gt;
-  &lt;a href=&quot;https://oeis.org/A261865/graph&quot;&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2021-05-31/scatterplot_a261865.png&quot; alt=&quot;A scatterplot of A261865&quot;&gt;&lt;/a&gt;
-  &lt;figcaption&gt;A scatterplot of &#92;(A261865(n)&#92;). Notice the records at &#92;(A261865(184)=38&#92;) and &#92;(A261865(8091)=43&#92;).&lt;/figcaption&gt;
-&lt;/figure&gt;
-## A conjecture about density
-&lt;p&gt;As the example illustrates, &#92;(1&#92;) does not appear in the sequence. And almost by definition, asymptotically &#92;(1/&#92;sqrt 2&#92;) of the values are &#92;(2&#92;)s.&lt;/p&gt;
-&lt;p&gt;Let’s denote the asymptotic density of terms that are equal to &#92;(n&#92;) by &#92;(d_n&#92;). It’s easy to check that &#92;(d_1 = 0&#92;), (because multiples of &#92;(&#92;sqrt 1&#92;) are never between any integers) and &#92;(d_2 = 1/&#92;sqrt 2&#92;), because multiples of &#92;(&#92;sqrt 2&#92;) are always inserted. I conjecture in &lt;a href=&quot;https://raw.githubusercontent.com/peterkagey/OpenishProblems/master/v2/mainfile.pdf#page=14&quot;&gt;Problem 13 of my Open Problem Collection&lt;/a&gt; that $$a_n = &#92;begin{cases}&#92;displaystyle&#92;frac{1}{&#92;sqrt n}&#92;left(1 – &#92;sum_{i=1}^{n-1} a_i&#92;right) &amp;amp; n &#92;text{ is squarefree}&#92;&#92;[5mm] 0 &amp;amp; &#92;text{otherwise}&#92;end{cases}$$&lt;/p&gt;
-&lt;p&gt;If this conjecture is true, then the following table gives approximate densities.&lt;/p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&#92;(i&#92;)&lt;/th&gt;&lt;th&gt;&#92;(d_i&#92;)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&#92;(1&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_1 = 0&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(2&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_2 = 70.7&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(3&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_3 = 16.9&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(4&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_4 = 0&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(5&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_5 = 5.54&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(6&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_6 = 2.79&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(7&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_7 = 1.53&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(10&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_{10} = 0.797&#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(11&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_{11} = 0.519&#92;% &#92;)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&#92;(399&#92;)&lt;/td&gt;&lt;td&gt;&#92;(d_{399} = 3.53 &#92;times 10^{-11} &#92;%&#92;)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;This was computed with the Mathematica code:&lt;/p&gt;
-&lt;pre class=&quot;language-plain&quot;&gt;&lt;code class=&quot;language-plain&quot;&gt;d[i_] := (d[i] = If[
-  SquareFreeQ[i],
-  N[(1 - Sum[d[j], {j, 2, i - 1}])/Sqrt[i], 50],
-  0
-])&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;finding-large-values&quot;&gt;Finding Large Values&lt;/h2&gt;
-&lt;p&gt;I’m interested in values of &#92;(n&#92;) such that &#92;(A261865(n)&#92;) is large, and I reckon that there are clever ways to construct these, perhaps by looking at some Diophantine approximations of &#92;(&#92;sqrt{2}, &#92;sqrt{3}, &#92;sqrt{5}, &#92;sqrt{6}, &#92;dots&#92;). In February, I &lt;a href=&quot;https://codegolf.stackexchange.com/q/219889/53884&quot;&gt;posted a challenge&lt;/a&gt; on Code Golf Stack Exchange to have folks compete in writing programs that can quickly find large values of &#92;(A261865(n)&#92;).&lt;/p&gt;
-&lt;p&gt;Impressively, &lt;a href=&quot;https://codegolf.stackexchange.com/a/219946/53884&quot;&gt;Noodle9’s C++ program&lt;/a&gt; won the challenge. In under a minute, this program found that the input &#92;(n=1001313673399&#92;) makes &#92;(A261865&#92;) particularly large: &#92;(A261865(1001313673399) = 399&#92;). Within the time limit, no other programs could find a value of &#92;(n&#92;) that makes &#92;(A261865(n)&#92;) larger.&lt;/p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&#92;(n&#92;)&lt;/th&gt;&lt;th&gt;Order of magnitude&lt;/th&gt;&lt;th&gt;&#92;(A261865(n)&#92;)&lt;/th&gt;&lt;th&gt;Time&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1 &#92;times 10^{0}&#92;)&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(3 &#92;times 10^{0}&#92;)&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.3 &#92;times 10^{1}&#92;)&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(3.0 &#92;times 10^{1}&#92;)&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;184&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.84 &#92;times 10^{2}&#92;)&lt;/td&gt;&lt;td&gt;38&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8091&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(8.091 &#92;times 10^{3}&#92;)&lt;/td&gt;&lt;td&gt;43&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16060&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.606 &#92;times 10^{4}&#92;)&lt;/td&gt;&lt;td&gt;46&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16907&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.691 &#92;times 10^{4}&#92;)&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20993&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.099 &#92;times 10^{4}&#92;)&lt;/td&gt;&lt;td&gt;61&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26286&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.629 &#92;times 10^{4}&#92;)&lt;/td&gt;&lt;td&gt;97&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;130375&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.304 &#92;times 10^{5}&#92;)&lt;/td&gt;&lt;td&gt;118&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;169819&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.698 &#92;times 10^{5}&#92;)&lt;/td&gt;&lt;td&gt;127&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2135662&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.136 &#92;times 10^{6}&#92;)&lt;/td&gt;&lt;td&gt;130&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2345213&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.345 &#92;times 10^{6}&#92;)&lt;/td&gt;&lt;td&gt;187&lt;/td&gt;&lt;td&gt;&amp;nbsp;(0s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;46272966&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(4.627 &#92;times 10^{7}&#92;)&lt;/td&gt;&lt;td&gt;193&lt;/td&gt;&lt;td&gt;&amp;nbsp;(1s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;222125822&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.221 &#92;times 10^{8}&#92;)&lt;/td&gt;&lt;td&gt;210&lt;/td&gt;&lt;td&gt;&amp;nbsp;(5.2s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;237941698&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.379 &#92;times 10^{8}&#92;)&lt;/td&gt;&lt;td&gt;217&lt;/td&gt;&lt;td&gt;&amp;nbsp;(5.7s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;257240414&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.572 &#92;times 10^{8}&#92;)&lt;/td&gt;&lt;td&gt;227&lt;/td&gt;&lt;td&gt;&amp;nbsp;(6.2s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1205703469&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.206 &#92;times 10^{9}&#92;)&lt;/td&gt;&lt;td&gt;267&lt;/td&gt;&lt;td&gt;&amp;nbsp;(31s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1558293414&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.558 &#92;times 10^{9}&#92;)&lt;/td&gt;&lt;td&gt;299&lt;/td&gt;&lt;td&gt;&amp;nbsp;(41.8s)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4641799364&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(4.642 &#92;times 10^{9}&#92;)&lt;/td&gt;&lt;td&gt;303&lt;/td&gt;&lt;td&gt;&amp;nbsp;(2.1m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6600656102&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(6.601 &#92;times 10^{9}&#92;)&lt;/td&gt;&lt;td&gt;323&lt;/td&gt;&lt;td&gt;&amp;nbsp;(3m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11145613453&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.115 &#92;times 10^{10}&#92;)&lt;/td&gt;&lt;td&gt;335&lt;/td&gt;&lt;td&gt;&amp;nbsp;(5.2m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20641456345&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(2.064 &#92;times 10^{10}&#92;)&lt;/td&gt;&lt;td&gt;354&lt;/td&gt;&lt;td&gt;&amp;nbsp;(9.8m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;47964301877&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(4.796 &#92;times 10^{10}&#92;)&lt;/td&gt;&lt;td&gt;358&lt;/td&gt;&lt;td&gt;&amp;nbsp;(22.9m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;105991039757&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.06 &#92;times 10^{11}&#92;)&lt;/td&gt;&lt;td&gt;385&lt;/td&gt;&lt;td&gt;&amp;nbsp;(52m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;119034690206&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.19 &#92;times 10^{11}&#92;)&lt;/td&gt;&lt;td&gt;397&lt;/td&gt;&lt;td&gt;&amp;nbsp;(59.1m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;734197670865&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(7.342 &#92;times 10^{11}&#92;)&lt;/td&gt;&lt;td&gt;455&lt;/td&gt;&lt;td&gt;&amp;nbsp;(6.4h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;931392113477&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(9.314 &#92;times 10^{11}&#92;)&lt;/td&gt;&lt;td&gt;501&lt;/td&gt;&lt;td&gt;&amp;nbsp;(8.4h)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1560674332481&lt;/td&gt;&lt;td&gt;&amp;nbsp;&#92;(1.561 &#92;times 10^{12}&#92;)&lt;/td&gt;&lt;td&gt;505&lt;/td&gt;&lt;td&gt;&amp;nbsp;(14.2h)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;A table of record values as &lt;a href=&quot;https://codegolf.stackexchange.com/a/219988/53884&quot;&gt;computed by Code Golf Stack Exchange user Neil&lt;/a&gt;. The first 16 values agree with Jon E. Schoenfield’s computations that were added to the OEIS in September 2015&lt;/p&gt;
-&lt;h2 id=&quot;related-ideas&quot;&gt;Related Ideas&lt;/h2&gt;
-&lt;p&gt;Sequence &lt;a href=&quot;https://oeis.org/A327953&quot;&gt;&#92;(A327953(n)&#92;)&lt;/a&gt; counts the number of positive integers &#92;(k&#92;) such that there is some integer &#92;(&#92;alpha^{(n)}_k &amp;gt; 2&#92;) where &#92;(&#92;alpha^{(n)}_k&#92;sqrt{k} &#92;in (n, n+1)&#92;). It appears to grow roughly linearly like &#92;(A327953(n) &#92;sim 1.3n&#92;), but I don’t know how to prove this.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Take any function &#92;(f&#92;colon&#92;mathbb N &#92;rightarrow &#92;mathbb R&#92;) that is positive, has positive first derivative, and has negative second derivative. Then, what is the least &#92;(k&#92;) such that some multiple of &#92;(f(k)&#92;) is in &#92;((n,n+1)&#92;)?&lt;/li&gt;
-&lt;li&gt;For example, what is the least integer &#92;(k &#92;geq 3&#92;) such that there is a multiple of &#92;(&#92;ln(k)&#92;) in &#92;((n, n+1)&#92;)?&lt;/li&gt;
-&lt;li&gt;What is the least &#92;(k &#92;in &#92;mathbb N&#92;) such that there exists &#92;(m &#92;in &#92;mathbb N&#92;) with &#92;(k2^{1/m} &#92;in (n,n+1)&#92;)?&lt;/li&gt;
-&lt;li&gt;What is the least &#92;(m &#92;in &#92;mathbb N&#92;) such that there exists &#92;(k &#92;in &#92;mathbb N&#92;) with &#92;(k2^{1/m} &#92;in (n,n+1)&#92;)?&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://oeis.org/A343205&quot;&gt;A343205&lt;/a&gt; is the auxiliary sequence that gives the value &#92;(m&#92;) such that &#92;(m&#92;sqrt{A261865(n)} &#92;in (n, n+1)&#92;). Does this sequence have an infinite &lt;a href=&quot;https://en.wikipedia.org/wiki/Limit_inferior_and_limit_superior&quot;&gt;limit inferior&lt;/a&gt;?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2021-05-31/A343205_Plot.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Scatterplot of &lt;a href=&quot;https://oeis.org/A343205&quot;&gt;A343205&lt;/a&gt;, generated in Mathematica. If the main conjecture is true, then this is not bounded below by &#92;(&#92;alpha n&#92;) for any positive value of &#92;(&#92;alpha&#92;). The size of the points is proportional to &#92;(&#92;log(A261865(n))&#92;) and the points are colored so that the values are redder when &#92;(A261865(n)&#92;) is small.&lt;/p&gt;
-&lt;p&gt;If you can answer any of these questions, or if you spend time thinking about this, please let me know on Bluesky, &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;!&lt;/p&gt;
 </content>
   </entry>
 </feed>
