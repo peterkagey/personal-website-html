@@ -37,7 +37,7 @@ function set_r(){
   border_width = r / 12
 }
 
-function initialize_everything(solutionString, rubyAShift, rubyBShift, width){
+function initialize_board(solutionString, rubyAShift, rubyBShift, width){
   rubyA = width; aShift = rubyAShift; bShift = rubyBShift
   set_size();
   initialize_atox_and_btoy();
@@ -431,14 +431,63 @@ canvas.oncontextmenu = function(event) {
   return false;
 }
 
-// initialize_everything("0,0,0,8,6,0,0,0,0,3,2,5,9,0,0,7,5,1,4,2,6,6,9,8,3,6,7,0,0,3,4,7,1,8,0,0,0,9,0,9,0,0",6,2,7,6);
+function initialize_high_scores(){
+  rubyA = width; aShift = rubyAShift; bShift = rubyBShift
+  set_size();
+  initialize_atox_and_btoy();
+  initialize_labels(a_width, b_height);
+  set_initial_positions(solutionString);
+  max_vertex = Math.max(max_label(), max_vertex);
+  refresh_canvas();
+}
+
+// initialize_board("0,0,0,8,6,0,0,0,0,3,2,5,9,0,0,7,5,1,4,2,6,6,9,8,3,6,7,0,0,3,4,7,1,8,0,0,0,9,0,9,0,0",6,2,7,6);
 
 const id = (new URLSearchParams(window.location.search)).get("id");
 console.log(id);
+
 if (id === null) {
-  initialize_everything("",0,0,0);
+  initialize_board("",0,0,0);
 } else {
   fetch(`https://api.peterkagey.com/square_game/${id}`)
     .then(response => response.json()) // Parse JSON response
-    .then(data => {console.log(data); initialize_everything(data.solution,data.xShift,data.yShift,data.width);})
+    .then(data => initialize_board(data.solution,data.xShift,data.yShift,data.width))
 }
+
+function bound(n) {
+  const bound_sequence = [NaN,0,2,4,6,8,11,15,19,23,28,34,40,46,53,61,69,77,86,96,106,116,127,139,151,163,176,190,204,218,233,249,265,281,298,316,334,352,371,391,411,431,452,474,496,518,541,565,589,613,638,664,690,716,743,771,799,827,856,886,916,946,977];
+  return Math.max(bound_sequence[n], n * Math.ceil((n-1)/4));
+}
+
+fetch(`https://api.peterkagey.com/square_game_records`)
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("records");
+    var grid = document.createElement("div");
+    grid.className = "grid five-three";
+
+    data.forEach(record => {
+      const li = document.createElement("div");
+      if (
+        (record.level == 3 && record.vertices == 4) ||
+        (record.level == 4 && record.vertices == 6) ||
+        (record.level == 5 && record.vertices == 9) ||
+        (record.level == 6 && record.vertices == 12) ||
+        (record.level == 7 && record.vertices == 15) ||
+        (record.level == 8 && record.vertices == 19) ||
+        (record.level == 9 && record.vertices == 24) ||
+        (record.level == 10 && record.vertices == 30) ||
+        (record.level == 11 && record.vertices == 34) ||
+        (record.level == 14 && record.vertices == 56)
+      ) {
+        li.innerHTML = `<a href="/apps/square_game/?id=${record.game_id}">f(${record.level}) = ${record.vertices}</a>`;
+        grid.appendChild(li);
+      } else if (record.level > 2) {
+        li.innerHTML = `<a href="/apps/square_game/?id=${record.game_id}">${bound(record.level)} ≤ f(${record.level}) ≤ ${record.vertices}</a>`;
+        grid.appendChild(li);
+      }
+    });
+
+    container.appendChild(grid);
+  })
+  .catch(err => console.error("Error loading records:", err));
