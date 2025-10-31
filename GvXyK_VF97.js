@@ -475,5 +475,3 @@ window.addEventListener("DOMContentLoaded", () => {
   mainCanvas();
   explanationCanvas();
 });
-
-console.log("test")

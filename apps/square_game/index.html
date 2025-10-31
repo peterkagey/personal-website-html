@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Conway&#39;s Game of Life</title>
+    <title>Square Game</title>
   
   
   <link rel="stylesheet" href="/yXU4NIelG_.css">
@@ -16,7 +16,7 @@
   <script type="module" src="/vendor/heading-anchors.js"></script>
   <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script> <!-- TODO: serve this -->
   
-  <meta property="og:title" content="Conway&#39;s Game of Life">
+  <meta property="og:title" content="Square Game">
   
   
   
@@ -24,10 +24,10 @@
   
   
   
-  <meta property="og:image" content="https://peterkagey.com/assets/apps/covers/GoL_cover_1200x630.png">
+  <meta property="og:image" content="https://peterkagey.com/assets/apps/covers/square_games_cover_1200x630.png">
   
   
-  <meta property="og:url" content="https://peterkagey.com/apps/conways_game_of_life/">
+  <meta property="og:url" content="https://peterkagey.com/apps/square_game/">
   <meta property="og:site_name" content="Peter Kagey">
   <meta property="og:locale" content="en_US">
 
@@ -72,18 +72,59 @@
     
     
     <heading-anchors>
-      <style>
-  #conway {
+      
+<p>This app is currently down! If the year is 2026 or later, send me an email to let me know it's still down.
+
+Here's a screenshot of what it looked like:
+</p>
+<!-- <div class="center">
+  <img width="600px" height="auto" src="/assets/apps/square-games/transparent_square_game.png">
+</div> -->
+
+<style>
+  #square_game_canvas {
     display: block;
     width: 100%;
     box-sizing: border-box;
   }
+  #alec_notes {
+    font-size: 1.5em;
+  }
 </style>
+<canvas id="square_game_canvas"></canvas>
 
-<h1 id="conways-game-of-life">Conway's Game of Life</h1>
-<canvas id="conway"></canvas>
+<p>
+  This is a <a href="https://oeis.org/search?q=2,4,6,9,12,15,19,_,30">new OEIS sequence</a>!
+</p>
+<p>
+  Found a bug? Please report it on <a href="https://github.com/PeterOKagey/circle-games/issues">GitHub</a>!
+</p>
 
-<script type="module" src="/z3IbZRSZRT.js"></script>
+
+<div id="connections">
+  <lh id="connect"><b> Connections </b></lh><br>
+  <pre id="alec_notes" style="display:none;"> = alec_string </pre>
+</div>
+
+<div id="instructions">
+  <lh id="instr"><b> Instructions </b></lh>
+  <ul id="instructions_paragraph" style="display:none;">
+    <li>The goal of this game is to connect all "colors" (numbers 1..N) of a graph restricted to a square tiling—using the fewest number of vertices possible.</li>
+    <li>In other words, for every n ≠ m, there needs to be a circle with n connected to a circle with m.</li>
+    <li>(The links under "Best Solutions" contain some examples.)</li>
+    <li>Clicking on a vertex will decrease the value in the circle and right clicking will increase the value in a circle.</li>
+    <li>You can move vertices by clicking and dragging.</li>
+    <li>If you type any character while your mouse is over a vertex, it will delete the vertex.</li>
+    <li>The circle in the upper-left corner gives the color of the greatest sub-graph that is fully connected.</li>
+    <li>The circle to the right of that records the "size" of the graph: the number of vertices in play.</li>
+    <li>The red edges denote colors that are twice-connected.</li>
+    <li>The "S" button will allow you to save your solution and update the high-scores table.</li>
+    <li>The number in the upper-right corner will let you adjust the maximum labelling for a vertex.</li>
+  </ul>
+</div>
+
+
+<script type="module" src="/F4oggmT2LJ.js"></script>
 
     </heading-anchors>
   </main>

@@ -340,6 +340,10 @@ img.art-thumbnail {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.five-three.grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .three-two.grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -428,6 +432,10 @@ img.art-thumbnail {
 
   .problems.grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .five-three.grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .three-two.grid {
