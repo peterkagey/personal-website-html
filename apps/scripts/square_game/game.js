@@ -438,7 +438,7 @@ console.log(id);
 if (id === null) {
   initialize_everything("",0,0,0);
 } else {
-  fetch(`https://peterkagey.com/square_game/${id}`)
+  fetch(`https://api.peterkagey.com/square_game/${id}`)
     .then(response => response.json()) // Parse JSON response
     .then(data => {console.log(data); initialize_everything(data.solution,data.xShift,data.yShift,data.width);})
 }
