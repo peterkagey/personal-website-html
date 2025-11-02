@@ -93,7 +93,7 @@
 </blockquote>
 <p>(In May 2019, Alec’s student Ryan Lee found the \(11\)th term: \(A278299(11) = 34\). \(A278299(12)\) is still unknown.)</p>
 <img src="/assets/blog/2021-06-28/transparent_square_game.png">
-<p>A screenshot from <a href="http://peterkagey.com/apps/square_game/">my game</a> illustrating the largest known term: <a href="http://peterkagey.com/apps/square_game/?id=356">\(A278299(14) = 56\)</a>. Every number is connected to every other number. The red edges refer to redundant connections.</p>
+<p>A screenshot from <a href="http://peterkagey.com/apps/square_game/">my game</a> illustrating the largest known term: <a href="http://peterkagey.com/apps/square_game/?id=356">A278299(14) = 56</a>. Every number is connected to every other number. The red edges refer to redundant connections.</p>
 <p>We found these terms by establishing some lower bounds (as explained below) and then implementing a <a href="http://peterkagey.com/apps/square_game/">Javascript game (which you can play here)</a> with a <a href="https://github.com/peterkagey/circle-games">Ruby on Rails backend</a> to allow people to submit their hand-crafted attempts. Each solution was constructive proof of an upper bound, so when a user submitted a solution that matched the lower bound, we were able to confirm that term of the sequence.</p>
 <p>(One heuristic for making minimal configurations is to start with the construction in OEIS sequence <a href="https://oeis.org/A260643">A260643</a> and add cells as necessary in an <em>ad hoc</em> fashion.)</p>
 <h2 id="lower-bounds">Lower bounds</h2>
