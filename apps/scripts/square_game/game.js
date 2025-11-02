@@ -114,6 +114,17 @@ function distance(x1, y1, x2, y2){
   return Math.sqrt(Math.pow((x1-x2),2)+Math.pow((y1-y2),2));
 }
 
+function distance2(p1, p2){
+  return Math.sqrt(Math.pow((p1.x-p2.x),2)+Math.pow((p1.y-p2.y),2));
+}
+
+function circleCenter(a, b) {
+  return {
+    x: 0.5*(canvas.width/a_width) + a*canvas.width/a_width,
+    y: 0.5*canvas.height/b_height + b*canvas.height/b_height
+  }
+}
+
 function update_state(a,b){
   var i = index(a,b);
   (labels[i] > 0) ? labels[i]-- : labels[i] = max_vertex;
@@ -414,8 +425,8 @@ function draw_menu_bar(){
   color_and_print_string_at("\u2013", a_width-3, 0);
   color_and_print_string_at(max_vertex, a_width-2, 0);
   color_and_print_string_at("+", a_width-1, 0);
-  color_and_print_string_at("S", 2, 0);
-  if(a_width > 6) { color_and_print_string_at("N", 3, 0); }
+  color_and_print_string_at("Save", 2, 0);
+  if(a_width > 6) { color_and_print_string_at("New", 3, 0); }
   if(a_width > 7) { color_and_print_string_at("\u2190", 4, 0) }
   if(a_width > 8) { color_and_print_string_at("\u2192", 5, 0); }
   if(a_width > 9) { color_and_print_string_at("\u2191", 6, 0); }
@@ -444,12 +455,10 @@ function initialize_high_scores(){
 // initialize_board("0,0,0,8,6,0,0,0,0,3,2,5,9,0,0,7,5,1,4,2,6,6,9,8,3,6,7,0,0,3,4,7,1,8,0,0,0,9,0,9,0,0",6,2,7,6);
 
 const id = (new URLSearchParams(window.location.search)).get("id");
-console.log(id);
-
 if (id === null) {
   initialize_board("",0,0,0);
 } else {
-  fetch(`https://api.peterkagey.com/square_game/${id}`)
+  fetch(`${API_BASE_URL}/square_game/${id}`)
     .then(response => response.json()) // Parse JSON response
     .then(data => initialize_board(data.solution,data.xShift,data.yShift,data.width))
 }
@@ -459,7 +468,7 @@ function bound(n) {
   return Math.max(bound_sequence[n], n * Math.ceil((n-1)/4));
 }
 
-fetch(`https://api.peterkagey.com/square_game_records`)
+fetch(`${API_BASE_URL}/square_game_records`)
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("records");

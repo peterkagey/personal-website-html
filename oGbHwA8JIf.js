@@ -1,3 +1,9 @@
+let API_BASE_URL
+if ("production" == "development") {
+  API_BASE_URL = "http://127.0.0.1:8000"
+} else {
+  API_BASE_URL = "https://api.peterkagey.com"
+}
 var canvas = document.getElementById("square_game_canvas");
 canvas.tabIndex = 0;
 var context = canvas.getContext("2d");
@@ -112,6 +118,17 @@ function reset_game_matrix(){
 
 function distance(x1, y1, x2, y2){
   return Math.sqrt(Math.pow((x1-x2),2)+Math.pow((y1-y2),2));
+}
+
+function distance2(p1, p2){
+  return Math.sqrt(Math.pow((p1.x-p2.x),2)+Math.pow((p1.y-p2.y),2));
+}
+
+function circleCenter(a, b) {
+  return {
+    x: 0.5*(canvas.width/a_width) + a*canvas.width/a_width,
+    y: 0.5*canvas.height/b_height + b*canvas.height/b_height
+  }
 }
 
 function update_state(a,b){
@@ -414,8 +431,8 @@ function draw_menu_bar(){
   color_and_print_string_at("\u2013", a_width-3, 0);
   color_and_print_string_at(max_vertex, a_width-2, 0);
   color_and_print_string_at("+", a_width-1, 0);
-  color_and_print_string_at("S", 2, 0);
-  if(a_width > 6) { color_and_print_string_at("N", 3, 0); }
+  color_and_print_string_at("Save", 2, 0);
+  if(a_width > 6) { color_and_print_string_at("New", 3, 0); }
   if(a_width > 7) { color_and_print_string_at("\u2190", 4, 0) }
   if(a_width > 8) { color_and_print_string_at("\u2192", 5, 0); }
   if(a_width > 9) { color_and_print_string_at("\u2191", 6, 0); }
@@ -444,12 +461,10 @@ function initialize_high_scores(){
 // initialize_board("0,0,0,8,6,0,0,0,0,3,2,5,9,0,0,7,5,1,4,2,6,6,9,8,3,6,7,0,0,3,4,7,1,8,0,0,0,9,0,9,0,0",6,2,7,6);
 
 const id = (new URLSearchParams(window.location.search)).get("id");
-console.log(id);
-
 if (id === null) {
   initialize_board("",0,0,0);
 } else {
-  fetch(`https://api.peterkagey.com/square_game/${id}`)
+  fetch(`${API_BASE_URL}/square_game/${id}`)
     .then(response => response.json()) // Parse JSON response
     .then(data => initialize_board(data.solution,data.xShift,data.yShift,data.width))
 }
@@ -459,7 +474,7 @@ function bound(n) {
   return Math.max(bound_sequence[n], n * Math.ceil((n-1)/4));
 }
 
-fetch(`https://api.peterkagey.com/square_game_records`)
+fetch(`${API_BASE_URL}/square_game_records`)
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("records");
@@ -492,7 +507,7 @@ fetch(`https://api.peterkagey.com/square_game_records`)
   })
   .catch(err => console.error("Error loading records:", err));
 
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   // Handle #instr click event
   document.getElementById("instr").addEventListener("click", function() {
     var instructionsParagraph = document.getElementById("instructions_paragraph");
@@ -520,51 +535,98 @@ var dragging = false; var mouseDown = false;
 var click_original_a; var click_original_b;
 var clickXdel; var clickYdel;
 var value_of_moving_circle;
-var coords;
 
-var handlemousedown = function(event) { // Where the clickiness happens.
-  mouseDown = true; dragging = false;
-  var coords = getCanvasCoords(canvas, event);
-  var [a,b] = ab_from_xy(coords.x, coords.y);
-  if (event.which == 1){
-    if      (distance(coords.x, coords.y, atox[a_width-3], btoy[0]) < r && max_vertex > 1) { max_vertex--; }
-    else if (distance(coords.x, coords.y, atox[a_width-1], btoy[0]) < r && max_vertex < 99){ max_vertex++; }
-    else if (distance(coords.x, coords.y, atox[2], btoy[0]) < r){
-      document.getElementById("new_square_game").submit(); return
+var coords;
+async function saveGame() {
+  const grid = Array.from({ length: b_height - 1 }, (_, b) =>
+    Array.from({ length: a_width }, (_, a) => labels[index(a, b + 1)])
+  );
+  try {
+    const response = await fetch(`${API_BASE_URL}/save_square_game`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(grid),
+    });
+
+    if (response.status == 200) {
+      const body = await response.json();
+      window.location.href = `/apps/square_game/?id=${body.id}`;
     }
-    else if (a_width > 6 && distance(coords.x, coords.y, atox[3], btoy[0]) < r){
-      document.getElementById("new_square_game").submit(); // seems broken.
-      window.location.assign("https://peterkagey.com/apps/square_game/"); //I'd prefer a "home_path" solution.
-      return
-    }
-    else if (a_width > 7 && distance(coords.x, coords.y, atox[4], btoy[0])  < r){ move_everything("left");   }
-    else if (a_width > 8  && distance(coords.x, coords.y, atox[5], btoy[0])  < r){ move_everything("right");  }
-    else if (a_width > 9  && distance(coords.x, coords.y, atox[6], btoy[0])  < r){ move_everything("up");     }
-    else if (a_width > 10 && distance(coords.x, coords.y, atox[7], btoy[0])  < r){ move_everything("down");   }
-    else if (a_width > 11 && distance(coords.x, coords.y, atox[8], btoy[0])  < r){ resize_canvas("widen");    }
-    else if (a_width > 12 && distance(coords.x, coords.y, atox[9], btoy[0])  < r){ resize_canvas("heighten"); }
-    else if (a_width > 13 && distance(coords.x, coords.y, atox[10], btoy[0]) < r){ resize_canvas("narrow");   }
-    else if (a_width > 14 && distance(coords.x, coords.y, atox[11], btoy[0]) < r){ resize_canvas("shorten");  }
-    if (distance(atox[a], btoy[b], coords.x, coords.y) < r){
-      click_original_a = a; click_original_b = b;
-      clickXdel = atox[a] - coords.x; clickYdel = btoy[b] - coords.y;
-      value_of_moving_circle = labels[index(a,b)];
-      labels[index(a,b)] = 0;
-      refresh_canvas();
-      saveCanvas();
-      labels[index(a,b)] = value_of_moving_circle;
-    }
-    else { value_of_moving_circle = 0; }
+  } catch (error) {
+    console.error('Error saving game:', error);
   }
-  if (event.which == 3){
-    if (distance(atox[a], btoy[b], coords.x, coords.y) < r){
-      labels[index(a,b)] = (parseInt(labels[index(a,b)]) + 1) % (max_vertex + 1);
-    }
-  }
-  refresh_canvas();
-  return false;
 }
-var handlefocus = function(e){
+
+function withinCircle(pt, a, b) { return distance2(pt, circleCenter(a, b)) < r }
+
+const isButton = {
+  decrement:      pt => withinCircle(pt, a_width-3, 0) && max_vertex > 1,
+  increment:      pt => withinCircle(pt, a_width-1, 0) && max_vertex < 99,
+  saveGame:       pt => withinCircle(pt, 2, 0),
+  newGame:        pt => withinCircle(pt, 3, 0),
+  moveLeft:       pt => withinCircle(pt, 4, 0) && a_width > 7,
+  moveRight:      pt => withinCircle(pt, 5, 0) && a_width > 8,
+  moveUp:         pt => withinCircle(pt, 6, 0) && a_width > 9,
+  moveDown:       pt => withinCircle(pt, 7, 0) && a_width > 10,
+  widenCanvas:    pt => withinCircle(pt, 8, 0) && a_width > 11,
+  heightenCanvas: pt => withinCircle(pt, 9, 0) && a_width > 12,
+  narrowCanvas:   pt => withinCircle(pt, 10, 0) && a_width > 13,
+  shortenCanvas:  pt => withinCircle(pt, 11, 0) && a_width > 14
+}
+
+async function newGame() {
+  window.location.assign("/apps/square_game/");
+}
+
+function setDragStartState(coords) {
+  var [a,b] = ab_from_xy(coords.x, coords.y);
+  if (withinCircle(coords, a, b) < r) {
+    click_original_a = a; click_original_b = b;
+    clickXdel = atox[a] - coords.x; clickYdel = btoy[b] - coords.y;
+    value_of_moving_circle = labels[index(a,b)];
+    labels[index(a,b)] = 0;
+    refresh_canvas();
+    saveCanvas();
+    labels[index(a,b)] = value_of_moving_circle;
+  } else {
+    value_of_moving_circle = 0;
+  }
+}
+
+function handleRightClick(event) {
+  var [a,b] = ab_from_xy(coords.x, coords.y);
+  if (withinCircle(coords, a, b)) {
+    labels[index(a,b)] = (labels[index(a,b)] + 1) % (max_vertex + 1);
+  }
+}
+
+function handleLeftClick(event) {
+  if (isButton.decrement(coords))           { max_vertex--;              }
+  else if (isButton.increment(coords))      { max_vertex++;              }
+  else if (isButton.saveGame(coords))       { saveGame();                }
+  else if (isButton.newGame(coords))        { newGame()                  }
+  else if (isButton.moveLeft(coords))       { move_everything("left");   }
+  else if (isButton.moveRight(coords))      { move_everything("right");  }
+  else if (isButton.moveUp(coords))         { move_everything("up");     }
+  else if (isButton.moveDown(coords))       { move_everything("down");   }
+  else if (isButton.widenCanvas(coords))    { resize_canvas("widen");    }
+  else if (isButton.heightenCanvas(coords)) { resize_canvas("heighten"); }
+  else if (isButton.narrowCanvas(coords))   { resize_canvas("narrow");   }
+  else if (isButton.shortenCanvas(coords))  { resize_canvas("shorten");  }
+  else                                      { setDragStartState(coords)  }
+}
+
+var handleMouseDown = function(event) {
+  coords = getCanvasCoords(event); // Just in case the user clicks before moving the mouse.
+  mouseDown = true; dragging = false;
+  var [a,b] = ab_from_xy(coords.x, coords.y);
+  var label = labels[index(a,b)]
+  // if (event.shiftKey && label != 0) { colorValue(label) }
+  if (event.which == 1)        { handleLeftClick(event) }
+  else if (event.which == 3)        { handleRightClick(event) }
+  refresh_canvas();
+}
+var handleFocus = function(e){
   if(e.type=='mouseover'){
     canvas.focus();
     return false;
@@ -575,7 +637,7 @@ var handlefocus = function(e){
   return true;
 };
 
-function getCanvasCoords(canvas, event) {
+function getCanvasCoords(event) {
   const rect = canvas.getBoundingClientRect();
   const scaleX = canvas.width / rect.width;
   const scaleY = canvas.height / rect.height;
@@ -586,9 +648,8 @@ function getCanvasCoords(canvas, event) {
   };
 }
 
-function handlemousemove(event){
-  var coords = getCanvasCoords(canvas, event);
-  // refresh_canvas();
+function handleMouseMove(event){
+  coords = getCanvasCoords(event);
   if (mouseDown && event.which == 1 && value_of_moving_circle > 0){
     dragging = true;
     restoreCanvas();
@@ -596,43 +657,42 @@ function handlemousemove(event){
   }
 }
 
-function handlemouseup(event){
+function handleMouseUp(event){
+  coords = getCanvasCoords(event); // For when the user saves, and mouseUp happens on the new screen.
   refresh_canvas();
   saveCanvas();
   mouseDown = false;
-  coords = getCanvasCoords(canvas, event);
   if (dragging){
     var [a,b] = ab_from_xy(coords.x+clickXdel, coords.y+clickYdel);
-    if (distance(atox[a], btoy[b], coords.x+clickXdel, coords.y+clickYdel) < r){
+    if (withinCircle({x: coords.x+clickXdel, y: coords.y+clickYdel}, a, b)){
       labels[index(click_original_a, click_original_b)] = 0;
       labels[index(a,b)] = value_of_moving_circle;
       refresh_canvas();
     }
   } else {
     var [a,b] = ab_from_xy(coords.x, coords.y);
-    if (distance(atox[a], btoy[b], coords.x, coords.y) < r){
+    if (withinCircle(coords, a, b)){
       if (event.which == 1){ update_state(a,b); }
       refresh_canvas();
     }
   }
-  dragging = false; // does the magic on mouseup
+  dragging = false;
 }
 
-function handlekeydown(event){
-  var [a,b] = ab_from_xy(coords.x, coords.y);
-  var label = labels[index(a,b)]
-  if (event.keyCode == 67 && label != 0) { return colorValue(label) };
-
-  if (distance(atox[a], btoy[b], coords.x, coords.y) < r){
-    labels[index(a,b)] = 0;
-    refresh_canvas();
-    return false;
+function handleKeyDown(event){
+  if (event.key == "Backspace") {
+    if (coords === undefined) { console.warn("The mouse hasn't moved yet!") }
+    else {
+      var [a,b] = ab_from_xy(coords.x, coords.y);
+      if (withinCircle(coords, a, b)){
+        labels[index(a,b)] = 0;
+        refresh_canvas();
+      }
+    }
   }
 }
 
-canvas.addEventListener('mouseover', handlefocus, false);
-canvas.addEventListener('mouseout', handlefocus, false);
-canvas.addEventListener('keydown', handlekeydown);
-canvas.addEventListener('mousedown', handlemousedown, false);
-canvas.addEventListener('mousemove', handlemousemove, false);
-canvas.addEventListener('mouseup', handlemouseup, false);
+window.addEventListener('keydown', handleKeyDown);
+canvas.addEventListener('mousemove', handleMouseMove, false);
+canvas.addEventListener('mousedown', handleMouseDown, false);
+canvas.addEventListener('mouseup', handleMouseUp, false);
