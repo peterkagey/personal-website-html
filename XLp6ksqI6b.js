@@ -457,8 +457,12 @@ if (id === null) {
   initializeEmptyBoard();
 } else {
   fetch(`${API_BASE_URL}/square_game/${id}`)
-    .then(response => response.json()) // Parse JSON response
+    .then(response => {
+      if (response.ok) { return response.json() }
+      else { throw new Error("ID not found") }
+    })
     .then(data => initializeBoard(data.solution,data.xShift,data.yShift,data.width))
+    .catch(_ => initializeEmptyBoard())
 }
 
 function bound(n) {
