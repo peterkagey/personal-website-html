@@ -12,6 +12,10 @@ body {
   max-width: 700px;
 }
 
+.problem {
+  max-width: 700px;
+}
+
 .draft {
   max-width: 700px;
 }
@@ -68,6 +72,11 @@ model-viewer {
   width:100%;
   aspect-ratio: 1 / 1;
   height: auto;
+}
+
+.problem-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .columns {
@@ -344,6 +353,14 @@ img.art-thumbnail {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.four-two.grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.three.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .three-two.grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -436,6 +453,10 @@ img.art-thumbnail {
 
   .five-three.grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .four-two.grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .three-two.grid {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>G4G15 gift exchange: parity triangles from the OEIS</title>
+    <title>Peter Kagey</title>
   
   
   <link rel="stylesheet" href="/adsFUlGMfQ.css">
@@ -16,23 +16,17 @@
   <script type="module" src="/vendor/heading-anchors.js"></script>
   <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script> <!-- TODO: serve this -->
   
-  <meta property="og:title" content="G4G15 gift exchange: parity triangles from the OEIS">
   
   
-  
-  <meta property="og:type" content="article">
-  
+  <meta property="og:type" content="website">
   
   
-  <meta property="og:image" content="https://peterkagey.com/assets/blog/2025-05-12/cover_1200x630.png">
-  
-  
-  <meta property="og:url" content="https://peterkagey.com/blog/2025/05/g4g15-gift-exchange-parity-triangles-from-the-oeis/">
+  <meta property="og:url" content="https://peterkagey.com/problems/058/">
   <meta property="og:site_name" content="Peter Kagey">
   <meta property="og:locale" content="en_US">
 
 </head>
-<body class="blog">
+<body class="problem">
   <header>
   <div class="header-columns">
     <div class="header-left">
@@ -70,37 +64,49 @@
 
   <main>
     
-    <h1 id="g4g15-gift-exchange-parity-triangles-from-the-oeis">G4G15 gift exchange: parity triangles from the OEIS</h1>
-    
-    
-    <p>by Peter Kagey (2025-05-11)</p>
     
     <heading-anchors>
-      <p>In February 2024, I attended the <a href="https://www.gathering4gardner.org/">Gathering 4 Gardner</a> in Atlanta (G4G15), which has a tradition of a <a href="https://www.gathering4gardner.org/gift-exchange-details/">gift exchange</a>, where you bring 170 copies of a small gift, and in turn you get a small gift from all of the exchange participants.</p>
-<p>One of these gifts, a set of 3D-printed fractals from Hideki Tsuiki appeared recently in the Numberphile video on the right—I have copies of these fractals in my office!</p>
-<div class="video-container">
-  <iframe loading="lazy" title="A 1.58-Dimensional Object - Numberphile" width="500" height="281" src="https://www.youtube.com/embed/FnRhnZbDprE?start=858&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+      <div class="problem-header">
+    <div>
+      <h1 id="problem-58">Problem 58</h1>
+      <img src="/assets/problems/ratings/stars_3.svg" width="200px">
+    </div>
+    <img src="/assets/problems/ratings/piste_3.svg" width="50px">
 </div>
-<h2 id="my-g4g15-gift">My G4G15 gift</h2>
-<p>For my G4G15 gift, I made 200 distinct cards illustrating &quot;parity triangles&quot; of OEIS sequences, based on the idea in my blog post &quot;<a href="/blog/2021/03/parity-bitmaps-from-the-oeis/index.html">Parity bitmaps from the OEIS</a>.&quot;</p>
-<p>Here’s how the cards turned out:</p>
-<div class="columns">
-    <div><img src="/assets/blog/2025-05-12/A085338-1.jpeg"></div>
-    <div><img src="/assets/blog/2025-05-12/A325001.jpeg"></div>
-</div>
-I used a Cricut to cut out the shapes of the cards, and then I draw them using an AxiDraw V3 pen plotter.
-<div class="columns">
-    <div><video autoplay="" controls="" muted="" loop="" src="/assets/blog/2025-05-12/Cricut.mov"></video></div>
-    <div><img src="/assets/blog/2025-05-12/CricutScraps-1.jpeg"></div>
-</div>
-<p>I then wrote a Python script that downloaded the data from the OEIS and generated SVG instructions for drawing the cards.</p>
-<p><img src="/assets/blog/2025-05-12/00_A051338_A061857_A186230_A267480_A284855_A295205_A304263_A325001.svg" alt=""></p>
-<p>Here’s a video (sped up by a factor of 10x) showing the AxiDraw V3 pen plotter dutifully following the instructions.</p>
-<div class="columns">
-    <div><video autoplay="" controls="" muted="" loop="" src="/assets/blog/2025-05-12/axidraw_fast.mov"></video></div>
-    <div><img src="/assets/blog/2025-05-12/AxiDrawProcess.jpeg"></div>
-</div>
-<p>Send me a message on Bluesky <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a> if you want me to put one in the mail for you!</p>
+<p>Consider a peaceable "hyper-queens" problem in an \(n \times n \times n\) chess
+"cube", where a queen can move in any diagonal direction.</p>
+<figure>
+  <div class="grid three">
+    <img src="/assets/problems/figure_058-1.svg">
+    <img src="/assets/problems/figure_058-2.svg">
+    <img src="/assets/problems/figure_058-3.svg">
+  </div>
+  <figcaption>
+    At least four hyper-queens can be placed peaceably on a \(3 \times 3 \times 3\) board, where each \(3 \times 3\) board represents a layer of the cube and the dots show where the queens can attack.
+  </figcaption>
+</figure>
+<h2 id="question">Question</h2>
+<p>
+  What is the greatest number of queens that can be placed on an
+  \(n \times n \times n\) board?
+</p>
+<h3 id="related-questions">Related questions</h3>
+<ol>
+  <li>
+    What is the greatest number of queens that can be placed on an \(n \times n \times \cdots \times n\) board?
+  </li>
+  <li>
+    If \(n^{k-1}\) queens can be placed on a
+    \(\displaystyle\underbrace{n \times n \times \cdots \times n}_{k\ \text{copies}}\) board
+    for sufficently large \(n\), how large must \(n\) be?
+  </li>
+</ol>
+<h3 id="references">References</h3>
+<ol>
+  <li>
+    Alexander Day, "<a href="https://math.stackexchange.com/q/2232287/121988">the 8 queens on the chessboard: variations</a>," Math Stack Exchange
+  </li>
+</ol>
 
     </heading-anchors>
   </main>
