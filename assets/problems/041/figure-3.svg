@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46.948pt" height="24.271pt" viewBox="0 0 46.948 24.271">
+<defs>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 45 1 L 46.949219 1 L 46.949219 24 L 45 24 Z M 45 1 "/>
+</clipPath>
+<clipPath id="clip-1">
+<path clip-rule="nonzero" d="M 43 0 L 46.949219 0 L 46.949219 4 L 43 4 Z M 43 0 "/>
+</clipPath>
+<clipPath id="clip-2">
+<path clip-rule="nonzero" d="M 0 0 L 46.949219 0 L 46.949219 24.269531 L 0 24.269531 Z M 0 0 "/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip-0)">
+<path fill="none" stroke-width="0.79701" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="2.98883 2.98883" stroke-miterlimit="10" d="M 22.678344 0.00134375 L 22.678344 21.970094 " transform="matrix(1, 0, 0, -1, 23.474, 23.474)"/>
+</g>
+<g clip-path="url(#clip-1)">
+<path fill="none" stroke-width="0.6376" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -1.554744 2.073395 C -1.425838 1.296051 -0.00005625 0.128083 0.386662 -0.00082375 C -0.00005625 -0.12973 -1.425838 -1.293792 -1.554744 -2.071136 " transform="matrix(0, -1, -1, 0, 46.15152, 1.50385)"/>
+</g>
+<g clip-path="url(#clip-2)">
+<path fill="none" stroke-width="1.59404" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 22.678344 0.00134375 L 22.483031 2.958375 L 21.904906 5.868531 L 20.951781 8.677125 L 19.639281 11.337281 L 17.990844 13.806031 L 16.033812 16.0365 L 13.803344 17.989625 L 11.3385 19.638063 L 8.678344 20.950563 L 5.86975 21.903688 L 2.959594 22.481813 L -0.00134375 22.677125 L -2.958375 22.481813 L -5.868531 21.903688 L -8.677125 20.950563 L -11.337281 19.638063 L -13.806031 17.989625 L -16.0365 16.0365 L -17.989625 13.806031 L -19.638063 11.337281 L -20.950563 8.677125 L -21.903688 5.868531 L -22.481813 2.958375 L -22.677125 0.00134375 " transform="matrix(1, 0, 0, -1, 23.474, 23.474)"/>
+</g>
+</svg>
