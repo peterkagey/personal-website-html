@@ -4,12 +4,72 @@
   <subtitle>Peter Kagey&#39;s math blog</subtitle>
   <link href="https://peterkagey.com/feed.xml" rel="self" />
   <link href="https://peterkagey.com/" />
-  <updated>2025-10-26T00:00:00Z</updated>
+  <updated>2025-11-05T00:00:00Z</updated>
   <id>https://peterkagey.com/</id>
   <author>
     <name>Peter Kagey</name>
     <email>peterkagey@gmail.com</email>
   </author>
+  <entry>
+    <title>Plot party postcard exchange</title>
+    <link href="https://peterkagey.com/blog/2025/11/postcard_party/" />
+    <updated>2025-11-05T00:00:00Z</updated>
+    <id>https://peterkagey.com/blog/2025/11/postcard_party/</id>
+    <content type="html">&lt;p&gt;In September, Michelle Chandra of &lt;a href=&quot;https://www.dirtalleydesign.com/&quot;&gt;Dirt Alley Design&lt;/a&gt; organized a &lt;code&gt;#plot-party&lt;/code&gt;, where the participants exchanged postcards made on a pen plotter. I based my design on my &amp;quot;&lt;a href=&quot;https://peterkagey.com/apps/icosahedral_symmetry/&quot;&gt;icosahedral symmetry&lt;/a&gt;&amp;quot; app, which allows the user to visualize certain nested shapes with (120) symmetries. As I wrote on the back:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The front of the postcard depicts a projection of three shapes: an icosahedron, a dodecahedron, and an icosidodecahedron scaled and aligned in such a way that the &amp;quot;convex hull&amp;quot; give a (120)-sided shape called the &amp;quot;disdyakis triacontahedron.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Each of the 15 postcards contains a different perspective on these nested shapes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure&gt;
+  &lt;div class=&quot;five-three grid&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_01.svg&quot; alt=&quot;Perspective 1&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_02.svg&quot; alt=&quot;Perspective 2&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_03.svg&quot; alt=&quot;Perspective 3&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_04.svg&quot; alt=&quot;Perspective 4&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_05.svg&quot; alt=&quot;Perspective 5&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_06.svg&quot; alt=&quot;Perspective 6&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_07.svg&quot; alt=&quot;Perspective 7&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_08.svg&quot; alt=&quot;Perspective 8&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_09.svg&quot; alt=&quot;Perspective 9&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_10.svg&quot; alt=&quot;Perspective 10&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_11.svg&quot; alt=&quot;Perspective 11&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_12.svg&quot; alt=&quot;Perspective 12&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_13.svg&quot; alt=&quot;Perspective 13&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_14.svg&quot; alt=&quot;Perspective 14&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_15.svg&quot; alt=&quot;Perspective 15&quot;&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;The fifteen different perspectives of the disdyakis triacontahedron.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/card_fronts.png&quot; alt=&quot;A photo of a three by five grid of postcard fronts&quot;&gt;
+  &lt;figcaption&gt;Fifteen plotted postcards&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&quot;plot-videos&quot;&gt;Plot videos&lt;/h2&gt;
+&lt;div class=&quot;grid two-one&quot;&gt;
+&lt;figure&gt;
+  &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; src=&quot;https://peterkagey.com/assets/blog/2025-11-05/postcard_timelapse_back.mp4&quot; alt=&quot;The front of the postcard depicts a projection of three shapes: an icosahedron, a dodecahedron, and an icosidodecahedron scaled and aligned in such a way that the &#39;convex hull&#39; gives a 120-sided shape called the &#39;disdyakis triacontahedron.&#39; Each of the 15 postcards contains a different perspective on these nested shapes, and you can see all fifteen on my website. It&#39;s been a joy receiving all of these postcards; thanks for participating in this with me!&quot;&gt;&lt;/video&gt;
+  &lt;figcaption&gt;A timelapse of the text of the card.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; src=&quot;https://peterkagey.com/assets/blog/2025-11-05/postcard_timelapse_front.mp4&quot;&gt;&lt;/video&gt;
+  &lt;figcaption&gt;A timelapse of the AxiDraw V3 pen plotter drawing the shapes.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;more-postcards&quot;&gt;More postcards!&lt;/h2&gt;
+I&#39;ve received five postcards so far!
+&lt;figure&gt;
+  &lt;div class=&quot;grid five-three&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_1.jpeg&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_2.jpeg&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_3.jpeg&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_4.jpeg&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_5.jpeg&quot;&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;The five postcards that I have received.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Do you want a postcard from me? Just let me know on Bluesky &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;—I&#39;ll send you one for free!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>RSS for the OEIS</title>
     <link href="https://peterkagey.com/blog/2025/10/oeis_rss/" />
@@ -2164,66 +2224,6 @@ p random_string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sca
 &lt;li&gt;What if we think of left-right connections as being different from up-down connections, and want both? Or what if we want each variable &#92;(x&#92;) to be neighbors with another &#92;(x&#92;)?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you have ideas about these questions or any questions of your own, please share them with me by leaving a comment or letting me know on Bluesky, &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;!&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>My favorite sequences: A289523</title>
-    <link href="https://peterkagey.com/blog/2021/06/my-favorite-sequences-a289523/" />
-    <updated>2021-06-14T00:00:00Z</updated>
-    <id>https://peterkagey.com/blog/2021/06/my-favorite-sequences-a289523/</id>
-    <content type="html">&lt;p&gt;This the second post in a recurring series, My favorite sequences. If you like this sort of thing, check out the &lt;a href=&quot;https://aperiodical.com/category/columns/checkmyworking/integer-sequence-review-checkmyworking/&quot;&gt;Integer Sequence Review&lt;/a&gt; from &lt;a href=&quot;https://aperiodical.com/about/&quot;&gt;The Aperiodical&lt;/a&gt;!&lt;/p&gt;
-&lt;h2 id=&quot;a289523-packing-circles-of-increasing-area&quot;&gt;A289523: Packing Circles of Increasing Area&lt;/h2&gt;
-&lt;figure&gt;
-&lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-14/a289523.png&quot;&gt;
-&lt;figcaption&gt;A plot of the circles in A289523, with the &#92;(y&#92;)-axis pointing down&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;In July 2017, I added a mathematically-silly-but-visually-fun sequence, &lt;a href=&quot;https://oeis.org/A289523&quot;&gt;A289523&lt;/a&gt;. The sequence works like this: place a circle of area &#92;(&#92;pi&#92;) centered at &#92;((1,1)&#92;), then place a circle of area &#92;(2&#92;pi&#92;) centered at &#92;((2,a(2))&#92;) where &#92;(a(2) = 4&#92;), the least positive integer such that the circle does not overlap with the first circle. Next, place a circle of area &#92;(3&#92;pi&#92;) centered at &#92;((3,a(3))&#92;) where &#92;(a(3) = 7&#92;) is the least positive integer such that the circle does not overlap with the first two circle. Continue this pattern &lt;em&gt;ad infinitum&lt;/em&gt;, creating the earliest infinite sequence of positive integers such that no two circles overlap with any others, and a circle centered at &#92;((k, a(k))&#92;) has area &#92;(k&#92;pi&#92;).&lt;/p&gt;
-&lt;p&gt;I haven’t done much mathematical analysis on this problem, but it would be interesting to see if it’s possible to compute (or put some bounds on) the packing density of the convex hull of the circles. Also, a glance at a plot of the points suggests that the sequence is bounded above by a linear function—is this the case?&lt;/p&gt;
-&lt;p&gt;The sequence begins
-$$1, 4, 7, 1, 11, 16, 5, 21, 27, 34, 10, 1, 41, 17, 49, 25, 57, 6, 33, 66, 43, 14, &#92;dots$$&lt;/p&gt;
-&lt;h3 id=&quot;finding-an-upper-bound&quot;&gt;Finding an upper bound&lt;/h3&gt;
-&lt;p&gt;The scatter plot of &lt;a href=&quot;https://oeis.org/A289523&quot;&gt;A289523&lt;/a&gt; suggests that the centers of the circles have a linear upper bound. This is to be expected! The areas of the circles increase linearly, and the packing density is (presumably) nonzero.&lt;/p&gt;
-&lt;p&gt;What is the slope of the upper bound? And what is the packing density of these circles in the limit?&lt;/p&gt;
-&lt;figure&gt;
-  &lt;a href=&quot;https://oeis.org/A289523/graph&quot;&gt;
-    &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-14/graph.png&quot; alt=&quot;A scatterplot of OEIS sequence A289523&quot;&gt;
-  &lt;/a&gt;
-  &lt;figcaption&gt;A scatterplot of OEIS sequence A289523&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h2 id=&quot;related-construction&quot;&gt;Related Construction&lt;/h2&gt;
-&lt;p&gt;At the end of March, I posted a related puzzle, &lt;a href=&quot;https://codegolf.stackexchange.com/q/222520/53884&quot;&gt;&amp;quot;Placing Circles Along a Square Spiral&amp;quot;&lt;/a&gt;, on Code Golf Stack Exchange. Impressively, Code Golf Stack Exchange users &lt;a href=&quot;https://codegolf.stackexchange.com/a/222570/53884&quot;&gt;tsh&lt;/a&gt;, &lt;a href=&quot;https://codegolf.stackexchange.com/a/222543/53884&quot;&gt;Arnauld&lt;/a&gt;, and &lt;a href=&quot;https://codegolf.stackexchange.com/a/222542/53884&quot;&gt;emanresu A&lt;/a&gt; each wrote (deliberately terse) Javascript code that computes the placement of these circles.&lt;/p&gt;
-&lt;p&gt;In fact, they compute something strictly harder! In the challenge, after laying down all of these circles (in blue), the challenge instructed them to go back to the start and greedily fill the gaps with (red) circles of increasing area. Next, they laid down a third (yellow) generation in the same fashion, and fourth (cyan) generation, and so on.&lt;/p&gt;
-&lt;p&gt;For the post, I made a few animated GIFs that explain the construction and tweeted about them. (Since I&#39;m not on Twitter anymore, I have copied the tweets below.)&lt;/p&gt;
-&lt;div class=&quot;columns&quot;&gt;
-  &lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-14/spiral_0.png&quot;&gt;
-  &lt;figcaption&gt;This image is the result of placing a circle of area π at the origin, then, moving along a square spiral, greedily placing circles of area 2π, 3π, 4π and so on in such a way that no two circles overlap.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-  &lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-14/spiral_1.gif&quot;&gt;
-  &lt;figcaption&gt;I made some animated GIFs and posted about this on &lt;a href=&quot;https://codegolf.stackexchange.com/q/222520/53884&quot;&gt;Code Golf Stack Exchange&lt;/a&gt;.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-&lt;div class=&quot;columns&quot;&gt;
-  &lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-14/spiral_2.gif&quot;&gt;
-  &lt;figcaption&gt;Then you can repeat this process again.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-  &lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-14/spiral_3.gif&quot;&gt;
-  &lt;figcaption&gt;And again and again and again.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h4 id=&quot;related-questions&quot;&gt;Related questions&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;What is the packing density of the first (blue) generation?&lt;/li&gt;
-&lt;li&gt;What is the packing density of the &#92;(k&#92;)-th generation?&lt;/li&gt;
-&lt;li&gt;How many &amp;quot;steps&amp;quot; away from the origin is the smallest circle in the &#92;(k&#92;)-th generation?&lt;/li&gt;
-&lt;li&gt;Do an infinite number of blue circles touch? Do an infinite number of &lt;em&gt;any&lt;/em&gt; circles touch? Which ones?&lt;/li&gt;
-&lt;li&gt;How far can a circle be from its neighbors? Which circles are maximally far from their neighbors?&lt;/li&gt;
-&lt;li&gt;How does this work if the path the circles follow is not the spiral? Can different paths have significantly different packing densities?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you have thoughts or ideas about any of this—or if you just want to make animated GIFs together—leave a comment or let me know on Bluesky, &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;!&lt;/p&gt;
 </content>
   </entry>
 </feed>
