@@ -21,7 +21,7 @@
   <meta property="og:type" content="website">
   
   
-  <meta property="og:url" content="https://peterkagey.com/problems/128/">
+  <meta property="og:url" content="https://peterkagey.com/problems/122/">
   <meta property="og:site_name" content="Peter Kagey">
   <meta property="og:locale" content="en_US">
 
@@ -68,52 +68,40 @@
     <heading-anchors>
       <div class="problem-header">
     <div>
-      <h1 id="problem-128">Problem 128</h1>
-      <img src="/assets/problems/ratings/stars_3.svg" width="200px">
+      <h1 id="problem-122">Problem 122</h1>
+      <img src="/assets/problems/ratings/stars_1.svg" width="200px">
     </div>
     <img src="/assets/problems/ratings/piste_2.svg" width="50px">
 </div>
 <p>
-  My Bluesky bot <a href="https://bsky.app/profile/oeistriangles.peterkagey.com">@oeistriangles.peterkagey.com</a> frequently tweets triangles based on OEIS sequences that appear to be fractal-like. I asked about the triangle that comes from OEIS sequence A186759 on Math Stack Exchange, and got an <a href="https://math.stackexchange.com/a/4569833/121988">answer from David Speyer</a> that gives a theory of computing "the fractal behavior of the coefficients of rational generating functions modulo \(p\)."
-</p>
+OEIS sequence <a href="https://oeis.org/A169950">A169950</a> counts \(0\)-\(1\) polynomials, \(f(x)\), by their
+<i>thickness</i>: the magnitude of the largest coefficient in the expansion of \(f(x)^2\).
+</p><blockquote>
+  Consider the \(2^n\) monic polynomials \(f(x)\) with coefficients \(0\) or \(1\) and degree \(n\).
+  Sequence gives triangle read by rows, in which \(T(n,k)\) (\(n \geq 0\)) is the number of such polynomials of thickness \(k\) (\(1 \leq k \leq n+1\)).
+</blockquote>
+On <a href="https://twitter.com/oeisTriangles/status/1384302498442215427">April 19, 2021</a> the precursor bot to my Bluesky bot <a href="https://bsky.app/profile/oeistriangles.peterkagey.com">@oeistriangles.peterkagey.com</a> tweeted an image in which that the parity of this triangle resembled the Sierpiński triangle, suggesting that there is a recursive structure in terms of the above rows.
+<p></p>
 <figure>
-  <img src="/assets/problems/128/A053398.png" alt="The parity triangle based on the first 128 rows of OEIS sequence A053398." style="width:400px; max-width:100%;">
-  <figcaption>The parity triangle based on the rows of OEIS sequence A286416.</figcaption>
+  <img src="/assets/problems/122/figure-1.svg" alt="">
+  <figcaption>
+    First eight rows of OEIS sequence <a href="https://oeis.org/A169950">A169950</a>, where odd-valued cells are dark and even-valued cells are light.
+  </figcaption>
 </figure>
-<div class="grid four-two">
-  <figure>
-    <img src="/assets/problems/128/A037254.png" alt="parity triangle for A037254">
-    <figcaption>Parity triangle for <a href="https://oeis.org/A037254">A037254</a></figcaption>
-  </figure>
-  <figure>
-    <img src="/assets/problems/128/A048571.png" alt="parity triangle for A048571">
-    <figcaption>Parity triangle for <a href="https://oeis.org/A048571">A048571</a></figcaption>
-  </figure>
-  <figure>
-    <img src="/assets/problems/128/A080080.png" alt="parity triangle for A080080">
-    <figcaption>Parity triangle for <a href="https://oeis.org/A080080">A080080</a></figcaption>
-  </figure>
-  <figure>
-    <img src="/assets/problems/128/A327884.png" alt="parity triangle for A327884">
-    <figcaption>Parity triangle for <a href="https://oeis.org/A327884">A327884</a></figcaption>
-  </figure>
-</div>
 <h2 id="question">Question</h2>
 <p>
-  How can one algorithmically determine the fractal dimension of parity triangles given by various families of generating functions, specifically those shown in the figures above.
+  What is a recurrence for the values in this triangle?
 </p>
 <h3 id="related-questions">Related questions</h3>
 <ol>
-  <li>Does the fractal dimension depend on how many rows are shown?
-  (e.g. in the first figure, we consider the limiting shape for \(2^n\) rows, what if we considered \(3(2^n)\) rows or something like this instead?)</li>
-  <li>How might this work for other geometries: tetrahedra, \(n\)-simplices, squares, diamonds (i.e. two equilateral triangles together), etc.</li>
+  <li>What if \(\{-1,0,1\}\)-polynomials are considered?</li>
+  <li>What if the "\(m\)-thickness" is the largest coefficient when taken to the power \(m\).</li>
+  <li>What if the sum of coefficients is considered?</li>
+  <li>How many \(0\)-\(1\) polynomials \(f(x)\) have \(\operatorname{thickness}(f(x)) + 1 = \operatorname{thickness}(xf(x)+1)\)? \(\operatorname{thickness}(f(x)) + 2 = \operatorname{thickness}(xf(x)+1)\) What is the asymptotic density of such \(0\)-\(1\) polynomials as a function of degree?</li>
 </ol>
 <h3 id="references">References</h3>
 <ol>
-  <li><a href="/problems/122/">Problem 122</a></li>
-  <li>Peter Kagey, "<a href="https://math.stackexchange.com/q/4554568/121988">What is the fractal dimension of the image given by a combinatorial sequence about permutation cycles?</a>" Math Stack Exchange</li>
-  <li><a href="https://bsky.app/profile/oeistriangles.peterkagey.com">@oeistriangles.peterkagey.com</a>, Bluesky</li>
-  <li>Peter Kagey, <a href="/blog/2021/03/parity-bitmaps-from-the-oeis/">Parity Bitmaps from the OEIS</a></li>
+  <li>David Speyer, <a href="https://math.stackexchange.com/a/4176545/121988">The Sierpiński triangle and the number of (0,1)-polynomials p(x) where p(x)² has largest coefficient k</a>, Math Stack Exchange answer.</li>
 </ol>
 
     </heading-anchors>
