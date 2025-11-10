@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="-5 -5 1110 500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M -5,-5 V 45 H 5 V 95 H -5 v 50 H 5 v 30 h 170 v -30 h 10 140 10 v 50 h -10 v 50 h 10 v 20 h 260 v -20 h 10 v 50 h -10 v 50 h 10 v 50 h -10 v 50 h 10 v 50 h 490 v -50 h 10 v -50 h -10 v -50 h 10 v -50 h -10 v -50 h 10 v -50 h -10 v -50 h 10 V 95 h -10 V 45 h 10 V -5 Z m 180,50 h 10 v 50 h -10 z m 150,0 h 10 v 50 h -10 z m 270,0 h 10 v 50 h -10 z m 0,100 h 10 v 50 h -10 z" fill="#B96" stroke="black" />
+</svg>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Squaring the shelf</title>
+  
+  
+  <link rel="stylesheet" href="/FRnh2zFmZg.css">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="/vendor/heading-anchors.js"></script>
+	<script src="/assets/mathjax-config.js" defer=""></script>
+  <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+  
+  <meta property="og:title" content="Squaring the shelf">
+  
+  
+  <meta property="og:description" content="Designing a shelf based on the &#39;squaring the square&#39; problem">
+  
+  
+  <meta property="og:type" content="website">
+  
+  
+  
+  <meta property="og:image" content="https://peterkagey.com/assets/2025-11-12/cover_1200x630.png">
+  
+  
+  <meta property="og:url" content="https://peterkagey.com/blog/2025/11/squaring_the_shelf/">
+  <meta property="og:site_name" content="Peter Kagey">
+  <meta property="og:locale" content="en_US">
+
+</head>
+<body class="draft">
+  <header>
+  <div class="header-columns">
+    <div class="header-left">
+      <a class="home-page-link" href="/">Peter Kagey</a>
+    </div>
+    <div class="header-right">
+      <div class="header-linked-list">
+        <a href="/blog/">blog</a>
+        : <a href="/about/">about</a>
+        : <a href="/cv/">cv</a>
+        : <a href="/art/">art</a>
+        : <a href="/apps/">apps</a>
+        : <a href="/problems/">problems</a>
+        : <a href="https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-List.html">[]</a>
+      </div>
+      <div class="header-icons">
+        <a href="https://github.com/peterkagey"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96"><circle r="48.5" cx="48.8" cy="49.7" fill="#fff"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg>
+</a>
+        <a href="https://bsky.app/profile/peterkagey.com">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="#1185fe"></path></svg>
+
+        </a>
+        <a href="https://stackexchange.com/users/3870024">
+          <svg class="icon" viewBox="0 0 12 15"><path fill="#8FD8F7" d="M0 3c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path fill="#155397" d="M12 10H0c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></svg>
+
+        </a>
+        <a href="/feed.xml">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246 246"><rect width="246" height="246" rx="50" ry="50" fill="#F49C52"></rect><circle cx="63" cy="184" r="24" fill="#FFF"></circle><path d="m155 208h-34a82 82 0 0 0-82-82v-34a116 116 0 0 1 116 116z" fill="#FFF"></path><path d="m179 208a140 140 0 0 0-140-140v-35a175 175 0 0 1 175 175z" fill="#FFF"></path></svg>
+
+        </a>
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    
+    
+    <heading-anchors>
+      <script type="module" src="/vendor/model-viewer.min.js"></script>
+<p>
+  I've been working on designing and building a shelf based on the <a href="https://en.wikipedia.org/wiki/Squaring_the_square">squaring the square</a> problem, which appeared in <a href="https://www.scientificamerican.com/article/mathematical-games-1958-11/">Martin Gardner's November 1958 <i>Mathematical Games</i> column</a>. The puzzle asks if it is possible to cut a square into smaller squares such such every smaller square is a different size.
+</p>
+<p>
+  The shelf I designed uses a solution to this puzzle to make several shelves of varying sizes and depths. Each square is extended out to a cube to create depth and dimension (and more room for my tchotchkes!) Below is a photo of a prototype along with a 3D model I created of the shelf, which you can drag around to see from any angle you'd like!
+</p>
+<div class="grid two-one">
+  <figure>
+    <img src="/assets/blog/2025-11-12/shelf_1.jpeg" alt="">
+    <figcaption>A photograph of the shelf prototype laser cut from cardboard</figcaption>
+  </figure>
+  <figure>
+    <model-viewer camera-controls="" disable-zoom="" autoplay="" alt="Model" src="/assets/blog/2025-11-12/shelf.glb"></model-viewer>
+    <figcaption>Click and drag the 3D model.</figcaption>
+  </figure>
+
+</div>
+
+<h2 id="prototyping">Prototyping</h2>
+To build the prototype, I used a laser cutter to the walls out of cardboard boxes. I then used painters tape and super glue (cyanoacrylate) to secure the joints that most wanted to separate.
+
+<div class="grid two-one">
+  <figure>
+    <video autoplay="" controls="" loop="" muted="" src="/assets/blog/2025-11-12/laser_cutter.mp4" alt="Small rectangles being cut out of cardboard on a laser cutter"></video>
+    <figcaption>
+      Cardboard walls being laser cut
+    </figcaption>
+  </figure>
+  <figure>
+    <video autoplay="" controls="" loop="" src="/assets/blog/2025-11-12/prototype.mp4" alt="A video view of the shelf"></video>
+    <figcaption>
+      A video perspective on the shelf
+    </figcaption>
+  </figure>
+</div>
+
+<h1 id="build-one-yourself">Build one yourself!</h1>
+<p>
+  You can build one yourself either by laser cutting or 3D printing the walls.
+  (Download a <code>.zip</code> file containing all <a href="/assets/blog/2025-11-12/shelves/vector/walls_vector.zip"><code>.svg</code> files</a> or all <a href="/assets/blog/2025-11-12/shelves/3D/walls_3D.zip"><code>.stl</code> files</a>.)
+</p>
+
+<div class="grid five-three">
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_0.svg">
+  <figcaption>
+    Wall \(x_0\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_0.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_0.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_1.svg">
+  <figcaption>
+    Wall \(x_1\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_1.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_1.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_2.svg">
+  <figcaption>
+    Wall \(x_2\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_2.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_2.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_3.svg">
+  <figcaption>
+    Wall \(x_3\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_3.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_3.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_4.svg">
+  <figcaption>
+    Wall \(x_4\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_4.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_4.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_5.svg">
+  <figcaption>
+    Wall \(x_5\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_5.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_5.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_6.svg">
+  <figcaption>
+    Wall \(x_6\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_6.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_6.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_7.svg">
+  <figcaption>
+    Wall \(x_7\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_7.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_7.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_8.svg">
+  <figcaption>
+    Wall \(x_8\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_8.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_8.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_9.svg">
+  <figcaption>
+    Wall \(x_9\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_9.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_9.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_10.svg">
+  <figcaption>
+    Wall \(x_{10}\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_10.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_10.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_11.svg">
+  <figcaption>
+    Wall \(x_{11}\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_11.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_11.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_12.svg">
+  <figcaption>
+    Wall \(x_{12}\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_12.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_12.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/x_0.svg">
+  <figcaption>
+    Wall \(x_0\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/x_0.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/x_0.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_1.svg">
+  <figcaption>
+    Wall \(y_1\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_1.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_1.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_2.svg">
+  <figcaption>
+    Wall \(y_2\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_2.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_2.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_3.svg">
+  <figcaption>
+    Wall \(y_3\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_3.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_3.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_4.svg">
+  <figcaption>
+    Wall \(y_4\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_4.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_4.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_5.svg">
+  <figcaption>
+    Wall \(y_5\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_5.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_5.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_6.svg">
+  <figcaption>
+    Wall \(y_6\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_6.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_6.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_7.svg">
+  <figcaption>
+    Wall \(y_7\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_7.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_7.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_8.svg">
+  <figcaption>
+    Wall \(y_8\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_8.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_8.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_9.svg">
+  <figcaption>
+    Wall \(y_9\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_9.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_9.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_10.svg">
+  <figcaption>
+    Wall \(y_{10}\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_10.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_10.stl">stl</a>)
+  </figcaption>
+</figure>
+<figure>
+  <img src="/assets/blog/2025-11-12/shelves/vector/y_11.svg">
+  <figcaption>
+    Wall \(y_{11}\)<br>
+    (<a href="/assets/blog/2025-11-12/shelves/vector/y_11.svg">svg</a>)
+    (<a href="/assets/blog/2025-11-12/shelves/3D/y_11.stl">stl</a>)
+  </figcaption>
+</figure>
+</div>
+
+You can treat assembly as a puzzle, or use the following guide:
+<figure>
+    <img src="/assets/blog/2025-11-12/labeled_diagram.svg" alt="" width="100%" style="max-width:400px;">
+    <figcaption>From <a href="https://commons.wikimedia.org/wiki/File:Smallest_perfect_squared_squares.svg">Wikipedia</a>, with wall labels added</figcaption>
+  </figure>
+
+<h2 id="code">Code</h2>
+I used the following Python code to draw the walls and the <a href="https://openscad.org/">OpenSCAD</a> code build <code>.stl</code> files from the <code>.svg</code> files.
+<div class="grid two-one">
+  <div>
+    <h3 id="python-code">Python code</h3>
+    <pre class="scrollable"><code>import svg
+
+class WallBuilderSVG():
+  MATERIAL_THICKNESS=1
+  HOLE_HEIGHT=5
+
+  def __init__(self, heights, joints):
+    self.heights = heights
+    self.joints = joints
+
+  def svg_walls(self):
+    t = self.MATERIAL_THICKNESS/2
+    vertices = [(-t, 0),(-t, self.heights[0][1])]
+    a = 0
+    for i in range(1,len(self.heights)):
+      (del_a, b0) = self.heights[i-1]
+      (_, b1) = self.heights[i]
+      a += del_a
+      d = t if b0 > b1 else -t
+      vertices.append((a+d, b0))
+      vertices.append((a+d, b1))
+
+    (del_a, b) = self.heights[-1]
+    a += del_a
+    vertices.append((a+t, b))
+    vertices.append((a+t, 0))
+    return svg.Polygon(points=vertices)
+
+  def z_holes(self, hole_data):
+    (a, z_max) = hole_data
+    hole_list = []
+    t = self.MATERIAL_THICKNESS/2
+    start = 0 if self.IS_HORIZONTAL else self.HOLE_HEIGHT
+    for z in range(start, z_max, 2*self.HOLE_HEIGHT):
+      z0 = min(z_max, z + self.HOLE_HEIGHT)
+      hole_list.append(svg.Polygon(points=[(a-t,z),(a+t,z),(a+t,z0),(a-t,z0)]))
+    return hole_list
+
+  def name(self, name):
+    return [svg.Text(stroke="#F0F", text=name[5:],font_size=3,x=2,y=3,font_family="Courier")]
+
+  def joint_holes(self):
+    return map(self.z_holes, self.joints)
+
+  def svg_export(self,file_name):
+    elements = [self.svg_walls()]
+    elements += self.joint_holes()
+    elements += self.name(file_name)
+
+    canvas = svg.SVG(
+      width=120,
+      height=120,
+      style="fill: none; stroke: #00F; stroke-width: 0.1;",
+      elements=elements,
+      viewBox="-5 -5 120 120"
+    )
+
+    with open(f"svgs/{file_name}.svg", "w") as f:
+      f.write(canvas.as_str())
+
+class HorizontalWallSVG(WallBuilderSVG):
+  IS_HORIZONTAL = True
+
+class VerticalWallSVG(WallBuilderSVG):
+  IS_HORIZONTAL = False
+
+HorizontalWallSVG(
+  [(18,18),(21,21),(17,17),(28,28),(26,26)],
+  [(0,18),(18,21),(39,21),(56,28),(84,28),(110,26)]
+  ).svg_export("wall_scott")
+
+HorizontalWallSVG(
+  [(17,17)],
+  [(0,17), (4,13),(17,17)]
+  ).svg_export("wall_x_1")
+
+HorizontalWallSVG(
+  [(18,18)],
+  [(0,18),(15,15),(18,18)]
+  ).svg_export("wall_x_2")
+
+HorizontalWallSVG(
+  [(3,12),(21,21),(4,16)],
+  [(0,12),(3,21),(12,16),(24,21),(28,16)]
+  ).svg_export("wall_x_3")
+
+HorizontalWallSVG(
+  [(26,26)],
+  [(0,26),(2,24),(26,26)]
+  ).svg_export("wall_x_4")
+
+HorizontalWallSVG(
+  [(28,28),(2,22)],
+  [(0,28),(8,22),(28,28),(30,22)]
+  ).svg_export("wall_x_5")
+
+HorizontalWallSVG(
+  [(13,13)],
+  [(0,13),(7,7),(13,13)]
+  ).svg_export("wall_x_6")
+
+HorizontalWallSVG(
+  [(27,27)],
+  [(0,27),(15,15),(27,27)]
+  ).svg_export("wall_x_7")
+
+HorizontalWallSVG(
+  [(14,14)],
+  [(0,14),(6,8),(14,14)]
+  ).svg_export("wall_x_8")
+
+HorizontalWallSVG(
+  [(23,23)],
+  [(0,23),(16,16),(23,23)]
+  ).svg_export("wall_x_9")
+
+HorizontalWallSVG(
+  [(60,60)],
+  [(0,60),(14,22),(36,24),(60,60)]
+  ).svg_export("wall_x_10")
+
+HorizontalWallSVG(
+  [(50,50)],
+  [(0,50),(27,27),(50,50)]
+  ).svg_export("wall_x_11")
+
+HorizontalWallSVG(
+  [(50,50),(60,60)],
+  [(0,50),(50,60),(110,60)]
+  ).svg_export("wall_x_12")
+
+VerticalWallSVG(
+  [(18,18),(15,15),(27,27),(50,50)],
+  [(0,18),(18,18),(33,27),(60,50),(110,50)]
+).svg_export("wall_y_0")
+
+VerticalWallSVG(
+  [(15,15)],
+  [(0,15),(3,12),(15,15)]
+).svg_export("wall_y_1")
+
+VerticalWallSVG(
+  [(21,21)],
+  [(0,21),(18,18),(21,21)]
+).svg_export("wall_y_2")
+
+VerticalWallSVG(
+  [(12,16),(27,27)],
+  [(0,16),(12,27),(16,23),(39,27)]
+).svg_export("wall_y_3")
+
+VerticalWallSVG(
+  [(21,21)],
+  [(0,21),(17,17),(21,21)]
+).svg_export("wall_y_4")
+
+VerticalWallSVG(
+  [(4,13),(16,16)],
+  [(0,13),(4,16),(13,13),(20,16)]
+).svg_export("wall_y_5")
+
+VerticalWallSVG(
+  [(6,7),(1,14),(13,23),(60,60)],
+  [(0,7),(6,14),(7,23),(20,60),(30,50),(80,60)]
+).svg_export("wall_y_6")
+
+VerticalWallSVG(
+  [(28,28),(2,13),(6,8)],
+  [(0,28),(17,17),(28,28),(30,13),(36,8)]
+).svg_export("wall_y_7")
+
+VerticalWallSVG(
+  [(22,22)],
+  [(0,22),(8,14),(22,22)]
+).svg_export("wall_y_8")
+
+VerticalWallSVG(
+  [(28,28)],
+  [(0,28),(26,26),(28,28)]
+).svg_export("wall_y_9")
+
+VerticalWallSVG(
+  [(24,24)],
+  [(0,24),(2,22),(24,24)]
+).svg_export("wall_y_10")
+
+VerticalWallSVG(
+  [(26,26),(24,24),(60,60)],
+  [(0,26),(26,26),(50,60),(110,60)]
+).svg_export("wall_y_11")
+</code></pre>
+  </div>
+  <div>
+    <h3 id="openscad-code">OpenSCAD code</h3>
+    <pre class="scrollable"><code>function filePath(nameStr) = str(nameStr, ".svg");
+
+TH = 1;
+
+module xWall(wallNumber, xDel, yDel, height) {
+translate([xDel-TH/2,yDel,height])
+rotate([-90,0,0])
+translate([0, 0, -TH/2])
+linear_extrude(TH)
+import(filePath(str("x_", wallNumber)), dpi=254);
+}
+
+module yWall(wallNumber, xDel, yDel, height) {
+translate([xDel,yDel-TH/2,height])
+rotate([-90,0,90])
+translate([0, 0, -TH/2])
+linear_extrude(TH)
+import(filePath(str("y_", wallNumber)), dpi=254);
+}
+
+rotate([0,0,180]) translate([-55,-55,0]) {
+  color("red") {
+    xWall(wallNumber=0, xDel=0, yDel=0, height=28);
+    xWall(wallNumber=1, xDel=39, yDel=17, height=17);
+    xWall(wallNumber=2, xDel=0, yDel=18, height=18);
+    xWall(wallNumber=3, xDel=15, yDel=21, height=21);
+    xWall(wallNumber=4, xDel=84, yDel=26, height=26);
+    xWall(wallNumber=5, xDel=56, yDel=28, height=28);
+    xWall(wallNumber=6, xDel=43, yDel=30, height=13);
+    xWall(wallNumber=7, xDel=0, yDel=33, height=27);
+    xWall(wallNumber=8, xDel=50, yDel=36, height=14);
+    xWall(wallNumber=9, xDel=27, yDel=37, height=23);
+    xWall(wallNumber=10, xDel=50, yDel=50, height=60);
+    xWall(wallNumber=11, xDel=0, yDel=60, height=50);
+    xWall(wallNumber=12, xDel=0, yDel=110, height=60);
+  }
+  color("blue"){
+    yWall(wallNumber=0, xDel=0, yDel=0, height=50);
+    yWall(wallNumber=1, xDel=15, yDel=18, height=15);
+    yWall(wallNumber=2, xDel=18, yDel=0, height=21);
+    yWall(wallNumber=3, xDel=27, yDel=21, height=27);
+    yWall(wallNumber=4, xDel=39, yDel=0, height=21);
+    yWall(wallNumber=5, xDel=43, yDel=17, height=16);
+    yWall(wallNumber=6, xDel=50, yDel=30, height=60);
+    yWall(wallNumber=7, xDel=56, yDel=0, height=28);
+    yWall(wallNumber=8, xDel=64, yDel=28, height=22);
+    yWall(wallNumber=9, xDel=84, yDel=0, height=28);
+    yWall(wallNumber=10, xDel=86, yDel=26, height=24);
+    yWall(wallNumber=11, xDel=110, yDel=0, height=60);
+  }
+}
+</code></pre>
+  </div>
+</div>
+
+    </heading-anchors>
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; Peter Kagey, 2025</p>
+  </footer>
+</body>
+</html>
