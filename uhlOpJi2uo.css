@@ -417,15 +417,7 @@ pre code {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.five-three.grid {
-  grid-template-columns: repeat(5, 1fr);
-}
-
 .wide-four.grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.four-two.grid {
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -433,19 +425,7 @@ pre code {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.three.grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.three-two.grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .wide-two.grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.two-one.grid {
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -539,20 +519,8 @@ pre code {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .five-three.grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .narrow-three.grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .four-two.grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .three-two.grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .narrow-two.grid {
@@ -560,10 +528,6 @@ pre code {
   }
 
   .narrow-one.grid {
-    grid-template-columns: 1fr;
-  }
-
-  .two-one.grid {
     grid-template-columns: 1fr;
   }
 }

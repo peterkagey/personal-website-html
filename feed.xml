@@ -21,7 +21,7 @@
 &lt;p&gt;Each of the 15 postcards contains a different perspective on these nested shapes.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure&gt;
-  &lt;div class=&quot;five-three grid&quot;&gt;
+  &lt;div class=&quot;grid wide-five narrow-three&quot;&gt;
     &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_01.svg&quot; alt=&quot;Perspective 1&quot;&gt;
     &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_02.svg&quot; alt=&quot;Perspective 2&quot;&gt;
     &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/polyhedra_03.svg&quot; alt=&quot;Perspective 3&quot;&gt;
@@ -45,7 +45,7 @@
   &lt;figcaption&gt;Fifteen plotted postcards&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h2 id=&quot;plot-videos&quot;&gt;Plot videos&lt;/h2&gt;
-&lt;div class=&quot;grid two-one&quot;&gt;
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
 &lt;figure&gt;
   &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; src=&quot;https://peterkagey.com/assets/blog/2025-11-05/postcard_timelapse_back.mp4&quot; alt=&quot;The front of the postcard depicts a projection of three shapes: an icosahedron, a dodecahedron, and an icosidodecahedron scaled and aligned in such a way that the &#39;convex hull&#39; gives a 120-sided shape called the &#39;disdyakis triacontahedron.&#39; Each of the 15 postcards contains a different perspective on these nested shapes, and you can see all fifteen on my website. It&#39;s been a joy receiving all of these postcards; thanks for participating in this with me!&quot;&gt;&lt;/video&gt;
   &lt;figcaption&gt;A timelapse of the text of the card.&lt;/figcaption&gt;
@@ -58,7 +58,7 @@
 &lt;h2 id=&quot;more-postcards&quot;&gt;More postcards!&lt;/h2&gt;
 I&#39;ve received five postcards so far!
 &lt;figure&gt;
-  &lt;div class=&quot;grid five-three&quot;&gt;
+  &lt;div class=&quot;grid wide-five narrow-three&quot;&gt;
     &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_1.jpeg&quot;&gt;
     &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_2.jpeg&quot;&gt;
     &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-05/cards_received_3.jpeg&quot;&gt;
@@ -89,7 +89,7 @@ I&#39;ve received five postcards so far!
 &lt;pre&gt;&lt;code&gt;https://api.peterkagey.com/oeis_feed.xml?q=author%3Adon%2Cknuth
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Subscribe using your favorite RSS reader (I use &lt;a href=&quot;https://feeder.co&quot;&gt;feeder.co&lt;/a&gt;) and get updates every time a new sequence is added that matches your search criteria.&lt;/p&gt;
-&lt;div class=&quot;grid two-one&quot;&gt;
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
   &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-10-26/oeis_rss_pk.png&quot; alt=&quot;A screenshot of an RSS feed for the OEIS with author:kagey.&quot;&gt;
   &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-10-26/oeis_rss_nice.png&quot; alt=&quot;A screenshot of an RSS feed for the OEIS with keyword:nice.&quot;&gt;
 &lt;/div&gt;
@@ -99,7 +99,7 @@ I&#39;ve received five postcards so far!
 &lt;p&gt;I have also sanitized the searches to only allow letters, numbers, spaces, and &lt;code&gt;,&lt;/code&gt;, &lt;code&gt;:&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;&#39;&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, and &lt;code&gt;&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
 &lt;p&gt;Here&#39;s a list of the searches I&#39;m currently following:&lt;/p&gt;
-&lt;div class=&quot;grid three-two&quot;&gt;
+&lt;div class=&quot;grid wide-three narrow-two&quot;&gt;
   &lt;div&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;https://api.peterkagey.com/oeis_feed.xml?q=author%3Akagey&quot;&gt;Peter Kagey&lt;/a&gt;&lt;/li&gt;
@@ -1935,8 +1935,8 @@ xorSeedsBasis[n_] := NullSpace[
 &lt;li&gt;&lt;a href=&quot;https://math.stackexchange.com/q/3331450/121988&quot;&gt;Points in &#92;(&#92;mathbb{R}^2&#92;) that can be reached via steps which are &#92;(1/5&#92;) of a unit circle.&lt;/a&gt; (MSE, August 2019)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://codegolf.stackexchange.com/q/196399/53884&quot;&gt;Circular Robot Instructions&lt;/a&gt; (CGSE, November 2019)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;openish-problem-collection&quot;&gt;Openish Problem Collection&lt;/h2&gt;
-&lt;p&gt;I’ve also asked about this setup in my Openish Problem Collection in &lt;a href=&quot;https://peterkagey.com/problems/041/&quot;&gt;Problem 41&lt;/a&gt; and in &lt;a href=&quot;https://peterkagey.com/problems/069/&quot;&gt;Problem 69&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;open-problem-collection&quot;&gt;Open Problem Collection&lt;/h2&gt;
+&lt;p&gt;I’ve also asked about this setup in my Open Problem Collection in &lt;a href=&quot;https://peterkagey.com/problems/041/&quot;&gt;Problem 41&lt;/a&gt; and in &lt;a href=&quot;https://peterkagey.com/problems/069/&quot;&gt;Problem 69&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&quot;columns&quot;&gt;
 &lt;figure&gt;
   &lt;img src=&quot;https://peterkagey.com/assets/blog/2022-12-20/Problem41.png&quot;&gt;

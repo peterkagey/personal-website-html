@@ -475,7 +475,7 @@ fetch(`${API_BASE_URL}/square_game_records`)
   .then(data => {
     const container = document.getElementById("records");
     var grid = document.createElement("div");
-    grid.className = "grid five-three";
+    grid.className = "grid wide-five narrow-three";
 
     data.forEach(record => {
       const li = document.createElement("div");
