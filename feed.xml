@@ -4,12 +4,524 @@
   <subtitle>Peter Kagey&#39;s math blog</subtitle>
   <link href="https://peterkagey.com/feed.xml" rel="self" />
   <link href="https://peterkagey.com/" />
-  <updated>2025-11-05T00:00:00Z</updated>
+  <updated>2025-11-12T00:00:00Z</updated>
   <id>https://peterkagey.com/</id>
   <author>
     <name>Peter Kagey</name>
     <email>peterkagey@gmail.com</email>
   </author>
+  <entry>
+    <title>Squaring the shelf</title>
+    <link href="https://peterkagey.com/blog/2025/11/squaring_the_shelf/" />
+    <updated>2025-11-12T00:00:00Z</updated>
+    <id>https://peterkagey.com/blog/2025/11/squaring_the_shelf/</id>
+    <content type="html">&lt;script type=&quot;module&quot; src=&quot;https://peterkagey.com/vendor/model-viewer.min.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;
+  I&#39;ve been working on designing and building a shelf based on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Squaring_the_square&quot;&gt;squaring the square&lt;/a&gt; problem, which appeared in &lt;a href=&quot;https://www.scientificamerican.com/article/mathematical-games-1958-11/&quot;&gt;Martin Gardner&#39;s November 1958 &lt;i&gt;Mathematical Games&lt;/i&gt; column&lt;/a&gt;. The puzzle asks if it is possible to cut a square into smaller squares such such every smaller square is a different size.
+&lt;/p&gt;
+&lt;p&gt;
+  The shelf I designed uses a solution to this puzzle to make several shelves of varying sizes and depths. Each square is extended out to a cube to create depth and dimension (and more room for my tchotchkes!) Below is a photo of a prototype along with a 3D model I created of the shelf, which you can drag around to see from any angle you&#39;d like!
+&lt;/p&gt;
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelf_1.jpeg&quot; alt=&quot;&quot;&gt;
+    &lt;figcaption&gt;A photograph of the shelf prototype laser cut from cardboard&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;model-viewer camera-controls=&quot;&quot; disable-zoom=&quot;&quot; autoplay=&quot;&quot; alt=&quot;Model&quot; src=&quot;/assets/blog/2025-11-12/shelf.glb&quot;&gt;&lt;/model-viewer&gt;
+    &lt;figcaption&gt;Click and drag the 3D model.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;prototyping&quot;&gt;Prototyping&lt;/h2&gt;
+To build the prototype, I used a laser cutter to the walls out of cardboard boxes. I then used painters tape and super glue (cyanoacrylate) to secure the joints that most wanted to separate.
+
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+  &lt;figure&gt;
+    &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; src=&quot;https://peterkagey.com/assets/blog/2025-11-12/laser_cutter.mp4&quot; alt=&quot;Small rectangles being cut out of cardboard on a laser cutter&quot;&gt;&lt;/video&gt;
+    &lt;figcaption&gt;
+      Cardboard walls being laser cut
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; src=&quot;https://peterkagey.com/assets/blog/2025-11-12/prototype.mp4&quot; alt=&quot;A video view of the shelf&quot;&gt;&lt;/video&gt;
+    &lt;figcaption&gt;
+      A video perspective on the shelf
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;build-one-yourself&quot;&gt;Build one yourself!&lt;/h1&gt;
+&lt;p&gt;
+  You can build one yourself either by laser cutting or 3D printing the walls.
+  (Download a &lt;code&gt;.zip&lt;/code&gt; file containing all &lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/walls_vector.zip&quot;&gt;&lt;code&gt;.svg&lt;/code&gt; files&lt;/a&gt; or all &lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/walls_3D.zip&quot;&gt;&lt;code&gt;.stl&lt;/code&gt; files&lt;/a&gt;.)
+&lt;/p&gt;
+
+&lt;div class=&quot;grid wide-five narrow-three&quot;&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_0.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_0&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_0.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_0.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_1.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_1&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_1.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_1.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_2.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_2&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_2.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_2.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_3.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_3&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_3.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_3.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_4.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_4&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_4.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_4.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_5.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_5&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_5.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_5.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_6.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_6&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_6.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_6.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_7.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_7&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_7.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_7.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_8.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_8&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_8.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_8.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_9.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_9&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_9.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_9.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_10.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_{10}&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_10.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_10.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_11.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_{11}&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_11.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_11.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_12.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_{12}&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_12.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_12.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_0.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(x_0&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/x_0.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/x_0.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_1.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_1&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_1.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_1.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_2.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_2&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_2.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_2.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_3.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_3&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_3.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_3.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_4.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_4&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_4.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_4.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_5.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_5&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_5.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_5.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_6.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_6&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_6.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_6.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_7.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_7&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_7.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_7.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_8.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_8&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_8.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_8.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_9.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_9&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_9.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_9.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_10.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_{10}&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_10.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_10.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_11.svg&quot;&gt;
+  &lt;figcaption&gt;
+    Wall &#92;(y_{11}&#92;)&lt;br&gt;
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/vector/y_11.svg&quot;&gt;svg&lt;/a&gt;)
+    (&lt;a href=&quot;https://peterkagey.com/assets/blog/2025-11-12/shelves/3D/y_11.stl&quot;&gt;stl&lt;/a&gt;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+
+You can treat assembly as a puzzle, or use the following guide:
+&lt;figure&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/labeled_diagram.svg&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width:400px;&quot;&gt;
+    &lt;figcaption&gt;From &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Smallest_perfect_squared_squares.svg&quot;&gt;Wikipedia&lt;/a&gt;, with wall labels added&lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+I used the following Python code to draw the walls and the &lt;a href=&quot;https://openscad.org/&quot;&gt;OpenSCAD&lt;/a&gt; code build &lt;code&gt;.stl&lt;/code&gt; files from the &lt;code&gt;.svg&lt;/code&gt; files.
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+  &lt;div&gt;
+    &lt;h3 id=&quot;python-code&quot;&gt;Python code&lt;/h3&gt;
+    &lt;pre class=&quot;scrollable&quot;&gt;&lt;code&gt;import svg
+
+class WallBuilderSVG():
+  MATERIAL_THICKNESS=1
+  HOLE_HEIGHT=5
+
+  def __init__(self, heights, joints):
+    self.heights = heights
+    self.joints = joints
+
+  def svg_walls(self):
+    t = self.MATERIAL_THICKNESS/2
+    vertices = [(-t, 0),(-t, self.heights[0][1])]
+    a = 0
+    for i in range(1,len(self.heights)):
+      (del_a, b0) = self.heights[i-1]
+      (_, b1) = self.heights[i]
+      a += del_a
+      d = t if b0 &gt; b1 else -t
+      vertices.append((a+d, b0))
+      vertices.append((a+d, b1))
+
+    (del_a, b) = self.heights[-1]
+    a += del_a
+    vertices.append((a+t, b))
+    vertices.append((a+t, 0))
+    return svg.Polygon(points=vertices)
+
+  def z_holes(self, hole_data):
+    (a, z_max) = hole_data
+    hole_list = []
+    t = self.MATERIAL_THICKNESS/2
+    start = 0 if self.IS_HORIZONTAL else self.HOLE_HEIGHT
+    for z in range(start, z_max, 2*self.HOLE_HEIGHT):
+      z0 = min(z_max, z + self.HOLE_HEIGHT)
+      hole_list.append(svg.Polygon(points=[(a-t,z),(a+t,z),(a+t,z0),(a-t,z0)]))
+    return hole_list
+
+  def name(self, name):
+    return [svg.Text(stroke=&quot;#F0F&quot;, text=name[5:],font_size=3,x=2,y=3,font_family=&quot;Courier&quot;)]
+
+  def joint_holes(self):
+    return map(self.z_holes, self.joints)
+
+  def svg_export(self,file_name):
+    elements = [self.svg_walls()]
+    elements += self.joint_holes()
+    elements += self.name(file_name)
+
+    canvas = svg.SVG(
+      width=120,
+      height=120,
+      style=&quot;fill: none; stroke: #00F; stroke-width: 0.1;&quot;,
+      elements=elements,
+      viewBox=&quot;-5 -5 120 120&quot;
+    )
+
+    with open(f&quot;svgs/{file_name}.svg&quot;, &quot;w&quot;) as f:
+      f.write(canvas.as_str())
+
+class HorizontalWallSVG(WallBuilderSVG):
+  IS_HORIZONTAL = True
+
+class VerticalWallSVG(WallBuilderSVG):
+  IS_HORIZONTAL = False
+
+HorizontalWallSVG(
+  [(18,18),(21,21),(17,17),(28,28),(26,26)],
+  [(0,18),(18,21),(39,21),(56,28),(84,28),(110,26)]
+  ).svg_export(&quot;wall_scott&quot;)
+
+HorizontalWallSVG(
+  [(17,17)],
+  [(0,17), (4,13),(17,17)]
+  ).svg_export(&quot;wall_x_1&quot;)
+
+HorizontalWallSVG(
+  [(18,18)],
+  [(0,18),(15,15),(18,18)]
+  ).svg_export(&quot;wall_x_2&quot;)
+
+HorizontalWallSVG(
+  [(3,12),(21,21),(4,16)],
+  [(0,12),(3,21),(12,16),(24,21),(28,16)]
+  ).svg_export(&quot;wall_x_3&quot;)
+
+HorizontalWallSVG(
+  [(26,26)],
+  [(0,26),(2,24),(26,26)]
+  ).svg_export(&quot;wall_x_4&quot;)
+
+HorizontalWallSVG(
+  [(28,28),(2,22)],
+  [(0,28),(8,22),(28,28),(30,22)]
+  ).svg_export(&quot;wall_x_5&quot;)
+
+HorizontalWallSVG(
+  [(13,13)],
+  [(0,13),(7,7),(13,13)]
+  ).svg_export(&quot;wall_x_6&quot;)
+
+HorizontalWallSVG(
+  [(27,27)],
+  [(0,27),(15,15),(27,27)]
+  ).svg_export(&quot;wall_x_7&quot;)
+
+HorizontalWallSVG(
+  [(14,14)],
+  [(0,14),(6,8),(14,14)]
+  ).svg_export(&quot;wall_x_8&quot;)
+
+HorizontalWallSVG(
+  [(23,23)],
+  [(0,23),(16,16),(23,23)]
+  ).svg_export(&quot;wall_x_9&quot;)
+
+HorizontalWallSVG(
+  [(60,60)],
+  [(0,60),(14,22),(36,24),(60,60)]
+  ).svg_export(&quot;wall_x_10&quot;)
+
+HorizontalWallSVG(
+  [(50,50)],
+  [(0,50),(27,27),(50,50)]
+  ).svg_export(&quot;wall_x_11&quot;)
+
+HorizontalWallSVG(
+  [(50,50),(60,60)],
+  [(0,50),(50,60),(110,60)]
+  ).svg_export(&quot;wall_x_12&quot;)
+
+VerticalWallSVG(
+  [(18,18),(15,15),(27,27),(50,50)],
+  [(0,18),(18,18),(33,27),(60,50),(110,50)]
+).svg_export(&quot;wall_y_0&quot;)
+
+VerticalWallSVG(
+  [(15,15)],
+  [(0,15),(3,12),(15,15)]
+).svg_export(&quot;wall_y_1&quot;)
+
+VerticalWallSVG(
+  [(21,21)],
+  [(0,21),(18,18),(21,21)]
+).svg_export(&quot;wall_y_2&quot;)
+
+VerticalWallSVG(
+  [(12,16),(27,27)],
+  [(0,16),(12,27),(16,23),(39,27)]
+).svg_export(&quot;wall_y_3&quot;)
+
+VerticalWallSVG(
+  [(21,21)],
+  [(0,21),(17,17),(21,21)]
+).svg_export(&quot;wall_y_4&quot;)
+
+VerticalWallSVG(
+  [(4,13),(16,16)],
+  [(0,13),(4,16),(13,13),(20,16)]
+).svg_export(&quot;wall_y_5&quot;)
+
+VerticalWallSVG(
+  [(6,7),(1,14),(13,23),(60,60)],
+  [(0,7),(6,14),(7,23),(20,60),(30,50),(80,60)]
+).svg_export(&quot;wall_y_6&quot;)
+
+VerticalWallSVG(
+  [(28,28),(2,13),(6,8)],
+  [(0,28),(17,17),(28,28),(30,13),(36,8)]
+).svg_export(&quot;wall_y_7&quot;)
+
+VerticalWallSVG(
+  [(22,22)],
+  [(0,22),(8,14),(22,22)]
+).svg_export(&quot;wall_y_8&quot;)
+
+VerticalWallSVG(
+  [(28,28)],
+  [(0,28),(26,26),(28,28)]
+).svg_export(&quot;wall_y_9&quot;)
+
+VerticalWallSVG(
+  [(24,24)],
+  [(0,24),(2,22),(24,24)]
+).svg_export(&quot;wall_y_10&quot;)
+
+VerticalWallSVG(
+  [(26,26),(24,24),(60,60)],
+  [(0,26),(26,26),(50,60),(110,60)]
+).svg_export(&quot;wall_y_11&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h3 id=&quot;openscad-code&quot;&gt;OpenSCAD code&lt;/h3&gt;
+    &lt;pre class=&quot;scrollable&quot;&gt;&lt;code&gt;function filePath(nameStr) = str(nameStr, &quot;.svg&quot;);
+
+TH = 1;
+
+module xWall(wallNumber, xDel, yDel, height) {
+translate([xDel-TH/2,yDel,height])
+rotate([-90,0,0])
+translate([0, 0, -TH/2])
+linear_extrude(TH)
+import(filePath(str(&quot;x_&quot;, wallNumber)), dpi=254);
+}
+
+module yWall(wallNumber, xDel, yDel, height) {
+translate([xDel,yDel-TH/2,height])
+rotate([-90,0,90])
+translate([0, 0, -TH/2])
+linear_extrude(TH)
+import(filePath(str(&quot;y_&quot;, wallNumber)), dpi=254);
+}
+
+rotate([0,0,180]) translate([-55,-55,0]) {
+  color(&quot;red&quot;) {
+    xWall(wallNumber=0, xDel=0, yDel=0, height=28);
+    xWall(wallNumber=1, xDel=39, yDel=17, height=17);
+    xWall(wallNumber=2, xDel=0, yDel=18, height=18);
+    xWall(wallNumber=3, xDel=15, yDel=21, height=21);
+    xWall(wallNumber=4, xDel=84, yDel=26, height=26);
+    xWall(wallNumber=5, xDel=56, yDel=28, height=28);
+    xWall(wallNumber=6, xDel=43, yDel=30, height=13);
+    xWall(wallNumber=7, xDel=0, yDel=33, height=27);
+    xWall(wallNumber=8, xDel=50, yDel=36, height=14);
+    xWall(wallNumber=9, xDel=27, yDel=37, height=23);
+    xWall(wallNumber=10, xDel=50, yDel=50, height=60);
+    xWall(wallNumber=11, xDel=0, yDel=60, height=50);
+    xWall(wallNumber=12, xDel=0, yDel=110, height=60);
+  }
+  color(&quot;blue&quot;){
+    yWall(wallNumber=0, xDel=0, yDel=0, height=50);
+    yWall(wallNumber=1, xDel=15, yDel=18, height=15);
+    yWall(wallNumber=2, xDel=18, yDel=0, height=21);
+    yWall(wallNumber=3, xDel=27, yDel=21, height=27);
+    yWall(wallNumber=4, xDel=39, yDel=0, height=21);
+    yWall(wallNumber=5, xDel=43, yDel=17, height=16);
+    yWall(wallNumber=6, xDel=50, yDel=30, height=60);
+    yWall(wallNumber=7, xDel=56, yDel=0, height=28);
+    yWall(wallNumber=8, xDel=64, yDel=28, height=22);
+    yWall(wallNumber=9, xDel=84, yDel=0, height=28);
+    yWall(wallNumber=10, xDel=86, yDel=26, height=24);
+    yWall(wallNumber=11, xDel=110, yDel=0, height=60);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
   <entry>
     <title>Plot party postcard exchange</title>
     <link href="https://peterkagey.com/blog/2025/11/postcard_party/" />
@@ -2177,53 +2689,6 @@ p random_string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sca
 &lt;/blockquote&gt;
 &lt;p&gt;I believe that the sequence A216256 on the right hand side appears to be the same as the sequence &amp;quot;n appears &#92;(&#92;displaystyle&#92;left&#92;lfloor &#92;frac{2n+1}{3} &#92;right&#92;rfloor&#92;) times,&amp;quot; but I’d have to crack open my &lt;em&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Concrete_Mathematics&quot;&gt;Concrete Mathematics&lt;/a&gt;&lt;/em&gt; book to prove it.&lt;/p&gt;
 &lt;p&gt;This is &lt;a href=&quot;https://peterkagey.com/problems/020/&quot;&gt;Problem 20&lt;/a&gt; in my &lt;a href=&quot;https://peterkagey.com/problems/&quot;&gt;Open Problem Collection&lt;/a&gt;, and I’ve placed a small, $5 bounty on solving this conjecture—so if you have an idea of how to prove this, let me know in exchange for a latte! I’ve asked about this in my Math Stack Exchange question &lt;a href=&quot;https://math.stackexchange.com/q/4100221/121988&quot;&gt;Circle-to-circle contacts on the hexagonal grid&lt;/a&gt;—so feel free to answer there or let me know on Bluesky, &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>My favorite sequences: &quot;Not Equal&quot; Grid</title>
-    <link href="https://peterkagey.com/blog/2021/06/my-favorite-sequences-a278299/" />
-    <updated>2021-06-28T00:00:00Z</updated>
-    <id>https://peterkagey.com/blog/2021/06/my-favorite-sequences-a278299/</id>
-    <content type="html">&lt;p&gt;This is the third installment in a recurring series, My favorite sequences. This post discusses OEIS sequence &lt;a href=&quot;https://oeis.org/A278299&quot;&gt;A278299&lt;/a&gt;, a sequence that took over two years to compute enough terms to add to the OEIS with confidence that it was distinct.&lt;/p&gt;
-&lt;p&gt;This sequence is discussed in &lt;a href=&quot;https://peterkagey.com/problems/023/&quot;&gt;Problem #23&lt;/a&gt; of my Open Problem Collection, which asks for the smallest polyomino (by number of cells) whose cells you can color with &#92;(n&#92;) different colors such that any two different colors are adjacent somewhere in the polyomino. As illustrated below, when there are &#92;(n=5&#92;) colors (say, green, brown, blue, purple, and magenta) there is a &#92;(13&#92;)-cell polyomino which has a green cell adjacent to a blue cell and a purple cell adjacent to a brown cell and so on for every color combination. This is the smallest polyomino with the &#92;(5&#92;)-coloring property.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-28/OP_23.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Five colors of blocks, where any two different colors of blocks are adjacent somewhere in the polyomino.&lt;/p&gt;
-&lt;h2 id=&quot;the-genesis-unequal-chains&quot;&gt;The Genesis: Unequal Chains&lt;/h2&gt;
-&lt;p&gt;The summer after my third undergraduate year, I decided to switch my major to Math and still try to graduate on time. Due to degree requirements, I had to go back and take some lower-division classes that I was a bit over-prepared for. One of these classes—and surely my favorite—was &lt;a href=&quot;https://math.oregonstate.edu/directory/william-a-bogley&quot;&gt;Bill Bogley&lt;/a&gt;&#39;s linear algebra class, where I half-way paid attention and half-way mused about other things.&lt;/p&gt;
-&lt;p&gt;Bill wrote something simple on the board that sparked inspiration for me: $$a &#92;neq b &#92;neq c &#92;neq a.$$ He wrote this to indicate that &#92;(a&#92;), &#92;(b&#92;), and &#92;(c&#92;) were all distinct, and this got me thinking: if we have to write a string of four variables in order to say that three variables are distinct, how many would we have to write down to say that four variables were distinct? It turns out that &#92;(8&#92;) will do the trick, with one redundancy: $$a&#92;neq b &#92;neq c &#92;neq d &#92;neq b &#92;color{red}{&#92;neq} c &#92;neq a.$$ Five variables? &#92;(11&#92;): $$a_1 &#92;neq a_2 &#92;neq a_3 &#92;neq a_4 &#92;neq a_5 &#92;neq a_3 &#92;neq a_1 &#92;neq a_4 &#92;neq a_2 &#92;neq a_5.$$ What about &#92;(n&#92;) variables?&lt;/p&gt;
-&lt;p&gt;My colleague and the then-President of the OSU Math Club, Tommy Pitts, made quick work of this problem. He pointed out that &amp;quot;not equal&amp;quot; is a symmetric, non-transitive, non-reflexive relation. This means that we can model this with a complete graph on &#92;(n&#92;) vertices, where each edge is a relation. Then the number of variables needed in the expression is the number of edges in the complete graph, plus the minimum number of &lt;a href=&quot;https://en.wikipedia.org/wiki/Eulerian_path&quot;&gt;Eulerian paths&lt;/a&gt; that we can split the graph into. Searching for this in the OEIS yields sequence &lt;a href=&quot;https://oeis.org/A053439&quot;&gt;A053439&lt;/a&gt;. $$A053439^*(n) = &#92;begin{cases} &#92;binom{n}{2} + 1 &amp;amp; n &#92;text{ is odd} &#92;&#92; &#92;binom{n}{2} + &#92;frac n 2 &amp;amp; n &#92;text{ is even}&#92;end{cases}$$&lt;/p&gt;
-&lt;h2 id=&quot;a-generalization-unequal-chainmail&quot;&gt;A Generalization: Unequal Chainmail&lt;/h2&gt;
-&lt;p&gt;This was around 2014, at which time I was writing letters to my friend Alec Jones whenever I—rather frequently!—stumbled upon a new math problem that interested me. In the exchange of letters, he suggested a 2D version of this puzzle. Write the &#92;(n&#92;) variables in the square grid, and say that two variables are unequal if they’re adjacent.&lt;/p&gt;
-&lt;p&gt;While Tommy solved the 1D version of the problem quickly, the 2D version was much more stubborn! However we were able to make some progress. We found some upper bounds (e.g. the 1D solution) and some lower bounds, and we were able to prove that some small configurations were optimal. Finally, in November 2016, we had ten terms: enough to prove that this sequence was not in the OEIS. We added it as &lt;a href=&quot;https://oeis.org/A278299&quot;&gt;A278299&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&#92;(a(n)&#92;) is the tile count of the smallest polyomino with an &#92;(n&#92;)-coloring such that every color is adjacent to every other distinct color at least once.&lt;/p&gt;
-&lt;p&gt;&lt;cite&gt;OEIS sequence &lt;a href=&quot;https://oeis.org/A278299&quot;&gt;A278299&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;(In May 2019, Alec’s student Ryan Lee found the &#92;(11&#92;)th term: &#92;(A278299(11) = 34&#92;). &#92;(A278299(12)&#92;) is still unknown.)&lt;/p&gt;
-&lt;img src=&quot;https://peterkagey.com/assets/blog/2021-06-28/transparent_square_game.png&quot;&gt;
-&lt;p&gt;A screenshot from &lt;a href=&quot;https://peterkagey.com/apps/square_game/&quot;&gt;my game&lt;/a&gt; illustrating the largest known term: &lt;a href=&quot;https://peterkagey.com/apps/square_game/?id=356&quot;&gt;A278299(14) = 56&lt;/a&gt;. Every number is connected to every other number. The red edges refer to redundant connections.&lt;/p&gt;
-&lt;p&gt;We found these terms by establishing some lower bounds (as explained below) and then implementing a &lt;a href=&quot;https://peterkagey.com/apps/square_game/&quot;&gt;Javascript game (which you can play here)&lt;/a&gt; with a &lt;a href=&quot;https://github.com/peterkagey/circle-games&quot;&gt;Ruby on Rails backend&lt;/a&gt; to allow people to submit their hand-crafted attempts. Each solution was constructive proof of an upper bound, so when a user submitted a solution that matched the lower bound, we were able to confirm that term of the sequence.&lt;/p&gt;
-&lt;p&gt;(One heuristic for making minimal configurations is to start with the construction in OEIS sequence &lt;a href=&quot;https://oeis.org/A260643&quot;&gt;A260643&lt;/a&gt; and add cells as necessary in an &lt;em&gt;ad hoc&lt;/em&gt; fashion.)&lt;/p&gt;
-&lt;h2 id=&quot;lower-bounds&quot;&gt;Lower bounds&lt;/h2&gt;
-&lt;p&gt;There are a few different ways of proving lower bounds.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;We know that there needs to be at least &#92;(&#92;binom{n}{2}&#92;) relations, one between each pair of variables. OEIS sequence &lt;a href=&quot;https://oeis.org/A123663&quot;&gt;A123663&lt;/a&gt; gives the &amp;quot;number of shared edges in a spiral of n unit squares,&amp;quot; which can be used to compute a lower bound: &lt;a href=&quot;https://oeis.org/A039823&quot;&gt;$$A039823(n) = &#92;left&#92;lceil &#92;frac{n^2+n+2}{4}&#92;right&#92;rceil$$&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Every number needs to be in contact with at least (n-1) other numbers, and each occurrence can be in contact with at most (4) others. So each number needs to occur at least &#92;(&#92;lceil &#92;frac{n-1}{4}&#92;rceil&#92;) times, for a total of &#92;(n&#92;lceil &#92;frac{n-1}{4}&#92;rceil&#92;) occurrences. This bound is usually weaker than the above bound.&lt;/li&gt;
-&lt;li&gt;For the cases of &#92;(n = 5&#92;) and &#92;(n=9&#92;), the lower bounds were proved using &lt;em&gt;ad hoc&lt;/em&gt; methods, by looking at how many cells would need to have a given number of neighbors.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;upper-bounds&quot;&gt;Upper Bounds&lt;/h2&gt;
-&lt;p&gt;Besides the upper bound that comes from the 1-dimensional version of the problem, that only upper bounds that I know of come from hand-crafted submissions on my &lt;a href=&quot;https://peterkagey.com/apps/square_game/&quot;&gt;Javascript game on my website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Do you have any ideas for an explicit and efficient algorithm for constructing such solutions? If so, let me know on Bluesky &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;asymptotics&quot;&gt;Asymptotics&lt;/h2&gt;
-&lt;p&gt;The lower and upper bounds show that this is asymptotically bounded between &#92;(n^2/4&#92;) and &#92;(n^2/2&#92;). It’s possible that this doesn’t have a limit at all, but it would be interesting to bound the liminf and limsup further. My intuition is that &#92;(n^2/4&#92;) is the right answer, can you prove or disprove this?&lt;/p&gt;
-&lt;h2 id=&quot;generalizations&quot;&gt;Generalizations&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;We could play this game on the triangular grid, or in the 3-dimensional cubic grid. Do you have ideas of other graphs that you could do this on?&lt;/li&gt;
-&lt;li&gt;This game came from Tommy’s analysis of looking at &amp;quot;not equal to&amp;quot; as a symmetric, non-reflexive, non-transitive relation. Can you do a similar analysis on other kinds of relations?&lt;/li&gt;
-&lt;li&gt;Is there a good way of defining what it means for two solutions to be the same? For a given number of variables, how many essentially different solutions exist? (Related: &lt;a href=&quot;https://peterkagey.com/problems/108/&quot;&gt;Open problem #108&lt;/a&gt;.)&lt;/li&gt;
-&lt;li&gt;What if we think of left-right connections as being different from up-down connections, and want both? Or what if we want each variable &#92;(x&#92;) to be neighbors with another &#92;(x&#92;)?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you have ideas about these questions or any questions of your own, please share them with me by leaving a comment or letting me know on Bluesky, &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;!&lt;/p&gt;
 </content>
   </entry>
 </feed>
