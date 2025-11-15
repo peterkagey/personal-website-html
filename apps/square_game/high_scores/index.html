@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Square Game</title>
+    <title>Square Game High Scores</title>
   
   
   <link rel="stylesheet" href="/uhlOpJi2uo.css">
@@ -18,8 +18,8 @@
   <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
-  <meta property="og:title" content="Square Game">
-  <meta name="twitter:title" content="Square Game">
+  <meta property="og:title" content="Square Game High Scores">
+  <meta name="twitter:title" content="Square Game High Scores">
   
   
   
@@ -33,8 +33,8 @@
   
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://peterkagey.com/apps/square_game/">
-  <meta name="twitter:url" content="https://peterkagey.com/apps/square_game/">
+  <meta property="og:url" content="https://peterkagey.com/apps/square_game/high_scores/">
+  <meta name="twitter:url" content="https://peterkagey.com/apps/square_game/high_scores/">
   <meta property="og:site_name" content="Peter Kagey">
   <meta property="og:locale" content="en_US">
 </head>
@@ -78,59 +78,28 @@
     
     
     <heading-anchors>
-      
-<style>
-  #square_game_canvas {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
+      <style>
+  .high-scores hr {
+    background:#2c4d75;
+    border:0;
+    height:7px;
   }
-  #alec_notes {
-    font-size: 1.5em;
+
+  .high-scores .solution {
+    text-align: center;
+  }
+
+  .high-scores .solution a:hover {
+      color: #6a5b34;
+      text-decoration: none;
+  }
+  .high-scores .solution pre {
+    line-height: 1.2;
   }
 </style>
+<div id="high-scores"></div>
 
-<h1 id="square-game">Square Game</h1>
-<p>
-  You can read about this app on my blog post <a href="/blog/2021/06/my-favorite-sequences-a278299/">My favorite sequences: "Not Equal" Grid</a>, from 2021.
-</p>
-<canvas id="square_game_canvas"></canvas>
-
-<p>
-  This sequence has been added to the On-Line Encyclopedia of Integer Sequences (OEIS) as sequence <a href="https://oeis.org/A278299">A278299</a>! The largest known term, <a href="http://localhost:8080/apps/square_game/?id=344">$a(11)=34$ was found by Ryan Lee on May 10th, 2019</a> when he was a junior high school student.
-</p>
-<p>
-  Found a bug? Please report it on <a href="https://github.com/PeterOKagey/circle-games/issues">GitHub</a>!
-</p>
-
-
-<div id="connections">
-  <lh id="connect"><b> Connections </b></lh><br>
-  <pre id="alec_notes" style="display:none;"> alecString </pre>
-</div>
-
-<div id="instructions">
-  <lh id="instr"><b> Instructions </b></lh>
-  <ul id="instructions_paragraph" style="display:none;">
-    <li>The goal of this game is to connect all "colors" (numbers 1..N) of a graph restricted to a square tiling—using the fewest number of vertices possible.</li>
-    <li>In other words, for every n ≠ m, there needs to be a circle with n connected to a circle with m.</li>
-    <li>(The links under "Best Solutions" contain some examples.)</li>
-    <li>Clicking on a vertex will decrease the value in the circle and right clicking will increase the value in a circle.</li>
-    <li>You can move vertices by clicking and dragging.</li>
-    <li>If you type any character while your mouse is over a vertex, it will delete the vertex.</li>
-    <li>The circle in the upper-left corner gives the color of the greatest sub-graph that is fully connected.</li>
-    <li>The circle to the right of that records the "size" of the graph: the number of vertices in play.</li>
-    <li>The red edges denote colors that are twice-connected.</li>
-    <li>The "S" button will allow you to save your solution and update the high-scores table.</li>
-    <li>The number in the upper-right corner will let you adjust the maximum labelling for a vertex.</li>
-  </ul>
-</div>
-
-<div id="records">
-  <lh id="best-known"><b>Best Solutions</b></lh>
-</div>
-
-<script type="module" src="/BV7oZOH1f4.js"></script>
+<script type="module" src="/nFwBFEWD9f.js"></script>
 
     </heading-anchors>
   </main>

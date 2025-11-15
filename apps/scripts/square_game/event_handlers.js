@@ -27,7 +27,7 @@ async function saveGame() {
     Array.from({ length: gridWidth }, (_, a) => labels[index(a, b + 1)])
   );
   try {
-    const response = await fetch(`${API_BASE_URL}/save_square_game`, {
+    const response = await fetch(`${API_BASE_URL}/square_game/save`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(grid),

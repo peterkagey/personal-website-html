@@ -464,7 +464,7 @@ function bound(n) {
   return Math.max(boundSequence[n], n * Math.ceil((n-1)/4));
 }
 
-fetch(`${API_BASE_URL}/square_game_records`)
+fetch(`${API_BASE_URL}/square_game/records`)
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("records");
@@ -485,10 +485,10 @@ fetch(`${API_BASE_URL}/square_game_records`)
         (record.level == 11 && record.vertices == 34) ||
         (record.level == 14 && record.vertices == 56)
       ) {
-        li.innerHTML = `<a href="/apps/square_game/?id=${record.game_id}">f(${record.level}) = ${record.vertices}</a>`;
+        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">f(${record.level}) = ${record.vertices}</a>`;
         grid.appendChild(li);
       } else if (record.level > 2) {
-        li.innerHTML = `<a href="/apps/square_game/?id=${record.game_id}">${bound(record.level)} ≤ f(${record.level}) ≤ ${record.vertices}</a>`;
+        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">${bound(record.level)} ≤ f(${record.level}) ≤ ${record.vertices}</a>`;
         grid.appendChild(li);
       }
     });
