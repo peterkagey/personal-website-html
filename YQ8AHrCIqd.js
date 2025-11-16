@@ -11,13 +11,12 @@ var defaultWidth; var defaultHeight;
 var rubyA;
 var gridWidth; var gridHeight;
 var aShift; var bShift; var r;
-var circleBorderColor = '#ccc'
-var backgroundColor = '#ddd'
-var gameCircleFill = '#346a5b'
+var circleBorderColor = '#333'
+var backgroundColor = '#222'
 var menuCircleFill = '#2c4d75'
 var textColor = 'white'
-var badConnectionColor ='red'
-var goodConnectionColor = gameCircleFill
+var badConnectionColor = '#d43'
+var goodConnectionColor = '#ccc'
 var labels = [];
 var gameMatrix;
 var maxVertex = 3;
@@ -118,13 +117,21 @@ function circleCenter(a, b) {
   }
 }
 
+function colorForIndex(n) {
+  const phi = 0.61803398875;          // golden ratio fractional part
+  const h = ((n - 1) * phi % 1) * 270 + 45; // evenly spread hue
+  const s = 40;                        // saturation %
+  const l = 40;                        // lightness %
+  return `hsl(${h}, ${s}%, ${l}%)`;     // browsers accept hsl() directly
+}
+
 function drawCircleBasedOnState(a, b){
   const c = circleCenter(a, b)
   const state = label(a,b);
   if (state == 0) {
     drawCircle(c.x, c.y, backgroundColor, circleBorderColor);
   } else {
-    drawGameCircleAtXY(state, c, gameCircleFill);
+    drawGameCircleAtXY(state, c, `${colorForIndex(state)}`);
   }
 }
 
@@ -181,7 +188,7 @@ function drawLine(a1, b1, a2, b2){
   context.beginPath();
   context.moveTo(c1.x, c1.y);
   context.lineTo(c2.x, c2.y);
-  context.lineWidth = borderWidth * 2;
+  context.lineWidth = borderWidth * 4;
 
   context.strokeStyle = redundantConnection(a1, b1, a2, b2)
     ? badConnectionColor
@@ -525,7 +532,8 @@ function handleMouseMove(event){
     dragging = true;
     restoreCanvas();
     const pt = {x: coords.x + dragState.xDel, y: coords.y + dragState.yDel}
-    drawGameCircleAtXY(movingCircleLabel, pt, gameCircleFill)
+    const color = colorForIndex(movingCircleLabel)
+    drawGameCircleAtXY(movingCircleLabel, pt, color)
   }
 }
 

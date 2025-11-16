@@ -50,7 +50,8 @@ function handleMouseMove(event){
     dragging = true;
     restoreCanvas();
     const pt = {x: coords.x + dragState.xDel, y: coords.y + dragState.yDel}
-    drawGameCircleAtXY(movingCircleLabel, pt, gameCircleFill)
+    const color = colorForIndex(movingCircleLabel)
+    drawGameCircleAtXY(movingCircleLabel, pt, color)
   }
 }
 
