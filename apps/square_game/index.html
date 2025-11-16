@@ -78,13 +78,13 @@
     
     
     <heading-anchors>
-      
-<style>
+      <style>
   #square_game_canvas {
     display: block;
     width: 100%;
     box-sizing: border-box;
   }
+
   #alec_notes {
     font-size: 1.5em;
   }
@@ -94,7 +94,36 @@
 <p>
   You can read about this app on my blog post <a href="/blog/2021/06/my-favorite-sequences-a278299/">My favorite sequences: "Not Equal" Grid</a>, from 2021.
 </p>
+
+<div class="grid" style="grid-template-columns:3fr 1fr 1fr">
+  <div style="font-size: min(4em,10cqw);">
+    a(<span id="display-solved"></span>) ≤&nbsp;<span id="display-vertices"></span>
+  </div>
+  <img id="button-save" src="/assets/apps/square-games/button-control-save.svg">
+  <img id="button-new" src="/assets/apps/square-games/button-control-new.svg">
+</div>
+<div style="display:none;">
+  <img id="button-decrement" src="/assets/apps/square-games/button-level-down.svg">
+  <div class="square-game-button" id="display-level"></div>
+  <img id="button-increment" src="/assets/apps/square-games/button-level-up.svg">
+</div>
 <canvas id="square_game_canvas"></canvas>
+<details>
+  <summary>Move and resize grid</summary>
+  <div class="grid wide-eight narrow-four">
+    <img id="button-left" src="/assets/apps/square-games/button-direction-left.svg">
+    <img id="button-right" src="/assets/apps/square-games/button-direction-right.svg">
+    <img id="button-up" src="/assets/apps/square-games/button-direction-up.svg">
+    <img id="button-down" src="/assets/apps/square-games/button-direction-down.svg">
+
+    <img id="button-wider" src="/assets/apps/square-games/button-resize-wider.svg">
+    <img id="button-taller" src="/assets/apps/square-games/button-resize-taller.svg">
+    <img id="button-shorter" src="/assets/apps/square-games/button-resize-shorter.svg">
+    <img id="button-narrower" src="/assets/apps/square-games/button-resize-narrower.svg">
+  </div>
+</details>
+
+<hr>
 
 <p>
   This sequence has been added to the On-Line Encyclopedia of Integer Sequences (OEIS) as sequence <a href="https://oeis.org/A278299">A278299</a>! The largest known term, <a href="http://localhost:8080/apps/square_game/?id=344">$a(11)=34$ was found by Ryan Lee on May 10th, 2019</a> when he was a junior high school student.
@@ -130,7 +159,7 @@
   <lh id="best-known"><b>Best Solutions</b></lh>
 </div>
 
-<script type="module" src="/BV7oZOH1f4.js"></script>
+<script type="module" src="/deSLxILQMr.js"></script>
 
     </heading-anchors>
   </main>

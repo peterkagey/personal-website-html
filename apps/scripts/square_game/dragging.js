@@ -1,5 +1,5 @@
 var movingCircleLabel;
-var dragging = false; var downState = null;
+var dragging = false; var downState = null; var readyToDrag = false;
 var pageJustLoaded = true;
 var dragState;
 var coords;
@@ -15,16 +15,19 @@ function restoreCanvas(){ context.drawImage(backCanvas, 0,0);}
 
 function setDragStartState(pt) {
   var [a,b] = indicesFromCoord(pt.x, pt.y);
-  if (withinCircle(pt, a, b) && b != 0) {
+  if (withinCircle(pt, a, b) && labels[index(a,b)] != 0) {
     const c = circleCenter(a, b)
     dragState = { a: a, b: b, xDel: c.x - pt.x, yDel: c.y - pt.y }
     movingCircleLabel = labels[index(a,b)];
+    readyToDrag = true;
     labels[index(a,b)] = 0;
     refreshCanvas();
     saveCanvas();
     labels[index(a,b)] = movingCircleLabel;
+    refreshCanvas();
   } else {
     movingCircleLabel = 0;
+    readyToDrag = false;
   }
 }
 
@@ -34,19 +37,20 @@ function handleMouseDown(event) {
   coords = getCanvasCoords(event);
   var [a,b] = indicesFromCoord(coords.x, coords.y);
   downState = {a: a, b: b}; dragging = false;
+  readyToDrag = false; // Turn this on in setDragStartState if we click on something draggable.
   // var label = labels[index(a,b)]
   // if (event.shiftKey && label != 0) { colorValue(label) }
-  if (event.which == 1)      { handleLeftClick(event) }
-  else if (event.which == 3) { handleRightClick(event) }
-  refreshCanvas();
+  if (event.which == 1)      { setDragStartState(coords) }
+  else if (event.which == 3) { handleRightClick() }
 }
 
 function handleMouseMove(event){
   coords = getCanvasCoords(event);
-  if (downState && event.which == 1 && movingCircleLabel > 0){
+  if (downState && readyToDrag){
     dragging = true;
     restoreCanvas();
-    drawGameCircleAtXY(movingCircleLabel, coords.x + dragState.xDel, coords.y + dragState.yDel, gameCircleFill)
+    const pt = {x: coords.x + dragState.xDel, y: coords.y + dragState.yDel}
+    drawGameCircleAtXY(movingCircleLabel, pt, gameCircleFill)
   }
 }
 
@@ -58,7 +62,7 @@ function decrementLabelState(a,b){
 function handleDragging() {
   const pt = {x: coords.x+dragState.xDel, y: coords.y+dragState.yDel}
   var [a,b] = indicesFromCoord(pt.x, pt.y);
-  if (withinCircle(pt, a, b) && b > 0 ){
+  if (withinCircle(pt, a, b)){
     labels[index(dragState.a, dragState.b)] = 0;
     labels[index(a,b)] = movingCircleLabel;
     movingCircleLabel = 0;

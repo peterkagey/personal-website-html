@@ -7,9 +7,6 @@ if ("production" == "development") {
 var canvas = document.getElementById("square_game_canvas");
 canvas.tabIndex = 0;
 var context = canvas.getContext("2d");
-
-var scale = window.devicePixelRatio || 1
-
 var defaultWidth; var defaultHeight;
 var rubyA;
 var gridWidth; var gridHeight;
@@ -22,13 +19,14 @@ var textColor = 'white'
 var badConnectionColor ='red'
 var goodConnectionColor = gameCircleFill
 var labels = [];
+var gameMatrix;
 var maxVertex = 3;
 var level; var score;
 var alecString
 var fontSize = 20; var borderWidth = 2;
 
-function setR(){
-  r = 0.5*canvas.width/(gridWidth*1.25);
+function setCircleRadius(){
+  r = 0.5/1.25*canvas.width/gridWidth;
   fontSize = Math.round(4 * r / 5);
   borderWidth = r / 12
 }
@@ -39,7 +37,7 @@ function initializeEmptyBoard() {
   refreshCanvas();
 }
 
-function initializeBoard(solutionString, xShift, yShift, solutionWidth){
+function initializeBoard(solutionString, solutionWidth){
   var solutionGrid = parsedSolution(solutionString, solutionWidth);
   const solutionHeight = solutionGrid.length;
   setBoardSize(solutionWidth, solutionHeight);
@@ -55,24 +53,23 @@ function initializeBoard(solutionString, xShift, yShift, solutionWidth){
 // 2) If they're checking out the score, we want to make the the board is big enough and the solution is centered, with at least one row/column of padding on either size.
 // 3) If this is a new game, the size of the board should match the size of the window appropriately.
 function setBoardSize(solutionWidth, solutionHeight) {
-  defaultWidth = 13;
+  const upperGridWidth = Math.floor(canvas.getBoundingClientRect().width/75)
+  defaultWidth = Math.max(6, upperGridWidth);
   defaultHeight = 6;
   //assume that a is too big, and b is never too big
   gridWidth = Math.max(defaultWidth, solutionWidth + 2);
-  gridHeight = Math.max(defaultHeight, solutionHeight + 3);
+  gridHeight = Math.max(defaultHeight, solutionHeight + 2);
   [canvas.width, canvas.height] = setCanvasSize();
-  setR();
+  setCircleRadius();
 }
 
 function initializeEmptyLabels(){
-  for (var i = 0; i < gridWidth*(gridHeight-1); i++){
-    labels[i] = 0;
-  }
+  for (var i = 0; i < gridWidth*gridHeight; i++){ labels[i] = 0; }
 }
 
 function setLabels(solutionGrid, solutionHeight, solutionWidth){
   const xShift = Math.floor((gridWidth - solutionWidth)/2)
-  const yShift = Math.floor((gridHeight + 1 - solutionHeight)/2)
+  const yShift = Math.floor((gridHeight - solutionHeight)/2)
   for (var rowIndex = 0; rowIndex < solutionHeight; rowIndex++){
     for (var colIndex = 0; colIndex < solutionWidth; colIndex++){
       const i = index(colIndex+xShift, rowIndex+yShift)
@@ -107,25 +104,12 @@ function parsedSolution(solutionString, width){
 }
 
 function colorAndLabelAllCircles(){
-  for (var b = 1; b < gridHeight ; b++){
+  for (var b = 0; b < gridHeight ; b++){
     for (var a = 0; a < gridWidth ; a++) {
       drawCircleBasedOnState(a, b);
     }
   }
 }
-
-var gameMatrix;
-function resetGameMatrix(){
-  var n = Math.max(maxLabel(), maxVertex);
-  var matrix = [];
-  for(var i = 0; i < n; i++) {
-    matrix[i] = [];
-    for (var j = 0; j < n; j++) {
-      if (i == j && labels.includes(i + 1)) { matrix[i][j] = 1; }
-      else { matrix[i][j] = 0; }
-    }
-  }
-  gameMatrix = matrix;}
 
 function circleCenter(a, b) {
   return {
@@ -136,24 +120,12 @@ function circleCenter(a, b) {
 
 function drawCircleBasedOnState(a, b){
   const c = circleCenter(a, b)
-  if (b == 0){
-    drawSquare(c.x, c.y, menuCircleFill, menuCircleFill);
+  const state = label(a,b);
+  if (state == 0) {
+    drawCircle(c.x, c.y, backgroundColor, circleBorderColor);
   } else {
-    const state = label(a,b);
-    if (state == 0) {
-      drawCircle(c.x, c.y, backgroundColor, circleBorderColor);
-    } else {
-      drawGameCircleAtXY(state, c.x, c.y, gameCircleFill);
-    }
+    drawGameCircleAtXY(state, c, gameCircleFill);
   }
-}
-
-function drawSquare(x, y, color) {
-  context.beginPath();
-  context.roundRect(x-r, y-r, 2*r, 2*r, r/2.5);
-  context.fillStyle = color;
-  context.fill();
-  context.lineWidth = 0;
 }
 
 function drawCircle(x, y, fillColor, strokeColor) {
@@ -166,9 +138,9 @@ function drawCircle(x, y, fillColor, strokeColor) {
   context.stroke();
 }
 
-function drawGameCircleAtXY(textString, x, y, color) {
-  drawCircle(x, y, color, color)
-  printStringAtXY(textString, x, y);
+function drawGameCircleAtXY(textString, pt, color) {
+  drawCircle(pt.x, pt.y, color, color)
+  printStringAtXY(textString, pt.x, pt.y);
 }
 
 function printStringAtXY(textString, x, y, flipstring){
@@ -184,30 +156,17 @@ function printStringAtXY(textString, x, y, flipstring){
   }
 }
 
-function colorAndPrintString(string, a, b, flipstring){
-  drawCircleBasedOnState(a,b);
-  const c = circleCenter(a, b)
-  printStringAtXY(string, c.x, c.y, flipstring);
-}
-
 function colorValue(value){
-  for (var b = 1; b < gridHeight ; b++) {
-    for (var a = 0; a < gridWidth ; a++) {
+  for (let b = 0; b < gridHeight ; b++) {
+    for (let a = 0; a < gridWidth ; a++) {
       if (label(a, b) == value) {
-        const c = circleCenter(a,b)
-        drawGameCircleAtXY(label(a, b), c.x, c.y, "#752c4d")
+        drawGameCircleAtXY(label(a, b), circleCenter(a,b), "#752c4d")
       }
     }
   }
 }
 
-function numberOfVertices(){
-  var count = 0;
-  for (var i = 0; i < gridWidth*(gridHeight-1); i++) {
-    if (labels[i] != 0){ count++; }
-  }
-  return count
-}
+function numberOfVertices(){ return labels.filter(x => x !== 0).length; }
 
 function redundantConnection(a1, b1, a2, b2) {
   const row = labels[index(a1, b1)] - 1
@@ -230,15 +189,11 @@ function drawLine(a1, b1, a2, b2){
   context.stroke();
 }
 
-function index(a,b) { return gridWidth * (b - 1) + a }
+function index(a,b) { return gridWidth * b + a }
 function label(a, b) { return labels[index(a,b)] }
 
-function maxLabel(){
-  var maxL = 0
-  for (var i = 0; i < labels.length; i++){
-    if (parseInt(labels[i]) > maxL){ maxL = labels[i]; }
-  }
-  return maxL
+function maxLabel() {
+  return Math.max(...labels.map(Number), 1);
 }
 
 function indicesFromCoord(x,y){
@@ -287,7 +242,6 @@ function setAlecString(){
   alecNotes.innerHTML = alecString
 }
 
-// var currentLabel;
 function compareRightAndDownAndUpdate(a,b){
   let currentLabel = label(a,b);
   if (currentLabel == 0) { return }
@@ -311,13 +265,16 @@ function compareRightAndDownAndDraw(a,b) {
   }
 }
 
-function calculateProximityAndDrawAllLines(){
-  for (var b = 1; b < gridHeight ; b++){
+function updateAdjacencyMatrix() {
+  for (var b = 0; b < gridHeight ; b++){
     for (var a = 0; a < gridWidth ; a++){
       compareRightAndDownAndUpdate(a,b);
     }
   }
-  for (var b = 1; b < gridHeight ; b++){
+}
+
+function drawEdges(){
+  for (var b = 0; b < gridHeight ; b++){
     for (var a = 0; a < gridWidth ; a++){
       compareRightAndDownAndDraw(a,b);
     }
@@ -329,9 +286,12 @@ function refreshCanvas(){
   context.rect(0, 0, canvas.width, canvas.height);
   context.fillStyle = backgroundColor;
   context.fill();
-  context.stroke();
+  const scale = canvas.width / canvas.getBoundingClientRect().width;
+  canvas.style.borderRadius = `${r/scale/0.8}px`;
+  maxVertex = Math.max(3, maxLabel() + 1)
   resetGameMatrix();
-  calculateProximityAndDrawAllLines();
+  updateAdjacencyMatrix();
+  drawEdges();
   colorAndLabelAllCircles();
   drawMenuBar();
   setAlecString();
@@ -345,8 +305,8 @@ function resizeCanvas(dimension){
   if (dimension == "widen"){
     gridWidth++;
     [canvas.width, canvas.height] = setCanvasSize()
-    setR();
-    for(var i = 0; i < gridHeight-1; i++){
+    setCircleRadius();
+    for(var i = 0; i < gridHeight; i++){
       labels.splice(i*gridWidth+gridWidth - 1, 0, 0);
     }
   }
@@ -354,28 +314,30 @@ function resizeCanvas(dimension){
   if (dimension == "heighten"){
     gridHeight++;
     [canvas.width, canvas.height] = setCanvasSize()
-    for(var i = gridWidth*(gridHeight-2); i < gridWidth*(gridHeight-1); i++){
+    for (var i = gridWidth*(gridHeight-1); i < gridWidth*(gridHeight); i++){
       labels[i] = 0;
     }
   }
 
   if (dimension == "narrow"){
-    for(var i = 0; i < labels.length/gridWidth; i++){
+    const rowCount = labels.length/gridWidth;
+    console.log(rowCount);
+    for(var i = 0; i < rowCount; i++){
       if(labels[i * gridWidth + gridWidth - 1] != 0){
         return false;
       }
     }
     gridWidth--;
     [canvas.width, canvas.height] = setCanvasSize()
-    setR();
-    for(var i = 1; i < gridHeight; i++){
+    setCircleRadius();
+    for(var i = 1; i <= gridHeight; i++){
       labels.splice(i * gridWidth, 1)
     }
   }
 
   if (dimension == "shorten"){
-    for(var i = 0; i < gridWidth; i++){
-      if(labels[labels.length - 1 - i] != 0){
+    for(var i = 1; i <= gridWidth; i++){
+      if(labels[labels.length - i] != 0){
         return false;
       }
     }
@@ -383,9 +345,10 @@ function resizeCanvas(dimension){
     [canvas.width, canvas.height] = setCanvasSize();
     labels.splice(labels.length-gridWidth, gridWidth);
   }
+  refreshCanvas();
 }
 
-function moveEverything(direction){
+function moveEverything(direction) {
   if (direction == "left"){
     for(var i = 0; i < labels.length/gridWidth; i++){
       if(labels[i * gridWidth] != 0){ return false; }
@@ -414,43 +377,31 @@ function moveEverything(direction){
     var bottomRow = labels.splice(labels.length-gridWidth, gridWidth);
     labels = bottomRow.concat(labels);
   }
+  refreshCanvas();
 }
 
+function resetGameMatrix(){
+  var n = Math.max(maxLabel(), maxVertex);
+  var matrix = [];
+  for(var i = 0; i < n; i++) {
+    matrix[i] = [];
+    for (var j = 0; j < n; j++) {
+      if (i == j && labels.includes(i + 1)) { matrix[i][j] = 1; }
+      else { matrix[i][j] = 0; }
+    }
+  }
+  gameMatrix = matrix;}
+
 function drawMenuBar(){
-  level = largestFullSubmatrix(gameMatrix);
-  score = numberOfVertices();
-  colorAndPrintString(level, 0, 0);
-  colorAndPrintString(score, 1, 0);
-  colorAndPrintString("\u2013", gridWidth-3, 0);
-  colorAndPrintString(maxVertex, gridWidth-2, 0);
-  colorAndPrintString("+", gridWidth-1, 0);
-  colorAndPrintString("Save", 2, 0);
-  if(gridWidth > 6) { colorAndPrintString("New", 3, 0); }
-  if(gridWidth > 7) { colorAndPrintString("\u2190", 4, 0) }
-  if(gridWidth > 8) { colorAndPrintString("\u2192", 5, 0); }
-  if(gridWidth > 9) { colorAndPrintString("\u2191", 6, 0); }
-  if(gridWidth > 10){ colorAndPrintString("\u2193", 7, 0); }
-  if(gridWidth > 11){ colorAndPrintString("\u2190\u2192", 8, 0); }
-  if(gridWidth > 12){ colorAndPrintString("\u2190\u2192", 9, 0, "flip"); }
-  if(gridWidth > 13){ colorAndPrintString("\u2192\u2190", 10, 0); }
-  if(gridWidth > 14){ colorAndPrintString("\u2192\u2190", 11, 0, "flip"); }
+  document.getElementById("display-solved").textContent = largestFullSubmatrix(gameMatrix);
+  document.getElementById("display-vertices").textContent = numberOfVertices();
+  document.getElementById("display-level").textContent = maxVertex;
 }
 
 // Disable the menu when user right-clicks.
 canvas.oncontextmenu = function(event) {
   return false;
 }
-
-// function initializeHighScores(){
-//   rubyA = width; aShift = rubyAShift; bShift = rubyBShift
-//   setSize();
-//   initializeEmptyLabels(gridWidth, gridHeight);
-//   parseSolution(solutionString, rubyA);
-//   maxVertex = Math.max(maxLabel(), maxVertex);
-//   refreshCanvas();
-// }
-
-// initializeBoard("0,0,0,8,6,0,0,0,0,3,2,5,9,0,0,7,5,1,4,2,6,6,9,8,3,6,7,0,0,3,4,7,1,8,0,0,0,9,0,9,0,0",6,2,7,6);
 
 const id = (new URLSearchParams(window.location.search)).get("id");
 if (id === null) {
@@ -461,7 +412,7 @@ if (id === null) {
       if (response.ok) { return response.json() }
       else { throw new Error("ID not found") }
     })
-    .then(data => initializeBoard(data.solution,data.xShift,data.yShift,data.width))
+    .then(data => initializeBoard(data.solution,data.width))
     .catch(_ => initializeEmptyBoard())
 }
 
@@ -503,8 +454,27 @@ fetch(`${API_BASE_URL}/square_game/records`)
   })
   .catch(err => console.error("Error loading records:", err));
 
+const buttons = {
+  "button-left":      () => moveEverything("left"),
+  "button-right":     () => moveEverything("right"),
+  "button-up":        () => moveEverything("up"),
+  "button-down":      () => moveEverything("down"),
+  "button-wider":     () => resizeCanvas("widen"),
+  "button-taller":    () => resizeCanvas("heighten"),
+  "button-shorter":   () => resizeCanvas("shorten"),
+  "button-narrower":  () => resizeCanvas("narrow"),
+  "button-decrement": () => { maxVertex--; refreshCanvas(); },
+  "button-increment": () => { maxVertex++; refreshCanvas(); },
+  "button-save":      () => saveGame(),
+  "button-new":       () => window.location.assign("/apps/square_game/"),
+}
+
+for (const [id, handler] of Object.entries(buttons)) {
+  document.getElementById(id).addEventListener("click", handler);
+}
+
 var movingCircleLabel;
-var dragging = false; var downState = null;
+var dragging = false; var downState = null; var readyToDrag = false;
 var pageJustLoaded = true;
 var dragState;
 var coords;
@@ -520,16 +490,19 @@ function restoreCanvas(){ context.drawImage(backCanvas, 0,0);}
 
 function setDragStartState(pt) {
   var [a,b] = indicesFromCoord(pt.x, pt.y);
-  if (withinCircle(pt, a, b) && b != 0) {
+  if (withinCircle(pt, a, b) && labels[index(a,b)] != 0) {
     const c = circleCenter(a, b)
     dragState = { a: a, b: b, xDel: c.x - pt.x, yDel: c.y - pt.y }
     movingCircleLabel = labels[index(a,b)];
+    readyToDrag = true;
     labels[index(a,b)] = 0;
     refreshCanvas();
     saveCanvas();
     labels[index(a,b)] = movingCircleLabel;
+    refreshCanvas();
   } else {
     movingCircleLabel = 0;
+    readyToDrag = false;
   }
 }
 
@@ -539,19 +512,20 @@ function handleMouseDown(event) {
   coords = getCanvasCoords(event);
   var [a,b] = indicesFromCoord(coords.x, coords.y);
   downState = {a: a, b: b}; dragging = false;
+  readyToDrag = false; // Turn this on in setDragStartState if we click on something draggable.
   // var label = labels[index(a,b)]
   // if (event.shiftKey && label != 0) { colorValue(label) }
-  if (event.which == 1)      { handleLeftClick(event) }
-  else if (event.which == 3) { handleRightClick(event) }
-  refreshCanvas();
+  if (event.which == 1)      { setDragStartState(coords) }
+  else if (event.which == 3) { handleRightClick() }
 }
 
 function handleMouseMove(event){
   coords = getCanvasCoords(event);
-  if (downState && event.which == 1 && movingCircleLabel > 0){
+  if (downState && readyToDrag){
     dragging = true;
     restoreCanvas();
-    drawGameCircleAtXY(movingCircleLabel, coords.x + dragState.xDel, coords.y + dragState.yDel, gameCircleFill)
+    const pt = {x: coords.x + dragState.xDel, y: coords.y + dragState.yDel}
+    drawGameCircleAtXY(movingCircleLabel, pt, gameCircleFill)
   }
 }
 
@@ -563,7 +537,7 @@ function decrementLabelState(a,b){
 function handleDragging() {
   const pt = {x: coords.x+dragState.xDel, y: coords.y+dragState.yDel}
   var [a,b] = indicesFromCoord(pt.x, pt.y);
-  if (withinCircle(pt, a, b) && b > 0 ){
+  if (withinCircle(pt, a, b)){
     labels[index(dragState.a, dragState.b)] = 0;
     labels[index(a,b)] = movingCircleLabel;
     movingCircleLabel = 0;
@@ -592,27 +566,17 @@ function handleMouseUp(event){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Handle #instr click event
   document.getElementById("instr").addEventListener("click", function() {
     var instructionsParagraph = document.getElementById("instructions_paragraph");
     instructionsParagraph.style.display = (instructionsParagraph.style.display === "none") ? "block" : "none";
   });
 
-  // Handle #connect click event
   document.getElementById("connect").addEventListener("click", function() {
     var alecNotes = document.getElementById("alec_notes");
     alecNotes.style.display = (alecNotes.style.display === "none" || alecNotes.style.display === "") ? "block" : "none";
     alecNotes.style.width = (canvas.width - 30) + "px";
     alecNotes.innerHTML = alecString;
   });
-
-  // Handle #best_sol click event
-  // document.getElementById("best_sol").addEventListener("click", function() {
-  //   var listItems = document.querySelectorAll("li");
-  //   listItems.forEach(function(li) {
-  //     li.style.display = (li.style.display === "none" || li.style.display === "") ? "block" : "none";
-  //   });
-  // });
 });
 
 async function saveGame() {
@@ -641,46 +605,11 @@ function withinCircle(p1, a, b) {
   return distance < r
 }
 
-const isButton = {
-  decrement:      pt => withinCircle(pt, gridWidth-3, 0) && maxVertex > 1,
-  increment:      pt => withinCircle(pt, gridWidth-1, 0) && maxVertex < 99,
-  saveGame:       pt => withinCircle(pt, 2, 0),
-  newGame:        pt => withinCircle(pt, 3, 0),
-  moveLeft:       pt => withinCircle(pt, 4, 0) && gridWidth > 7,
-  moveRight:      pt => withinCircle(pt, 5, 0) && gridWidth > 8,
-  moveUp:         pt => withinCircle(pt, 6, 0) && gridWidth > 9,
-  moveDown:       pt => withinCircle(pt, 7, 0) && gridWidth > 10,
-  widenCanvas:    pt => withinCircle(pt, 8, 0) && gridWidth > 11,
-  heightenCanvas: pt => withinCircle(pt, 9, 0) && gridWidth > 12,
-  narrowCanvas:   pt => withinCircle(pt, 10, 0) && gridWidth > 13,
-  shortenCanvas:  pt => withinCircle(pt, 11, 0) && gridWidth > 14
-}
-
-async function newGame() {
-  window.location.assign("/apps/square_game/");
-}
-
-function handleRightClick(event) {
+function handleRightClick() {
   var [a,b] = indicesFromCoord(coords.x, coords.y);
   if (withinCircle(coords, a, b)) {
     labels[index(a,b)] = (labels[index(a,b)] + 1) % (maxVertex + 1);
   }
-}
-
-function handleLeftClick(event) {
-  if (isButton.decrement(coords))           { maxVertex--;              }
-  else if (isButton.increment(coords))      { maxVertex++;              }
-  else if (isButton.saveGame(coords))       { saveGame();                }
-  else if (isButton.newGame(coords))        { newGame()                  }
-  else if (isButton.moveLeft(coords))       { moveEverything("left");   }
-  else if (isButton.moveRight(coords))      { moveEverything("right");  }
-  else if (isButton.moveUp(coords))         { moveEverything("up");     }
-  else if (isButton.moveDown(coords))       { moveEverything("down");   }
-  else if (isButton.widenCanvas(coords))    { resizeCanvas("widen");    }
-  else if (isButton.heightenCanvas(coords)) { resizeCanvas("heighten"); }
-  else if (isButton.narrowCanvas(coords))   { resizeCanvas("narrow");   }
-  else if (isButton.shortenCanvas(coords))  { resizeCanvas("shorten");  }
-  setDragStartState(coords)
 }
 
 var handleFocus = function(e){
@@ -722,3 +651,4 @@ window.addEventListener('keydown', handleKeyDown);
 canvas.addEventListener('mousemove', handleMouseMove, false);
 canvas.addEventListener('mousedown', handleMouseDown, false);
 canvas.addEventListener('mouseup', handleMouseUp, false);
+window.addEventListener('resize', () => refreshCanvas());
