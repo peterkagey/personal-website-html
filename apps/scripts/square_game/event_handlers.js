@@ -1,17 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("instr").addEventListener("click", function() {
-    var instructionsParagraph = document.getElementById("instructions_paragraph");
-    instructionsParagraph.style.display = (instructionsParagraph.style.display === "none") ? "block" : "none";
-  });
-
-  document.getElementById("connect").addEventListener("click", function() {
-    var alecNotes = document.getElementById("alec_notes");
-    alecNotes.style.display = (alecNotes.style.display === "none" || alecNotes.style.display === "") ? "block" : "none";
-    alecNotes.style.width = (canvas.width - 30) + "px";
-    alecNotes.innerHTML = alecString;
-  });
-});
-
 async function saveGame() {
   const grid = Array.from({ length: gridHeight - 1 }, (_, b) =>
     Array.from({ length: gridWidth }, (_, a) => labels[index(a, b + 1)])

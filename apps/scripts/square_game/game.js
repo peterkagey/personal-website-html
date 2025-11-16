@@ -13,7 +13,7 @@ var badConnectionColor = '#d43'
 var goodConnectionColor = '#ccc'
 var labels = [];
 var gameMatrix;
-var maxVertex = 3;
+var maxVertex = 4;
 var level; var score;
 var alecString
 var fontSize = 20; var borderWidth = 2;
@@ -25,9 +25,7 @@ function setCircleRadius(){
 }
 
 function initializeEmptyBoard() {
-  setBoardSize(0,0);
-  initializeEmptyLabels();
-  refreshCanvas();
+  initializeBoard("1,2,0,0,3,1", 3)
 }
 
 function initializeBoard(solutionString, solutionWidth){
@@ -239,7 +237,7 @@ function setAlecString(){
     }
     alecString = alecString + "\n";
   }
-  var alecNotes = document.getElementById("alec_notes");
+  var alecNotes = document.getElementById("adjacency-matrix");
   alecNotes.innerHTML = alecString
 }
 
@@ -396,7 +394,6 @@ function resetGameMatrix(){
 function drawMenuBar(){
   document.getElementById("display-solved").textContent = largestFullSubmatrix(gameMatrix);
   document.getElementById("display-vertices").textContent = numberOfVertices();
-  document.getElementById("display-level").textContent = maxVertex;
 }
 
 // Disable the menu when user right-clicks.
@@ -464,8 +461,6 @@ const buttons = {
   "button-taller":    () => resizeCanvas("heighten"),
   "button-shorter":   () => resizeCanvas("shorten"),
   "button-narrower":  () => resizeCanvas("narrow"),
-  "button-decrement": () => { maxVertex--; refreshCanvas(); },
-  "button-increment": () => { maxVertex++; refreshCanvas(); },
   "button-save":      () => saveGame(),
   "button-new":       () => window.location.assign("/apps/square_game/"),
 }

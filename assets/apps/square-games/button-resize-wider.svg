@@ -1,4 +1,7 @@
 <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <path d="M 163.53125,400 V 325 H 225 V 175 H 163.53125 V 100 L 50,250.00001 Z
-M 336.46875,400 V 325 H 275 V 175 h 61.46875 V 100 L 450,250.00001 Z" fill="#F0F"/>
+  <rect fill="#222" width="450" height="450" x="25" y="25" rx="50" />
+  <g transform="rotate(90,250,250)">
+    <path d="M 100,328.25 H 200 V 258 h 100 v 70.25 H 400 L 249.99999,458 Z" fill="#ccc" stroke="#ccc" stroke-width="10" stroke-linejoin="round"/>
+   <path d="M 100,171.75 H 200 V 242 H 300 V 171.75 H 400 L 249.99999,42 Z" fill="#ccc" stroke="#ccc" stroke-width="10" stroke-linejoin="round"/>
+  </g>
 </svg>

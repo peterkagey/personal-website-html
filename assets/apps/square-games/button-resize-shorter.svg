@@ -1,3 +1,7 @@
 <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <path d="M 400,388.53125 H 325 V 450 H 175 V 388.53125 H 100 L 250,275 Z M 400,111.46875 H 325 V 50 H 175 v 61.46875 H 100 L 250,225 Z" fill="#F0F"/>
+  <rect fill="#222" width="450" height="450" x="25" y="25" rx="50" />
+  <g transform="rotate(0,250,250)">
+    <path d="M 100,112.25 H 200 V 42 h 100 v 70.25 H 400 L 249.99999,242 Z" fill="#ccc" stroke="#ccc" stroke-width="10" stroke-linejoin="round"/>
+   <path d="M 100,387.75 H 200 V 458 H 300 V 387.75 H 400 L 249.99999,258 Z" fill="#ccc" stroke="#ccc" stroke-width="10" stroke-linejoin="round"/>
+  </g>
 </svg>
