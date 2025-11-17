@@ -513,16 +513,21 @@ function handleMouseDown(event) {
   // Just in case the user clicks on the game before moving the mouse.
   coords = getCanvasCoords(event);
   var [a,b] = indicesFromCoord(coords.x, coords.y);
-  downState = {a: a, b: b}; dragging = false;
+  downState = { a: a, b: b };
+  dragging = false;
   readyToDrag = false; // Turn this on in setDragStartState if we click on something draggable.
   // var label = labels[index(a,b)]
   // if (event.shiftKey && label != 0) { colorValue(label) }
-  if (event.which == 1)      { setDragStartState(coords) }
-  else if (event.which == 3) { handleRightClick() }
+  if (event.which == 1 || event.type == "touchstart") {
+    setDragStartState(coords)
+  } else if (event.which == 3) {
+    handleRightClick()
+  }
 }
 
 function handleMouseMove(event){
   coords = getCanvasCoords(event);
+  if (event.touches) { event.preventDefault(); }
   if (downState && readyToDrag){
     dragging = true;
     restoreCanvas();
@@ -617,9 +622,16 @@ function getCanvasCoords(event) {
   const scaleX = canvas.width / rect.width;
   const scaleY = canvas.height / rect.height;
 
-  return {
-    x: (event.clientX - rect.left) * scaleX,
-    y: (event.clientY - rect.top) * scaleY
+  if (event.touches) {
+    return {
+      x: (event.touches[0].clientX - rect.left) * scaleX,
+      y: (event.touches[0].clientY - rect.top) * scaleY
+    };
+  } else {
+    return {
+      x: (event.clientX - rect.left) * scaleX,
+      y: (event.clientY - rect.top) * scaleY
+    }
   };
 }
 
@@ -637,7 +649,11 @@ function handleKeyDown(event){
 }
 
 window.addEventListener('keydown', handleKeyDown);
-canvas.addEventListener('mousemove', handleMouseMove, false);
-canvas.addEventListener('mousedown', handleMouseDown, false);
-canvas.addEventListener('mouseup', handleMouseUp, false);
-window.addEventListener('resize', () => refreshCanvas());
+canvas.addEventListener('mousemove', handleMouseMove);
+canvas.addEventListener('mousedown', handleMouseDown);
+canvas.addEventListener('mouseup', handleMouseUp);
+
+canvas.addEventListener('touchstart', handleMouseDown);
+canvas.addEventListener('touchmove', handleMouseMove);
+canvas.addEventListener('touchend', handleMouseUp);
+window.addEventListener('resize', refreshCanvas);

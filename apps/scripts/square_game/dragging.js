@@ -36,16 +36,21 @@ function handleMouseDown(event) {
   // Just in case the user clicks on the game before moving the mouse.
   coords = getCanvasCoords(event);
   var [a,b] = indicesFromCoord(coords.x, coords.y);
-  downState = {a: a, b: b}; dragging = false;
+  downState = { a: a, b: b };
+  dragging = false;
   readyToDrag = false; // Turn this on in setDragStartState if we click on something draggable.
   // var label = labels[index(a,b)]
   // if (event.shiftKey && label != 0) { colorValue(label) }
-  if (event.which == 1)      { setDragStartState(coords) }
-  else if (event.which == 3) { handleRightClick() }
+  if (event.which == 1 || event.type == "touchstart") {
+    setDragStartState(coords)
+  } else if (event.which == 3) {
+    handleRightClick()
+  }
 }
 
 function handleMouseMove(event){
   coords = getCanvasCoords(event);
+  if (event.touches) { event.preventDefault(); }
   if (downState && readyToDrag){
     dragging = true;
     restoreCanvas();
