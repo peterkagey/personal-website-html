@@ -4,24 +4,21 @@ if ("production" == "development") {
 } else {
   API_BASE_URL = "https://api.peterkagey.com"
 }
-var canvas = document.getElementById("square_game_canvas");
+const canvas = document.getElementById("square_game_canvas");
 canvas.tabIndex = 0;
-var context = canvas.getContext("2d");
-var defaultWidth; var defaultHeight;
-var rubyA;
+const context = canvas.getContext("2d");
 var gridWidth; var gridHeight;
-var aShift; var bShift; var r;
-var circleBorderColor = '#333'
-var backgroundColor = '#222'
-var menuCircleFill = '#2c4d75'
-var textColor = 'white'
-var badConnectionColor = '#d43'
-var goodConnectionColor = '#ccc'
+var r;
+const colors = {
+  circleBorder: '#333',
+  background: '#222',
+  text: 'white',
+  badConnection: '#d43',
+  goodConnection: '#ccc',
+}
 var labels = [];
 var gameMatrix;
 var maxVertex = 4;
-var level; var score;
-var alecString
 var fontSize = 20; var borderWidth = 2;
 
 function setCircleRadius(){
@@ -51,8 +48,8 @@ function initializeBoard(solutionString, solutionWidth){
 // 3) If this is a new game, the size of the board should match the size of the window appropriately.
 function setBoardSize(solutionWidth, solutionHeight) {
   const upperGridWidth = Math.floor(canvas.getBoundingClientRect().width/75)
-  defaultWidth = Math.max(6, upperGridWidth);
-  defaultHeight = 6;
+  const defaultWidth = Math.max(6, upperGridWidth);
+  const defaultHeight = 6;
   //assume that a is too big, and b is never too big
   gridWidth = Math.max(defaultWidth, solutionWidth + 2);
   gridHeight = Math.max(defaultHeight, solutionHeight + 2);
@@ -75,24 +72,7 @@ function setLabels(solutionGrid, solutionHeight, solutionWidth){
   }
 }
 
-// solutionString is saved in the database as a string like "0,0,1,2,0,..."
-// together with a width that specifies when to break the line.
-function parseSolution(solutionString, solutionWidth){
-  if (solutionWidth + aShift > gridWidth){
-    aShift = gridWidth - solutionWidth
-  };
-  var solutionList = solutionString.split(",");
-  var bRow = bShift;
-  for (var i = 0; i < solutionList.length; i++){
-    var aPos = (i % solutionWidth) + aShift;
-    if (aPos == aShift){
-      bRow++;
-    }
-    labels[index(aPos, bRow)] = parseInt(solutionList[i]);
-  }
-}
-
-function parsedSolution(solutionString, width){
+function parsedSolution(solutionString, width) {
   var solutionList = solutionString.split(",").map(Number);
   return Array.from(
     { length: solutionList.length/width },
@@ -127,7 +107,7 @@ function drawCircleBasedOnState(a, b){
   const c = circleCenter(a, b)
   const state = label(a,b);
   if (state == 0) {
-    drawCircle(c.x, c.y, backgroundColor, circleBorderColor);
+    drawCircle(c.x, c.y, colors.background, colors.circleBorder);
   } else {
     drawGameCircleAtXY(state, c, `${colorForIndex(state)}`);
   }
@@ -150,7 +130,7 @@ function drawGameCircleAtXY(textString, pt, color) {
 
 function printStringAtXY(textString, x, y, flipstring){
   context.font = fontSize + "px Helvetica";
-  context.fillStyle = textColor;
+  context.fillStyle = colors.text;
   context.textAlign = 'center';
   if (flipstring == "flip"){
     context.rotate(Math.PI/2);
@@ -189,8 +169,8 @@ function drawLine(a1, b1, a2, b2){
   context.lineWidth = borderWidth * 4;
 
   context.strokeStyle = redundantConnection(a1, b1, a2, b2)
-    ? badConnectionColor
-    : goodConnectionColor;
+    ? colors.badConnection
+    : colors.goodConnection;
   context.stroke();
 }
 
@@ -213,38 +193,6 @@ function incrementAdjacencyMatrix(i, j, matrix){
     matrix[i-1][j-1]++;
     matrix[j-1][i-1]++;
   }
-}
-
-function largestFullSubmatrix(matrix){
-  for (var n = 0; n < matrix.length+1; n++){
-    for (var i = 0; i < n; i++){
-      for (var j = 0; j < n; j++){
-        if( matrix[i][j] == 0) { return n-1 }
-      }
-    }
-  }
-  return matrix.length
-}
-
-function padString(string, length){return ("     " + string).slice(-length);}
-
-function setAlecString(){
-  alecString = "";
-  var matrix = gameMatrix;
-  var len = matrix.length.toString().length
-  for (var i = 0; i < matrix.length; i++){
-    alecString = alecString + padString((i+1),len) + ":";
-    for (var j = 0; j <= matrix.length; j++){
-      if (matrix[i][j] == 0) {
-        alecString = alecString + " " + padString((j+1),len)
-      } else {
-        alecString = alecString + " " + padString("", len)
-      }
-    }
-    alecString = alecString + "\n";
-  }
-  var alecNotes = document.getElementById("adjacency-matrix");
-  alecNotes.innerHTML = alecString
 }
 
 function compareRightAndDownAndUpdate(a,b){
@@ -286,103 +234,55 @@ function drawEdges(){
   }
 }
 
+function expandGrid() {
+  var rowCount = labels.length/gridWidth;
+  for(var i = 0; i < rowCount; i++){
+    if(labels[i * gridWidth] != 0) {
+      moveRight();
+      break
+    }
+  }
+
+  rowCount = labels.length/gridWidth;
+  for(var i = 0; i < rowCount; i++){
+    if(labels[i * gridWidth + gridWidth - 1] != 0) {
+      widenCanvas();
+      break
+    }
+  }
+
+  for(var i = 1; i <= gridWidth; i++) {
+    if(labels[i] != 0) {
+      moveDown();
+      break
+    }
+  }
+
+  for(var i = 1; i <= gridWidth; i++) {
+    if(labels[labels.length - i] != 0) {
+      heightenCanvas();
+      break
+    }
+  }
+}
+
 function refreshCanvas(){
-  canvas.width = canvas.width;
   context.rect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = backgroundColor;
+  context.fillStyle = colors.background;
   context.fill();
   const scale = canvas.width / canvas.getBoundingClientRect().width;
   canvas.style.borderRadius = `${r/scale/0.8}px`;
   maxVertex = Math.max(3, maxLabel() + 1)
+  expandGrid();
   resetGameMatrix();
   updateAdjacencyMatrix();
   drawEdges();
   colorAndLabelAllCircles();
   drawMenuBar();
-  setAlecString();
 }
 
 function setCanvasSize(){
   return [gridWidth * 300, gridHeight * 300];
-}
-
-function resizeCanvas(dimension){
-  if (dimension == "widen"){
-    gridWidth++;
-    [canvas.width, canvas.height] = setCanvasSize()
-    setCircleRadius();
-    for(var i = 0; i < gridHeight; i++){
-      labels.splice(i*gridWidth+gridWidth - 1, 0, 0);
-    }
-  }
-
-  if (dimension == "heighten"){
-    gridHeight++;
-    [canvas.width, canvas.height] = setCanvasSize()
-    for (var i = gridWidth*(gridHeight-1); i < gridWidth*(gridHeight); i++){
-      labels[i] = 0;
-    }
-  }
-
-  if (dimension == "narrow"){
-    const rowCount = labels.length/gridWidth;
-    console.log(rowCount);
-    for(var i = 0; i < rowCount; i++){
-      if(labels[i * gridWidth + gridWidth - 1] != 0){
-        return false;
-      }
-    }
-    gridWidth--;
-    [canvas.width, canvas.height] = setCanvasSize()
-    setCircleRadius();
-    for(var i = 1; i <= gridHeight; i++){
-      labels.splice(i * gridWidth, 1)
-    }
-  }
-
-  if (dimension == "shorten"){
-    for(var i = 1; i <= gridWidth; i++){
-      if(labels[labels.length - i] != 0){
-        return false;
-      }
-    }
-    gridHeight--;
-    [canvas.width, canvas.height] = setCanvasSize();
-    labels.splice(labels.length-gridWidth, gridWidth);
-  }
-  refreshCanvas();
-}
-
-function moveEverything(direction) {
-  if (direction == "left"){
-    for(var i = 0; i < labels.length/gridWidth; i++){
-      if(labels[i * gridWidth] != 0){ return false; }
-    }
-    labels.splice(labels.length, 0, 0);
-    labels.shift();
-
-  } else if(direction == "right"){
-    for(var i = 0; i < labels.length/gridWidth; i++){
-      if(labels[i * gridWidth + gridWidth - 1] != 0){ return false; }
-    }
-    labels.splice(0, 0, 0);
-    labels.pop();
-
-  } else if (direction == "up"){
-    for(var i = 0; i < gridWidth; i++){
-      if(labels[i] != 0){ return false; }
-    }
-    var topRow = labels.splice(0, gridWidth);
-    labels = labels.concat(topRow);
-
-  } else if (direction == "down"){
-    for(var i = 0; i < gridWidth; i++){
-      if(labels[labels.length - 1 - i] != 0){ return false; }
-    }
-    var bottomRow = labels.splice(labels.length-gridWidth, gridWidth);
-    labels = bottomRow.concat(labels);
-  }
-  refreshCanvas();
 }
 
 function resetGameMatrix(){
@@ -396,11 +296,6 @@ function resetGameMatrix(){
     }
   }
   gameMatrix = matrix;}
-
-function drawMenuBar(){
-  document.getElementById("display-solved").textContent = largestFullSubmatrix(gameMatrix);
-  document.getElementById("display-vertices").textContent = numberOfVertices();
-}
 
 // Disable the menu when user right-clicks.
 canvas.oncontextmenu = function(event) {
@@ -420,53 +315,168 @@ if (id === null) {
     .catch(_ => initializeEmptyBoard())
 }
 
-function bound(n) {
-  const boundSequence = [NaN,0,2,4,6,8,11,15,19,23,28,34,40,46,53,61,69,77,86,96,106,116,127,139,151,163,176,190,204,218,233,249,265,281,298,316,334,352,371,391,411,431,452,474,496,518,541,565,589,613,638,664,690,716,743,771,799,827,856,886,916,946,977];
-  return Math.max(boundSequence[n], n * Math.ceil((n-1)/4));
+function largestFullSubmatrix(matrix){
+  for (var n = 0; n < matrix.length+1; n++){
+    for (var i = 0; i < n; i++){
+      for (var j = 0; j < n; j++){
+        if( matrix[i][j] == 0) { return n-1 }
+      }
+    }
+  }
+  return matrix.length
 }
 
-fetch(`${API_BASE_URL}/square_game/records`)
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById("records");
-    var grid = document.createElement("div");
-    grid.className = "grid wide-five narrow-three";
+function drawMenuBar(){
+  document.getElementById("display-solved").textContent = largestFullSubmatrix(gameMatrix);
+  document.getElementById("display-vertices").textContent = numberOfVertices();
+  setAlecString();
+}
 
-    data.forEach(record => {
-      const li = document.createElement("div");
-      if (
-        (record.level == 3 && record.vertices == 4) ||
-        (record.level == 4 && record.vertices == 6) ||
-        (record.level == 5 && record.vertices == 9) ||
-        (record.level == 6 && record.vertices == 12) ||
-        (record.level == 7 && record.vertices == 15) ||
-        (record.level == 8 && record.vertices == 19) ||
-        (record.level == 9 && record.vertices == 24) ||
-        (record.level == 10 && record.vertices == 30) ||
-        (record.level == 11 && record.vertices == 34) ||
-        (record.level == 14 && record.vertices == 56)
-      ) {
-        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">f(${record.level}) = ${record.vertices}</a>`;
-        grid.appendChild(li);
-      } else if (record.level > 2) {
-        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">${bound(record.level)} ≤ f(${record.level}) ≤ ${record.vertices}</a>`;
-        grid.appendChild(li);
+function padString(string, length){return ("     " + string).slice(-length);}
+
+function setAlecString(){
+  let alecString = "";
+  var matrix = gameMatrix;
+  var len = matrix.length.toString().length
+  for (var i = 0; i < matrix.length; i++){
+    alecString = alecString + padString((i+1),len) + ":";
+    for (var j = 0; j <= matrix.length; j++){
+      if (matrix[i][j] == 0) {
+        alecString = alecString + " " + padString((j+1),len)
+      } else {
+        alecString = alecString + " " + padString("", len)
       }
+    }
+    alecString = alecString + "\n";
+  }
+  var alecNotes = document.getElementById("adjacency-matrix");
+  alecNotes.innerHTML = alecString
+}
+
+function moveLeft() {
+  for(var i = 0; i < labels.length/gridWidth; i++){
+    if(labels[i * gridWidth] != 0) { return false; }
+  }
+  labels.splice(labels.length, 0, 0);
+  labels.shift();
+  refreshCanvas();
+}
+
+function moveRight() {
+  for(var i = 0; i < labels.length/gridWidth; i++){
+    if(labels[i * gridWidth + gridWidth - 1] != 0) { return false; }
+  }
+  labels.splice(0, 0, 0);
+  labels.pop();
+  refreshCanvas();
+}
+
+function moveUp() {
+  for(var i = 0; i < gridWidth; i++){
+    if(labels[i] != 0) { return false; }
+  }
+  var topRow = labels.splice(0, gridWidth);
+  labels = labels.concat(topRow);
+  refreshCanvas();
+}
+
+function moveDown() {
+  for(var i = 0; i < gridWidth; i++){
+    if(labels[labels.length - 1 - i] != 0) { return false; }
+  }
+  var bottomRow = labels.splice(labels.length-gridWidth, gridWidth);
+  labels = bottomRow.concat(labels);
+  refreshCanvas();
+}
+
+function widenCanvas() {
+  gridWidth++;
+  [canvas.width, canvas.height] = setCanvasSize()
+  setCircleRadius();
+  for(var i = 0; i < gridHeight; i++){
+    labels.splice(i*gridWidth+gridWidth - 1, 0, 0);
+  }
+  refreshCanvas();
+}
+
+function heightenCanvas() {
+  gridHeight++;
+  [canvas.width, canvas.height] = setCanvasSize()
+  for (var i = gridWidth*(gridHeight-1); i < gridWidth*(gridHeight); i++){
+    labels[i] = 0;
+  }
+  refreshCanvas();
+}
+
+function narrowCanvas() {
+  const rowCount = labels.length/gridWidth;
+  for(var i = 0; i < rowCount; i++){
+    if(labels[i * gridWidth + gridWidth - 1] != 0){
+      return false;
+    }
+  }
+  gridWidth--;
+  [canvas.width, canvas.height] = setCanvasSize()
+  setCircleRadius();
+  for(var i = 1; i <= gridHeight; i++){
+    labels.splice(i * gridWidth, 1)
+  }
+  refreshCanvas();
+}
+
+function shortenCanvas() {
+  for(var i = 1; i <= gridWidth; i++) {
+    if(labels[labels.length - i] != 0) { return false; }
+  }
+  gridHeight--;
+  [canvas.width, canvas.height] = setCanvasSize();
+  labels.splice(labels.length-gridWidth, gridWidth);
+  refreshCanvas();
+}
+
+const resizeCanvas = {
+  "widen": widenCanvas,
+  "heighten": heightenCanvas,
+  "narrow": narrowCanvas,
+  "shorten": shortenCanvas
+}
+
+const moveEverything = {
+  "left": moveLeft,
+  "right": moveRight,
+  "up": moveUp,
+  "down": moveDown
+}
+
+async function saveGame() {
+  const grid = Array.from({ length: gridHeight }, (_, b) =>
+    Array.from({ length: gridWidth }, (_, a) => labels[index(a, b)])
+  );
+  try {
+    const response = await fetch(`${API_BASE_URL}/square_game/save`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(grid),
     });
 
-    container.appendChild(grid);
-  })
-  .catch(err => console.error("Error loading records:", err));
+    if (response.status == 200) {
+      const body = await response.json();
+      window.location.href = `/apps/square_game/?id=${body.id}`;
+    }
+  } catch (error) {
+    console.error('Error saving game:', error);
+  }
+}
 
 const buttons = {
-  "button-left":      () => moveEverything("left"),
-  "button-right":     () => moveEverything("right"),
-  "button-up":        () => moveEverything("up"),
-  "button-down":      () => moveEverything("down"),
-  "button-wider":     () => resizeCanvas("widen"),
-  "button-taller":    () => resizeCanvas("heighten"),
-  "button-shorter":   () => resizeCanvas("shorten"),
-  "button-narrower":  () => resizeCanvas("narrow"),
+  "button-left":      moveEverything.left,
+  "button-right":     moveEverything.right,
+  "button-up":        moveEverything.up,
+  "button-down":      moveEverything.down,
+  "button-wider":     resizeCanvas.widen,
+  "button-taller":    resizeCanvas.heighten,
+  "button-shorter":   resizeCanvas.shorten,
+  "button-narrower":  resizeCanvas.narrow,
   "button-save":      () => saveGame(),
   "button-new":       () => window.location.assign("/apps/square_game/"),
 }
@@ -573,26 +583,6 @@ function handleMouseUp(event){
   dragging = false;
 }
 
-async function saveGame() {
-  const grid = Array.from({ length: gridHeight - 1 }, (_, b) =>
-    Array.from({ length: gridWidth }, (_, a) => labels[index(a, b + 1)])
-  );
-  try {
-    const response = await fetch(`${API_BASE_URL}/square_game/save`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(grid),
-    });
-
-    if (response.status == 200) {
-      const body = await response.json();
-      window.location.href = `/apps/square_game/?id=${body.id}`;
-    }
-  } catch (error) {
-    console.error('Error saving game:', error);
-  }
-}
-
 function withinCircle(p1, a, b) {
   const p2 = circleCenter(a, b)
   const distance = Math.sqrt(Math.pow((p1.x-p2.x),2)+Math.pow((p1.y-p2.y),2))
@@ -657,3 +647,41 @@ canvas.addEventListener('touchstart', handleMouseDown);
 canvas.addEventListener('touchmove', handleMouseMove);
 canvas.addEventListener('touchend', handleMouseUp);
 window.addEventListener('resize', refreshCanvas);
+
+function bound(n) {
+  const boundSequence = [NaN,0,2,4,6,8,11,15,19,23,28,34,40,46,53,61,69,77,86,96,106,116,127,139,151,163,176,190,204,218,233,249,265,281,298,316,334,352,371,391,411,431,452,474,496,518,541,565,589,613,638,664,690,716,743,771,799,827,856,886,916,946,977];
+  return Math.max(boundSequence[n], n * Math.ceil((n-1)/4));
+}
+
+fetch(`${API_BASE_URL}/square_game/records`)
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("records");
+    var grid = document.createElement("div");
+    grid.className = "grid wide-five narrow-three";
+
+    data.forEach(record => {
+      const li = document.createElement("div");
+      if (
+        (record.level == 3 && record.vertices == 4) ||
+        (record.level == 4 && record.vertices == 6) ||
+        (record.level == 5 && record.vertices == 9) ||
+        (record.level == 6 && record.vertices == 12) ||
+        (record.level == 7 && record.vertices == 15) ||
+        (record.level == 8 && record.vertices == 19) ||
+        (record.level == 9 && record.vertices == 24) ||
+        (record.level == 10 && record.vertices == 30) ||
+        (record.level == 11 && record.vertices == 34) ||
+        (record.level == 14 && record.vertices == 56)
+      ) {
+        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">f(${record.level}) = ${record.vertices}</a>`;
+        grid.appendChild(li);
+      } else if (record.level > 2) {
+        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">${bound(record.level)} ≤ f(${record.level}) ≤ ${record.vertices}</a>`;
+        grid.appendChild(li);
+      }
+    });
+
+    container.appendChild(grid);
+  })
+  .catch(err => console.error("Error loading records:", err));

@@ -1,23 +1,3 @@
-async function saveGame() {
-  const grid = Array.from({ length: gridHeight - 1 }, (_, b) =>
-    Array.from({ length: gridWidth }, (_, a) => labels[index(a, b + 1)])
-  );
-  try {
-    const response = await fetch(`${API_BASE_URL}/square_game/save`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(grid),
-    });
-
-    if (response.status == 200) {
-      const body = await response.json();
-      window.location.href = `/apps/square_game/?id=${body.id}`;
-    }
-  } catch (error) {
-    console.error('Error saving game:', error);
-  }
-}
-
 function withinCircle(p1, a, b) {
   const p2 = circleCenter(a, b)
   const distance = Math.sqrt(Math.pow((p1.x-p2.x),2)+Math.pow((p1.y-p2.y),2))
