@@ -1,7 +1,7 @@
-var highScoresDiv = document.getElementById("high-scores");
+const highScoresDiv = document.getElementById("high-scores");
 highScoresDiv.className = "high-scores"
-var header = document.createElement("h1");
-var level = (new URLSearchParams(window.location.search)).get("level");
+const header = document.createElement("h1");
+const level = parseInt(new URLSearchParams(window.location.search).get("level"));
 
 if (level) { handleLevel() } else { handleBlankPage() }
 
