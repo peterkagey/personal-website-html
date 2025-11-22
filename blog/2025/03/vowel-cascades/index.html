@@ -14,8 +14,6 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
-	<script src="/assets/mathjax-config.js" defer=""></script>
-  <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   <meta property="og:title" content="Vowel cascades">
@@ -88,7 +86,7 @@
       <script async="" src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 <p>I saw a post on Bluesky that proposed a problem that I had been thinking about for a long time!</p>
 <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:62z5zvrhttrg3dtn5j3myks3/app.bsky.feed.post/3lj3ppemlus22" data-bluesky-cid="bafyreie7fmzq6ckjnkjw75m4xllyx3dwyuq75ybybmyfzyxysczlqh36ge" data-bluesky-embed-color-mode="system"><p lang="en">The string F@ND can have the @ replaced with four of the five vowels A, E, I, O, U to make a real word each time.
-I wonder: Is there a string where you can replace the @ with all five vowels? For any collection of vowels you think of, is there a string that works just for those vowels?</p>&mdash; David K Butler (<a href="https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3?ref_src=embed">@davidkbutler.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3/post/3lj3ppemlus22?ref_src=embed">February 26, 2025 at 7:42 AM</a></blockquote>
+I wonder: Is there a string where you can replace the @ with all five vowels? For any collection of vowels you think of, is there a string that works just for those vowels?</p>— David K Butler (<a href="https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3?ref_src=embed">@davidkbutler.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:62z5zvrhttrg3dtn5j3myks3/post/3lj3ppemlus22?ref_src=embed">February 26, 2025 at 7:42 AM</a></blockquote>
 <p>I figured that with the help of dictionary and a Python script, I could find the desired examples.</p>
 <div class="columns">
   <div style="align-content: flex-start;">
@@ -144,7 +142,7 @@ I wonder: Is there a string where you can replace the @ with all five vowels? Fo
   </div>
 </div>
 <h2 id="python-code">Python code</h2>
-<p>Here’s my quick Python script to help find these. The dictionary has some words that I’m not familiar with (e.g. &quot;cen,&quot; &quot;wir,&quot; etc.) so I had to manually audit the results.</p>
+<p>Here’s my quick Python script to help find these. The dictionary has some words that I’m not familiar with (e.g. "cen," "wir," etc.) so I had to manually audit the results.</p>
 <pre class="language-python"><code class="language-python"><span class="token keyword">from</span> wordfreq <span class="token keyword">import</span> top_n_list
 <span class="token keyword">import</span> re
 <span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
@@ -179,7 +177,7 @@ vowel_subsets <span class="token operator">=</span> <span class="token punctuati
 
   <footer>
     <hr>
-    <p>&copy; Peter Kagey, 2025</p>
+    <p>© Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

@@ -14,8 +14,6 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
-	<script src="/assets/mathjax-config.js" defer=""></script>
-  <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   
@@ -84,12 +82,12 @@
   <img src="/assets/problems/ratings/piste_2.svg" width="50px">
 </div>
 
-<p>Consider a frog hopping on a circular collection of \(n\) lily pads. The frog hops to any lily pad, and then hops with increasing steps. At the \(k\)-th step, the frog looks \(k\) steps in the clockwise direction and \(k\) steps in the counterclockwise direction and hops to whichever lily pad she has visited less. If there is a tie, she hops in the clockwise direction.</p>
+<p>Consider a frog hopping on a circular collection of <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> lily pads. The frog hops to any lily pad, and then hops with increasing steps. At the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container>-th step, the frog looks <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container> steps in the clockwise direction and <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container> steps in the counterclockwise direction and hops to whichever lily pad she has visited less. If there is a tie, she hops in the clockwise direction.</p>
 <figure>
   <div class="grid one">
     <img src="/assets/problems/106/figure-1.svg">
   </div>
-  <figcaption>For \(n=5\), all lily pads will have been reached after nine hops.</figcaption>
+  <figcaption>For <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><mn>5</mn></math></mjx-assistive-mml></mjx-container>, all lily pads will have been reached after nine hops.</figcaption>
 </figure>
 <h2 id="question">Question</h2>
 <p>
@@ -101,7 +99,7 @@
     What if ties are broken by hopping in the same direction instead of hopping clockwise?
   </li>
   <li>
-    What if instead of hopping with steps \(1, 2, 3, \dots\), a different sequence is used?
+    What if instead of hopping with steps <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mo>…</mo></math></mjx-assistive-mml></mjx-container>, a different sequence is used?
   </li>
   <li>
     How many positions are reached exactly once?
@@ -110,7 +108,7 @@
     If the hops are in a random direction, what's the expected time to reach every lily pad? What's the expected value of the most-reached lily pad?
   </li>
   <li>
-    If you get to choose clockwise or counterclockwise each hop, how many ways are there to reach every lily pad in exactly \(n\) hops?
+    If you get to choose clockwise or counterclockwise each hop, how many ways are there to reach every lily pad in exactly <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> hops?
   </li>
 </ol>
 <h3 id="references">References</h3>
@@ -141,7 +139,7 @@ Spot an error or have other feedback? Please <a href="https://github.com/peterka
 
   <footer>
     <hr>
-    <p>&copy; Peter Kagey, 2025</p>
+    <p>© Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

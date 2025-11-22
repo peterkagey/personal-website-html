@@ -14,8 +14,6 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
-	<script src="/assets/mathjax-config.js" defer=""></script>
-  <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   <meta property="og:title" content="RSS for the OEIS">
@@ -106,7 +104,7 @@
 <h2 id="under-the-hood">Under the hood</h2>
 <p>The RSS works by searching the OEIS using the <a href="https://oeis.org/search?q=author%3adon%2cknuth&amp;fmt=json"><code>fmt=json</code></a> query param, and then doing a conversion of the JSON into RSS-compatible XML.</p>
 <p>I have added the <code>sort=created</code> to return sequences in order of how recently they were added to the OEIS.</p>
-<p>I have also sanitized the searches to only allow letters, numbers, spaces, and <code>,</code>, <code>:</code>, <code>-</code>, <code>'</code>, <code>_</code>, and <code>&quot;</code>.</p>
+<p>I have also sanitized the searches to only allow letters, numbers, spaces, and <code>,</code>, <code>:</code>, <code>-</code>, <code>'</code>, <code>_</code>, and <code>"</code>.</p>
 <h2 id="getting-started">Getting started</h2>
 <p>Here's a list of the searches I'm currently following:</p>
 <div class="grid wide-three narrow-two">
@@ -128,7 +126,7 @@
   </div>
 </div>
 <h2 id="previous-rss-on-the-oeis">Previous RSS on the OEIS</h2>
-<p>Russ Cox, the president of the OEIS has a &quot;to do&quot; item to <a href="https://oeis.org/wiki/User:Russ_Cox/OEIS_Server_Features">&quot;add recent new sequences RSS feed&quot;</a>. If you want this, you can now add it with <a href="https://api.peterkagey.com/oeis_feed.xml?q=keyword%3Anew"><code>https://api.peterkagey.com/oeis_feed.xml?q=keyword%3Anew</code></a>—but with roughly 34 new sequences added each day, this feed will be chatty!</p>
+<p>Russ Cox, the president of the OEIS has a "to do" item to <a href="https://oeis.org/wiki/User:Russ_Cox/OEIS_Server_Features">"add recent new sequences RSS feed"</a>. If you want this, you can now add it with <a href="https://api.peterkagey.com/oeis_feed.xml?q=keyword%3Anew"><code>https://api.peterkagey.com/oeis_feed.xml?q=keyword%3Anew</code></a>—but with roughly 34 new sequences added each day, this feed will be chatty!</p>
 <p><a href="https://www.reddit.com/r/OEIS/comments/68nqwa/rss_feed_for_new_oeis_sequences/">Eight years ago</a>, I had made a similar RSS feed, but it broke a few years ago when I migrated my website. I've added redirects for those old feeds to the new API, so that if you were using it before, it should be working again.</p>
 <p>If you spot a bug or if there's a feature you want, let me know on Bluesky <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a>.</p>
 <p>If you read this far, it's likely you use RSS! If so, I encourage you to subscribe to my <a href="/feed.xml">blog's RSS feed</a> too!</p>
@@ -138,7 +136,7 @@
 
   <footer>
     <hr>
-    <p>&copy; Peter Kagey, 2025</p>
+    <p>© Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

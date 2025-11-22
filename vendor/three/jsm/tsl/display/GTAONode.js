@@ -1,6 +1,8 @@
 import { DataTexture, RenderTarget, RepeatWrapping, Vector2, Vector3, TempNode, QuadMesh, NodeMaterial, RendererUtils } from 'three/webgpu';
 import { reference, logarithmicDepthToViewZ, viewZToPerspectiveDepth, getNormalFromDepth, getScreenPosition, getViewPosition, nodeObject, Fn, float, NodeUpdateType, uv, uniform, Loop, vec2, vec3, vec4, int, dot, max, pow, abs, If, textureSize, sin, cos, PI, texture, passTexture, mat3, add, normalize, mul, cross, div, mix, sqrt, sub, acos, clamp } from 'three/tsl';
 
+/** @module GTAONode **/
+
 const _quadMesh = /*@__PURE__*/ new QuadMesh();
 const _size = /*@__PURE__*/ new Vector2();
 
@@ -29,7 +31,6 @@ let _rendererState;
  * Reference: {@link https://www.activision.com/cdn/research/Practical_Real_Time_Strategies_for_Accurate_Indirect_Occlusion_NEW%20VERSION_COLOR.pdf}.
  *
  * @augments TempNode
- * @three_import import { ao } from 'three/addons/tsl/display/GTAONode.js';
  */
 class GTAONode extends TempNode {
 
@@ -43,7 +44,7 @@ class GTAONode extends TempNode {
 	 * Constructs a new GTAO node.
 	 *
 	 * @param {Node<float>} depthNode - A node that represents the scene's depth.
-	 * @param {?Node<vec3>} normalNode - A node that represents the scene's normals.
+	 * @param {Node<vec3>?} normalNode - A node that represents the scene's normals.
 	 * @param {Camera} camera - The camera the scene is rendered with.
 	 */
 	constructor( depthNode, normalNode, camera ) {
@@ -62,7 +63,7 @@ class GTAONode extends TempNode {
 		 * constructor (because MRT is not available), normals can be automatically
 		 * reconstructed from depth values in the shader.
 		 *
-		 * @type {?Node<vec3>}
+		 * @type {Node<vec3>?}
 		 */
 		this.normalNode = normalNode;
 
@@ -70,7 +71,7 @@ class GTAONode extends TempNode {
 		 * The resolution scale. By default the effect is rendered in full resolution
 		 * for best quality but a value of `0.5` should be sufficient for most scenes.
 		 *
-		 * @type {number}
+		 * @type {Number}
 		 * @default 1
 		 */
 		this.resolutionScale = 1;
@@ -79,7 +80,7 @@ class GTAONode extends TempNode {
 		 * The `updateBeforeType` is set to `NodeUpdateType.FRAME` since the node renders
 		 * its effect once per frame in `updateBefore()`.
 		 *
-		 * @type {string}
+		 * @type {String}
 		 * @default 'frame'
 		 */
 		this.updateBeforeType = NodeUpdateType.FRAME;
@@ -223,8 +224,8 @@ class GTAONode extends TempNode {
 	/**
 	 * Sets the size of the effect.
 	 *
-	 * @param {number} width - The width of the effect.
-	 * @param {number} height - The height of the effect.
+	 * @param {Number} width - The width of the effect.
+	 * @param {Number} height - The height of the effect.
 	 */
 	setSize( width, height ) {
 
@@ -323,8 +324,6 @@ class GTAONode extends TempNode {
 
 			const ao = float( 0 ).toVar();
 
-			// Each iteration analyzes one vertical "slice" of the 3D space around the fragment.
-
 			Loop( { start: int( 0 ), end: DIRECTIONS, type: 'int', condition: '<' }, ( { i } ) => {
 
 				const angle = float( i ).div( float( DIRECTIONS ) ).mul( PI ).toVar();
@@ -339,13 +338,9 @@ class GTAONode extends TempNode {
 				const tangentToNormalInSlice = cross( normalInSlice, sliceBitangent ).toVar();
 				const cosHorizons = vec2( dot( viewDir, tangentToNormalInSlice ), dot( viewDir, tangentToNormalInSlice.negate() ) ).toVar();
 
-				// For each slice, the inner loop performs ray marching to find the horizons.
-
 				Loop( { end: STEPS, type: 'int', name: 'j', condition: '<' }, ( { j } ) => {
 
 					const sampleViewOffset = sampleDir.xyz.mul( radiusToUse ).mul( sampleDir.w ).mul( pow( div( float( j ).add( 1.0 ), float( STEPS ) ), this.distanceExponent ) );
-
-					// The loop marches in two opposite directions (x and y) along the slice's line to find the horizon on both sides.
 
 					// x
 
@@ -376,8 +371,6 @@ class GTAONode extends TempNode {
 					} );
 
 				} );
-
-				// After the horizons are found for a given slice, their contribution to the total occlusion is calculated.
 
 				const sinHorizons = sqrt( sub( 1.0, cosHorizons.mul( cosHorizons ) ) ).toVar();
 				const nx = dot( normalInSlice, sliceTangent );
@@ -424,7 +417,7 @@ export default GTAONode;
 /**
  * Generates the AO's noise texture for the given size.
  *
- * @param {number} [size=5] - The noise size.
+ * @param {Number} [size=5] - The noise size.
  * @return {DataTexture} The generated noise texture.
  */
 function generateMagicSquareNoise( size = 5 ) {
@@ -462,8 +455,8 @@ function generateMagicSquareNoise( size = 5 ) {
 /**
  * Computes an array of magic square values required to generate the noise texture.
  *
- * @param {number} size - The noise size.
- * @return {Array<number>} The magic square values.
+ * @param {Number} size - The noise size.
+ * @return {Array<Number>} The magic square values.
  */
 function generateMagicSquare( size ) {
 
@@ -520,10 +513,9 @@ function generateMagicSquare( size ) {
 /**
  * TSL function for creating a Ground Truth Ambient Occlusion (GTAO) effect.
  *
- * @tsl
  * @function
  * @param {Node<float>} depthNode - A node that represents the scene's depth.
- * @param {?Node<vec3>} normalNode - A node that represents the scene's normals.
+ * @param {Node<vec3>?} normalNode - A node that represents the scene's normals.
  * @param {Camera} camera - The camera the scene is rendered with.
  * @returns {GTAONode}
  */

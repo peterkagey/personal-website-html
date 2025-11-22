@@ -14,8 +14,6 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
-	<script src="/assets/mathjax-config.js" defer=""></script>
-  <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   
@@ -84,13 +82,13 @@
   <img src="/assets/problems/ratings/piste_3.svg" width="50px">
 </div>
 
-<p>Consider an \(n \times m\) grid of ones and zeroes, which represent the heights of the cells. It rains, and the grid fills up with the rain moving horizontally and vertically.</p>
+<p>Consider an <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>m</mi></math></mjx-assistive-mml></mjx-container> grid of ones and zeroes, which represent the heights of the cells. It rains, and the grid fills up with the rain moving horizontally and vertically.</p>
 <figure>
   <div class="grid one">
     <img src="/assets/problems/097/figure-1.svg">
   </div>
   <figcaption>
-    An example \(6 \times 5\) grid of zeros and ones; shaded regions illustrate water-filled areas (lakes) when rain falls and water flows horizontally and vertically.
+    An example <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c36"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>6</mn><mo>×</mo><mn>5</mn></math></mjx-assistive-mml></mjx-container> grid of zeros and ones; shaded regions illustrate water-filled areas (lakes) when rain falls and water flows horizontally and vertically.
   </figcaption>
 </figure>
 <h2 id="question">Question</h2>
@@ -102,8 +100,8 @@
   <li>What is the expected number of lakes? Of islands? Of lakes on islands?</li>
   <li>What if water can flow diagonally too?</li>
   <li>What if the heights can take on arbitrary values?</li>
-  <li>What if there is a border around the grid of height \(k\)?</li>
-  <li>What if the cell is height \(0\) with probability \(p\) and height \(1\) with probability \(1-p\)?</li>
+  <li>What if there is a border around the grid of height <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container>?</li>
+  <li>What if the cell is height <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></mjx-assistive-mml></mjx-container> with probability <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></mjx-assistive-mml></mjx-container> and height <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> with probability <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>−</mo><mi>p</mi></math></mjx-assistive-mml></mjx-container>?</li>
   <li>How does this generalize to triangular/hexagonal grids? More dimensions?</li>
   <li>How does this generalize to a cylinder?</li>
 </ol>
@@ -128,7 +126,7 @@ Spot an error or have other feedback? Please <a href="https://github.com/peterka
 
   <footer>
     <hr>
-    <p>&copy; Peter Kagey, 2025</p>
+    <p>© Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

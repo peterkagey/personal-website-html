@@ -1,7 +1,7 @@
 import { DataTexture, FloatType, RGBAFormat, Vector2, Vector3, LightsNode, NodeUpdateType } from 'three/webgpu';
 
 import {
-	attributeArray, nodeProxy, int, float, vec2, ivec2, ivec4, uniform, Break, Loop, positionView,
+	attributeArray, nodeProxy, int, float, vec2, ivec2, ivec4, uniform, Break, Loop,
 	Fn, If, Return, textureLoad, instanceIndex, screenCoordinate, directPointLight
 } from 'three/tsl';
 
@@ -34,14 +34,6 @@ export const circleIntersectsAABB = /*@__PURE__*/ Fn( ( [ circleCenter, radius, 
 const _vector3 = /*@__PURE__*/ new Vector3();
 const _size = /*@__PURE__*/ new Vector2();
 
-/**
- * A custom version of `LightsNode` implementing tiled lighting. This node is used in
- * {@link TiledLighting} to overwrite the renderer's default lighting with
- * a custom implementation.
- *
- * @augments LightsNode
- * @three_import import { tiledLights } from 'three/addons/tsl/lighting/TiledLightsNode.js';
- */
 class TiledLightsNode extends LightsNode {
 
 	static get type() {
@@ -50,12 +42,6 @@ class TiledLightsNode extends LightsNode {
 
 	}
 
-	/**
-	 * Constructs a new tiled lights node.
-	 *
-	 * @param {number} [maxLights=1024] - The maximum number of lights.
-	 * @param {number} [tileSize=32] - The tile size.
-	 */
 	constructor( maxLights = 1024, tileSize = 32 ) {
 
 		super();
@@ -63,20 +49,7 @@ class TiledLightsNode extends LightsNode {
 		this.materialLights = [];
 		this.tiledLights = [];
 
-		/**
-		 * The maximum number of lights.
-		 *
-		 * @type {number}
-		 * @default 1024
-		 */
 		this.maxLights = maxLights;
-
-		/**
-		 * The tile size.
-		 *
-		 * @type {number}
-		 * @default 32
-		 */
 		this.tileSize = tileSize;
 
 		this._bufferSize = null;
@@ -198,7 +171,7 @@ class TiledLightsNode extends LightsNode {
 		const tileOffset = element.div( stride );
 		const tileIndex = this._screenTileIndex.mul( int( 2 ) ).add( tileOffset );
 
-		return this._lightIndexes.element( tileIndex ).element( element.mod( stride ) );
+		return this._lightIndexes.element( tileIndex ).element( element.modInt( stride ) );
 
 	}
 
@@ -234,8 +207,8 @@ class TiledLightsNode extends LightsNode {
 		const lightingModel = builder.context.reflectedLight;
 
 		// force declaration order, before of the loop
-		lightingModel.directDiffuse.toStack();
-		lightingModel.directSpecular.toStack();
+		lightingModel.directDiffuse.append();
+		lightingModel.directSpecular.append();
 
 		super.setupLights( builder, lightNodes );
 
@@ -253,16 +226,16 @@ class TiledLightsNode extends LightsNode {
 
 				const { color, decay, viewPosition, distance } = this.getLightData( lightIndex.sub( 1 ) );
 
-				builder.lightsNode.setupDirectLight( builder, this, directPointLight( {
+				directPointLight( {
 					color,
-					lightVector: viewPosition.sub( positionView ),
+					lightViewPosition: viewPosition,
 					cutoffDistance: distance,
 					decayExponent: decay
-				} ) );
+				} ).append();
 
 			} );
 
-		}, 'void' )();
+		} )().append();
 
 	}
 
@@ -322,7 +295,7 @@ class TiledLightsNode extends LightsNode {
 		const lightsTexture = new DataTexture( lightsData, lightsData.length / 8, 2, RGBAFormat, FloatType );
 
 		const lightIndexesArray = new Int32Array( count * 4 * 2 );
-		const lightIndexes = attributeArray( lightIndexesArray, 'ivec4' ).setName( 'lightIndexes' );
+		const lightIndexes = attributeArray( lightIndexesArray, 'ivec4' ).label( 'lightIndexes' );
 
 		// compute
 
@@ -342,7 +315,7 @@ class TiledLightsNode extends LightsNode {
 			const tileOffset = elementIndex.div( stride );
 			const tileIndex = instanceIndex.mul( int( 2 ) ).add( tileOffset );
 
-			return lightIndexes.element( tileIndex ).element( elementIndex.mod( stride ) );
+			return lightIndexes.element( tileIndex ).element( elementIndex.modInt( stride ) );
 
 		};
 
@@ -353,7 +326,7 @@ class TiledLightsNode extends LightsNode {
 			const tiledBufferSize = bufferSize.clone().divideScalar( tileSize ).floor();
 
 			const tileScreen = vec2(
-				instanceIndex.mod( tiledBufferSize.width ),
+				instanceIndex.modInt( tiledBufferSize.width ),
 				instanceIndex.div( tiledBufferSize.width )
 			).mul( tileSize ).div( screenSize );
 

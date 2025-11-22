@@ -11,24 +11,28 @@ fetch(`${API_BASE_URL}/square_game/records`)
     grid.className = "grid wide-five narrow-three";
 
     data.forEach(record => {
-      const li = document.createElement("div");
-      if (
-        (record.level == 3 && record.vertices == 4) ||
-        (record.level == 4 && record.vertices == 6) ||
-        (record.level == 5 && record.vertices == 9) ||
-        (record.level == 6 && record.vertices == 12) ||
-        (record.level == 7 && record.vertices == 15) ||
-        (record.level == 8 && record.vertices == 19) ||
-        (record.level == 9 && record.vertices == 24) ||
-        (record.level == 10 && record.vertices == 30) ||
-        (record.level == 11 && record.vertices == 34) ||
-        (record.level == 14 && record.vertices == 56)
-      ) {
-        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">f(${record.level}) = ${record.vertices}</a>`;
-        grid.appendChild(li);
-      } else if (record.level > 2) {
-        li.innerHTML = `<a href="/apps/square_game/high_scores/?level=${record.level}">${bound(record.level)} ≤ f(${record.level}) ≤ ${record.vertices}</a>`;
-        grid.appendChild(li);
+      const div = document.createElement("div");
+      const a = document.createElement("a")
+      a.href = `/apps/square_game/high_scores/?level=${record.level}`
+      if (record.level > 2) {
+        if (
+          (record.level == 3 && record.vertices == 4) ||
+          (record.level == 4 && record.vertices == 6) ||
+          (record.level == 5 && record.vertices == 9) ||
+          (record.level == 6 && record.vertices == 12) ||
+          (record.level == 7 && record.vertices == 15) ||
+          (record.level == 8 && record.vertices == 19) ||
+          (record.level == 9 && record.vertices == 24) ||
+          (record.level == 10 && record.vertices == 30) ||
+          (record.level == 11 && record.vertices == 34) ||
+          (record.level == 14 && record.vertices == 56)
+        ) {
+          a.textContent = `f(${record.level}) = ${record.vertices}`
+        } else {
+          a.textContent = `${bound(record.level)} ≤ f(${record.level}) ≤ ${record.vertices}`
+        }
+        grid.appendChild(div);
+        div.appendChild(a)
       }
     });
 

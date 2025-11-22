@@ -14,8 +14,6 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
-	<script src="/assets/mathjax-config.js" defer=""></script>
-  <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   <meta property="og:title" content="How to make animated math GIFs: LaTeX + TikZ">
@@ -88,7 +86,7 @@
       <p>The first animated GIF that I ever made was made with the LaTeX package TikZ and the command line utility ImageMagick. In this post, I’ll give a quick example of how to make a simple GIF that works by layering images with transparent backgrounds on top of each other repeatedly.</p>
 <p><img src="/assets/blog/2023-01-16/blog_example.gif" alt=""></p>
 <h2 id="tikz-code">TikZ code</h2>
-<p>In our first step toward making the above GIF, we’ll make a PDF where each frame contains one of the above circles on a transparent background. In this case, each circle is placed uniformly at random with its center in a \(10 \times 10\) box, with a radius in \([0,1]\), and whose color gets progressively more red and less green with a random amount of blue at each step.</p>
+<p>In our first step toward making the above GIF, we’ll make a PDF where each frame contains one of the above circles on a transparent background. In this case, each circle is placed uniformly at random with its center in a <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>×</mo><mn>10</mn></math></mjx-assistive-mml></mjx-container> box, with a radius in <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>, and whose color gets progressively more red and less green with a random amount of blue at each step.</p>
 <pre class="language-plain"><code class="language-plain">\documentclass[tikz]{standalone}
 \usepackage{tikz}
 
@@ -104,9 +102,9 @@
 \end{document}</code></pre>
 <p>Starting with <code>\documentclass[tikz]{standalone}</code> says to make each <code>tikzpicture</code> its own page in the resulting PDF.</p>
 <p>Next we loop through values of <code>\red</code> from <code>0</code> to <code>255</code>, each time setting <code>\green</code> to be equal to <code>255 - \red</code> so that with each step the amount of red goes up and the amount of green goes down.</p>
-<p>The command <code>\useasboundingbox (0,0) rectangle (10,10);</code> gives each frame a \(10 \times 10\) bounding box so that all of the frames are the same size and positioned the same way.</p>
+<p>The command <code>\useasboundingbox (0,0) rectangle (10,10);</code> gives each frame a <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>×</mo><mn>10</mn></math></mjx-assistive-mml></mjx-container> bounding box so that all of the frames are the same size and positioned the same way.</p>
 <p>The command <code>\pgfmathrandominteger{\blue}{0}{255}</code> chooses a random blue values between <code>0</code> and <code>255</code>.</p>
-<p>The command <code>\fill[myColor] ({10*random()},{10*random()}) circle ({1+random()});</code> places a circle with its center randomly chosen in the \(10 \times 10\) box and with a radius between \(1\) and \(2\).</p>
+<p>The command <code>\fill[myColor] ({10*random()},{10*random()}) circle ({1+random()});</code> places a circle with its center randomly chosen in the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>×</mo><mn>10</mn></math></mjx-assistive-mml></mjx-container> box and with a radius between <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> and <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml></mjx-container>.</p>
 <h2 id="imagemagick">ImageMagick</h2>
 <p>When we compile this code, we get a PDF with one circle on each page. In order do turn this PDF into an animated GIF, we <a href="https://imagemagick.org/script/convert.php">convert the PDF using ImageMagick</a>, a powerful command-line utility for handling images. If we named our PDF <code>bubbles.pdf</code> then running the following command in the terminal (in the same directory as <code>bubbles.pdf</code>) will give us an animated GIF called <code>bubbles.gif</code>.</p>
 <pre class="language-plain"><code class="language-plain">convert -density 300 -delay 8 -loop 0 -background white bubbles.pdf bubbles.gif</code></pre>
@@ -117,7 +115,7 @@
 
   <footer>
     <hr>
-    <p>&copy; Peter Kagey, 2025</p>
+    <p>© Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

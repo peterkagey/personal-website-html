@@ -14,8 +14,6 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
-	<script src="/assets/mathjax-config.js" defer=""></script>
-  <script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   <meta property="og:title" content="A π-estimating Twitter bot (2 of 3)">
@@ -98,13 +96,13 @@
 <li>Set up a function on AWS Lambda to run the code on a timer</li>
 </ul>
 <h3 id="get-access-to-the-twitter-api">Get access to the Twitter API</h3>
-<p>When I made my first Twitter bot, I followed the article &quot;<a href="https://archive.ph/uz8xh">How to Make a Twitter Bot With Python</a>&quot;.</p>
+<p>When I made my first Twitter bot, I followed the article "<a href="https://archive.ph/uz8xh">How to Make a Twitter Bot With Python</a>".</p>
 <p>In order to have your Python code post to your Twitter feed, you’ll need to register for a Twitter developer account, which you can do by going to <a href="https://developer.twitter.com/">https://developer.twitter.com/</a> and clicking apply. You’ll need to link the account to a phone number and fill out a few minutes of forms. For all four of my bots, (<a href="https://twitter.com/oeisTriangles">@oeisTriangles</a>, <a href="https://twitter.com/oeisTriangles">@xorTriangles</a>, <a href="https://twitter.com/RobotWalks">@RobotWalks</a>, and this bot) I’ve been approved right away.</p>
 <p><em>Keep in mind that you can only use your phone number on two Twitter accounts—so you’ll have to use a Google Voice number or something else if you want to make more than two bots.</em></p>
-<p>Once you’re approved, go to the Developer Portal, click on the Projects &amp; Apps Overview, and click on the blue &quot;+ New Project&quot; button. You will be given a series of short questions, but what you submit isn’t too important.</p>
+<p>Once you’re approved, go to the Developer Portal, click on the Projects &amp; Apps Overview, and click on the blue "+ New Project" button. You will be given a series of short questions, but what you submit isn’t too important.</p>
 <figure>
   <img src="/assets/blog/2021-04-26/Developer_Portal.png" alt="">
-  <figcaption>Create a new project by clicking "+ New Project" via the Projects & Apps overview</figcaption>
+  <figcaption>Create a new project by clicking "+ New Project" via the Projects &amp; Apps overview</figcaption>
 </figure>
 <h3 id="getting-the-api-keys">Getting the API Keys</h3>
 <p>Once you’ve filled out the form, you should be sent to a page with an API Key and API Secret Key. This is essentially the password to your account, so don’t share these values.</p>
@@ -116,17 +114,17 @@
 <pre class="language-python"><code class="language-python">API_KEY        <span class="token operator">=</span> <span class="token string">"3x4MP1e4P1kEy"</span>
 API_SECRET_KEY <span class="token operator">=</span> <span class="token string">"5Ecr3TK3Y3x4MP1e4P1kEytH150nEi510nG"</span></code></pre>
 <h3 id="getting-the-access-token">Getting the Access Token</h3>
-<p>Once we close the API Key dialog, we’ll need to update our app to allow us to both read and write. We can do this by clicking on the gear to access our projects &quot;App settings&quot;.</p>
+<p>Once we close the API Key dialog, we’ll need to update our app to allow us to both read and write. We can do this by clicking on the gear to access our projects "App settings".</p>
 <figure>
   <img src="/assets/blog/2021-04-26/Project_App.png" alt="">
   <figcaption>Click the gear to access the settings.</figcaption>
 </figure>
-<p>Once you’re in, you’ll want to edit the App permissions to &quot;Read and Write&quot;.</p>
+<p>Once you’re in, you’ll want to edit the App permissions to "Read and Write".</p>
 <figure>
   <img src="/assets/blog/2021-04-26/App_permissions.png" alt="">
   <figcaption>Click "Edit" to update from "Read Only" to "Read and Write".</figcaption>
 </figure>
-<p>Then go to the &quot;Keys and Tokens&quot; page (which you can do by clicking the key icon from the app settings page), and generate an Access Token and Secret.</p>
+<p>Then go to the "Keys and Tokens" page (which you can do by clicking the key icon from the app settings page), and generate an Access Token and Secret.</p>
 <figure>
   <img src="/assets/blog/2021-04-26/Access_Token.png" alt="">
   <figcaption>Click "Generate" to make an access token and secret.</figcaption>
@@ -173,12 +171,12 @@ TwitterAccessor<span class="token punctuation">(</span><span class="token punctu
 <p>In total, 374 of 600 needles have crossed a line.
 This estimates π ≈ 3.20, an error of 2.13%.</p>
 </blockquote>
-<p>BotfonsNeedles should parse the &quot;374 of 600&quot;, throw 100 more needles, and report on the updated estimate of \(\pi\).</p>
+<p>BotfonsNeedles should parse the "374 of 600", throw 100 more needles, and report on the updated estimate of <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D70B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>π</mi></math></mjx-assistive-mml></mjx-container>.</p>
 <h3 id="an-implementation">An implementation</h3>
 <p>I’ve made a file called <code>tweet_builder.py</code>, with five functions:</p>
 <ul>
-<li><code>pi_digits_difference</code> takes an estimate of \(\pi\) and outputs an appropriate length string. For example, if the estimate is \(3.14192919\), then it will output <code>&quot;3.14192&quot;</code>, which are all of the correct digits, plus the first two that are wrong. If the estimate is \(3.20523\), then it will output &quot;<code>3.20&quot;</code>.</li>
-<li><code>error_estimate</code> takes an estimate of \(\pi\) and computes the right number of digits to show in its percent error. For example, if the estimate is \(3.20523\) (which is \(2.0256396\%\) too big) then it will output <code>&quot;2.02%&quot;</code>.</li>
+<li><code>pi_digits_difference</code> takes an estimate of <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D70B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>π</mi></math></mjx-assistive-mml></mjx-container> and outputs an appropriate length string. For example, if the estimate is <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c34"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c39"></mjx-c><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c39"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c39"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3.14192919</mn></math></mjx-assistive-mml></mjx-container>, then it will output <code>"3.14192"</code>, which are all of the correct digits, plus the first two that are wrong. If the estimate is <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3.20523</mn></math></mjx-assistive-mml></mjx-container>, then it will output "<code>3.20"</code>.</li>
+<li><code>error_estimate</code> takes an estimate of <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D70B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>π</mi></math></mjx-assistive-mml></mjx-container> and computes the right number of digits to show in its percent error. For example, if the estimate is <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3.20523</mn></math></mjx-assistive-mml></mjx-container> (which is <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c36"></mjx-c><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c39"></mjx-c><mjx-c class="mjx-c36"></mjx-c></mjx-mn><mjx-mi class="mjx-n"><mjx-c class="mjx-c25"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2.0256396</mn><mi mathvariant="normal">%</mi></math></mjx-assistive-mml></mjx-container> too big) then it will output <code>"2.02%"</code>.</li>
 <li><code>get_running_estimate</code> uses the API in <code>TwitterAccessor</code> to look up the last tweet—then throws some needles, and outputs both the total number of needles tossed and the total number of needles that cross a line.</li>
 <li><code>tweet_copy</code> takes the information from <code>get_running_estimate</code>, formats it with <code>pi_digits_distance</code> and <code>error_estimate</code> and writes the text for the tweet.</li>
 <li><code>post_tweet</code> uses the API in <code>TwitterAccessor</code> to send the tweet to Twitter, with an image to match.</li>
@@ -190,8 +188,8 @@ This estimates π ≈ 3.20, an error of 2.13%.</p>
   self<span class="token punctuation">.</span>accessor<span class="token punctuation">.</span>api<span class="token punctuation">.</span>update_with_media<span class="token punctuation">(</span>filename<span class="token operator">=</span>file_name<span class="token punctuation">,</span> status<span class="token operator">=</span>copy<span class="token punctuation">)</span>
   <span class="token keyword">return</span> copy</code></pre>
 <div class="columns">
-  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 69 of which crossed a line. This estimates π ≈ 2*(100/69) ≈ 2.89, an error of -7.74%.<br><br>In total, 506 of 800 needles have crossed a line.<br>This estimates π ≈ 3.162, an error of 0.651%. <a href="https://t.co/MZtGQxyh2p">pic.twitter.com/MZtGQxyh2p</a></p>&mdash; Botfon&#39;s Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386546547047821313?ref_src=twsrc%5Etfw">April 26, 2021</a></blockquote>
-  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 60 of which crossed a line. This estimates π ≈ 2*(100/60) ≈ 3.33, an error of 6.10%.<br><br>In total, 19990 of 31400 needles have crossed a line.<br>This estimates π ≈ 3.141570, an error of -0.000696%. <a href="https://t.co/NEUzP77QgS">pic.twitter.com/NEUzP77QgS</a></p>&mdash; Botfon&#39;s Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1443447986642722816?ref_src=twsrc%5Etfw">September 30, 2021</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 69 of which crossed a line. This estimates π ≈ 2*(100/69) ≈ 2.89, an error of -7.74%.<br><br>In total, 506 of 800 needles have crossed a line.<br>This estimates π ≈ 3.162, an error of 0.651%. <a href="https://t.co/MZtGQxyh2p">pic.twitter.com/MZtGQxyh2p</a></p>— Botfon's Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1386546547047821313?ref_src=twsrc%5Etfw">April 26, 2021</a></blockquote>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This trial dropped 100 needles, 60 of which crossed a line. This estimates π ≈ 2*(100/60) ≈ 3.33, an error of 6.10%.<br><br>In total, 19990 of 31400 needles have crossed a line.<br>This estimates π ≈ 3.141570, an error of -0.000696%. <a href="https://t.co/NEUzP77QgS">pic.twitter.com/NEUzP77QgS</a></p>— Botfon's Needles (@BotfonsNeedles) <a href="https://twitter.com/BotfonsNeedles/status/1443447986642722816?ref_src=twsrc%5Etfw">September 30, 2021</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <h3 id="what-s-next">What’s next</h3>
 <p>In Part III, we’ll get this running in a Docker container and have it run on AWS Lambda.</p>
@@ -207,7 +205,7 @@ This estimates π ≈ 3.20, an error of 2.13%.</p>
 
   <footer>
     <hr>
-    <p>&copy; Peter Kagey, 2025</p>
+    <p>© Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>
