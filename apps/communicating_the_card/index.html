@@ -97,7 +97,7 @@
 Give the audience member five pieces of paper and a pen, and ask them to write down five distinct numbers between 1 and 100, without showing you the numbers.
 Then have the audience member shuffle up the pieces of paper, and hand the five cards to your assistant.
 </p>
-<h3 id="assistant-instructions-the-assistant-will-now-determine-the-order-to-present-the-numbers-to-the-magician-by-applying-the-algorithm-above-or-by-typing-the-five-numbers-below-and-letting-the-computer-do-it-compute-card-order-7-26-91-9-magician-instructions-part-2-the-magician-will-now-decode-the-assistants-cards-by-applying-the-algorithm-above-or-by-typing-the-five-numbers-below-and-letting-the-computer-do-it-compute-missing-card-19-now-reveal-the-missing-card-to-the-audience-ul-li-have-the-magician-leave-the-room-and-ask-audience-for-five-distinct-numbers-between-1-and-100-inclusive-li-li-type-these-numbers-below-comma-separated-e-g-27-87-93-23-59-li-li-params-li-form-with-method-get-do-form-form-label-audience-numbers-audience-numbers-text-field-tag-audience-numbers-audience-numbers-text-submit-tag-compute-end-li-li-b-assistant-list-b-once-you-hit-compute-b-four-b-of-the-numbers-should-appear-here-li-li-read-the-four-numbers-to-the-magician-in-the-order-that-they-appear-li-ul-br-br-br-h2-magician-instructions-h2-ul-li-enter-assistants-numbers-below-comma-separated-e-g-59-87-27-23-li-li-form-with-method-get-do-f-label-tag-ordered-sequence-from-assistant-assistants-numbers-text-field-tag-ordered-sequence-from-assistant-assistant-numbers-text-submit-tag-compute-end-li-li-b-magician-number-b-once-you-hit-compute-b-one-b-number-should-appear-here-li-li-reveal-the-secret-number-to-the-audience-li-ul">Assistant Instructions
+<h3 id="assistant-instructions">Assistant Instructions</h3>
 <p>The assistant will now determine the order to present the numbers to the magician by applying the algorithm above. (Or by typing the five numbers below, and letting the computer do it!)</p>
 <input type="text" id="assistant-input" value="7, 26, 9, 19, 91">
 <button id="assistant-button">Compute!</button>
@@ -112,39 +112,10 @@ Card order: <span id="assistant-answer">7, 26, 91, 9</span>
 Missing card: <span id="magician-answer">19</span>
 </p>
 Now reveal the missing card to the audience!
-<!-- <ul>
-  <li>Have the magician leave the room, and ask audience for five distinct numbers between 1 and 100, inclusive.</li>
-  <li>Type these numbers below, comma separated. (e.g. 27, 87, 93, 23, 59)</li>
-  <li><%=params%>
-  <li>
-    <%= form_with method: :get do |form| %>
-      <%= form.label :audience_numbers, "Audience numbers:" %>
-      <%= text_field_tag(:audience_numbers, @audience_numbers_text) %>
-      <%= submit_tag("Compute!") %>
-    <% end %>
-  </li>
-  <li><b><%= @assistant_list %></b> ← (Once you hit "Compute!", <b>four</b> of the numbers should appear here.)</li>
-  <li>Read the four numbers to the magician in the order that they appear.</li>
-</ul>
-<br>
-<br>
-<br>
-<h2>Magician Instructions</h2>
-<ul>
-  <li>Enter assistant's numbers below, comma separated. (e.g. 59, 87, 27, 23)</li>
-  <li>
-    <%= form_with method: :get do |f| %>
-      <%= label_tag(:ordered_sequence_from_assistant, "Assistant's numbers:") %>
-      <%= text_field_tag(:ordered_sequence_from_assistant, @assistant_numbers_text) %>
-      <%= submit_tag("Compute!") %>
-    <% end %>
-  </li>
-  <li><b><%= @magician_number %></b> ← (Once you hit "Compute!", <b>one</b> number should appear here.)</li>
-  <li>Reveal the secret number to the audience!</li>
-</ul> -->
+
 <script type="module" src="/apps/scripts/card_trick.js"></script>
 
-    </h3></heading-anchors>
+    </heading-anchors>
   </main>
 
   <footer>
