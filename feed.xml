@@ -497,6 +497,7 @@ mjx-c.mjx-c1D466.TEX-I::before {
   content: &quot;y&quot;;
 }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;script type=&quot;module&quot; src=&quot;https://peterkagey.com/vendor/model-viewer.min.js&quot;&gt;&lt;/script&gt;
+
 &lt;p&gt;
   I&#39;ve been working on designing and building a shelf based on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Squaring_the_square&quot;&gt;squaring the square&lt;/a&gt; problem, which appeared in &lt;a href=&quot;https://www.scientificamerican.com/article/mathematical-games-1958-11/&quot;&gt;Martin Gardner&#39;s November 1958 &lt;i&gt;Mathematical Games&lt;/i&gt; column&lt;/a&gt;. The puzzle asks if it is possible to cut a square into smaller squares such such every smaller square is a different size.
 &lt;/p&gt;
@@ -1001,6 +1002,19 @@ rotate([0,0,180]) translate([-55,-55,0]) {
 &lt;/code&gt;&lt;/pre&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&quot;bob-mackays-cabinet&quot;&gt;Bob Mackay&#39;s cabinet&lt;/h2&gt;
+If you can&#39;t get enough Squaring the Square furniture, check out this &lt;a href=&quot;http://bobmackay.com/Square/&quot;&gt;cabinet made by Bob Mackay&lt;/a&gt; which I learned about from George Hart&#39;s blog post for the&lt;a href=&quot;https://momath.org/mathmonday/math-monday-12-card-star-puzzle/math-monday-the-squared-square/&quot;&gt;Museum of Mathematics&lt;/a&gt; in partnership with Make: Magazine.
+&lt;figure&gt;
+  &lt;div class=&quot;grid wide-two narrow-one&quot; style=&quot;grid-template-columns: 3fr 4fr&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/BobMackay_1.png&quot; alt=&quot;Squaring the square shelf, doors closed.&quot;&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-12/BobMackay_2.png&quot; alt=&quot;Squaring the square shelf, doors open.&quot;&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;George Hart, &quot;&lt;a href=&quot;https://makezine.com/article/home/furniture/math-monday-the-squared-square/&quot;&gt;Math Monday: The Squared Square&lt;/a&gt;,&quot; Make: magazine&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;let-me-know-what-you-think&quot;&gt;Let me know what you think!&lt;/h2&gt;
+Have thoughts, ideas, suggestions? Let me know &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com on Bluesky&lt;/a&gt;
 &lt;/body&gt;&lt;/html&gt;
 </content>
   </entry>
