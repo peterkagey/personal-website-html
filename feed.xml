@@ -4,19 +4,224 @@
   <subtitle>Peter Kagey&#39;s math blog</subtitle>
   <link href="https://peterkagey.com/feed.xml" rel="self" />
   <link href="https://peterkagey.com/" />
-  <updated>2025-11-12T00:00:00Z</updated>
+  <updated>2025-11-27T00:00:00Z</updated>
   <id>https://peterkagey.com/</id>
   <author>
     <name>Peter Kagey</name>
     <email>peterkagey@gmail.com</email>
   </author>
   <entry>
+    <title>Human rhombic dodecahedron</title>
+    <link href="https://peterkagey.com/blog/2025/11/human_rd/" />
+    <updated>2025-11-27T00:00:00Z</updated>
+    <id>https://peterkagey.com/blog/2025/11/human_rd/</id>
+    <content type="html">
+&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;No, this isn&#39;t a human &lt;em&gt;pyramid&lt;/em&gt;—it&#39;s a human &lt;em&gt;rhombic dodecahedron&lt;/em&gt;!&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; src=&quot;https://peterkagey.com/assets/blog/2025-11-27/human_rd.mp4&quot; alt=&quot;A video of twelve people making a human rhombic dodecahedron. Four people are standing at the base with their feet together, four people are standing on their shoulders, and four people are on the ground supporting the structure (since it otherwise would only be anchored at one point.)&quot;&gt;&lt;/video&gt;
+  &lt;figcaption&gt;&quot;If we put our heads together, we can make a rhombic dodecahedron.&quot;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Okay, &lt;em&gt;technically&lt;/em&gt; this isn&#39;t a rhombic dodecahedron because of the quadrilateral at the top, but if the participants put their heads together (as shown in the animation below) then it has twelve rhombic faces. &lt;em&gt;Close enough!&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-27/tweet_exarcheia_kg.png&quot; alt=&quot;&quot;&gt;
+    &lt;figcaption&gt;I learned about this video from a tweet from @exarcheia_kg.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot; src=&quot;https://peterkagey.com/assets/blog/2025-11-27/human_rd_model.mp4&quot;&gt;&lt;/video&gt;
+    &lt;figcaption&gt;An animation I made in Mathematica illustrating the rhombic dodecahedron that results from people putting their heads together.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;some-help-from-a-lapl-librarian&quot;&gt;Some help from a LAPL librarian&lt;/h2&gt;
+
+&lt;p&gt;
+  I was curious about the provenance of this video. Who were these people? Is this a cultural practice somewhere in the world? Have they made other human polyhedra?
+&lt;/p&gt;
+
+&lt;p&gt;I had just finished up &lt;em&gt;The Library Book&lt;/em&gt; by Susan Orlean, which intersperses stories about the &lt;a href=&quot;https://en.wikipedia.org/wiki/Los_Angeles_Central_Library#Arson&quot;&gt;1986 fire at the LA Central Library&lt;/a&gt; with other stories of the LA Public Library system. In this book, I read about the helpfulness of LAPL librarians in finding information, so after unsuccessful sleuthing on my own, I decided to to reach out. Here&#39;s what I heard back:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I am a librarian in the Science &amp;amp; Technology Dept. at Central Library and I received your question. I was not able to find out much about the video itself. I used a tool I found online to download the video with hopes there would be some interesting metadata associated with the video, but I didn&#39;t unearth any meaningful clues. (Digital forensics is not my forte apparently) Poking around online, I did find out that in Spain there are &quot;human tower&quot; competitions and the human towers are called &lt;a href=&quot;https://anthrosource.onlinelibrary.wiley.com/doi/abs/10.1111/amet.12310&quot;&gt;castells&lt;/a&gt;. It seems that competitors strive for tower height more than anything else. In India there is a festival, &lt;a href=&quot;https://bestmediainfo.com/mediainfo/television/pro-govinda-league-season-2-to-be-broadcast-on-star-sports-network-6868003&quot;&gt;Dahi Handi,&lt;/a&gt; where &quot;Govinda Pathak&quot; teams make &lt;a href=&quot;https://www.economist.com/asia/2015/09/07/safer-human-pyramid-schemes-in-mumbai&quot;&gt;human towers&lt;/a&gt; in order to break a pot that is strung high up. So, once again the focus is on height over creativity.&lt;/p&gt;
+
+&lt;p&gt;[...]&lt;/p&gt;
+
+&lt;p&gt;Sincerely,&lt;br&gt;Stella Mittelbach&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This video is 2:35 seconds, and it&#39;s just a delight!&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SQM4qbwyxCM&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;some-help-from-a-you&quot;&gt;Some help from a you?&lt;/h2&gt;
+&lt;p&gt;
+  Do you know of any other examples of synchronized swimming, group acroyoga, acrobatics, or other sports where people make interesting 3D shapes with their bodies? Let me know on Bluesky &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+  Until then, one last human polyhedron for the road.
+&lt;/p&gt;
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-27/syncronized_swimming.png&quot; alt=&quot;&quot;&gt;
+  &lt;figcaption&gt;Synchronized swimmers forming a square pyramid, from &lt;a href=&quot;https://bradscanvas.com/&quot;&gt;Brad Walls&lt;/a&gt; via the Fast Company article &quot;&lt;a href=&quot;https://www.fastcompany.com/90633411/these-stunning-photographs-capture-synchronized-swimming-from-above&quot;&gt;These stunning photographs capture synchronized swimming from above&lt;/a&gt;.&quot;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://peterkagey.com/assets/blog/2025-11-27/syncronized_swimming_model_compressed.gif&quot; alt=&quot;Animation of square pyramid&quot;&gt;
+  &lt;figcaption&gt;Mathematica model of a square pyramid.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;!--
+&lt;blockquote&gt;
+&lt;p&gt;I&#39;m glad the research was useful! When I started Googling videos using the term &quot;acrobatics&quot; I started to find more instances of &quot;architecture&quot; made of human bodies, but didn&#39;t find any geometric forms like the original video portrayed. Since the video looked like it came from South Asia, I poked around the web for other clues. There is an ancient form of Indian gymnastics called&amp;nbsp;Mallakhamba&amp;nbsp;where people use a tall pole in their routines. It looks like in&amp;nbsp;Mallakhamba, sometimes teams use the pole as a springboard for making human towers, but not quite like the one you found. Another term I used in searching was &quot;Acro Yoga&quot; as there seems to be a combination of acrobatics and yoga gaining popularity.&lt;/p&gt;
+
+&lt;p&gt;I see you are from Cal Poly Pomona! Berit Givens is a longtime friend! Will let you know if I find out more.&lt;/p&gt;
+
+&lt;p&gt;Best regards,&lt;br&gt;Stella Mittelbach&lt;/p&gt;
+&lt;/blockquote&gt; --&gt;
+&lt;/body&gt;&lt;/html&gt;
+</content>
+  </entry>
+  <entry>
     <title>Squaring the shelf</title>
     <link href="https://peterkagey.com/blog/2025/11/squaring_the_shelf/" />
     <updated>2025-11-12T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/11/squaring_the_shelf/</id>
     <content type="html">
-&lt;html&gt;&lt;head&gt;&lt;style id=&quot;MJX-CHTML-styles&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;style id=&quot;MJX-CHTML-styles&quot;&gt;mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
+  display: flex;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
+  text-align: left;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
+  text-align: right;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c.mjx-c1D465.TEX-I::before {
+  padding: 0.442em 0.572em 0.011em 0;
+  content: &quot;x&quot;;
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;0&quot;;
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;1&quot;;
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;2&quot;;
+}
+
+mjx-c.mjx-c33::before {
+  padding: 0.665em 0.5em 0.022em 0;
+  content: &quot;3&quot;;
+}
+
+mjx-c.mjx-c34::before {
+  padding: 0.677em 0.5em 0 0;
+  content: &quot;4&quot;;
+}
+
+mjx-c.mjx-c35::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;5&quot;;
+}
+
+mjx-c.mjx-c36::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;6&quot;;
+}
+
+mjx-c.mjx-c37::before {
+  padding: 0.676em 0.5em 0.022em 0;
+  content: &quot;7&quot;;
+}
+
+mjx-c.mjx-c38::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;8&quot;;
+}
+
+mjx-c.mjx-c39::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;9&quot;;
+}
+
+mjx-c.mjx-c1D466.TEX-I::before {
+  padding: 0.442em 0.49em 0.205em 0;
+  content: &quot;y&quot;;
+}
+
+
 mjx-container[jax=&quot;CHTML&quot;] {
   line-height: 0;
 }
@@ -163,75 +368,6 @@ mjx-assistive-mml {
 
 mjx-assistive-mml[display=&quot;block&quot;] {
   width: 100% !important;
-}
-
-mjx-math {
-  display: inline-block;
-  text-align: left;
-  line-height: 0;
-  text-indent: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  font-size-adjust: none;
-  letter-spacing: normal;
-  border-collapse: collapse;
-  word-wrap: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-  direction: ltr;
-  padding: 1px 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
-  display: flex;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
-  padding: 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
-  text-align: left;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
-  text-align: right;
-}
-
-mjx-msub {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-mi {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-c {
-  display: inline-block;
-}
-
-mjx-utext {
-  display: inline-block;
-  padding: .75em 0 .2em 0;
-}
-
-mjx-mn {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-TeXAtom {
-  display: inline-block;
-  text-align: left;
 }
 
 mjx-c::before {
@@ -435,66 +571,6 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 @font-face /* 21 */ {
   font-family: MJXTEX-VB;
   src: url(&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff&quot;) format(&quot;woff&quot;);
-}
-
-mjx-c.mjx-c1D465.TEX-I::before {
-  padding: 0.442em 0.572em 0.011em 0;
-  content: &quot;x&quot;;
-}
-
-mjx-c.mjx-c30::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;0&quot;;
-}
-
-mjx-c.mjx-c31::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;1&quot;;
-}
-
-mjx-c.mjx-c32::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;2&quot;;
-}
-
-mjx-c.mjx-c33::before {
-  padding: 0.665em 0.5em 0.022em 0;
-  content: &quot;3&quot;;
-}
-
-mjx-c.mjx-c34::before {
-  padding: 0.677em 0.5em 0 0;
-  content: &quot;4&quot;;
-}
-
-mjx-c.mjx-c35::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;5&quot;;
-}
-
-mjx-c.mjx-c36::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;6&quot;;
-}
-
-mjx-c.mjx-c37::before {
-  padding: 0.676em 0.5em 0.022em 0;
-  content: &quot;7&quot;;
-}
-
-mjx-c.mjx-c38::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;8&quot;;
-}
-
-mjx-c.mjx-c39::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;9&quot;;
-}
-
-mjx-c.mjx-c1D466.TEX-I::before {
-  padding: 0.442em 0.49em 0.205em 0;
-  content: &quot;y&quot;;
 }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;script type=&quot;module&quot; src=&quot;https://peterkagey.com/vendor/model-viewer.min.js&quot;&gt;&lt;/script&gt;
 
@@ -1435,6 +1511,135 @@ mjx-c.mjx-c2265::before {
 
 
 
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
+  display: flex;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
+  text-align: left;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
+  text-align: right;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c.mjx-c1D465.TEX-I::before {
+  padding: 0.442em 0.572em 0.011em 0;
+  content: &quot;x&quot;;
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;0&quot;;
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;1&quot;;
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;2&quot;;
+}
+
+mjx-c.mjx-c33::before {
+  padding: 0.665em 0.5em 0.022em 0;
+  content: &quot;3&quot;;
+}
+
+mjx-c.mjx-c34::before {
+  padding: 0.677em 0.5em 0 0;
+  content: &quot;4&quot;;
+}
+
+mjx-c.mjx-c35::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;5&quot;;
+}
+
+mjx-c.mjx-c36::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;6&quot;;
+}
+
+mjx-c.mjx-c37::before {
+  padding: 0.676em 0.5em 0.022em 0;
+  content: &quot;7&quot;;
+}
+
+mjx-c.mjx-c38::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;8&quot;;
+}
+
+mjx-c.mjx-c39::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;9&quot;;
+}
+
+mjx-c.mjx-c1D466.TEX-I::before {
+  padding: 0.442em 0.49em 0.205em 0;
+  content: &quot;y&quot;;
+}
+
 
 mjx-container[jax=&quot;CHTML&quot;] {
   line-height: 0;
@@ -1582,75 +1787,6 @@ mjx-assistive-mml {
 
 mjx-assistive-mml[display=&quot;block&quot;] {
   width: 100% !important;
-}
-
-mjx-math {
-  display: inline-block;
-  text-align: left;
-  line-height: 0;
-  text-indent: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  font-size-adjust: none;
-  letter-spacing: normal;
-  border-collapse: collapse;
-  word-wrap: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-  direction: ltr;
-  padding: 1px 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
-  display: flex;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
-  padding: 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
-  text-align: left;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
-  text-align: right;
-}
-
-mjx-msub {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-mi {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-c {
-  display: inline-block;
-}
-
-mjx-utext {
-  display: inline-block;
-  padding: .75em 0 .2em 0;
-}
-
-mjx-mn {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-TeXAtom {
-  display: inline-block;
-  text-align: left;
 }
 
 mjx-c::before {
@@ -1854,66 +1990,6 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 @font-face /* 21 */ {
   font-family: MJXTEX-VB;
   src: url(&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff&quot;) format(&quot;woff&quot;);
-}
-
-mjx-c.mjx-c1D465.TEX-I::before {
-  padding: 0.442em 0.572em 0.011em 0;
-  content: &quot;x&quot;;
-}
-
-mjx-c.mjx-c30::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;0&quot;;
-}
-
-mjx-c.mjx-c31::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;1&quot;;
-}
-
-mjx-c.mjx-c32::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;2&quot;;
-}
-
-mjx-c.mjx-c33::before {
-  padding: 0.665em 0.5em 0.022em 0;
-  content: &quot;3&quot;;
-}
-
-mjx-c.mjx-c34::before {
-  padding: 0.677em 0.5em 0 0;
-  content: &quot;4&quot;;
-}
-
-mjx-c.mjx-c35::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;5&quot;;
-}
-
-mjx-c.mjx-c36::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;6&quot;;
-}
-
-mjx-c.mjx-c37::before {
-  padding: 0.676em 0.5em 0.022em 0;
-  content: &quot;7&quot;;
-}
-
-mjx-c.mjx-c38::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;8&quot;;
-}
-
-mjx-c.mjx-c39::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;9&quot;;
-}
-
-mjx-c.mjx-c1D466.TEX-I::before {
-  padding: 0.442em 0.49em 0.205em 0;
-  content: &quot;y&quot;;
 }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;I got nerd sniped by this first open problem described in a &lt;a href=&quot;https://mathoverflow.net/a/15306/104733&quot;&gt;MathOverflow post by Richard Stanley&lt;/a&gt;, which suggests that there’s good reason to suspect that an innocuous-seeming combinatorial function might grows faster than any recursive function!&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://mathoverflow.net/a/15306/104733&quot;&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2025-06-24/StanleyUndecidability.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -3183,6 +3259,135 @@ mjx-c.mjx-c2265::before {
 
 
 
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
+  display: flex;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
+  text-align: left;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
+  text-align: right;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c.mjx-c1D465.TEX-I::before {
+  padding: 0.442em 0.572em 0.011em 0;
+  content: &quot;x&quot;;
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;0&quot;;
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;1&quot;;
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;2&quot;;
+}
+
+mjx-c.mjx-c33::before {
+  padding: 0.665em 0.5em 0.022em 0;
+  content: &quot;3&quot;;
+}
+
+mjx-c.mjx-c34::before {
+  padding: 0.677em 0.5em 0 0;
+  content: &quot;4&quot;;
+}
+
+mjx-c.mjx-c35::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;5&quot;;
+}
+
+mjx-c.mjx-c36::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;6&quot;;
+}
+
+mjx-c.mjx-c37::before {
+  padding: 0.676em 0.5em 0.022em 0;
+  content: &quot;7&quot;;
+}
+
+mjx-c.mjx-c38::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;8&quot;;
+}
+
+mjx-c.mjx-c39::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;9&quot;;
+}
+
+mjx-c.mjx-c1D466.TEX-I::before {
+  padding: 0.442em 0.49em 0.205em 0;
+  content: &quot;y&quot;;
+}
+
 
 mjx-container[jax=&quot;CHTML&quot;] {
   line-height: 0;
@@ -3330,75 +3535,6 @@ mjx-assistive-mml {
 
 mjx-assistive-mml[display=&quot;block&quot;] {
   width: 100% !important;
-}
-
-mjx-math {
-  display: inline-block;
-  text-align: left;
-  line-height: 0;
-  text-indent: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  font-size-adjust: none;
-  letter-spacing: normal;
-  border-collapse: collapse;
-  word-wrap: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-  direction: ltr;
-  padding: 1px 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
-  display: flex;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
-  padding: 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
-  text-align: left;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
-  text-align: right;
-}
-
-mjx-msub {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-mi {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-c {
-  display: inline-block;
-}
-
-mjx-utext {
-  display: inline-block;
-  padding: .75em 0 .2em 0;
-}
-
-mjx-mn {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-TeXAtom {
-  display: inline-block;
-  text-align: left;
 }
 
 mjx-c::before {
@@ -3602,66 +3738,6 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 @font-face /* 21 */ {
   font-family: MJXTEX-VB;
   src: url(&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff&quot;) format(&quot;woff&quot;);
-}
-
-mjx-c.mjx-c1D465.TEX-I::before {
-  padding: 0.442em 0.572em 0.011em 0;
-  content: &quot;x&quot;;
-}
-
-mjx-c.mjx-c30::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;0&quot;;
-}
-
-mjx-c.mjx-c31::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;1&quot;;
-}
-
-mjx-c.mjx-c32::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;2&quot;;
-}
-
-mjx-c.mjx-c33::before {
-  padding: 0.665em 0.5em 0.022em 0;
-  content: &quot;3&quot;;
-}
-
-mjx-c.mjx-c34::before {
-  padding: 0.677em 0.5em 0 0;
-  content: &quot;4&quot;;
-}
-
-mjx-c.mjx-c35::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;5&quot;;
-}
-
-mjx-c.mjx-c36::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;6&quot;;
-}
-
-mjx-c.mjx-c37::before {
-  padding: 0.676em 0.5em 0.022em 0;
-  content: &quot;7&quot;;
-}
-
-mjx-c.mjx-c38::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;8&quot;;
-}
-
-mjx-c.mjx-c39::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;9&quot;;
-}
-
-mjx-c.mjx-c1D466.TEX-I::before {
-  padding: 0.442em 0.49em 0.205em 0;
-  content: &quot;y&quot;;
 }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;I’ve been going through my old Twitter saves, when I came across this one which was no longer available, but which intrigued me!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://peterkagey.com/assets/blog/2025-04-21/jdh_tweet.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -4565,6 +4641,135 @@ mjx-c.mjx-c2265::before {
 
 
 
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
+  display: flex;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
+  text-align: left;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
+  text-align: right;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c.mjx-c1D465.TEX-I::before {
+  padding: 0.442em 0.572em 0.011em 0;
+  content: &quot;x&quot;;
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;0&quot;;
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;1&quot;;
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;2&quot;;
+}
+
+mjx-c.mjx-c33::before {
+  padding: 0.665em 0.5em 0.022em 0;
+  content: &quot;3&quot;;
+}
+
+mjx-c.mjx-c34::before {
+  padding: 0.677em 0.5em 0 0;
+  content: &quot;4&quot;;
+}
+
+mjx-c.mjx-c35::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;5&quot;;
+}
+
+mjx-c.mjx-c36::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;6&quot;;
+}
+
+mjx-c.mjx-c37::before {
+  padding: 0.676em 0.5em 0.022em 0;
+  content: &quot;7&quot;;
+}
+
+mjx-c.mjx-c38::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;8&quot;;
+}
+
+mjx-c.mjx-c39::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;9&quot;;
+}
+
+mjx-c.mjx-c1D466.TEX-I::before {
+  padding: 0.442em 0.49em 0.205em 0;
+  content: &quot;y&quot;;
+}
+
 
 mjx-container[jax=&quot;CHTML&quot;] {
   line-height: 0;
@@ -4712,75 +4917,6 @@ mjx-assistive-mml {
 
 mjx-assistive-mml[display=&quot;block&quot;] {
   width: 100% !important;
-}
-
-mjx-math {
-  display: inline-block;
-  text-align: left;
-  line-height: 0;
-  text-indent: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  font-size-adjust: none;
-  letter-spacing: normal;
-  border-collapse: collapse;
-  word-wrap: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-  direction: ltr;
-  padding: 1px 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
-  display: flex;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
-  padding: 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
-  text-align: left;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
-  text-align: right;
-}
-
-mjx-msub {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-mi {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-c {
-  display: inline-block;
-}
-
-mjx-utext {
-  display: inline-block;
-  padding: .75em 0 .2em 0;
-}
-
-mjx-mn {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-TeXAtom {
-  display: inline-block;
-  text-align: left;
 }
 
 mjx-c::before {
@@ -4984,66 +5120,6 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 @font-face /* 21 */ {
   font-family: MJXTEX-VB;
   src: url(&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff&quot;) format(&quot;woff&quot;);
-}
-
-mjx-c.mjx-c1D465.TEX-I::before {
-  padding: 0.442em 0.572em 0.011em 0;
-  content: &quot;x&quot;;
-}
-
-mjx-c.mjx-c30::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;0&quot;;
-}
-
-mjx-c.mjx-c31::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;1&quot;;
-}
-
-mjx-c.mjx-c32::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;2&quot;;
-}
-
-mjx-c.mjx-c33::before {
-  padding: 0.665em 0.5em 0.022em 0;
-  content: &quot;3&quot;;
-}
-
-mjx-c.mjx-c34::before {
-  padding: 0.677em 0.5em 0 0;
-  content: &quot;4&quot;;
-}
-
-mjx-c.mjx-c35::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;5&quot;;
-}
-
-mjx-c.mjx-c36::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;6&quot;;
-}
-
-mjx-c.mjx-c37::before {
-  padding: 0.676em 0.5em 0.022em 0;
-  content: &quot;7&quot;;
-}
-
-mjx-c.mjx-c38::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;8&quot;;
-}
-
-mjx-c.mjx-c39::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;9&quot;;
-}
-
-mjx-c.mjx-c1D466.TEX-I::before {
-  padding: 0.442em 0.49em 0.205em 0;
-  content: &quot;y&quot;;
 }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;As I discussed &lt;a href=&quot;https://peterkagey.com/blog/2025/02/some-saved-tweets/&quot;&gt;previously&lt;/a&gt;, I’m going through my old saved tweets and documenting them as I move to Bluesky (&lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;). Here are four of those tweets (all of which had video/GIF embeddings):&lt;/p&gt;
 &lt;ul&gt;
@@ -5604,6 +5680,135 @@ mjx-c.mjx-c2265::before {
 
 
 
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
+  display: flex;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
+  text-align: left;
+}
+
+mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
+  text-align: right;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c.mjx-c1D465.TEX-I::before {
+  padding: 0.442em 0.572em 0.011em 0;
+  content: &quot;x&quot;;
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;0&quot;;
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;1&quot;;
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: &quot;2&quot;;
+}
+
+mjx-c.mjx-c33::before {
+  padding: 0.665em 0.5em 0.022em 0;
+  content: &quot;3&quot;;
+}
+
+mjx-c.mjx-c34::before {
+  padding: 0.677em 0.5em 0 0;
+  content: &quot;4&quot;;
+}
+
+mjx-c.mjx-c35::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;5&quot;;
+}
+
+mjx-c.mjx-c36::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;6&quot;;
+}
+
+mjx-c.mjx-c37::before {
+  padding: 0.676em 0.5em 0.022em 0;
+  content: &quot;7&quot;;
+}
+
+mjx-c.mjx-c38::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;8&quot;;
+}
+
+mjx-c.mjx-c39::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: &quot;9&quot;;
+}
+
+mjx-c.mjx-c1D466.TEX-I::before {
+  padding: 0.442em 0.49em 0.205em 0;
+  content: &quot;y&quot;;
+}
+
 
 mjx-container[jax=&quot;CHTML&quot;] {
   line-height: 0;
@@ -5751,75 +5956,6 @@ mjx-assistive-mml {
 
 mjx-assistive-mml[display=&quot;block&quot;] {
   width: 100% !important;
-}
-
-mjx-math {
-  display: inline-block;
-  text-align: left;
-  line-height: 0;
-  text-indent: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  font-size-adjust: none;
-  letter-spacing: normal;
-  border-collapse: collapse;
-  word-wrap: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-  direction: ltr;
-  padding: 1px 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;][width=&quot;full&quot;] {
-  display: flex;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][display=&quot;true&quot;] mjx-math {
-  padding: 0;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;left&quot;] {
-  text-align: left;
-}
-
-mjx-container[jax=&quot;CHTML&quot;][justify=&quot;right&quot;] {
-  text-align: right;
-}
-
-mjx-msub {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-mi {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-c {
-  display: inline-block;
-}
-
-mjx-utext {
-  display: inline-block;
-  padding: .75em 0 .2em 0;
-}
-
-mjx-mn {
-  display: inline-block;
-  text-align: left;
-}
-
-mjx-TeXAtom {
-  display: inline-block;
-  text-align: left;
 }
 
 mjx-c::before {
@@ -6023,66 +6159,6 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 @font-face /* 21 */ {
   font-family: MJXTEX-VB;
   src: url(&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff&quot;) format(&quot;woff&quot;);
-}
-
-mjx-c.mjx-c1D465.TEX-I::before {
-  padding: 0.442em 0.572em 0.011em 0;
-  content: &quot;x&quot;;
-}
-
-mjx-c.mjx-c30::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;0&quot;;
-}
-
-mjx-c.mjx-c31::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;1&quot;;
-}
-
-mjx-c.mjx-c32::before {
-  padding: 0.666em 0.5em 0 0;
-  content: &quot;2&quot;;
-}
-
-mjx-c.mjx-c33::before {
-  padding: 0.665em 0.5em 0.022em 0;
-  content: &quot;3&quot;;
-}
-
-mjx-c.mjx-c34::before {
-  padding: 0.677em 0.5em 0 0;
-  content: &quot;4&quot;;
-}
-
-mjx-c.mjx-c35::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;5&quot;;
-}
-
-mjx-c.mjx-c36::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;6&quot;;
-}
-
-mjx-c.mjx-c37::before {
-  padding: 0.676em 0.5em 0.022em 0;
-  content: &quot;7&quot;;
-}
-
-mjx-c.mjx-c38::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;8&quot;;
-}
-
-mjx-c.mjx-c39::before {
-  padding: 0.666em 0.5em 0.022em 0;
-  content: &quot;9&quot;;
-}
-
-mjx-c.mjx-c1D466.TEX-I::before {
-  padding: 0.442em 0.49em 0.205em 0;
-  content: &quot;y&quot;;
 }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;I wanted an excuse to use Harvey Mudd’s large format printer, so I made a movie-sized (27″×40″) poster for my office based on the second term of OEIS sequence &lt;a href=&quot;https://oeis.org/A368138&quot;&gt;A368138(n)&lt;/a&gt;: &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c36&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c38&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c38&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c28&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c29&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c3D&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mn class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c35&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c34&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;368138&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;154&lt;/mn&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;. The idea here is that you have a a collection of tiles like &lt;img class=&quot;inline-img&quot; src=&quot;https://peterkagey.com/assets/blog/2024-05-20/tile_example.png&quot;&gt;, which you can rotate and mirror; you then choose a &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;3&quot;&gt;&lt;mjx-c class=&quot;mjx-cD7&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot; space=&quot;3&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; grid of these tiles, and repeat that pattern infinitely over the plane. I recently learned that this particular example (for &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c3D&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mn class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;) was first enumerated in a 1996 paper by Dan Davis, &lt;a href=&quot;https://doi.org/10.37236/1338&quot;&gt;On a Tiling Scheme from M. C. Escher&lt;/a&gt;, in &lt;em&gt;The Electronic Journal of Combinatorics&lt;/em&gt;.&lt;/p&gt;
 &lt;img src=&quot;https://peterkagey.com/assets/blog/2024-05-20/A368138_poster.svg&quot;&gt;
@@ -6485,47 +6561,6 @@ p random_string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sca
 &lt;h2 id=&quot;the-zimin-word-z-2-aba-and-bifixes&quot;&gt;The Zimin Word &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-msub&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D44D TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-script style=&quot;vertical-align: -0.15em; margin-left: -0.04em;&quot;&gt;&lt;mjx-mn class=&quot;mjx-n&quot; size=&quot;s&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-script&gt;&lt;/mjx-msub&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c3D&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D435 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;Z&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; and Bifixes&lt;/h2&gt;
 &lt;p&gt;The number of Zimin words of length &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; that match the pattern ABA is equal to the number of of words that begin with an odd-length palindrome. Analogously, the number of words with a bifix is equal to the number of words that begin with an even-length palindrome. The number of these agree when &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; is odd.&lt;/p&gt;
 &lt;p&gt;I’ve added OEIS sequences &lt;a href=&quot;https://oeis.org/A342510&quot;&gt;A342510&lt;/a&gt;–&lt;a href=&quot;https://oeis.org/A342512&quot;&gt;A342512&lt;/a&gt; which relate to how numbers viewed as binary strings avoid—or fail to avoid—Zimin words. &lt;a href=&quot;https://codegolf.stackexchange.com/q/220679/53884&quot;&gt;I asked users to implement this on Code Golf Stack Exchange&lt;/a&gt;.&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;
-</content>
-  </entry>
-  <entry>
-    <title>My favorite sequences: A263135</title>
-    <link href="https://peterkagey.com/blog/2021/07/my-favorite-sequences-a263135/" />
-    <updated>2021-07-12T00:00:00Z</updated>
-    <id>https://peterkagey.com/blog/2021/07/my-favorite-sequences-a263135/</id>
-    <content type="html">
-&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This is the fourth in my installment of My favorite sequences. This post discusses sequence &lt;a href=&quot;https://oeis.org/A263135&quot;&gt;A263135&lt;/a&gt; which counts penny-to-penny connections among &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; pennies on the vertices of a hexagonal grid. I published this sequence in October 2015 when I was thinking about hexagonal-grid analogs to the &lt;a href=&quot;https://peterkagey.com/blog/2021/06/my-favorite-sequences-a278299/&quot;&gt;&quot;Not Equal&quot; grid&lt;/a&gt;. The square-grid analog of this sequence is &lt;a href=&quot;https://oeis.org/A123663&quot;&gt;A123663&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;a263135-placing-pennies&quot;&gt;&lt;a href=&quot;https://oeis.org/A263135&quot;&gt;A263135&lt;/a&gt;: Placing Pennies&lt;/h2&gt;
-&lt;p&gt;The sequences &lt;a href=&quot;https://oeis.org/A047932&quot;&gt;A047932&lt;/a&gt; and &lt;a href=&quot;https://oeis.org/A263135&quot;&gt;A263135&lt;/a&gt; are about placing pennies on a hexagonal grid in such a way that maximizes the number of penny-to-penny contacts, which occurs when you place the pennies in a spiral. A047932, counts the contacts when the pennies are placed on the faces of the grid; A263135 counts the contacts with the pennies placed on the vertices.&lt;/p&gt;
-&lt;div class=&quot;columns&quot;&gt;
-&lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-07-12/hexagon_faces.gif&quot; alt=&quot;Pattern of placing pennies in A047932.&quot;&gt;
-  &lt;figcaption&gt;Pattern of placing pennies in A047932.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-07-12/hexagon_vertices.gif&quot; alt=&quot;Pattern of placing pennies in A263135.&quot;&gt;
-  &lt;figcaption&gt;Pattern of placing pennies in A263135.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/div&gt;
-&lt;p&gt;While spiral shapes maximize the number of penny-to-penny contacts, there are sometimes non-spiral shapes that have the same number of contacts. For example, in the case of the square grid, there are &lt;a href=&quot;https://oeis.org/A100092&quot;&gt;&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c30&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c30&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c30&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c39&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c28&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c29&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;100092&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;&lt;/a&gt; such ways to lay down &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; pennies on the square grid with the maximum number of connections. &lt;a href=&quot;https://peterkagey.com/problems/108/&quot;&gt;Problem 108&lt;/a&gt; in my Open Problem Collection asks about generalizing this OEIS sequence to other settings such as the hexagonal grid.&lt;/p&gt;
-&lt;div class=&quot;columns&quot;&gt;
-&lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-07-12/fpennies.png&quot; alt=&quot;A047932(11) = 21.&quot;&gt;
-  &lt;figcaption&gt;A047932(11) = 21&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-  &lt;img src=&quot;https://peterkagey.com/assets/blog/2021-07-12/vpennies.png&quot; alt=&quot;A263135(22) = 27.&quot;&gt;
-  &lt;figcaption&gt;A263135(22) = 27&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/div&gt;
-&lt;h4 id=&quot;comparing-contacts&quot;&gt;Comparing contacts&lt;/h4&gt;
-&lt;p&gt;Notice that the &quot;face&quot; pennies in A047932 can have a maximum of six neighbors, while the &quot;vertex&quot; pennies in A263135 can have a maximum of three. In the limit, most pennies are &quot;interior&quot; pennies with the maximum number of contacts, so &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c30&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c34&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c37&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c39&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c28&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c29&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c223C&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mn class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;047932&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; and &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c36&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c35&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c28&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c29&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c223C&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mfrac space=&quot;4&quot;&gt;&lt;mjx-frac&gt;&lt;mjx-num&gt;&lt;mjx-nstrut&gt;&lt;/mjx-nstrut&gt;&lt;mjx-mn class=&quot;mjx-n&quot; size=&quot;s&quot;&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-num&gt;&lt;mjx-dbox&gt;&lt;mjx-dtable&gt;&lt;mjx-line&gt;&lt;/mjx-line&gt;&lt;mjx-row&gt;&lt;mjx-den&gt;&lt;mjx-dstrut&gt;&lt;/mjx-dstrut&gt;&lt;mjx-mn class=&quot;mjx-n&quot; size=&quot;s&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-den&gt;&lt;/mjx-row&gt;&lt;/mjx-dtable&gt;&lt;/mjx-dbox&gt;&lt;/mjx-frac&gt;&lt;/mjx-mfrac&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;263135&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;∼&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;.&lt;/p&gt;
-&lt;p&gt;Looking at the comparative growth rates, it is natural to ask how the number of connections of &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; face pennies compares to the number of connections of &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; vertex pennies. In October 2015 I made a conjecture on the OEIS that this difference grew like sequence &lt;a href=&quot;https://oeis.org/A216256&quot;&gt;A216256&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Conjecture: For &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c3E&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mn class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c30&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;gt;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;, &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot; display=&quot;true&quot;&gt;&lt;mjx-math display=&quot;true&quot; style=&quot;margin-left: 0; margin-right: 0;&quot; class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c36&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c35&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c28&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c29&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-TeXAtom texclass=&quot;ORD&quot;&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c2013&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-TeXAtom&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c30&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c34&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c37&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c39&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c28&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c29&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c3D&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c2308&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-msqrt&gt;&lt;mjx-sqrt&gt;&lt;mjx-surd&gt;&lt;mjx-mo class=&quot;mjx-lop&quot;&gt;&lt;mjx-c class=&quot;mjx-c221A TEX-S2&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-surd&gt;&lt;mjx-box style=&quot;padding-top: 0.455em;&quot;&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-TeXAtom texclass=&quot;ORD&quot;&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c2013&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-TeXAtom&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-TeXAtom texclass=&quot;ORD&quot;&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c2F&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-TeXAtom&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c34&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-box&gt;&lt;/mjx-sqrt&gt;&lt;/mjx-msqrt&gt;&lt;mjx-TeXAtom texclass=&quot;ORD&quot;&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c2013&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-TeXAtom&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-TeXAtom texclass=&quot;ORD&quot;&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c2F&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-TeXAtom&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c2309&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c3D&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot; space=&quot;4&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D434 TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c36&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c35&quot;&gt;&lt;/mjx-c&gt;&lt;mjx-c class=&quot;mjx-c36&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c28&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c29&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mo class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c2E&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;block&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;263135&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mo&gt;–&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;047932&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;⌈&lt;/mo&gt;&lt;msqrt&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mo&gt;–&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mo&gt;/&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msqrt&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mo&gt;–&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mrow data-mjx-texclass=&quot;ORD&quot;&gt;&lt;mo&gt;/&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;⌉&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;216256&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I believe that the sequence A216256 on the right hand side appears to be the same as the sequence &quot;n appears &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;CHTML&quot; style=&quot;font-size: 113.1%; position: relative;&quot;&gt;&lt;mjx-math class=&quot; MJX-TEX&quot; aria-hidden=&quot;true&quot;&gt;&lt;mjx-mstyle&gt;&lt;mjx-mrow&gt;&lt;mjx-mo class=&quot;mjx-s3&quot;&gt;&lt;mjx-c class=&quot;mjx-c230A TEX-S3&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mfrac&gt;&lt;mjx-frac type=&quot;d&quot;&gt;&lt;mjx-num&gt;&lt;mjx-nstrut type=&quot;d&quot;&gt;&lt;/mjx-nstrut&gt;&lt;mjx-mrow&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c32&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;mjx-mi class=&quot;mjx-i&quot;&gt;&lt;mjx-c class=&quot;mjx-c1D45B TEX-I&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mi&gt;&lt;mjx-mo class=&quot;mjx-n&quot; space=&quot;3&quot;&gt;&lt;mjx-c class=&quot;mjx-c2B&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;mjx-mn class=&quot;mjx-n&quot; space=&quot;3&quot;&gt;&lt;mjx-c class=&quot;mjx-c31&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-mrow&gt;&lt;/mjx-num&gt;&lt;mjx-dbox&gt;&lt;mjx-dtable&gt;&lt;mjx-line type=&quot;d&quot;&gt;&lt;/mjx-line&gt;&lt;mjx-row&gt;&lt;mjx-den&gt;&lt;mjx-dstrut type=&quot;d&quot;&gt;&lt;/mjx-dstrut&gt;&lt;mjx-mn class=&quot;mjx-n&quot;&gt;&lt;mjx-c class=&quot;mjx-c33&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mn&gt;&lt;/mjx-den&gt;&lt;/mjx-row&gt;&lt;/mjx-dtable&gt;&lt;/mjx-dbox&gt;&lt;/mjx-frac&gt;&lt;/mjx-mfrac&gt;&lt;mjx-mo class=&quot;mjx-s3&quot;&gt;&lt;mjx-c class=&quot;mjx-c230B TEX-S3&quot;&gt;&lt;/mjx-c&gt;&lt;/mjx-mo&gt;&lt;/mjx-mrow&gt;&lt;/mjx-mstyle&gt;&lt;/mjx-math&gt;&lt;mjx-assistive-mml unselectable=&quot;on&quot; display=&quot;inline&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mstyle displaystyle=&quot;true&quot; scriptlevel=&quot;0&quot;&gt;&lt;mrow data-mjx-texclass=&quot;INNER&quot;&gt;&lt;mo data-mjx-texclass=&quot;OPEN&quot;&gt;⌊&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo data-mjx-texclass=&quot;CLOSE&quot;&gt;⌋&lt;/mo&gt;&lt;/mrow&gt;&lt;/mstyle&gt;&lt;/math&gt;&lt;/mjx-assistive-mml&gt;&lt;/mjx-container&gt; times,&quot; but I’d have to crack open my &lt;em&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Concrete_Mathematics&quot;&gt;Concrete Mathematics&lt;/a&gt;&lt;/em&gt; book to prove it.&lt;/p&gt;
-&lt;p&gt;This is &lt;a href=&quot;https://peterkagey.com/problems/020/&quot;&gt;Problem 20&lt;/a&gt; in my &lt;a href=&quot;https://peterkagey.com/problems/&quot;&gt;Open Problem Collection&lt;/a&gt;, and I’ve placed a small, $5 bounty on solving this conjecture—so if you have an idea of how to prove this, let me know in exchange for a latte! I’ve asked about this in my Math Stack Exchange question &lt;a href=&quot;https://math.stackexchange.com/q/4100221/121988&quot;&gt;Circle-to-circle contacts on the hexagonal grid&lt;/a&gt;—so feel free to answer there or let me know on Bluesky, &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;.&lt;/p&gt;
 &lt;/body&gt;&lt;/html&gt;
 </content>
   </entry>
