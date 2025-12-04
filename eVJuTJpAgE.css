@@ -407,18 +407,26 @@ pre code {
   padding: 0.5em;
   background: #777;
   border-radius: 12px;
-  text-align: center;
   aspect-ratio: 1.9047619048;
-  line-height: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-}
-
-.problem-card a {
+  text-align: center;
+  line-height: 1;
   color: #fff;
   text-decoration: none;
+  font-variant:small-caps;
 }
+
+.problem-card:hover {
+  background: #346a5b;
+}
+
+.no-underline:hover {
+  text-decoration: none;
+}
+
+
 
 .blog-posts.grid {
   grid-template-columns: repeat(2, 1fr);
