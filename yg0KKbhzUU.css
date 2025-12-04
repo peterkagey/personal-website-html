@@ -1,3 +1,30 @@
+#square_game_canvas {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #adjacency-matrix {
+    font-size: 1.5em;
+    overflow-x: auto;
+  }
+
+  .square-game summary {
+    font-size: 1.5em;
+  }
+  .square-game .button {
+    margin-bottom: 3%;
+  }
+
+  .square-game .upper-bound {
+    font-size: min(4em,10cqw);
+    line-height:1.2;
+    text-align: center;
+  }
+
+  .square-game .menu {
+    grid-template-columns:1fr 3fr 1fr;
+  }
 body {
   font-family: system-ui, sans-serif;
   max-width: 900px;
@@ -474,10 +501,6 @@ pre code {
   margin:0;
 }
 
-.hp .blog-title-card-text {
-  font-size: 1.4em;
-}
-
 @media (max-width: 726px) {
   .hp.cols {
     flex-direction: column;
@@ -568,6 +591,7 @@ blockquote cite {
   position: relative;
   display: inline-block;
   text-align: center;
+  container-type: inline-size;
 }
 
 .blog-title-card-image {
@@ -577,6 +601,8 @@ blockquote cite {
 
 .blog-title-card-overlay {
   position: absolute;
+  display: flex;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -586,24 +612,31 @@ blockquote cite {
   z-index: 1;
 }
 
+.blog-title-card-nav {
+  position: absolute;
+  color: #CCC;
+  top: 1cqw;
+  left: 3cqw;
+  text-align: left;
+  font-size: 5cqw;
+}
+
 .blog-title-card-text {
   width:90%;
   line-height: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  align-self: center;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 8cqw;
   color: white;
 }
 
 .blog-title-card-date {
-  width:90%;
-  text-align: end;
+  position: absolute;
+  bottom: 1cqw;
+  right: 3cqw;
   font-weight: normal;
-  font-size: 0.5em;
+  font-size: 5cqw;
   color: white;
 }
 /* Copied from node_modules/prismjs/themes/prism-tomorrow.min.css */
