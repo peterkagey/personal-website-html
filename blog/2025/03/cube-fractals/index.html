@@ -14,6 +14,8 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script src="/assets/mathjax_config.js" defer=""></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   <meta property="og:title" content="Cube fractals">
@@ -88,7 +90,7 @@
   <div><img src="/assets/blog/2025-03-25/RobFathauerArt_CubesFractal.png"></div>
   <div><video autoplay="" controls="" loop="" src="/assets/blog/2025-03-25/RobFathauerArt_CubesFractal.mp4"></video></div>
 </div>
-<p>When I tried to learn more about this fractal, I found a Mathematica demo called <a href="https://demonstrations.wolfram.com/ShiftingCubeFractal">"Shifting Cube Fractal"</a>. I couldn’t get the demo to work quite properly, so I illustrated it myself by writing a Mathematica script to make this video:</p>
+<p>When I tried to learn more about this fractal, I found a Mathematica demo called <a href="https://demonstrations.wolfram.com/ShiftingCubeFractal">&quot;Shifting Cube Fractal&quot;</a>. I couldn’t get the demo to work quite properly, so I illustrated it myself by writing a Mathematica script to make this video:</p>
 <p><video autoplay="" controls="" loop="" muted="" src="/assets/blog/2025-03-25/fathauer_fractal_frames_opaque.mp4"></video></p>
 <h2 id="bluesky-mathartmarch">Bluesky #MathArtMarch</h2>
 <p>In March 2025, <a href="https://bsky.app/profile/did:plc:enw4w6ihzt4uomkphuxuvczu">@ayliean.bsky.social</a> started <a href="https://bsky.app/hashtag/MathArtMarch">#MathArtMarch</a> with a list of prompts to use to make new art or post existing art. On Day 12, I saw <a href="https://bsky.app/profile/did:plc:2loubqde7mj2jy4yejarroqw">@curved-ruler.bsky.social</a>'s cube fractal, and inspired it, Ayliean’s prompt, and Robert Fathauer’s timelapse, I modified the above video to show off some new perspectives.</p>
@@ -141,11 +143,11 @@ frames = Table[
    ViewVertical -&amp;gt; -{Sin[4 \[Pi]*t + \[Pi]/4],
       Sin[4 \[Pi]*t + \[Pi]/4], Sqrt[2] Cos[4 \[Pi]*t + \[Pi]/4]},
    ViewAngle -&amp;gt; 0.025,
-   ImageSize -&amp;gt; {720, 720}, Boxed -&amp;gt; False, Lighting -&amp;gt; "Neutral",
+   ImageSize -&amp;gt; {720, 720}, Boxed -&amp;gt; False, Lighting -&amp;gt; &quot;Neutral&quot;,
    SphericalRegion -&amp;gt; True],
   {t, 1/200, 1, 1/200}
   ]
-Export["frame_000.png", frames, "VideoFrames"]
+Export[&quot;frame_000.png&quot;, frames, &quot;VideoFrames&quot;]
 </code></pre>
 
     </heading-anchors>
@@ -191,7 +193,7 @@ Export["frame_000.png", frames, "VideoFrames"]
   </main>
   <footer>
     <hr>
-    <p>© Peter Kagey, 2025</p>
+    <p>&copy; Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

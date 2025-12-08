@@ -14,6 +14,8 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script src="/assets/mathjax_config.js" defer=""></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   
@@ -81,7 +83,7 @@
   <img src="/assets/problems/ratings/piste_2.svg" width="50px">
 </div>
 
-<p>Consider ways to lay matchsticks (of unit length) on the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>m</mi></math></mjx-assistive-mml></mjx-container> grid in
+<p>Consider ways to lay matchsticks (of unit length) on the \(n \times m\) grid in
 such a way as to form a maze.</p>
 <figure>
   <div class="grid wide-two">
@@ -89,7 +91,7 @@ such a way as to form a maze.</p>
     <img src="/assets/problems/068/figure-2.svg">
   </div>
   <figcaption>
-    Two mazes on a <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>×</mo><mn>4</mn></math></mjx-assistive-mml></mjx-container>-cell grid.
+    Two mazes on a \(5 \times 4\)-cell grid.
   </figcaption>
 </figure>
 <h2 id="question">Question</h2>
@@ -98,9 +100,9 @@ such a way as to form a maze.</p>
 </p>
 <h3 id="related-questions">Related questions</h3>
 <ol>
-  <li>What if every <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>×</mo><mn>1</mn></math></mjx-assistive-mml></mjx-container> cell must be reachable?</li>
+  <li>What if every \(1\times1\) cell must be reachable?</li>
   <li>What if there are no dead ends?</li>
-  <li>What if there are to be identically <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container> dead ends?</li>
+  <li>What if there are to be identically \(k\) dead ends?</li>
   <li>What if paths that loop are not allowed?</li>
   <li>What if the entrance and exit have prescribed positions?</li>
   <li>What if this is done on a hexagonal or triangular grid? On a torus?</li>
@@ -108,7 +110,7 @@ such a way as to form a maze.</p>
 </ol>
 <h3 id="note">Note</h3>
 <p>
-  This appears to be the number of spanning trees on the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>m</mi></math></mjx-assistive-mml></mjx-container> grid graph
+  This appears to be the number of spanning trees on the \(n \times m\) grid graph
   such that the start and end are leaves.
 </p>
 <h3 id="references">References</h3>
@@ -132,7 +134,7 @@ Spot an error or have other feedback? Please <a href="https://github.com/peterka
   </main>
   <footer>
     <hr>
-    <p>© Peter Kagey, 2025</p>
+    <p>&copy; Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

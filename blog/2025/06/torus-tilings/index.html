@@ -14,6 +14,8 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script src="/assets/mathjax_config.js" defer=""></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   <meta property="og:title" content="Torus tilings">
@@ -82,7 +84,7 @@
     <p>by Peter Kagey (2025-06-02)</p>
     
     <heading-anchors>
-      <p>Ever since Bill Keehn and I started writing our paper, "<a href="https://cs.uwaterloo.ca/journals/JIS/VOL27/Kagey/kagey6.html">Counting Tilings of the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>m</mi></math></mjx-assistive-mml></mjx-container> Grid, Cylinder, and Torus</a>," I’ve been noticing and taking photos of tiles that I see that exhibit interesting symmetries.</p>
+      <p>Ever since Bill Keehn and I started writing our paper, &quot;<a href="https://cs.uwaterloo.ca/journals/JIS/VOL27/Kagey/kagey6.html">Counting Tilings of the \(n \times m\) Grid, Cylinder, and Torus</a>,&quot; I’ve been noticing and taking photos of tiles that I see that exhibit interesting symmetries.</p>
 <div class="columns">
   <div><img src="/assets/blog/2025-06-02/tile_001_rf.png" alt="Tile with diagonal reflectional symmetry"></div>
   <div><img src="/assets/blog/2025-06-02/tile_002_rf_rr.png" alt="Tile with diagonal reflectional symmetry and 180° rotational symmetry"></div>
@@ -133,7 +135,7 @@
   <div><img src="/assets/blog/2025-06-02/tile_032_rf.png" alt="Tile with diagonal reflectional symmetry"></div>
   <div><img src="/assets/blog/2025-06-02/tile_030_id.png"></div>
 </div>
-<p>My wife will sometimes <a href="https://en.wiktionary.org/wiki/kid_on_the_square">kid on the square</a>: "Whenever you take your phone out to take a picture of a tile, you also have to take a picture of me."</p>
+<p>My wife will sometimes <a href="https://en.wiktionary.org/wiki/kid_on_the_square">kid on the square</a>: &quot;Whenever you take your phone out to take a picture of a tile, you also have to take a picture of me.&quot;</p>
 <h2 id="cpp-job-talk">CPP Job Talk</h2>
 <p>When I gave my job talk at CPP, I included some of these tiles in my most labor-intensive slide transition:</p>
 <p><video controls="" src="/assets/blog/2025-06-02/MathArtRecreation.mov"></video></p>
@@ -166,7 +168,7 @@
 </div>
 <h2 id="mathematica-code">Mathematica code</h2>
 <p>Here’s the code for drawing the patterns on a torus:</p>
-<pre><code>faceImage = ImageCrop[Import["tiling_018.png"],1620/3];
+<pre><code>faceImage = ImageCrop[Import[&quot;tiling_018.png&quot;],1620/3];
 
 torus[u_, v_, R_ : 2, r_ : 1] := {
   (R + r Cos[v]) Cos[u],
@@ -178,8 +180,8 @@ frames = Table[
   ParametricPlot3D[torus[u, v], {u, 0, 2 Pi}, {v, 0, 2 Pi},
     TextureCoordinateFunction -&gt; ({#4, #5 + a} &amp;),
     PlotStyle -&gt; Texture[faceImage],
-    Mesh -&gt; None, Lighting -&gt; "Neutral",
-    Boxed -&gt; False, Axes -&gt; False, Method -&gt; {"ShrinkWrap" -&gt; True},
+    Mesh -&gt; None, Lighting -&gt; &quot;Neutral&quot;,
+    Boxed -&gt; False, Axes -&gt; False, Method -&gt; {&quot;ShrinkWrap&quot; -&gt; True},
     Background -&gt; Black, ImageSize -&gt; Large
   ],
   {a, 0, 119/120, 1/120}
@@ -268,7 +270,7 @@ canvas<span class="token punctuation">.</span>save<span class="token punctuation
   </main>
   <footer>
     <hr>
-    <p>© Peter Kagey, 2025</p>
+    <p>&copy; Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

@@ -14,6 +14,8 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script src="/assets/mathjax_config.js" defer=""></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   
@@ -85,17 +87,17 @@
 <figure>
   <img src="/assets/problems/080/figure-1.svg">
   <figcaption>
-    On the leftmost path, the final transition is from an "L" to a square, because the maximum number of faces that can touch is two, so the block must be added in the upper left corner. Counting the number of vertices gives <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math></mjx-assistive-mml></mjx-container>, <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn></math></mjx-assistive-mml></mjx-container>, and <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn></math></mjx-assistive-mml></mjx-container>.
+    On the leftmost path, the final transition is from an "L" to a square, because the maximum number of faces that can touch is two, so the block must be added in the upper left corner. Counting the number of vertices gives \(a(1)=1\), \(a(2)=2\), and \(a(3)=4\).
   </figcaption>
 </figure>
 <h2 id="question">Question</h2>
 <p>
-  How many distinct figures (up to group action) can be made with <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> blocks, always following a greedy algorithm (with respect to number of faces touching)?
+  How many distinct figures (up to group action) can be made with \(n\) blocks, always following a greedy algorithm (with respect to number of faces touching)?
 </p>
 <h3 id="related-questions">Related questions</h3>
 <ol>
   <li>What if this is done with circles on a hexagonal grid? (Polyiamonds, etc.)</li>
-  <li>What if this is done in more than <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml></mjx-container> dimensions?</li>
+  <li>What if this is done in more than \(2\) dimensions?</li>
   <li>What if the starting shape is different? (e.g. the "T" tetromino)</li>
   <li>What if the blocks are different? (e.g. dominoes)</li>
   <li>What if the constraint is changed? (e.g. each block must touch exactly two sides)</li>
@@ -120,7 +122,7 @@ Spot an error or have other feedback? Please <a href="https://github.com/peterka
   </main>
   <footer>
     <hr>
-    <p>© Peter Kagey, 2025</p>
+    <p>&copy; Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

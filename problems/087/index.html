@@ -14,6 +14,8 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script src="/assets/mathjax_config.js" defer=""></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   
@@ -81,7 +83,7 @@
   <img src="/assets/problems/ratings/piste_2.svg" width="50px">
 </div>
 
-<p>Consider partitions of the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>m</mi></math></mjx-assistive-mml></mjx-container> grid into triangles with vertices on gridpoints.</p>
+<p>Consider partitions of the \(n\times m\) grid into triangles with vertices on gridpoints.</p>
 <figure>
   <div class="grid wide-six">
     <img src="/assets/problems/087/figure-1.svg">
@@ -92,7 +94,7 @@
     <img src="/assets/problems/087/figure-6.svg">
   </div>
   <figcaption>
-    All six partitions of the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>×</mo><mn>1</mn></math></mjx-assistive-mml></mjx-container> grid into triangles with gridpoint vertices, up to dihedral action.
+    All six partitions of the \(2 \times 1\) grid into triangles with gridpoint vertices, up to dihedral action.
   </figcaption>
 </figure>
 <figure>
@@ -100,7 +102,7 @@
     <img src="/assets/problems/087/figure-7.svg">
   </div>
   <figcaption>
-    An example of a partition of the <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn><mo>×</mo><mn>4</mn></math></mjx-assistive-mml></mjx-container> grid into triangles with no “empty” gridpoints.
+    An example of a partition of the \(4 \times 4\) grid into triangles with no “empty” gridpoints.
   </figcaption>
 </figure>
 <h2 id="question">Question</h2>
@@ -111,14 +113,14 @@
 <ol>
   <li>What if these are counted up to rotation/reflection?</li>
   <li>What if this is done on a triangular/hexagonal grid?</li>
-  <li>How many partitions with the maximal number of triangles? With <mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container> triangles?</li>
+  <li>How many partitions with the maximal number of triangles? With \(k\) triangles?</li>
   <li>What if all triangles must be right triangles? Acute? Obtuse?</li>
   <li>What if each gridpoint must touch a triangle? What is the minimum number of faces?</li>
   <li>What if each gridpoint must touch as many triangles as possible? What is the minimum number of faces? What’s the expected number of faces (i.e. there’s no way to draw a new edge)?</li>
   <li>What if this is done on a grid in hyperbolic space?</li>
 </ol>
 <h3 id="note">Note</h3>
-<p><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c37"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c38"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mn>051708</mn><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></p>
+<p>\(a_1(n) = A051708(n)\)</p>
 <h3 id="references">References</h3>
 <ol>
   <li>On-Line Encyclopedia of Integer Sequences, <a href="https://oeis.org/A051708">A051708</a></li>
@@ -140,7 +142,7 @@ Spot an error or have other feedback? Please <a href="https://github.com/peterka
   </main>
   <footer>
     <hr>
-    <p>© Peter Kagey, 2025</p>
+    <p>&copy; Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>

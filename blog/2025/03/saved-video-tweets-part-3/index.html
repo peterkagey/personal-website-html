@@ -14,6 +14,8 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="/vendor/heading-anchors.js"></script>
+  <script src="/assets/mathjax_config.js" defer=""></script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
   <meta name="twitter:card" content="summary_large_image">
   
   <meta property="og:title" content="Saved video tweets (3 of 3)">
@@ -100,7 +102,7 @@
 </div>I think this could be an interesting problem to have multivariable calculus students model. Here’s my attempt:<p></p>
 <p><video autoplay="" controls="" loop="" src="/assets/blog/2025-03-17/geometric_paint.mp4"></video></p>
 <p>Here’s the quick and dirty Mathematica code:</p>
-<pre><code>colors = {RGBColor["#a476b9"], RGBColor["#4476bc"], RGBColor["#73b9a3"], RGBColor["#faf0e1"], RGBColor["#fbe5cc"], RGBColor["#e85981"], RGBColor["#f3c0ee"], RGBColor["#d3cdd6"]};
+<pre><code>colors = {RGBColor[&quot;#a476b9&quot;], RGBColor[&quot;#4476bc&quot;], RGBColor[&quot;#73b9a3&quot;], RGBColor[&quot;#faf0e1&quot;], RGBColor[&quot;#fbe5cc&quot;], RGBColor[&quot;#e85981&quot;], RGBColor[&quot;#f3c0ee&quot;], RGBColor[&quot;#d3cdd6&quot;]};
 c=4; a=0.35;
 fs:=Table[
     {Cos[-t],2Sin[-t]}+a*{Cos[-c*t+s],Sin[-c*t+s]},
@@ -110,11 +112,11 @@ frames=Table[
     ParametricPlot[
         fs,{t,-\[Pi]/4,tf},
         Background-&gt;Black, PlotRange-&gt;List[{-2,2},{-3,2}], Axes-&gt;False,
-        PlotStyle-&gt;({JoinForm["Round"],CapForm["Round"],Thickness[0.02],#}&amp;/@colors)
+        PlotStyle-&gt;({JoinForm[&quot;Round&quot;],CapForm[&quot;Round&quot;],Thickness[0.02],#}&amp;/@colors)
     ],
     {tf,-\[Pi]/4+0.01,2\[Pi]-3\[Pi]/4,0.05}
 ];
-Export[NotebookDirectory[] &lt;&gt; "geometric_paint.mp4", frames]
+Export[NotebookDirectory[] &lt;&gt; &quot;geometric_paint.mp4&quot;, frames]
 </code></pre>
 <h2 id="keishiro-ueki-s-hinged-objects">Keishiro Ueki’s hinged objects</h2>
 <p>Keishiro Ueki is on Bluesky as <a href="https://bsky.app/profile/keishiroueki.bsky.social">@keishiroueki.bsky.social</a>. The first video is a minute long and has twelve (!!) examples—each of them very slick!</p>
@@ -123,11 +125,11 @@ Export[NotebookDirectory[] &lt;&gt; "geometric_paint.mp4", frames]
 <div><img src="/assets/blog/2025-03-17/KeishiroUeki_November2023.png"></div>
 </div>
 <p><video controls="" src="/assets/blog/2025-03-17/KeishiroUeki_1.mp4"></video></p>
-<p>This next video reminds me of Martin Schwab’s "Mechanized Hinged Truchet Tiling," which you can see on <a href="https://mathstodon.xyz/@diamabolo/113522470565232417">Mathstodon</a>! (You won’t regret clicking on the link!)</p>
+<p>This next video reminds me of Martin Schwab’s &quot;Mechanized Hinged Truchet Tiling,&quot; which you can see on <a href="https://mathstodon.xyz/@diamabolo/113522470565232417">Mathstodon</a>! (You won’t regret clicking on the link!)</p>
 <p><video controls="" src="/assets/blog/2025-03-17/KeishiroUeki_2.mp4"></video></p>
 <h2 id="amy-goodchild-illustrating-genuary-2024">Amy Goodchild illustrating Genuary 2024</h2>
 <p>Amy is at Bluesky with the handle <a href="https://bsky.app/profile/amygoodchild.bsky.social">@amygoodchild.bsky.social</a>.</p>
-<p>I find this "Genuary Day 1" post to be both very pretty and very inspiring.</p>
+<p>I find this &quot;Genuary Day 1&quot; post to be both very pretty and very inspiring.</p>
 <div class="columns">
   <figure>
     <img src="/assets/blog/2025-03-17/amygoodchild_GenuaryDay1.png">
@@ -187,7 +189,7 @@ Export[NotebookDirectory[] &lt;&gt; "geometric_paint.mp4", frames]
   </heading-anchors></main>
   <footer>
     <hr>
-    <p>© Peter Kagey, 2025</p>
+    <p>&copy; Peter Kagey, 2025</p>
   </footer>
 </body>
 </html>
