@@ -132,7 +132,34 @@
   <figcaption>An illustration of the vertices and sides.</figcaption>
 </figure>
 <p>In the table below, I give examples of five triangle centers and their description in barycentric coordinates. In the case of \(X(2)\), the barycentric coodinates say that the centroid is just an honest average of the vertices. In all other cases, the other triangle centers are <em>weighted</em> averages of the vertices.</p>
-<table><tbody><tr><td>Triangle Center</td><td>Barycentric</td></tr><tr><td>X(1)&nbsp;=&nbsp;INCENTER</td><td>\(f(a,b,c) = a\)</td></tr><tr><td>X(2)&nbsp;=&nbsp;CENTROID</td><td>\(f(a,b,c) = 1\)</td></tr><tr><td>X(6)&nbsp;=&nbsp;SYMMEDIAN POINT</td><td>\(f(a,b,c) = a^2\)</td></tr><tr><td>X(10) = SPIEKER CENTER</td><td>\(f(a,b,c) = b + c\)</td></tr><tr><td>X(58) = ISOGONAL CONJUGATE OF X(10)</td><td>\(\displaystyle f(a,b,c) = \frac{a^2}{b + c}\)</td></tr></tbody></table>
+<table>
+  <tbody>
+    <tr>
+      <td>Triangle Center</td>
+      <td>Barycentric</td>
+    </tr>
+    <tr>
+      <td>X(1)&nbsp;=&nbsp;INCENTER</td>
+      <td>\(f(a,b,c) = a\)</td>
+    </tr>
+    <tr>
+      <td>X(2)&nbsp;=&nbsp;CENTROID</td>
+      <td>\(f(a,b,c) = 1\)</td>
+    </tr>
+    <tr>
+      <td>X(6)&nbsp;=&nbsp;SYMMEDIAN POINT</td>
+      <td>\(f(a,b,c) = a^2\)</td>
+    </tr>
+    <tr>
+      <td>X(10) = SPIEKER CENTER</td>
+      <td>\(f(a,b,c) = b + c\)</td>
+    </tr>
+    <tr>
+      <td>X(58) = ISOGONAL CONJUGATE OF X(10)</td>
+      <td>\(\displaystyle f(a,b,c) = \frac{a^2}{b + c}\)</td>
+    </tr>
+  </tbody>
+</table>
 <p>A table of five triangle centers and the corresponding barycentric coordinates.</p>
 <h2 id="a-curve-of-triangle-centers">A curve of triangle centers</h2>
 <p>The triangle centers in the video are all described by functions of the form \[f(a,b,c) = a^{x_1}(b + c – a)^{x_2} (bc)^{x_3} (b^{x_4} + c^{x_4})^{x_5},\] where \((x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5\) and each frame follows a path in \(\mathbb{R}^5\), which intersects a triangle center from ETC for a single frame every ten seconds. In order to get this path in five-dimensional space, the code stitches together twenty piecewise-defined Bézier curves into a differentiable curve that goes through those twenty &quot;anchor points&quot;, as suggested by the following illustration. (Thankfully I could reuse some of the code I wrote for my Twitter bot <a href="https://twitter.com/BotzierCurves">@BotzierCurves</a>!)</p>

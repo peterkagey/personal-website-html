@@ -138,10 +138,152 @@
 <p>If you have any ideas about this, let me know on Twitter or post an answer to the Stack Exchange question above.</p>
 <h2 id="a-catalog-of-polytopes-and-grids">A catalog of polytopes and grids</h2>
 <p>On my [OEIS wiki pagehttp://oeis.org/w/index.php?title=User:Peter_Kagey&amp;oldid=1643082), I’ve created some tables that show different kinds of polytopes in different kinds of grids. There are quite a number of combinations of polygons/polyhedra and grids that either don’t have an OEIS sequence or that I have been unable to find.</p>
-<table><tbody><tr><th>&nbsp;</th><th style="font-size: small; text-align: center;">Square</th><th style="font-size: small; text-align: center;">Rectangular</th><th style="font-size: small; text-align: center;">Centered Square</th><th style="font-size: small; text-align: center;">Triangular</th><th style="font-size: small; text-align: center;">Centered Hexagonal</th></tr><tr><td>Equilateral Triangle</td><td>–</td><td>–</td><td>–</td><td><a href="http://oeis.org/A000332">A000332</a></td><td><a href="http://oeis.org/A008893">A008893</a></td></tr><tr><td>Square</td><td><a href="http://oeis.org/A002415">A002415</a></td><td><a href="http://oeis.org/A130684">A130684</a></td><td><a href="http://oeis.org/A006324">A006324</a></td><td>–</td><td>–</td></tr><tr><td>Regular Hexagon</td><td>–</td><td>–</td><td>–</td><td><a href="http://oeis.org/A011779">A011779</a></td><td><a href="http://oeis.org/A000537">A000537</a></td></tr><tr><td>Regular Polygon</td><td><a href="http://oeis.org/A002415">A002415</a></td><td><a href="http://oeis.org/A130684">A130684</a></td><td><a href="http://oeis.org/A006324">A006324</a></td><td>&nbsp;?</td><td><a href="http://oeis.org/A339483">A339483</a>*</td></tr><tr><td>Triangle</td><td><a href="http://oeis.org/A045996">A045996</a></td><td><a href="http://oeis.org/A334705">A334705</a></td><td>&nbsp;?</td><td>&nbsp;?</td><td><a href="http://oeis.org/A241223">A241223</a></td></tr><tr><td>Rectangle</td><td><a href="http://oeis.org/A085582">A085582</a></td><td><a href="http://oeis.org/A289832">A289832</a></td><td>&nbsp;?</td><td>–</td><td>–</td></tr><tr><td>Right Triangle</td><td><a href="http://oeis.org/A077435">A077435</a></td><td>&nbsp;?</td><td>&nbsp;?</td><td>&nbsp;?</td><td><a href="http://oeis.org/A241225">A241225</a></td></tr></tbody></table>
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th style="font-size: small; text-align: center;">Square</th>
+      <th style="font-size: small; text-align: center;">Rectangular</th>
+      <th style="font-size: small; text-align: center;">Centered Square</th>
+      <th style="font-size: small; text-align: center;">Triangular</th>
+      <th style="font-size: small; text-align: center;">Centered Hexagonal</th>
+    </tr>
+    <tr>
+      <td>Equilateral Triangle</td>
+      <td>–</td>
+      <td>–</td>
+      <td>–</td>
+      <td><a href="http://oeis.org/A000332">A000332</a></td>
+      <td><a href="http://oeis.org/A008893">A008893</a></td>
+    </tr>
+    <tr>
+      <td>Square</td>
+      <td><a href="http://oeis.org/A002415">A002415</a></td>
+      <td><a href="http://oeis.org/A130684">A130684</a></td>
+      <td><a href="http://oeis.org/A006324">A006324</a></td>
+      <td>–</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>Regular Hexagon</td>
+      <td>–</td>
+      <td>–</td>
+      <td>–</td>
+      <td><a href="http://oeis.org/A011779">A011779</a></td>
+      <td><a href="http://oeis.org/A000537">A000537</a></td>
+    </tr>
+    <tr>
+      <td>Regular Polygon</td>
+      <td><a href="http://oeis.org/A002415">A002415</a></td>
+      <td><a href="http://oeis.org/A130684">A130684</a></td>
+      <td><a href="http://oeis.org/A006324">A006324</a></td>
+      <td>?</td>
+      <td><a href="http://oeis.org/A339483">A339483</a>*</td>
+    </tr>
+    <tr>
+      <td>Triangle</td>
+      <td><a href="http://oeis.org/A045996">A045996</a></td>
+      <td><a href="http://oeis.org/A334705">A334705</a></td>
+      <td>?</td>
+      <td>?</td>
+      <td><a href="http://oeis.org/A241223">A241223</a></td>
+    </tr>
+    <tr>
+      <td>Rectangle</td>
+      <td><a href="http://oeis.org/A085582">A085582</a></td>
+      <td><a href="http://oeis.org/A289832">A289832</a></td>
+      <td>?</td>
+      <td>–</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>Right Triangle</td>
+      <td><a href="http://oeis.org/A077435">A077435</a></td>
+      <td>?</td>
+      <td>?</td>
+      <td>?</td>
+      <td><a href="http://oeis.org/A241225">A241225</a></td>
+    </tr>
+  </tbody>
+</table>
 <p>OEIS sequences for polygons on 2-dimensional grids.
 Sequences marked with &quot;*&quot; are ones that I’ve authored, cells marked with &quot;—&quot; have no polygons, and cells marked with &quot;?&quot; do not have a corresponding sequence that I know of.</p>
-<table><tbody><tr><th></th><th>Cubic</th><th>Tetrahedral</th><th>Octahedral</th></tr><tr><td>Equilateral Triangle</td><td><a href="http://oeis.org/A102698">A102698</a></td><td><a href="https://oeis.org/A334581">A334581</a>*</td><td>&nbsp;<a href="https://oeis.org/A342353">A342353</a>*</td></tr><tr><td>Square</td><td><a href="http://oeis.org/A334881">A334881</a>*</td><td><a href="http://oeis.org/A334891">A334891</a>*</td><td>&nbsp;?</td></tr><tr><td>Regular Hexagon</td><td><a href="http://oeis.org/A338322">A338322</a>*</td><td>&nbsp;?</td><td>&nbsp;?</td></tr><tr><td>Regular Polygon</td><td><a href="http://oeis.org/A338323">A338323</a>*</td><td>&nbsp;?</td><td>&nbsp;?</td></tr><tr><td>Triangle</td><td>&nbsp;?</td><td>&nbsp;?</td><td>&nbsp;?</td></tr><tr><td>Rectangle</td><td>&nbsp;?</td><td>&nbsp;?</td><td>&nbsp;?</td></tr><tr><td>Right Triangle</td><td>&nbsp;?</td><td>&nbsp;?</td><td>&nbsp;?</td></tr><tr><td>Regular Tetrahedron</td><td><a href="http://oeis.org/A103158">A103158</a></td><td><a href="http://oeis.org/A269747">A269747</a></td><td>&nbsp;?</td></tr><tr><td>Cube</td><td><a href="http://oeis.org/A098928">A098928</a></td><td>&nbsp;?</td><td>&nbsp;?</td></tr><tr><td>Octahedron</td><td><a href="http://oeis.org/A178797">A178797</a></td><td>&nbsp;?</td><td>&nbsp;?</td></tr><tr><td>Platonic Solid</td><td><a href="http://oeis.org/A338791">A338791</a></td><td>&nbsp;?</td><td>&nbsp;?</td></tr></tbody></table>
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th>Cubic</th>
+      <th>Tetrahedral</th>
+      <th>Octahedral</th>
+    </tr>
+    <tr>
+      <td>Equilateral Triangle</td>
+      <td><a href="http://oeis.org/A102698">A102698</a></td>
+      <td><a href="https://oeis.org/A334581">A334581</a>*</td>
+      <td><a href="https://oeis.org/A342353">A342353</a>*</td>
+    </tr>
+    <tr>
+      <td>Square</td>
+      <td><a href="http://oeis.org/A334881">A334881</a>*</td>
+      <td><a href="http://oeis.org/A334891">A334891</a>*</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Regular Hexagon</td>
+      <td><a href="http://oeis.org/A338322">A338322</a>*</td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Regular Polygon</td>
+      <td><a href="http://oeis.org/A338323">A338323</a>*</td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Triangle</td>
+      <td>?</td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Rectangle</td>
+      <td>?</td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Right Triangle</td>
+      <td>?</td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Regular Tetrahedron</td>
+      <td><a href="http://oeis.org/A103158">A103158</a></td>
+      <td><a href="http://oeis.org/A269747">A269747</a></td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Cube</td>
+      <td><a href="http://oeis.org/A098928">A098928</a></td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Octahedron</td>
+      <td><a href="http://oeis.org/A178797">A178797</a></td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Platonic Solid</td>
+      <td><a href="http://oeis.org/A338791">A338791</a></td>
+      <td>?</td>
+      <td>?</td>
+    </tr>
+  </tbody>
+</table>
 <p>OEIS sequences for polytopes on 3-dimensional grids.
 Sequences marked with &quot;*&quot; are ones that I’ve authored, and cells marked with &quot;?&quot; do not have a corresponding sequence that I know of.</p>
 <p>If you’re interested in working on filling in some of the gaps in this table, I’d love it if you let me now! And if you’d like to collaborate or could use help getting started, [send me a message on Blueskyhttps://bsky.app/profile/peterkagey.com)!</p>
