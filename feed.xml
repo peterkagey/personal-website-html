@@ -4,7 +4,7 @@
   <subtitle>Peter Kagey&#39;s math blog</subtitle>
   <link href="https://peterkagey.com/feed.xml" rel="self" />
   <link href="https://peterkagey.com/" />
-  <updated>2025-11-27T00:00:00Z</updated>
+  <updated>2025-12-27T00:00:00Z</updated>
   <id>https://peterkagey.com/</id>
   <author>
     <name>Peter Kagey</name>
@@ -303,5 +303,12 @@
     <updated>2025-11-27T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/11/human_rd/</id>
     <content type="text">Based on a delightful video of people forming a &#39;human rhombic dodecahedron,&#39; I look for other examples of human polyhedra with some help from an LAPL librarian.</content>
+  </entry>
+  <entry>
+    <title>Potato printing plot party postcards</title>
+    <link href="https://peterkagey.com/blog/2025/12/potato_printing/" />
+    <updated>2025-12-27T00:00:00Z</updated>
+    <id>https://peterkagey.com/blog/2025/12/potato_printing/</id>
+    <content type="text">A postcard designed for the 2025 plotter postcard exchange #ptpx based on &#39;Potato Printing,&#39; a game that M.C. Escher played with his kids.</content>
   </entry>
 </feed>

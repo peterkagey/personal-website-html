@@ -4,7 +4,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/ignore.xml" rel="self" />
   <link href="https://example.com/" />
-  <updated>2025-11-27T00:00:00Z</updated>
+  <updated>2025-12-27T00:00:00Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Your Name</name>
@@ -4011,7 +4011,7 @@ rotate([0,0,180]) translate([-55,-55,0]) {
 &lt;/div&gt;
 
 &lt;h2 id=&quot;bob-mackays-cabinet&quot;&gt;Bob Mackay&#39;s cabinet&lt;/h2&gt;
-If you can&#39;t get enough Squaring the Square furniture, check out this &lt;a href=&quot;http://bobmackay.com/Square/&quot;&gt;cabinet made by Bob Mackay&lt;/a&gt; which I learned about from George Hart&#39;s blog post for the&lt;a href=&quot;https://momath.org/mathmonday/math-monday-12-card-star-puzzle/math-monday-the-squared-square/&quot;&gt;Museum of Mathematics&lt;/a&gt; in partnership with Make: Magazine.
+If you can&#39;t get enough Squaring the Square furniture, check out this &lt;a href=&quot;http://bobmackay.com/Square/&quot;&gt;cabinet made by Bob Mackay&lt;/a&gt; which I learned about from George Hart&#39;s blog post for the &lt;a href=&quot;https://momath.org/mathmonday/math-monday-12-card-star-puzzle/math-monday-the-squared-square/&quot;&gt;Museum of Mathematics&lt;/a&gt; in partnership with Make: Magazine.
 &lt;figure&gt;
   &lt;div class=&quot;grid wide-two narrow-one&quot; style=&quot;grid-template-columns: 3fr 4fr&quot;&gt;
     &lt;img src=&quot;https://example.com/assets/blog/2025-11-12/BobMackay_1.png&quot; alt=&quot;Squaring the square shelf, doors closed.&quot;&gt;
@@ -4097,5 +4097,170 @@ Have thoughts, ideas, suggestions? Let me know &lt;a href=&quot;https://bsky.app
 &lt;p&gt;Best regards,&lt;br&gt;Stella Mittelbach&lt;/p&gt;
 &lt;/blockquote&gt; --&gt;
 </content>
+  </entry>
+  <entry>
+    <title>Potato printing plot party postcards</title>
+    <link href="https://example.com/blog/2025/12/potato_printing/" />
+    <updated>2025-12-27T00:00:00Z</updated>
+    <id>https://example.com/blog/2025/12/potato_printing/</id>
+    <content type="html">&lt;p&gt;
+  I&#39;m participating in the 2025 plotter postcard exchange (&lt;a href=&quot;https://buttondown.com/ptpx/archive/ptpx-2025-registration-is-open/&quot;&gt;#ptpx 2025&lt;/a&gt;) which consists of &lt;a href=&quot;https://bsky.app/profile/paulbutler.org/post/3m7vqphnpt22v&quot;&gt;94 participants from 18 countries&lt;/a&gt; exchanging postcards drawn on pen plotters across the globe! (This is my second postcard exchange. You can read about my first one &lt;a href=&quot;https://example.com/blog/2025/11/postcard_party/&quot;&gt;here&lt;/a&gt;!)
+&lt;/p&gt;
+&lt;p&gt;
+  I decided to base my design on a game called &quot;potato printing&quot; that M.C. Escher played with his kids, where they would carve a potato to make a square stamp, and then stamp that pattern onto a square grid. In Doris Schattschneider&#39;s book &lt;a href=&quot;https://archive.org/details/visionsofsymmetr00dori/page/44/mode/2up&quot;&gt;Visions of Symmetry (pp. 44)&lt;/a&gt;, I saw a particular tile that I used as an inspiration for my postcard.
+&lt;/p&gt;
+&lt;!-- &lt;figure&gt;
+  &lt;img src=&quot;/assets/blog/2025-12-27/PotatoPrinting5a.png&quot;/&gt;
+&lt;/figure&gt; --&gt;
+&lt;figure&gt;
+  &lt;a href=&quot;https://archive.org/details/magicmirrorofmce0000erns/page/40/mode/2up&quot;&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting5b.png&quot;&gt;
+  &lt;/a&gt;
+  &lt;caption&gt;
+    The tile design (along with its rotations) that I used for my postcard.&lt;br&gt;(Image from &lt;a href=&quot;https://archive.org/details/magicmirrorofmce0000erns/page/40/mode/2up&quot;&gt;&lt;i&gt;The Magic Mirror of M.C. Escher&lt;/i&gt; by Bruno Ernst&lt;/a&gt;.)
+  &lt;/caption&gt;
+&lt;/figure&gt;
+
+On each postcard, I two overlapping 2×3 grids of these designs, each drawn in a different color with the property that two tiles in the same position were offset by ±90° or 180° from each other, as shown below.
+
+&lt;figure&gt;
+  &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/postcard.min.svg&quot;&gt;
+  &lt;caption&gt;An SVG of a postcard&lt;/caption&gt;
+&lt;/figure&gt;
+
+I designed the tile by tracing it on Inkscape, and then using a trick to convert it into a series of concentric polygons. The trick involves copying the polygon many times, pasting it on top of itself with varying stroke thicknesses, and then using &quot;Stroke to Path&quot; to get the concentric effect. Once the tile was designed, I used &lt;a href=&quot;https://github.com/orsinium-labs/svg.py&quot;&gt;svg.py&lt;/a&gt; to randomize the tiles and fill in two overlapping grids.
+
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PlotParty_tile.min.svg&quot;&gt;
+    &lt;caption&gt;The SVG tile for the pen plotter, which corresponds to tile design &lt;u&gt;1&lt;/u&gt;.&lt;/caption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;video autoplay=&quot;&quot; controls=&quot;&quot; loop=&quot;&quot; src=&quot;https://example.com/assets/blog/2025-12-27/ptpx2025_2.mp4&quot;&gt;&lt;/video&gt;
+    &lt;caption&gt;A short video snippet of the pen plotting process.&lt;/caption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+Every postcard has a different random arrangement of tile orientations, and most have different color choices, as shown in the following two examples.
+
+&lt;div class=&quot;grid wide-two&quot;&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/postcard_1.jpeg&quot;&gt;
+  &lt;caption&gt;A scan of a postcard&lt;/caption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/postcard_2.jpeg&quot;&gt;
+  &lt;caption&gt;A scan of a postcard&lt;/caption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;potato-printing&quot;&gt;Potato Printing&lt;/h1&gt;
+I learned about the &quot;potato printing&quot; game from &lt;a href=&quot;https://archive.org/details/visionsofsymmetr00dori/page/44/mode/2up&quot;&gt;Doris Schattschneider&#39;s book&lt;/a&gt;, but M.C. Escher&#39;s son George Escher &lt;a href=&quot;https://archive.org/details/mcescherartscien0000inte/page/8/mode/2up&quot;&gt;wrote about it for the &lt;i&gt;International Congress on M.C. Escher&lt;/i&gt; which took place in Rome in 1985 .
+&lt;figure&gt;
+  &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting1.png&quot;&gt;
+    &lt;caption&gt;
+      &lt;details style=&quot;text-align:left;&quot;&gt;
+        &lt;summary&gt;[Click to see text version.]&lt;/summary&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt;In &quot;The Magic Mirror of M.C. Escher&quot; (6), Bruno Ernst describes on page 40 a game with engraved stamps which M.C. Escher invented in 1942. We played a simplified version of it which can be quickly improvised for children or grandchildren looking for something different to do.&lt;/p&gt;
+          &lt;ol&gt;
+          &lt;li&gt;Draw a grid of squares on a sheet of paper and multiply it, for example by punching the corners with a sharp point through a stack of papers.&lt;/li&gt;
+          &lt;li&gt;Draw on one square of the grid lines which intersect the four sides in the same places, so that when the squares are placed side by side the lines connect to each other.&lt;/li&gt;
+          &lt;li&gt;Cut a potato in half and accurately shape the two flat faces into squares of the same size as the grid units.&lt;/li&gt;
+          &lt;li&gt;Transfer the pattern of lines to one potato and with a pointed knife carefully cut away those parts which must remain white in the print,&lt;/li&gt;
+          &lt;li&gt;Prepare a small &quot;ink&quot; pad by folding a rag on a saucer and soaking it with any color at hand: water color, food coloring, finger paint.&lt;/li&gt;
+          &lt;li&gt;Press the finished potato stamp on the pad so that if picks up color on its raised portions. Soak up excess paint and moisture with tissue paper, then press one half potato against the other to transfer the pattern. Cut the second stamp, which is now a mirror image of the first.&lt;/li&gt;
+          &lt;li&gt;Carve a reference mark on one side of each stamp.&lt;/li&gt;
+          &lt;li&gt;The stamps can now be used in four different orientations to print sets of lines on the paper. By regular repetitions a great variety of symmetrical patterns Can be created, which show features of translations, rotations and mirroring.&lt;/li&gt;
+          &lt;/ol&gt;
+          &lt;p&gt;An example is given on the following two pages. It is intriguing to discover what lines on a stamp make interesting patterns and, of course, the game can be extended to triangular and hexagonal grids.&lt;/p&gt;
+          &lt;cite&gt;
+            G.A. Escher, &quot;Potato-printing, a game for winter evenings,&quot; &lt;em&gt;&lt;a href=&quot;https://archive.org/details/mcescherartscien0000inte/page/8/mode/2up&quot;&gt;M.C. Escher, Art and Science&lt;/a&gt;&lt;/em&gt;, pp 9–11.
+          &lt;/cite&gt;
+        &lt;/blockquote&gt;
+      &lt;/details&gt;
+    &lt;/caption&gt;
+&lt;/figure&gt;
+An illustration that follows George&#39;s description contains illustrations that are awfully postcard-like, and I like to think that Escher might have sent out postcards like this if he were to have participated in &lt;a href=&quot;https://buttondown.com/ptpx/archive/ptpx-2025-registration-is-open/&quot;&gt;#ptpx 2025&lt;/a&gt;.
+&lt;figure&gt;
+  &lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+    &lt;a href=&quot;https://archive.org/details/mcescherartscien0000inte/page/10/mode/2up&quot;&gt;
+      &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting2a.png&quot;&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://archive.org/details/mcescherartscien0000inte/page/10/mode/2up&quot;&gt;
+      &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting2b.png&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;caption&gt;M.C. Escher&#39;s hypothetical &quot;postcards&quot;.&lt;/caption&gt;
+&lt;/figure&gt;
+
+I&#39;ve vectorized the tile design used in these illustrations, in case you want to use the pen plotter (or just a printer) to make some of these postcards for yourself.
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/Escher_tile.min.svg&quot;&gt;
+    &lt;caption&gt;A vectorized trace of Escher&#39;s tile design.&lt;/caption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/EscherPostcard.min.svg&quot;&gt;
+    &lt;caption&gt;What a postcard from M.C. Escher might have looked like.&lt;/caption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-magic-mirror-of-m-c-escher&quot;&gt;The Magic Mirror of M.C. Escher&lt;/h2&gt;
+You can read more about this, read a quote from M.C. Escher, and see colored in versions of some of these tilings in &lt;a href=&quot;https://archive.org/details/magicmirrorofmce0000erns/page/40/mode/2up&quot;&gt;&lt;i&gt;The Magic Mirror of M.C. Escher&lt;/i&gt;&lt;/a&gt; by Bruno Ernst, published in 1976.
+&lt;figure&gt;
+  &lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting3.png&quot;&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting4.png&quot;&gt;
+  &lt;/div&gt;
+  &lt;caption&gt;
+    &lt;details style=&quot;text-align:left;&quot;&gt;
+      &lt;summary&gt;[Click to see text version.]&lt;/summary&gt;
+      &lt;blockquote&gt;
+        &lt;h3 id=&quot;a-game&quot;&gt;A Game&lt;/h3&gt;
+        &lt;p&gt;
+          When dealing with periodic space-filling I cannot refrain from describing a game that took Escher&#39;s fancy in 1942, and to which he attached no importance beyond that of a private diversion. He never reproduced it or made use of it in any more serious work.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Escher carved a die shown by figure 79a. On each side of the square, three corresponding connections are possible. If one prints from this stamp a number of times, so that the imprints come next to each other, then the bars form continuous lines throughout the whole figure.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Because the stamp can be printed off in four different positions, and because Escher cut the figure again in its mirror image (once again capable of being printed in four positions), it is possible to use it to conjure up a large number of interesting designs. In figure 79b you can see a few examples, and in figures 80 and 81 two of the many designs Escher colored in.
+        &lt;/p&gt;
+        &lt;h3 id=&quot;a-confession&quot;&gt;A Confession&lt;/h3&gt;
+        &lt;p&gt;
+          The significance periodic space-division has had for Escher is difficult to overestimate. In this chapter we have shown something of it with just a few, indeed all too few, examples. This restriction does not tally with Escher&#39;s own view of his work.
+        &lt;/p&gt;
+        &lt;p&gt;
+          So let us allow Escher to have the last word in this chapter:
+        &lt;/p&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt;
+            [...] I wander totally alone around the garden of periodic drawings. However satisfying it may be to possess one&#39;s own domain, yet loneliness is not as enjoyable as one might expect; and in this case I really find it incomprehensible. Every artist, or better every person (to avoid as much as possible using the word art in this connection), possesses a high degree of personal characteristics and habits. But periodic drawings are not merely a nervous tic, a habit, or a hobby. They are not subjective; they are objective. And I cannot accept, with the best will in the world, that something so obvious and ready to hand as the giving of recognizable form, meaning, function, and purpose to figures that fill each other out, should never have come into the head of any other man but me. For once one has crossed over the threshold of the early stages this activity takes on more worth than any other form of decorative art.
+          &lt;/p&gt;
+          &lt;p&gt;
+            Long before I discovered a relationship with regular space-division through the Moorish artists of the Alhambra, I had already recognized it in myself. At the beginning I had no notion of how I might be able to build up my figures systematically. I knew no rules of the game and I tried, almost without knowing what I was about, to fit together congruent surfaces to which I tried to give animal shapes... later the designing of new motifs gradually came with rather less struggle than in the early days, and yet this has remained a very strenuous occupation, a real mania to which I became enslaved and from which I can only with great difficulty free myself.
+          &lt;/p&gt;
+          &lt;cite&gt;
+            M. C. Escher, Regelmatige Vlakverdeling (Periodic Space-Filling), Utrecht, 1958
+          &lt;/cite&gt;
+        &lt;/blockquote&gt;
+        &lt;cite&gt;&lt;i&gt;The Magic Mirror of M.C. Escher&lt;/i&gt; by Bruno Ernst&lt;/cite&gt;
+      &lt;/blockquote&gt;
+    &lt;/details&gt;
+  &lt;/caption&gt;
+&lt;/figure&gt;
+Here are some colorized versions of the resulting tilings.
+&lt;figure&gt;
+  &lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting6.png&quot;&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2025-12-27/PotatoPrinting7.png&quot;&gt;
+  &lt;/div&gt;
+  &lt;caption&gt;Colored &quot;potato prints&quot;.&lt;/caption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;/h1&gt;
+Have thoughts or ideas or want a (free) postcard from me? Let me know on Bluesky &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;.
+&lt;/a&gt;</content>
   </entry>
 </feed>
