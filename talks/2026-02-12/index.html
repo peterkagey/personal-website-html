@@ -1,33 +1,34 @@
 <link rel="stylesheet" href="/vendor/reveal/reveal.css">
 <link rel="stylesheet" href="/vendor/reveal/theme/black.css">
 <script type="module" src="/vendor/model-viewer.min.js"></script>
-<link rel="stylesheet" href="/assets/talks/2026-02-12/talk.css">
+<link rel="stylesheet" href="/assets/talks/2026-02-12/talk2.css">
 <body>
   <div class="reveal">
     <div class="slides">
       <section>
         <section>
-    <div style="top:40px; height:1080px; width:790px; left:0px; position:absolute;">
-    <p style="font-size: 150px; line-height: 0.8;">
+    <div style="height:1080px; width:790px; position:absolute;">
+    <div style="font-size: 140px; line-height: 0.9; padding:10px;">
       Tilings on Polyhedra
       <br>
       +
       <br>
       Polyhedra on Tilings
-    </p>
+    </div>
   </div>
-  <div class="abs" style="bottom:300px; left:400px; font-size: 50px; line-height: 0.8;">
-    Peter Kagey
+  <div class="abs" style="bottom:20px; left:400px; font-size: 50px; line-height: 0.8; text-align:left;">
+    Peter Kagey<br>
+    2026-02-12<br>
+    Mathematical Connections Seminar
   </div>
-  <div class="abs" style="bottom:250px; left:400px; font-size: 50px; line-height: 0.8;">
-    2026-02-12
+  <div class="abs" style="bottom:0px; left:5px; padding:20px; width:300px;">
+    <img src="/assets/talks/2026-02-12/title/cpp_logo_stacked.png">
   </div>
-  <div class="abs" style="bottom:20px; left:400px; font-size: 50px; line-height: 0.8;">
-    Mathematical<br>Connections<br>Seminar
-  </div>
-  <img style="bottom:0px; left:50px; position:absolute; width:300px;" src="/assets/talks/2026-02-12/title/cpp_logo_stacked.png">
   <div style="bottom:0px; right:50px; position:absolute; width:1080px; height:1080px;">
     <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 54.74deg auto" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/intro/Escher_cube_animated.glb"></model-viewer>
+  </div>
+  <div class="abs" style="width:300px; height:300px; bottom:0px; right:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
   </div>
 </section>
 
@@ -224,6 +225,9 @@
       </cite>
     </div>
   </div>
+  <div class="abs" style="width:300px; height:300px; bottom:0px; left:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
+  </div>
   <aside class="notes">
     "In each of his two enumerations [...] Escher found that 23 distinct all-over patterns could be created according to his method using [asymmetric square tiles up to rotation]
     [...]
@@ -406,6 +410,9 @@
       <i>Tile designs by M.C. Escher</i>
     </p>
   </div>
+  <div class="abs" style="width:300px; height:300px; bottom:0px; left:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
+  </div>
   <aside>
     This is OEIS sequence A368138.
   </aside>
@@ -459,6 +466,17 @@
     In 2002, Ellen Gethner wrote her Computer Science PhD dissertation <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/831/items/1.0051682?o=0">"Computational aspects of Escher tilings"</a> based on a decidability question related to Escher tilings under co-advisement by former Mudd math professor Nick Pippenger.
   </p>
   <img style="height:800px;" src="/assets/talks/2026-02-12/intro/Gethner.png">
+</section>
+
+        <section>
+  <div class="abs" style="width:960px; height:1080px">
+    <img src="/assets/talks/2026-02-12/part1_preview/OpenProblemCollection.png">
+  </div>
+  <div class="abs" style="width:960px; height:1080px; right:0">
+    <a href="/problems/028/">
+      <img style="margin:0px;" src="/assets/talks/2026-02-12/part1_preview/Problem28.png">
+    </a>
+  </div>
 </section>
 
       </section>
@@ -656,15 +674,16 @@
   <div style="pointer-events: none; position: absolute; left: 360px; top: 120px; width: 220px; height: 220px; border: 10px solid #58cc29;"></div>
   <div style="pointer-events: none; position: absolute; left: 360px; top:
   480px; width: 220px; height: 220px; border: 10px solid #29a9cc;"></div>
-  <div style="position: absolute; left: 960px; top: 120px; width: 840; height: 380; background-color: #000000C0;">
-    <p style="font-size: 1.15em; padding: 0.5em;">
+  <div style="position: absolute; right:0; top:0; margin:40px; width: 840; height:auto;">
+    <div style="font-size: 1.15em; background-color: #000000C0; padding:10px;">
       There are \(A367536(2) = 17\) ways of tiling the \(2 \times 2\) torus with these tiles up to rotation and reflection.<br>(There are \(A367536(4) = 33\,572\,458\) ways for the \(4 \times 4\) torus.)
-    </p>
+    </div>
+    <div style="font-size: 1.15em; background-color: #000000C0; padding:10px; margin-top:40px">
+      Based on the tiles of Sébastien Truchet, <a href="https://gallica.bnf.fr/ark:/12148/bpt6k5823204r/f240.item"><i>Memoir sur les Combinasions</i></a>, 1704
+    </div>
   </div>
-    <div style="position: absolute; left: 960px; bottom: 120px; width: 840; height: 5em; background-color: #000000C0;">
-    <p style="font-size: 1.15em; padding: 0.5em;">
-      <i>Based on the tiles of Sébastien Truchet, <a href="https://gallica.bnf.fr/ark:/12148/bpt6k5823204r/f240.item"><i>Memoir sur les Combinasions</i></a>, 1704</i>
-    </p>
+  <div class="abs" style="width:300px; height:300px; bottom:0px; right:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
   </div>
   <aside>
     This is OEIS sequence A368138.
@@ -707,6 +726,9 @@
   </div>
   <div style="position: absolute; right: 27px; bottom: 27px; width: 800px; height: 800px;">
     <model-viewer camera-controls="" disable-zoom="" camera-orbit="225deg 125.26deg auto" interaction-prompt="none" width="1000px" alt="Polytorus" src="/assets/talks/2026-02-12/intro/SolLewitt.glb"></model-viewer>
+  </div>
+  <div class="abs" style="width:300px; height:300px; top:0px; right:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
   </div>
 </section>
 
@@ -770,7 +792,7 @@
     Jasper Bown, <i>Polytopes amidst a Permutahedral Tiling</i>, 2024, Ceramic
   </div>
   <div class="abs" style="width:1820; left:50; bottom:50;">
-    How many different structures could Jasper Bown ('25) make with \(n\) truncated octahedra?
+    How many different structures could Jasper Bown ('24) make with \(n\) truncated octahedra?
   </div>
 </section>
 
@@ -829,7 +851,7 @@
       </section>
       <section>
         <section>
-  <div style="top:200px; height:1080px; width:790px; left:0px; position:absolute;">
+  <div style="top:300px; height:1080px; width:790px; left:0px; position:absolute;">
     <p style="font-size: 150px; line-height: 0.8;">
       Tilings on polyhedra
     </p>
@@ -842,6 +864,9 @@
     <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png">
     <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
     <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+  <div class="abs" style="width:300px; height:300px; bottom:0px; right:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
   </div>
 </section>
 
@@ -1013,6 +1038,9 @@
         A378475(3) = 11\,768\,099\,013,
       \] where A378475 is a sequence we added to the On-Line Encyclopedia of Integer Sequences (OEIS).
     </div>
+  </div>
+  <div class="abs" style="width:300px; height:300px; bottom:0px; left:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
   </div>
 </section>
 
@@ -1709,16 +1737,19 @@
 </section>
 
         <section>
-  <div class="abs" style="width:840px;height:880px;left:0;top:100px;">
+  <div class="abs" style="width:840px;height:880px;left:0;top:0;padding:40px;">
     <div style="margin:40px; font-size:75px; line-height:1;">
-      We can think about polyforms on the faces of polyhedra.
+      Putting an adjacency graph on a polyhedron gives a notion of polyforms on its faces.
     </div>
-    <div class="fragment fade-in" style="margin:40px; padding:100px 0 0 0;font-size:75px; line-height:1;">
+    <div class="fragment fade-in" style="margin:40px; padding-top:40px;font-size:75px; line-height:1;">
       How many ways can you make a connected component of three faces, up to rotation?
     </div>
   </div>
   <div class="abs" style="width:1080px;height:1080px;right:0">
     <model-viewer camera-controls="" camera-orbit="300deg 90deg 100m" autoplay="" src="/assets/talks/2026-02-12/part3_puzzles/PentagonalIcositetrahedron_puzzle_pieces.glb"></model-viewer>
+  </div>
+    <div class="abs" style="width:300px; height:300px; bottom:0px; left:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-12/QR.png">
   </div>
 </section>
 
@@ -1753,15 +1784,15 @@
     <img src="/assets/talks/2026-02-12/part3_puzzles/tet-oct_pieces.png">
   </div>
   <div class="abs" style="width:880px; height:1000px; padding:40px;">
-    <p>
+    <div style="padding:20px;">
       There are 11 tetrahedral-octahedral 4-celled polyforms up to rotation (but not reflection). In total, these have 20 octahedral cells and 24 tetrahedral cells.
-    </p>
-    <p class="fragment fade-in" data-fragment-index="1">
+    </div>
+    <div style="padding:20px;" class="fragment fade-in" data-fragment-index="1">
       Can these fit into the 5x scaled tetrahedron, which can be partitioned into 20 octahedra and 35 tetrahedra?
-    </p>
-    <p class="fragment fade-in" data-fragment-index="3">
+    </div>
+    <div style="padding:20px;" class="fragment fade-in" data-fragment-index="3">
       Andrew Kepert points out by taking the length-5 tetrahedron and removing the 4 tetrahedra at each vertex, the 6 tetrahedra at the center of each edge, and the tetrahedron in the center results in a region with full tetrahedral symmetry and which has 20 octahedral cells and 24 tetrahedral cells. Can the 11 polyforms pack this region?
-    </p>
+    </div>
   </div>
   <div class="abs fragment fade-in-then-out" data-fragment-index="2" style="width:1000px;height:500px;right:40px;bottom:40px">
     <img src="/assets/talks/2026-02-12/part3_puzzles/tet-oct_puzzle_solution1.png">
@@ -1777,6 +1808,12 @@
           <div class="abs" style="display:flex; justify-content: center; align-items: center; height:1080px; width:1920px; font-size:300px;">
             Thank you!
           </div>
+          <div class="abs" style="width:300px; height:300px; bottom:0px; right:0px; padding:10px;">
+            <img src="/assets/talks/2026-02-12/QR.png">
+          </div>
+          <div class="abs fragment fade-in" style="width:300px; height:auto; bottom:0px; left:0px; padding:10px;">
+            (After this, let's play with puzzles!)
+          </div>
         </section>
       </section>
     </div>
@@ -1784,7 +1821,6 @@
 
   <script src="/vendor/reveal/reveal.js"></script>
   <script src="/apps/scripts/talk_2026-02-12.js"></script>
-  <script src="/assets/mathjax_config.js" defer=""></script>
   <script>
     document.querySelectorAll('model-viewer').forEach(el => {
       el.addEventListener('touchstart', e => e.stopPropagation(), { passive: true });
