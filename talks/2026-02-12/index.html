@@ -1,0 +1,1804 @@
+<link rel="stylesheet" href="/vendor/reveal/reveal.css">
+<link rel="stylesheet" href="/vendor/reveal/theme/black.css">
+<script type="module" src="/vendor/model-viewer.min.js"></script>
+<link rel="stylesheet" href="/assets/talks/2026-02-12/talk.css">
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <section>
+    <div style="top:40px; height:1080px; width:790px; left:0px; position:absolute;">
+    <p style="font-size: 150px; line-height: 0.8;">
+      Tilings on Polyhedra
+      <br>
+      +
+      <br>
+      Polyhedra on Tilings
+    </p>
+  </div>
+  <div class="abs" style="bottom:300px; left:400px; font-size: 50px; line-height: 0.8;">
+    Peter Kagey
+  </div>
+  <div class="abs" style="bottom:250px; left:400px; font-size: 50px; line-height: 0.8;">
+    2026-02-12
+  </div>
+  <div class="abs" style="bottom:20px; left:400px; font-size: 50px; line-height: 0.8;">
+    Mathematical<br>Connections<br>Seminar
+  </div>
+  <img style="bottom:0px; left:50px; position:absolute; width:300px;" src="/assets/talks/2026-02-12/title/cpp_logo_stacked.png">
+  <div style="bottom:0px; right:50px; position:absolute; width:1080px; height:1080px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 54.74deg auto" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/intro/Escher_cube_animated.glb"></model-viewer>
+  </div>
+</section>
+
+        <section>
+          <h1 id="todo">TODO</h1>
+          <ul>
+            <li>Open Problems Collection.</li>
+            <li>A372198</li>
+            <li>QR code</li>
+          </ul>
+          <blockquote>
+            <p>
+              Some three hundred years ago, the Italian philosopher Giambattista Vico came to a humble conclusion that still startles today—that one can understand only what one makes.
+            </p>
+            <cite>Dan Beachy-Quick, Aperture</cite>
+          </blockquote>
+        </section>
+      </section>
+      <section>
+        <section>
+  <div style="top:300px; height:1080px; width:790px; left:0px; position:absolute;">
+    <span>Overview of</span>
+    <p style="font-size: 150px; line-height: 0.8;">
+      Tilings on polyhedra
+    </p>
+  </div>
+  <div class="abs" style="bottom:0px; right:50px; width:1080px; height:1080px;">
+    <video style="height:100%" data-autoplay="" controls="" loop="" src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls.mp4"></video>
+  </div>
+</section>
+
+        <section>
+  <style>
+    .reveal img.escher {
+      width: 120px;
+      margin: 0;
+      position: absolute;
+    }
+  </style>
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile.png">
+  <div style="pointer-events: none; position: absolute; left: 0px; top:360px; width: 220px; height: 220px; border: 10px solid #9d29cc;"></div>
+  <div style="pointer-events: none; position: absolute; left: 0px; top: 0px; width: 220px; height: 220px; border: 10px solid #cc4b29;"></div>
+  <div style="pointer-events: none; position: absolute; left: 360px; top: 120px; width: 220px; height: 220px; border: 10px solid #58cc29;"></div>
+  <div style="pointer-events: none; position: absolute; left: 360px; top:
+  480px; width: 220px; height: 220px; border: 10px solid #29a9cc;"></div>
+  <div style="position: absolute; left: 960px; top: 120px; width: 840; height: 840; background-color: #000000C0;">
+    <div style="position: absolute; left: 0px; top: 0px; width: 840; height: 840;" class="fragment fade-out" data-fragment-index="1">
+      <p style="font-size: 1.15em; padding: 0.5em;">
+        Choose an asymmetric motif, place it in a small square, then fill out a \(2 \times 2\) grid of four squares with copies of this small decorated square in any orientation. Translate the filled \(2 \times 2\) grid horizontally and vertically to fill the plane.
+        How many different patterns can be produced by a single motif, following this algorithm?
+      </p>
+      <cite>
+        &mdash; M.C. Escher
+        <br>
+        <span style="font-size: 0.8em;">(via Doris Schattschneider, <em>M.C. Escher: Visions of Symmetry</em>, pp 343, 1990)</span>
+      </cite>
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; width: 840; height: 840;" class="fragment fade-in" data-fragment-index="1">
+      <p style="font-size: 1.15em; padding: 0.5em;">
+        "Escher, by sheer doggedness (sketching all possibilities), correctly answered the question when only rotated orientations of the motif-filled square (chosen from four possible) are allowed: there are 23 different pat-terns. When both rotated and reflected versions (eight possible) of the motif-filled square are allowed, the problem is much more difficult."
+      </p>
+      <cite>
+        &mdash; Doris Schattschneider<br>
+        <span style="font-size: 0.8em;"><em>M.C. Escher: Visions of Symmetry</em>, pp 343, 1990</span>
+      </cite>
+    </div>
+  </div>
+  <aside class="notes">
+    "In each of his two enumerations [...] Escher found that 23 distinct all-over patterns could be created according to his method using [asymmetric square tiles up to rotation]
+    [...]
+    In May 1942 Escher created printed designs with a new carved motif of straight bands meeting each other at right angles and tilted in a square. The designs illustrate each of his 23 distinct possible types of patterns requiring just one printing block. This motif divided the square block on which it was carved into six closed regions; after printing the designs, Escher added color to some of the regions following his usual rule-adjacent regions must be of contrasting color (see the illustration at right). In the patterns printed according to Escher's method described"
+  </aside>
+  <aside class="notes">
+    Escher's combinatorial patterns The experiments that Escher carried out from 1938 to 1942, producing scores of patterns by repeatedly sketching or printing a simple motif in a square grid according to a completely deterministic scheme was, for the artist, a pastime that eventually he tired of (see pages 44-52). Yet the combinatorial problems he set for himself as well as other problems suggested by his experiments have caught the eye of several mathematicians and computer scientists. Shortly after this book was published, the author received mail from two different computer scientists who wanted to determine exactly what Escher had done, and also to find, using a computer search, the answers to some of Escher's ques-tions. Escher had posed the following problem for himself:
+    Choose an asymmetric motif, place it in a small square, then fill out a 2x2 grid of four squares with copies of this small decorated square in any orienta-tion. Translate the filled 2 × 2 grid horizontally and vertically to fill the plane.
+    How many different patterns can be produced by a single motif, following this algorithm?
+    Escher, by sheer doggedness (sketching all possibilities), correctly answered the question when only rotated orientations of the motif-filled square (chosen from four possible) are allowed: there are 23 different pat-terns. When both rotated and reflected versions (eight possible) of the motif-filled square are allowed, the problem is much more difficult, and Escher only examined two special cases: (1) in the 2 x 2 grid, two motifs have the same rotated orientation, and two motifs have the same reflected orientation, and (2) in the 2 x 2 grid, two motifs have different rotated ori-entations, and two motifs have different reflected orientations. In case (1), Escher found (again, through an exhaustive search by sketching) the correct answer: 10 different patterns. In case (2), it appears that he lost interest near the end of his search, yet he managed to find 36 different patterns.
+    A computer program written by Eric Hanson found the answer to a more general version of Escher's two restricted cases: he allowed the 2 × 2 grid to contain any two rotated copies and any two reflected copies of the motif-filled square. For this case, he found there are 67 different patterns,
+    <cite>(Schattschneider, <i>M. C. Escher: Visions of Symmetry</i>, pp 343&ndash;344)</cite>
+  </aside>
+</section>
+
+        <section>
+  <style>
+    .reveal img.escher {
+      width: 120px;
+      margin: 0;
+      position: absolute;
+    }
+  </style>
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:0px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:120px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:240px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:360px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:480px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:600px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:720px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:840px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:960px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1080px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1200px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1320px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1440px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1560px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1680px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1800px;" src="/assets/talks/2026-02-12/intro/EscherTile2.png">
+  <div style="pointer-events: none; position: absolute; left: 0px; top:360px; width: 220px; height: 220px; border: 10px solid #9d29cc;"></div>
+  <div style="pointer-events: none; position: absolute; left: 0px; top: 0px; width: 220px; height: 220px; border: 10px solid #cc4b29;"></div>
+  <div style="pointer-events: none; position: absolute; left: 360px; top: 120px; width: 220px; height: 220px; border: 10px solid #58cc29;"></div>
+  <div style="pointer-events: none; position: absolute; left: 360px; top:
+  480px; width: 220px; height: 220px; border: 10px solid #29a9cc;"></div>
+  <div style="position: absolute; left: 960px; top: 120px; width: 840; height: 380; background-color: #000000C0;">
+    <p style="font-size: 1.15em; padding: 0.5em;">
+      In 1997, Dan Davis counted that there are \(154\) distinct tilings by \(2 \times 2\) stamps when both rotated and reflected versions are allowed.
+    </p>
+  </div>
+    <div style="position: absolute; left: 960px; bottom: 120px; width: 840; height: 160; background-color: #000000C0;">
+    <p style="font-size: 1.15em; padding: 0.5em;">
+      <i>Tile designs by M.C. Escher</i>
+    </p>
+  </div>
+  <aside>
+    This is OEIS sequence A368138.
+  </aside>
+</section>
+
+        <section>
+  <img src="/assets/talks/2026-02-12/intro/EscherNotebook.png">
+  <div class="fragment fade-in" style="position: absolute; left: 1000px; top: 700px; width: 726px; height: 314; background-color: #000000C0; border-radius: 30px;">
+    <p style="margin:0.5em;">
+      Trial designs printed by Escher in 1938 with his carved square blocks. The number array for each design is penciled next to it.
+    </p>
+    <cite>
+      <span style="font-size: 0.5em;">Schattschneider, 1990, pp 35</span>
+    </cite>
+  </div>
+</section>
+
+        <section>
+  <div style="position: absolute; left: 30px; top: 30px; width: 500px; height: 500;">
+    <img src="/assets/talks/2026-02-12/intro/Escher_weave1.png">
+  </div>
+  <div style="position: absolute; left: 550px; top: 30px; width: 500px; height: 500;">
+    <img src="/assets/talks/2026-02-12/intro/Escher_weave2.png">
+  </div>
+  <div style="position: absolute; left: 1070px; top: 30px; width: 500px; height: 500;">
+    <img src="/assets/talks/2026-02-12/intro/Escher_weave3.png">
+  </div>
+
+  <div style="position: absolute; left: 30px; bottom: 30px; width: 500px; height: 500;">
+    <img src="/assets/talks/2026-02-12/intro/Escher_weave4.png">
+  </div>
+  <div style="position: absolute; left: 550px; bottom: 30px; width: 500px; height: 500;">
+    <img src="/assets/talks/2026-02-12/intro/Escher_weave5.png">
+  </div>
+  <div style="position: absolute; left: 1070px; bottom: 30px; width: 500px; height: 500;">
+    <img src="/assets/talks/2026-02-12/intro/Escher_weave6.png">
+  </div>
+  <div style="position: absolute; left: 1590px; top: 30px; width: 300px; height: 1020;">
+    <p>
+      "Six designs made [by M.C. Escher] with the 'ribbon' blocks, mounted for display. Hand-printed with watercolor added, 150 x 150 mm (each design)."
+    </p>
+    <cite>
+      <span style="font-size: 0.8em;">Doris Schattschneider, <em>M.C. Escher: Visions of Symmetry</em>, pp 49, 1990</span>
+    </cite>
+
+  </div>
+</section>
+
+        <section>
+  <p>
+    In 2002, Ellen Gethner wrote her Computer Science PhD dissertation <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/831/items/1.0051682?o=0">"Computational aspects of Escher tilings"</a> based on a decidability question related to Escher tilings under co-advisement by former Mudd math professor Nick Pippenger.
+  </p>
+  <img style="height:800px;" src="/assets/talks/2026-02-12/intro/Gethner.png">
+</section>
+
+      </section>
+      <section>
+        <section>
+  <div class="abs" style="left: 200px; top: 100px; width: 800px; height: 880px;">
+    <img style="margin:0; height:880px" src="/assets/talks/2026-02-12/intro/Keehn_1.png">
+  </div>
+  <div class="abs" style="right: 200px; top: 100px; width: 800px; height: 880px;">
+    <img style="margin:0;" src="/assets/talks/2026-02-12/intro/Keehn_2.png">
+  </div>
+  <div class="abs fragment fade-in" style="right: 200px; top: 100px; width: 800px; height: 880px;">
+    <img style="margin:0;" src="/assets/talks/2026-02-12/intro/Keehn_3.png">
+  </div>
+</section>
+
+        <section>
+  <div class="centered-image-container">
+    <img src="/assets/talks/2026-02-12/intro/Keehn_quote.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left: 200px; top: 100px; width: 600px; height: 780px;">
+    <img style="margin:0; height:880px" src="/assets/talks/2026-02-12/intro/Truchet_planche.png">
+    Sébastien Truchet, <a href="https://gallica.bnf.fr/ark:/12148/bpt6k5823204r/f240.item"><i>Memoir sur les Combinasions</i></a>, 1704
+  </div>
+
+  <div class="abs" style="right: 200px; top: 100px; width: 800px; height: 880px;">
+    <div class="grid four-col">
+      <img src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+      <img src="/assets/talks/2026-02-12/intro/truchet_tile.png" style="transform:rotate(90deg);">
+      <img src="/assets/talks/2026-02-12/intro/truchet_tile.png" style="transform:rotate(180deg);">
+      <img src="/assets/talks/2026-02-12/intro/truchet_tile.png" style="transform:rotate(270deg);">
+    </div>
+    <caption>The four different orientations of a "Truchet Tile"</caption>
+    <img style="margin:0;" src="/assets/talks/2026-02-12/intro/Truchet_Keehn.png">
+  </div>
+</section>
+
+        <section>
+  <style>
+    .reveal img.escher {
+      width: 120px;
+      margin: 0;
+      position: absolute;
+    }
+  </style>
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:0px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:120px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:240px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:360px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:480px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:600px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:720px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:840px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:960px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1080px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1200px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1320px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1440px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1560px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:0px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:120px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:240px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:360px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:480px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:600px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:720px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="01" style="bottom:840px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="00" style="bottom:960px; left:1680px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:0px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:120px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:240px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:360px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:480px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:600px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:720px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="11" style="bottom:840px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <img class="escher" data-rotate-group="10" style="bottom:960px; left:1800px;" src="/assets/talks/2026-02-12/intro/truchet_tile.png">
+  <div style="pointer-events: none; position: absolute; left: 0px; top:360px; width: 220px; height: 220px; border: 10px solid #9d29cc;"></div>
+  <div style="pointer-events: none; position: absolute; left: 0px; top: 0px; width: 220px; height: 220px; border: 10px solid #cc4b29;"></div>
+  <div style="pointer-events: none; position: absolute; left: 360px; top: 120px; width: 220px; height: 220px; border: 10px solid #58cc29;"></div>
+  <div style="pointer-events: none; position: absolute; left: 360px; top:
+  480px; width: 220px; height: 220px; border: 10px solid #29a9cc;"></div>
+  <div style="position: absolute; left: 960px; top: 120px; width: 840; height: 380; background-color: #000000C0;">
+    <p style="font-size: 1.15em; padding: 0.5em;">
+      There are \(A367536(2) = 17\) ways of tiling the \(2 \times 2\) torus with these tiles up to rotation and reflection.<br>(There are \(A367536(4) = 33\,572\,458\) ways for the \(4 \times 4\) torus.)
+    </p>
+  </div>
+    <div style="position: absolute; left: 960px; bottom: 120px; width: 840; height: 5em; background-color: #000000C0;">
+    <p style="font-size: 1.15em; padding: 0.5em;">
+      <i>Based on the tiles of Sébastien Truchet, <a href="https://gallica.bnf.fr/ark:/12148/bpt6k5823204r/f240.item"><i>Memoir sur les Combinasions</i></a>, 1704</i>
+    </p>
+  </div>
+  <aside>
+    This is OEIS sequence A368138.
+  </aside>
+</section>
+
+        <section>
+  <div class="centered-image-container">
+    <img src="/assets/talks/2026-02-12/intro/Keehn_cube.png">
+  </div>
+</section>
+
+      </section>
+      <section>
+        <section>
+  <div class="abs" style="left: 0px; top: 0px; width: 1080px; height: 1080px;">
+    <img src="/assets/talks/2026-02-12/intro/SolLewitt_inverted.png">
+  </div>
+  <div class="abs" style="left: 1100; top: 100px; width: 800; height: 500px;">
+    Sol Lewitt's "Variations of Incomplete Open Cubes" (1974, inverted image), illustrates the 122 ways to <em>not</em> make a cube, by counting connected, nonplanar, proper subsets of edges of the cube.
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="1" style="left: 1100; top: 450px; width: 800; height: 500px;">
+    Can you find these cubes in the table on the left? (They could be reflected or rotated!)
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="1" style="left: 1100; bottom: 27px; width: 400; height: 500px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 125.26deg auto" interaction-prompt="none" width="1000px" alt="Polytorus" src="/assets/talks/2026-02-12/intro/SolLewitt.glb"></model-viewer>
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="1" style="left: 1520; bottom: 27px; width: 400; height: 500px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="225deg 125.26deg auto" interaction-prompt="none" width="1000px" alt="Polytorus" src="/assets/talks/2026-02-12/intro/SolLewitt.glb"></model-viewer>
+  </div>
+</section>
+
+        <section>
+  <div style="position: absolute; left: 0px; top: 0px; width: 1920px;">
+    <p>Which drawings do the two incomplete cubes correspond to?</p>
+    <img src="/assets/talks/2026-02-12/intro/SoLewitt_10Edges.png">
+  </div>
+  <div style="position: absolute; left: 27px; bottom: 27px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 125.26deg auto" interaction-prompt="none" width="1000px" alt="Polytorus" src="/assets/talks/2026-02-12/intro/SolLewitt.glb"></model-viewer>
+  </div>
+  <div style="position: absolute; right: 27px; bottom: 27px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="225deg 125.26deg auto" interaction-prompt="none" width="1000px" alt="Polytorus" src="/assets/talks/2026-02-12/intro/SolLewitt.glb"></model-viewer>
+  </div>
+</section>
+
+        <section>
+  <iframe width="1824" height="1026" src="https://www.youtube.com/embed/_BrFKp-U8GI?si=a54FmKNjOCD4lwe1&amp;start=1057" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</section>
+
+        <section>
+  <div class="abs" style="left: 40px; top: 40px; width: 1000px; height: 1000px;">
+    <video style="height:100%" data-autoplay="" controls="" loop="" src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls.mp4"></video>
+  </div>
+  <div class="abs" style="left: 1080px; top: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_instagram.png">
+  </div>
+  <div class="abs" style="left: 1080px; bottom: 40px; width: 200px;">
+    <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_tile1.png">
+  </div>
+  <div class="abs" style="left: 1380px; bottom: 40px; width: 200px;">
+    <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_tile2.png">
+  </div>
+    <div class="abs" style="left: 1680px; bottom: 40px; width: 200px;">
+    <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_tile3.png">
+  </div>
+</section>
+
+      </section>
+      <section>
+        <section>
+    <div style="top:300px; height:1080px; width:790px; left:0px; position:absolute;">
+    <span>Overview of</span>
+    <p style="font-size: 150px; line-height: 0.8;">
+      Polyhedra on tilings
+    </p>
+  </div>
+  <div class="abs fragment fade-out" data-fragment-index="1" style="bottom:0px; right:50px; width:1080px; height:1080px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="0deg 93deg 39m" autoplay="" interaction-prompt="none" style="background-color: #222;" width="1000px" alt="Polytorus" src="/assets/talks/2026-02-12/examples_polyhedral_complexes/TOWARD.glb"></model-viewer>
+  </div>
+    <div class="abs fragment fade-in" data-fragment-index="1" style="bottom:0px; right:50px; width:1080px; height:1080px;">
+      <img src="/assets/talks/2026-02-12/examples_polyhedral_complexes/ProfileTOWARD.png">
+  </div>
+</section>
+
+        <section>
+  <img src="/assets/talks/2026-02-12/part2_preview/TOWARD_in_progress.JPEG">
+</section>
+
+        <section>
+  <img src="/assets/talks/2026-02-12/part2_preview/NembhardTOWARD.JPEG">
+</section>
+
+        <section>
+  <div class="grid two-col abs">
+    <img src="/assets/talks/2026-02-12/part2_preview/TOWARD_raising.JPEG">
+    <img src="/assets/talks/2026-02-12/part2_preview/JasperInTOWARD.JPEG">
+  </div>
+</section>
+
+        <section>
+  <img src="/assets/talks/2026-02-12/examples_polyhedral_complexes/Jasper.jpeg">
+  <div class="abs" style="width:1820; left:50; top:50;">
+    Jasper Bown, <i>Polytopes amidst a Permutahedral Tiling</i>, 2024, Ceramic
+  </div>
+  <div class="abs" style="width:1820; left:50; bottom:50;">
+    How many different structures could Jasper Bown ('25) make with \(n\) truncated octahedra?
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1840px;height:1000px;top:40px;left:40px;">
+    <img style="width:auto;height:100%;" src="/assets/talks/2026-02-12/part2_preview/TOWARD_alternate.png">
+  </div>
+</section>
+
+        <section>
+  <img src="/assets/talks/2026-02-12/part2_preview/TOWARD_alternate2.png">
+</section>
+
+        <section>
+  <img src="/assets/talks/2026-02-12/part2_preview/3D_printed_parts.png">
+</section>
+
+        <section>
+  <div class="abs" style="left:40px; top:40px; width:800px; height:1000px">
+    <img src="/assets/talks/2026-02-12/part2_preview/ZIGZAG.jpg">
+  </div>
+    <div class="abs" style="left:40px; bottom:140px; width:800px; height:100px">
+    ZIGZAG by hardbodyhang
+  </div>
+  <div class="grid three-col abs" style="right:40px; top:40px; width:1000px; height:1000px">
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_1.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_2.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_3.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_4.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_5.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_6.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_7.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_8.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="91deg 78deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2_preview/octTet_9.glb"></model-viewer>
+    </div>
+  </div>
+</section>
+
+      </section>
+      <section>
+        <section>
+  <div style="top:200px; height:1080px; width:790px; left:0px; position:absolute;">
+    <p style="font-size: 150px; line-height: 0.8;">
+      Tilings on polyhedra
+    </p>
+  </div>
+  <div class="abs" style="bottom:0px; right:50px; width:1080px; height:1080px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 37deg 40m" autoplay="" interaction-prompt="none" alt="" src="/assets/talks/2026-02-12/part1/tetrahedron_illustration_face_rotation.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="bottom:20px;left:20px;width:960px;">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_0.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left: 40; top: 100px; width: 1840px;">
+    <img src="/assets/talks/2026-02-12/part1/BurnsidesLemma.png">
+  </div>
+  <div class="abs" style="left: 60px; top: 220px; width: 505px; height:260px; border: 10px solid red;"></div>
+  <div class="abs" style="left: 820px; top: 120px; width: 650px; height:530px; border: 10px solid blue;"></div>
+  <div class="abs" style="left: 1500px; top: 220px; width: 340px; height:260px; border: 10px solid green;"></div>
+
+  <div class="abs" style="left: 60px; top: 720px; width: 475px; height:auto; padding:15px; border: 10px solid red;">
+    The number of tilings (\(X\)) of the polyhedron up to its symmetries (\(G\))
+  </div>
+
+  <div class="abs" style="left: 820px; top: 720px; width: 620px; height:auto; padding:15px; border: 10px solid blue;">
+    Take the average over all of the symmetries of the polyhedron
+  </div>
+
+  <div class="abs" style="left: 1500px; top: 720px; width: 340px; height:auto; padding:15px; border: 10px solid green;">
+    The number of tilings that look the same after \(g\) is applied
+  </div>
+</section>
+
+        <section>
+  <div class="std" style="top:100px; height:1080px; width:790px; left:0px; position:absolute;">
+    <p style="font-size: 50px;">
+      Let \(G\) be the group consisting of the \(12\) rotational symmetries of the tetrahedron.
+    </p>
+    <p style="font-size: 50px;">
+      How many ways can we decorate the faces the tetrahedron with these <em>tile designs</em> up to rotational symmetry?
+    </p>
+  </div>
+  <div class="abs" style="bottom:0px; right:50px; width:1080px; height:1080px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 37deg 40m" autoplay="" interaction-prompt="none" alt="" src="/assets/talks/2026-02-12/part1/tetrahedron_illustration_face_rotation.glb"></model-viewer>
+  </div>
+  <div class="abs grid two-col" style="bottom:20px;left:20px;width:790px;">
+    <!-- <img src="/assets/talks/2026-02-12/part1/TriangleFace_0.png"> -->
+    <!-- <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png"> -->
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left: 40px; top: 40px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 37deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/tetrahedron_illustration_face_rotation_not_animated.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_0.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+  <div class="abs" style="right: 0px; top: 40px; width: 1000px;">
+    <div class="std" style="height:auto;">
+      How many ways are there to tile the tetrahedron using these four tile designs such that the tetrahedron looks the same after being rotated \(\pm120^\circ\) about a face (equivalently vertex)?
+      <br>
+      <span style="font-size: 30px;">(There are \(8\) inequivalent ways in which we can do this.)</span>
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      There is just \(1\) choice of tile for the rotating face.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Then we can choose any of the four tile designs for any of the remaining faces which then determines the other two.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Thus there are \(1 \times 4 = 4\) ways to tile the tetrahedron that look the same after \(120^\circ\) rotation of a face.
+    </div>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left: 40px; top: 40px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 37deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/tetrahedron_edge_rotationally_symmetric.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_0.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+  <div class="abs" style="right: 0px; top: 40px; width: 1000px;">
+    <div class="std" style="height:auto;">
+      How many ways are there to tile the tetrahedron such that the tetrahedron looks the same after being rotated \(180^\circ\) along an edge?
+      <br>
+      <span style="font-size: 30px;">(There are \(3\) inequivalent ways in which we can do this.)</span>
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      We can choose a face and tile it any of the \(4\) ways.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      This determines how we much tile the other face in its <em>orbit</em>.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Next we can choose either of the remaining faces and tile it any of the \(4\) ways, which determines the tiling on the fourth face.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Thus there are \(4 \times 4 = 16\) ways to tile the tetrahedron that look the same after \(180^\circ\) rotation.
+    </div>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left: 40px; top: 40px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 37deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/tetrahedron_illustration_asymmetic.glb"></model-viewer>
+
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_0.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+  <div class="abs" style="right: 0px; top: 40px; width: 1000px;">
+    <div class="std" style="height:auto;">
+      How many ways are there to tile the tetrahedron such that the tetrahedron looks the same after doing <em>nothing</em>?
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Everything looks the same after doing nothing!
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      We can tile each face \(4\) different ways.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Thus there are \(4^4 = 256\) ways to tile the tetrahedron that are <em>fixed</em> under the identity transformation.
+    </div>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left: 40px; top: 40px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 37deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/tetrahedron_edge_rotationally_symmetric.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_0.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+  <div class="abs" style="right: 0px; top: 240px; width: 1000px;">
+    <div class="std" style="height:auto;">
+      Now applying Burnside's lemma we see that there are...
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      \[
+        \frac{3(16) + 8(4) + 1(256)}{12} = 28
+      \] distinct ways to tile the tetrahedron up to rotations.
+    </div>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left: 40px; top: 40px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 127deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/PentagonalIcositetrahedron.glb"></model-viewer>
+  </div>
+
+  <div class="abs" style="right: 0px; top: 40px; width: 1000px;">
+    <div class="std" style="height:auto;">
+      My favorite shape is the pentagonal icositetrahedron. How many ways can tile the faces with \(3\)-colors up to its \(24\) symmetries?
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      A good guess is \[
+        \frac{3^{24}}{24} \approx 11\,767\,897\,353.4
+      \] using the heuristic "most colorings have no symmetry."
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      The correct answer is \[
+        A378475(3) = 11\,768\,099\,013,
+      \] where A378475 is a sequence we added to the On-Line Encyclopedia of Integer Sequences (OEIS).
+    </div>
+  </div>
+</section>
+
+        <section>
+  <p>
+    We start by describing <em>matrix representatives</em> for (generators of) the symmetry group of the polyhedron. For example, the full icosahedral group is a <em>Coxeter group</em> generated by the three reflections
+  </p>
+  <div class="abs" style="width:900px; left:10px;">
+    <p>
+      \[
+        \begin{align*}
+          R_0 &= \begin{pmatrix}
+            -1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+          \end{pmatrix}
+          \\
+          R_1 &= \frac{1}{2}\begin{pmatrix}
+            1 - \phi & -\phi & -1 \\
+            -\phi & 1 & 1-\phi \\
+            -1 & 1-\phi & \phi
+          \end{pmatrix}
+          \\
+          R_2 &= \begin{pmatrix}
+            1 &  0 & 0 \\
+            0 & -1 & 0 \\
+            0 &  0 & 1
+          \end{pmatrix}
+        \end{align*}
+      \]
+    </p>
+  </div>
+  <div class="abs" style="width:900px; right:10px; aspect-ratio: 1;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 157deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/DeltoidalHexecontahedron.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_0.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_1.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_2.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_3.png">
+  </div>
+</section>
+
+        <section>
+  <p>
+    Next we give explicit vertex coordinates which we use to generate all of the vertices.
+  </p>
+  <div class="abs" style="width:900px; left:10px;">
+    <p>
+      \[
+        \begin{align*}
+          v &= (1,0,0) \\
+          v' &= \alpha(1,1,1) \\
+          v'' &= \beta(0,1,\phi)
+        \end{align*}
+      \] where \[
+        \begin{align*}
+          \alpha &= (\sqrt 5 + 4)/11,\,\text{and} \\
+          \beta &= \phi/3.
+        \end{align*}
+      \]
+    </p>
+  </div>
+  <div class="abs" style="width:900px; right:10px; aspect-ratio: 1;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 157deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/DeltoidalHexecontahedron.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_0.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_1.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_2.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_3.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:960px;height:auto;">
+    <div style="padding:20px;margin:20px;">
+      With these vertices, we can explicitly compute how each \(g \in G\) acts on the faces and detect when and how "faces land on top of themselves" under repeated application of \(g \in G\). That is, we can compute when the size of an orbit of a face under the action of a cyclic subgroup \(\langle g \rangle\) is less than the order of \(g\).
+    </div>
+    <div class="fragment fade-in" style="padding:20px;margin:20px;">
+      When the size of the orbit is the order of the cyclic subgroup, we can freely choose our tile for that orbit. When it is smaller, we must choose an appropriately <em>symmetric</em> tile for that position, where the symmetry respects how the faces "land on top of themselves."
+    </div>
+  </div>
+  <!-- <div class="abs" style="width:900px; left:10px; ">
+  </div> -->
+  <div class="abs" style="width:900px; right:10px; aspect-ratio: 1;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 157deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/DeltoidalHexecontahedron.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_0.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_1.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_2.png">
+    <img src="/assets/talks/2026-02-12/part1/DH_face_3.png">
+  </div>
+</section>
+
+        <section>
+  <div style="top:0px; height:1080px; width:790px; left:0px; position:absolute;">
+  </div>
+  <div class="abs" style="width:820px;text-align:left;margin:10px 10px 10px 10px;">
+    The number of ways of tiling the truncated icosahedron up to its \(60\) rotational symmetries with
+    \(t_{5,\mathrm{id}}\) and \(t_{5,r}\) pentagonal tile designs fixed under the \(\mathrm{id}\), and \(r \in C_5\) respectively and
+    \(t_{6,\mathrm{id}}\) and \(t_{6,r}\) hexagonal tile designs fixed under the \(\mathrm{id}\), and \(r \in C_6\) respectively is given by the expression
+    \[
+      \begin{align*}
+        &\frac{1}{60}
+        \big(
+          t_{6,\mathrm{id}}^{20}          t_{5,\mathrm{id}}^{12}
+          +
+          24t_{6,\mathrm{id}}^4           t_{5,\mathrm{id}}^2 t_{5,r}^2
+          \\ &\qquad~+
+          20t_{6,\mathrm{id}}^6 t_{6,r}^2 t_{5,\mathrm{id}}^4
+          +
+          15t_{6,\mathrm{id}}^{10}        t_{5,\mathrm{id}}^6
+        \big).
+      \end{align*}
+    \]
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="1" style="width:840px; top:650px">
+    \[
+      \begin{alignat*}{2}
+        t_{5,\mathrm{id}} &= 1 \qquad
+        t_{5,r} &= 1
+        \\
+        t_{6,\mathrm{id}} &= 3 \qquad
+        t_{6,r} &= 0
+      \end{alignat*}
+    \]
+  </div>
+  <div class="abs" style="bottom:0px; right:0px; width:1080px; height:1080px;">
+    <video style="height:100%" data-autoplay="" controls="" loop="" src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls.mp4"></video>
+  </div>
+  <div class="abs fragment fade-out" data-fragment-index="2" style="bottom:40px">
+    <div class="abs" style="left: 20px; bottom: 0px; width: 166px;">
+      <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_tile1.png">
+    </div>
+    <div class="abs" style="left: 206px; bottom: 0px; width: 166px;">
+      <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_tile2.png">
+    </div>
+    <div class="abs" style="left: 392px; bottom: 0px; width: 166px;">
+      <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_tile3.png">
+    </div>
+      <div class="abs" style="left: 640px; bottom: -10px; width: 166px;">
+      <img src="/assets/talks/2026-02-12/polyhedral_tiling_intro/JonPaulsBalls_tile_pentagonal.png">
+    </div>
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="2" style="bottom:40px; width:840px;">
+    There are \(8\,127\,868\) rotationally distinct "Truchet soccer balls".
+  </div>
+</section>
+
+      </section>
+      <section>
+        <section>
+  <div style="top:200px; height:1080px; width:790px; left:0px; position:absolute;">
+    <p style="font-size: 150px; line-height: 0.9;">
+      Polyhedra on Tilings
+    </p>
+  </div>
+  <div class="abs" style="width:1200px; right:40px;">
+    <img src="/assets/talks/2026-02-12/part2/tetris_4.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="1" style="width:1200px; right:40px;">
+    <img src="/assets/talks/2026-02-12/part2/tetris_5.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="left:40px; top:40px; width:800px; height:1000px">
+    <img src="/assets/talks/2026-02-12/part2/RobinHouston_tetragonal_disphenoid1.png">
+  </div>
+    <div class="abs" style="left:40px; bottom:140px; width:800px; height:100px">
+    Robin Houston's tetragonal disphenoidal building blocks.
+  </div>
+  <div class="grid four-col abs" style="right:40px; top:40px; width:1000px; height:1000px">
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_1.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_2.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_3.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_4.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_5.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_6.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_7.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_8.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_9.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_10.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_11.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_12.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_13.glb"></model-viewer>
+    </div>
+    <div style="aspect-ratio: 1; width:100%; min-width: 0;">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="15deg 150deg 40m" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-12/part2/TetragonalDisphenoidal_14.glb"></model-viewer>
+    </div>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="1" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_graph.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="2" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_overlay.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="3" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_overlay2.png">
+  </div>
+  <!-- <div
+    class="abs fragment fade-in" data-fragment-index="2"
+    style="width:1920; height:1080;"
+  >
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_outlined_polyform.png">
+  </div> -->
+  <div class="abs" style="width:708px; right:40px; height:1000px; bottom:40px;background-color:#000000BF">
+    <p>
+      We count "polyforms" (connected-components of polytopes) on a tiling, up to the symmetries of that tiling.
+    </p>
+    <p class="fragment fade-in" data-fragment-index="1">
+      We begin by embedding the tiling in \(\mathbb{R}^n\), placing a vertex at the center of each cell, and edges between adjacent cells.
+    </p>
+    <p class="fragment fade-in" data-fragment-index="2">
+      Connected components of cells on the tiling correspond to <em>induced subgraphs</em> on the corresponding adjacency graph.
+    </p>
+    <p class="fragment fade-in" data-fragment-index="3">
+      <!-- <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_example_polyform.png"> -->
+      <b>Definition</b> (sketch).<br> A <em>polyomino</em> is an orbit of induced subgraphs under a choice of subgroup of automorphism group of the graph.
+    </p>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal.png">
+  </div>
+  <div class="abs" style="width:708px; right:40px; height:60px; top:20px;background-color:#000000DF">
+    How many \(1\)-celled polyforms?
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="1" style="width:708px; right:40px; height:200px; top:80px; background-color:#000000DF">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_1-polyforms.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="2" style="width:708px; right:40px; height:60px; top:340px;background-color:#000000DF">
+    How many \(2\)-celled polyforms?
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="3" style="width:708px; right:40px; height:180px; top:400px;background-color:#000000DF">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_2-polyforms.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="4" style="width:1840px; right:40px; height:60px; top:700px; background-color:#000000FF">
+    How many \(3\)-celled polyforms?
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="5" style="width:1840px; right:40px; height:auto; top:760px; background-color:#000000FF">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_3-polyforms.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal.png">
+  </div>
+  <div class="abs" style="width:960px; right:40px; height:auto; top:20px;">
+    <div style="background-color:#000000DF">
+      How do we count the number of orbits of order-\(n\) induced subgraphs (polyforms)?
+    </div>
+    <div class="fragment fade-in" data-fragment-index="1" style="background-color:#000000DF">
+      We need to generate representatives for every orbit.
+    </div>
+    <div class="fragment fade-in" data-fragment-index="2" style="background-color:#000000DF">
+      We need to be able to tell if two representatives correspond to the same polyform.
+    </div>
+    <div class="fragment fade-in" data-fragment-index="3" style="background-color:#000000DF">
+      This process is computationally expensive, so we want to encode this problem so that a computer can do the work for us.
+    </div>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_basis.png">
+  </div>
+  <div class="abs" style="width:708px; left:920px; height:auto; top:0;background-color:#000000BF">
+    We start by describing the Euclidean automorphisms, and a <em>translation basis</em>. \[\begin{align*}
+      {
+        \color{red}
+        \vec{b}_1 = \begin{pmatrix} 5 \\ \sqrt3 \end{pmatrix}
+      }
+      \qquad
+      {
+        \color{blue}
+        \vec{b}_2 = \begin{pmatrix} 1 \\ 3\sqrt3 \end{pmatrix}
+      }
+    \end{align*}\]
+    All vertices have rational coordinates with respect to this basis \(\mathcal{B} = \{\vec{b}_1, \vec{b}_2\}\).
+  </div>
+  <div class="abs" style="width:1040px; padding:40px; bottom:0px; left:800px;background-color:#000000BF">
+      The automorphism group is generated by \[
+        \left\langle
+          \left[
+            \begin{array}{rr|r}
+              1 & 0 & 1\\
+              0 & 1 & 0\\\hline
+              0 & 0 & 1
+            \end{array}
+          \right],
+          \left[
+            \begin{array}{rr|r}
+              1 & 0 & 0\\
+              0 & 1 & 1\\\hline
+              0 & 0 & 1
+            \end{array}
+          \right],
+          \left[
+            \begin{array}{rr|r}
+              1 & 1 & 0\\
+              -1 & 0 & 0\\\hline
+              0 & 0 & 1
+            \end{array}
+          \right]
+        \right\rangle,
+      \]
+    where the first two matrices generate the translation subgroup, and matrices act on projective coordinates.
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal.png">
+  </div>
+  <div class="abs" style="width:1920; height:1080; background-color:#000000BF;"></div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="1" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_hex_neighbors.png">
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="2" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_red_tri_neighbors.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="3" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_blue_tri_neighbors.png">
+  </div>
+    <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_graph_overlay.png">
+  </div>
+  <div class="abs" style="margin:20px; padding:10px; width:800; left:10px; height:auto; top:0; background-color:#000000BF">
+    Next we specify representatives for each of the orbits of the vertices in terms of the basis.
+    <div>
+      <img style="width:200px;" src="/assets/talks/2026-02-12/part2/snub_v1.png">
+      <img style="width:100px;" src="/assets/talks/2026-02-12/part2/snub_v2.png">
+      <img style="width:100px;" src="/assets/talks/2026-02-12/part2/snub_v3.png">
+      \[
+        (0,0) \quad
+        (1/3,1/3) \quad
+        (2/21,8/21)
+      \]
+    </div>
+  </div>
+
+  <div class="abs" style="margin:24px; width:900; right:0px; height:auto; top:0;">
+    <div style="background-color:#000000BF">
+      For each vertex representative, we describe the edges:
+    </div>
+    <div class="abs fragment fade-in-then-out" data-fragment-index="1" style="top:100px; left:140px;">
+      <div>
+        <img style="width:200px;" src="/assets/talks/2026-02-12/part2/snub_v1.png"><br>\((0,0)\)
+      </div>
+      <div style="font-size: 30px;">
+        \[
+          \begin{alignat*}{3}
+            &\left(-\frac{10}{21}, \frac{2}{21}\right) \quad
+            &&\left(-\frac{8}{21}, \frac{10}{21}\right) \quad
+            &&\left(-\frac{2}{21}, -\frac{8}{21}\right) \\
+            &\left(\frac{10}{21}, -\frac{2}{21}\right) \quad
+            &&\left(\frac{8}{21}, -\frac{10}{21}\right) \quad
+            &&\left(\frac{2}{21}, \frac{8}{21}\right)
+          \end{alignat*}
+        \]
+      </div>
+    </div>
+    <div class="abs fragment fade-in-then-out" data-fragment-index="2" style="top:100px; left:200px;">
+      <div>
+        <img style="width:200px;" src="/assets/talks/2026-02-12/part2/snub_v2.png"><br>\((1/3,1/3)\)
+      </div>
+      <div style="font-size: 30px;">
+        \[
+          \begin{alignat*}{3}
+            &\left(\frac{8}{21}, \frac{11}{21}\right) \quad
+            &&\left(\frac{2}{21}, \frac{8}{21}\right) \quad
+            &&\left(\frac{11}{21}, \frac{2}{21}\right)
+          \end{alignat*}
+        \]
+      </div>
+    </div>
+    <div class="abs fragment fade-in" data-fragment-index="3" style="top:100px; left:240px;">
+      <div>
+        <img style="width:200px;" src="/assets/talks/2026-02-12/part2/snub_v3.png"><br>\((2/21,8/21)\)
+      </div>
+      <div style="font-size: 30px;">
+        \[
+          \begin{alignat*}{3}
+            &\left(0, 0\right) \quad
+            &&\left(-\frac{2}{21}, \frac{13}{21}\right) \quad
+            &&\left(\frac{1}{3}, \frac{1}{3}\right)
+          \end{alignat*}
+        \]
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal.png">
+  </div>
+  <div class="abs" style="width:1920; height:1080; background-color:#000000BF;"></div>
+
+  <div class="abs" style="margin:24px; width:900; right:0px; height:auto; top:0;">
+    <div style="background-color:#000000BF">
+      Starting with the vertex orbit representatives, we can build all of the polyforms one cell at a time.
+    </div>
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_1.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_2.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_3.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_4.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_5.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_6.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_7.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_8.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_9.png">
+  </div>
+  <div class="abs fragment fade-in" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_growth_10.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal.png">
+  </div>
+  <div class="abs" style="width:1920; height:1080; background-color:#000000BF;"></div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="1" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_1.png">
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="2" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_2.png">
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="3" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_3.png">
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="4" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_4.png">
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="5" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_5.png">
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="6" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_6.png">
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="7" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_7.png">
+  </div>
+    <div class="abs fragment fade-in" data-fragment-index="8" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_fixed_polyform_4.png">
+  </div>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_basis_region.png">
+  </div>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_graph_overlay.png">
+  </div>
+  <div class="abs" style="margin:24px; width:900; right:0px; height:auto; top:0;">
+    <div style="background-color:#000000BF; padding:10px;margin:10px;font-size:39px;">
+      Next, we need to be able to determine when two polyforms are equivalent up to automorphisms. We do this by giving a canonical name for each orbit.
+    </div>
+    <div class="fragment fade-in" data-fragment-index="1" style="background-color:#000000BF; padding:10px;margin:10px;font-size:39px;">
+      We start by shifting the polyform so that all coordinates are non-negative, and as small as possible.
+    </div>
+    <div class="fragment fade-in" data-fragment-index="3" style="background-color:#000000BF; padding:10px;margin:10px;font-size:39px;">
+      Next, we move our piece into all possible <em>orientations</em>, which are specified by coset representatives of the quotient group of the Euclidean automorphism group by its translation subgroup.
+    </div>
+    <div class="fragment fade-in" data-fragment-index="8" style="background-color:#000000BF; padding:10px;margin:10px;font-size:39px;">
+      The canonical representative for a polyform (orbit of an induced subgraph) is the lexicographically earliest vertex set with non-negative coordinates.
+    </div>
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="1" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(0, 0\right),
+        \left(\frac{2}{21}, -\frac{10}{21}\right),
+        \left(\frac{1}{3}, \frac{1}{3}\right),
+        \left(\frac{8}{21}, \frac{2}{21}\right),
+        \left(\frac{11}{21}, \frac{8}{21}\right),
+        \left(1, 0\right)
+      \right\}
+    \]
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="2" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(0, 1\right),
+        \left(\frac{2}{21}, \frac{11}{21}\right),
+        \left(\frac{1}{3}, \frac{4}{3}\right),
+        \left(\frac{8}{21}, \frac{23}{21}\right),
+        \left(\frac{11}{21}, \frac{29}{21}\right),
+        \left(1, 1\right)
+      \right\}
+    \]
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="3" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(\frac{13}{21}, \frac{40}{21}\right),
+        \left(\frac{2}{3}, \frac{5}{3}\right),
+        \left(\frac{19}{21}, \frac{31}{21}\right),
+        \left(1, 1\right),
+        \left(1, 2\right),
+        \left(\frac{31}{21}, \frac{13}{21}\right)
+      \right\}
+    \]
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="4" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(0, 1\right),
+        \left(\frac{2}{21}, \frac{11}{21}\right),
+        \left(\frac{1}{3}, \frac{1}{3}\right),
+        \left(\frac{11}{21}, \frac{8}{21}\right),
+        \left(1, 0\right),
+        \left(\frac{29}{21}, \frac{2}{21}\right)
+      \right\}
+    \]
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="5" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(0, 1\right),
+        \left(\frac{10}{21}, \frac{13}{21}\right),
+        \left(\frac{13}{21}, \frac{19}{21}\right),
+        \left(\frac{2}{3}, \frac{2}{3}\right),
+        \left(\frac{19}{21}, \frac{31}{21}\right),
+        \left(1, 1\right)
+      \right\}
+    \]
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="6" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(\frac{11}{21}, \frac{29}{21}\right),
+        \left(1, 0\right),
+        \left(1, 1\right),
+        \left(\frac{23}{21}, \frac{11}{21}\right),
+        \left(\frac{4}{3}, \frac{1}{3}\right),
+        \left(\frac{29}{21}, \frac{2}{21}\right)
+      \right\}
+    \]
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="7" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(\frac{13}{21}, \frac{19}{21}\right),
+        \left(1, 1\right),
+        \left(\frac{31}{21}, \frac{13}{21}\right),
+        \left(\frac{5}{3}, \frac{2}{3}\right),
+        \left(\frac{40}{21}, \frac{10}{21}\right),
+        \left(2, 0\right)
+      \right\}
+    \]
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="8" style="width:1620px; height:automatic; bottom:0; right:0; padding:20px; margin:20px;">
+    \[
+      \left\{
+        \left(0, 1\right),
+        \left(\frac{2}{21}, \frac{11}{21}\right),
+        \left(\frac{1}{3}, \frac{1}{3}\right),
+        \left(\frac{11}{21}, \frac{8}{21}\right),
+        \left(1, 0\right),
+        \left(\frac{29}{21}, \frac{2}{21}\right)
+      \right\}
+    \]
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_5-polyforms.png">
+  </div>
+</section>
+<section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_6-polyforms.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920; height:1080;">
+    <img src="/assets/talks/2026-02-12/part2/snub_trihexagonal_7-polyforms.png">
+  </div>
+</section>
+
+      </section>
+      <section>
+        <section>
+  <div class="abs" style="width:440px; height:1080px;">
+    <img src="/assets/talks/2026-02-12/part3_puzzles/Gardner_1957-05_pentominoes_inverted.png">
+  </div>
+  <div class="abs" style="width:801px; height:1080px; right:0px;">
+    <img src="/assets/talks/2026-02-12/part3_puzzles/Gardner_1957-12_solution_inverted.png">
+  </div>
+  <div class="abs" style="width:679px; height:1080px; left:440px;">
+    <div style="padding:30px">
+      In 1957, Martin Gardner popularized a series of pentominoes packing puzzles in his "Mathematical Games" column in <em>Scientific American</em>, which he attributed to Sol Golomb (USC).
+    </div>
+    <div class="fragment fade-in" style="padding:30px 30px 0 30px">
+      "It is also possible to fit the 12 pentominoes to form rectangles that are 6 &times; 10, 5 &times; 12, 4 &times; 15 and 3 &times; 20. The first three are shown on [the right]. The 3 &times; 20 rectangle, by all odds the most difficult, is left for the interested reader to construct."
+      <div style="padding:0px 30px; font-size: 30px; text-align: left;">
+        &mdash;Martin Gardner
+      </div>
+    </div>
+  </div>
+
+</section>
+
+        <section>
+  <div class="abs" style="width:1920px;height:1080px;">
+    <img style="height:100%; width:auto;" src="/assets/talks/2026-02-12/part3_puzzles/Kadon_Booth.png">
+  </div>
+</section>
+
+        <section>
+    <img style="height:100%; width:auto;" src="/assets/talks/2026-02-12/part3_puzzles/AndyNiedermaier_Mega-Pyramid.png">
+</section>
+
+        <section>
+  <div class="abs" style="height:480px; top:40px; left:40px;">
+    <img style="height:100%;" src="/assets/talks/2026-02-12/part3_puzzles/Kadon_Greening_1.png">
+  </div>
+  <div class="abs" style="height:480px; top:40px; left:600px;">
+    <img style="height:100%;" src="/assets/talks/2026-02-12/part3_puzzles/Kadon_Greening_3.png">
+  </div>
+  <div class="abs" style="height:480px; top:560px; left:40px;">
+    <img style="height:100%;" src="/assets/talks/2026-02-12/part3_puzzles/Kadon_Greening_2.png">
+  </div>
+  <div class="abs" style="height:480px; top:560px; left:540px;">
+    <img style="height:100%;" src="/assets/talks/2026-02-12/part3_puzzles/Kadon_Greening_4.png">
+  </div>
+  <div class="abs" style="height:480px; top:300px; right:40px;">
+    <a href="https://gamepuzzles.com/p5rare.htm">
+      <img style="height:100%; margin:0;" src="/assets/talks/2026-02-12/part3_puzzles/Kadon_Poly-5.png">
+    </a>
+  </div>
+</section>
+
+        <section>
+  <iframe width="1920" height="1080" src="https://www.youtube.com/embed/isoIxX8aOB8?si=XQ2eczsNOWg0dPR7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</section>
+
+        <section>
+  <div class="abs" style="width:840px;height:880px;left:0;top:100px;">
+    <div style="margin:40px; font-size:75px; line-height:1;">
+      We can think about polyforms on the faces of polyhedra.
+    </div>
+    <div class="fragment fade-in" style="margin:40px; padding:100px 0 0 0;font-size:75px; line-height:1;">
+      How many ways can you make a connected component of three faces, up to rotation?
+    </div>
+  </div>
+  <div class="abs" style="width:1080px;height:1080px;right:0">
+    <model-viewer camera-controls="" camera-orbit="300deg 90deg 100m" autoplay="" src="/assets/talks/2026-02-12/part3_puzzles/PentagonalIcositetrahedron_puzzle_pieces.glb"></model-viewer>
+  </div>
+</section>
+
+        <section>
+  <div class="abs grid four-col" style="width:1920;height:1080;">
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece1.glb"></model-viewer>
+
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece2.glb"></model-viewer>
+
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece3.glb"></model-viewer>
+
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece4.glb"></model-viewer>
+
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece5.glb"></model-viewer>
+
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece6.glb"></model-viewer>
+
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece7.glb"></model-viewer>
+
+  <model-viewer camera-controls="" autoplay="" alt="Model" src="/assets/blog/2025-10-05/piece8.glb"></model-viewer>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920;height:1080;">
+    <model-viewer camera-controls="" disable-zoom="" disable-pan="" environment-image="legacy" alt="Model" src="/assets/talks/2026-02-12/part3_puzzles/PentagonalIcositetrahedron_puzzle_solution_boundary.glb"></model-viewer>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1000px;height:500px;right:40px;top:40px">
+    <img src="/assets/talks/2026-02-12/part3_puzzles/tet-oct_pieces.png">
+  </div>
+  <div class="abs" style="width:880px; height:1000px; padding:40px;">
+    <p>
+      There are 11 tetrahedral-octahedral 4-celled polyforms up to rotation (but not reflection). In total, these have 20 octahedral cells and 24 tetrahedral cells.
+    </p>
+    <p class="fragment fade-in" data-fragment-index="1">
+      Can these fit into the 5x scaled tetrahedron, which can be partitioned into 20 octahedra and 35 tetrahedra?
+    </p>
+    <p class="fragment fade-in" data-fragment-index="3">
+      Andrew Kepert points out by taking the length-5 tetrahedron and removing the 4 tetrahedra at each vertex, the 6 tetrahedra at the center of each edge, and the tetrahedron in the center results in a region with full tetrahedral symmetry and which has 20 octahedral cells and 24 tetrahedral cells. Can the 11 polyforms pack this region?
+    </p>
+  </div>
+  <div class="abs fragment fade-in-then-out" data-fragment-index="2" style="width:1000px;height:500px;right:40px;bottom:40px">
+    <img src="/assets/talks/2026-02-12/part3_puzzles/tet-oct_puzzle_solution1.png">
+  </div>
+  <div class="abs fragment fade-in" data-fragment-index="3" style="width:1000px;height:500px;right:40px;bottom:40px">
+    <model-viewer camera-controls="" disable-zoom="" disable-pan="" environment-image="legacy" alt="Model" src="/assets/talks/2026-02-12/part3_puzzles/tet-oct_puzzle_region.glb"></model-viewer>
+  </div>
+</section>
+
+      </section>
+      <section>
+        <section>
+          <div class="abs" style="display:flex; justify-content: center; align-items: center; height:1080px; width:1920px; font-size:300px;">
+            Thank you!
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="/vendor/reveal/reveal.js"></script>
+  <script src="/apps/scripts/talk_2026-02-12.js"></script>
+  <script src="/assets/mathjax_config.js" defer=""></script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
+</body>

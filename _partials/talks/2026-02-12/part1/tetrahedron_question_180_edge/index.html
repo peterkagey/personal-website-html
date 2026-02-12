@@ -1,0 +1,30 @@
+<section>
+  <div class="abs" style="left: 40px; top: 40px; width: 800px; height: 800px;">
+    <model-viewer camera-controls="" disable-zoom="" camera-orbit="21deg 37deg 40m" autoplay="" alt="" src="/assets/talks/2026-02-12/part1/tetrahedron_edge_rotationally_symmetric.glb"></model-viewer>
+  </div>
+  <div class="abs grid four-col" style="left: 40px; bottom: 40px; width: 800px;">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_0.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_1.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_2.png">
+    <img src="/assets/talks/2026-02-12/part1/TriangleFace_3.png">
+  </div>
+  <div class="abs" style="right: 0px; top: 40px; width: 1000px;">
+    <div class="std" style="height:auto;">
+      How many ways are there to tile the tetrahedron such that the tetrahedron looks the same after being rotated \(180^\circ\) along an edge?
+      <br>
+      <span style="font-size: 30px;">(There are \(3\) inequivalent ways in which we can do this.)</span>
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      We can choose a face and tile it any of the \(4\) ways.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      This determines how we much tile the other face in its <em>orbit</em>.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Next we can choose either of the remaining faces and tile it any of the \(4\) ways, which determines the tiling on the fourth face.
+    </div>
+    <div class="std fragment fade-in" style="height:auto;">
+      Thus there are \(4 \times 4 = 16\) ways to tile the tetrahedron that look the same after \(180^\circ\) rotation.
+    </div>
+  </div>
+</section>
