@@ -1,0 +1,586 @@
+<link rel="stylesheet" href="/vendor/reveal/reveal.css">
+<link rel="stylesheet" href="/vendor/reveal/theme/black.css">
+<script type="module" src="/vendor/model-viewer.min.js"></script>
+<link rel="stylesheet" href="/assets/talks/2026-02-12/talk2.css">
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <section>
+    <div style="height:1080px; width:790px; top:200px; position:absolute;">
+    <div style="font-size: 140px; line-height: 0.9; padding:20px;">
+      Polyominoes on Polyhedra
+    </div>
+  </div>
+  <div class="abs" style="bottom:20px; left:400px; font-size: 45px; line-height: 0.8; text-align:left;">
+    Peter Kagey<br>
+    2026-02-22<br>
+    G4G16
+  </div>
+  <div class="abs" style="bottom:0px; left:5px; padding:20px; width:300px;">
+    <img src="/assets/talks/2026-02-12/title/cpp_logo_stacked.png">
+  </div>
+  <div style="bottom:0px; right:50px; position:absolute; width:1080px; height:1080px;">
+    <model-viewer camera-controls="" disable-zoom="" disable-pan="" autoplay="" interaction-prompt="none" camera-orbit="45deg 90deg 2000m" environment-image="legacy" alt="Model" src="/assets/talks/2026-02-22/intro/animated.glb">
+    </model-viewer>
+  </div>
+  <div class="abs" style="width:300px; height:300px; bottom:0px; right:0px; padding:10px;">
+    <img src="/assets/talks/2026-02-22/QR.png">
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:440px; height:1080px;">
+    <img src="/assets/talks/2026-02-12/part3_puzzles/Gardner_1957-05_pentominoes_inverted.png">
+    <div class="abs fragment fade-in" data-fragment-index="1" style="top:55px; left:43px; width:354px;">
+      <img src="/assets/talks/2026-02-22/intro/Gardner_1957-12_polyomino_trace.min.svg" width="100%">
+    </div>
+  </div>
+  <div class="abs" style="width:801px; height:1080px; right:0px;">
+    <img src="/assets/talks/2026-02-12/part3_puzzles/Gardner_1957-12_solution_inverted.png">
+    <div class="abs fragment fade-in" data-fragment-index="2" style="left:10px; width:392px; top:48px;">
+      <img src="/assets/talks/2026-02-22/intro/Gardner_1957-12_solution_trace_6x10.min.svg" width="100%">
+    </div>
+    <div class="abs fragment fade-in" data-fragment-index="3" style="left:10px; width:470px; top:357px;">
+      <img src="/assets/talks/2026-02-22/intro/Gardner_1957-12_solution_trace_5x12.min.svg" width="100%">
+    </div>
+    <div class="abs fragment fade-in" data-fragment-index="4" style="left:10px; width:588px; top:629px;">
+      <img src="/assets/talks/2026-02-22/intro/Gardner_1957-12_solution_trace_4x15.min.svg" width="100%">
+    </div>
+    <div class="abs fragment fade-in" data-fragment-index="5" style="left:18px; width:770px; height:114px; top:864px; background-color:#FFFFFF44">
+    </div>
+  </div>
+  <div class="abs" style="width:679px; left:440px;">
+    <div style="padding:30px; margin-top: 100px;">
+      In the December 1957, "Mathematical Games" column, Martin Gardner popularized a series of pentominoes packing puzzles, which he attributed to Sol Golomb (USC).
+    </div>
+    <div class="fragment fade-in" data-fragment-index="1" style="padding:30px 30px 0 30px">
+      "It is [...] possible to fit the 12 pentominoes
+      <span class="fragment fade-in" data-fragment-index="2">
+        to form rectangles that are 6 &times; 10,
+      </span>
+      <span class="fragment fade-in" data-fragment-index="3">
+        5 &times; 12,
+      </span>
+      <span class="fragment fade-in" data-fragment-index="4">
+        4 &times; 15
+      </span>
+      <span class="fragment fade-in" data-fragment-index="5">
+        and 3 &times; 20.
+      </span>
+      <span class="fragment fade-in" data-fragment-index="6">
+        The first three are shown on [the right]. The 3 &times; 20 rectangle, by all odds the most difficult, is left for the interested reader to construct."
+      </span>
+    </div>
+    <div style="padding:0px 30px; font-size: 30px; text-align: left;">
+      &mdash;Martin Gardner, December 1957
+    </div>
+  </div>
+</section>
+
+        <section>
+  <img src="/assets/talks/2026-02-22/intro/Kadon_HexnutII.png">
+</section>
+<section>
+  <div class="abs" style="width:1920px; height:1080px;">
+    <img src="/assets/talks/2026-02-22/intro/Kadon_Table.jpeg">
+  </div>
+  <div class="abs" style="width:960px; height:auto; left:480px; top:200px; background-color: #000000A0; font-size: 100px;">
+    Kadon Enterprises (gamepuzzles.com)
+  </div>
+</section>
+
+        <section>
+          <h2 id="andrew-clarkes-the-poly-pages">Andrew Clarke's THE POLY PAGES</h2>
+          <div class="abs" style="width:1920px;height:1080px;">
+            <img width="100%" height="auto" src="/assets/talks/2026-02-22/intro/PolyPages1.png">
+          </div>
+        </section>
+        <section>
+          <img height="100%" src="/assets/talks/2026-02-22/intro/PolyPages2.png">
+        </section>
+        <section>
+  <div width="1920" height="1080">
+    <iframe width="1536px" height="864px" src="https://www.youtube.com/embed/isoIxX8aOB8?si=XQ2eczsNOWg0dPR7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    <p style="padding:40px;">
+      John Greening's tiling of a region with twelve symmetries (\(D_{6}\)) made up of the \(3334\) "free \(12\)-iamonds," where the pieces are all of the possible ways of placing \(12\) equilateral triangles together.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div>
+    <img style="height:1060px; width:auto; padding:0px;margin:20px;" src="/assets/talks/2026-02-22/intro/Greening_12iamonds.png">
+  </div>
+</section>
+
+        <section>
+  <h1 id="polyforms-in-other-settings">Polyforms in other settings</h1>
+  <div class="abs" style="top:150px; width:1920px;">
+    <div class="abs grid two-col" style="left:0px; width:640px; gap: 0;">
+      <div style="aspect-ratio: 1; padding:0; margin:0;">
+        <img style="margin:0px;" src="/assets/talks/2026-02-22/intro/TriakisTriangular2.png">
+      </div>
+      <div style="aspect-ratio: 1; padding:0; margin:0;">
+        <img style="margin:0px;" src="/assets/talks/2026-02-22/intro/TriakisTriangular1.png">
+      </div>
+      <div style="aspect-ratio: 1; padding:0; margin:0;">
+        <img style="margin:0px;" src="/assets/talks/2026-02-22/intro/TriakisTriangular4.png">
+      </div>
+      <div style="aspect-ratio: 1; padding:0; margin:0;">
+        <img style="margin:0px;" src="/assets/talks/2026-02-22/intro/TriakisTriangular3.png">
+      </div>
+    </div>
+    <div class="abs grid two-col fragment fade-in" data-fragment-index="1" style="width:640px; right:640px;">
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron3.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron4.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron1.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron2.glb">
+      </model-viewer>
+    </div>
+    <div class="abs grid two-col fragment fade-in" data-fragment-index="2" style="width:650px; right:0px;">
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisOctahedron3.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisOctahedron2.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisOctahedron1.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisOctahedron4.glb">
+      </model-viewer>
+    </div>
+    <div class="abs" style="left:0px; width:640px; top:640px; text-align: center;">
+      <table>
+        <tr>
+          <td>(Triakis triangular tiling)</td>
+          <td>A057784</td>
+          <td>1</td>
+          <td>2</td>
+          <td>2</td>
+          <td>4</td>
+          <td>4</td>
+          <td>10</td>
+          <td>13</td>
+          <td>29</td>
+          <td>47</td>
+          <td>100</td>
+          <td>181</td>
+          <td>383</td>
+          <td>738</td>
+        </tr>
+        <tr class="fragment fade-in" data-fragment-index="1">
+          <td>(Triakis icosahedron)</td>
+          <td>A383492</td>
+          <td>1</td>
+          <td>2</td>
+          <td>2</td>
+          <td>4</td>
+          <td>4</td>
+          <td>10</td>
+          <td>13</td>
+          <td>29</td>
+          <td>47</td>
+          <td>99</td>
+          <td>175</td>
+          <td>358</td>
+          <td>669</td>
+        </tr>
+        <tr class="fragment fade-in" data-fragment-index="2">
+          <td>(Triakis octahedron)</td>
+          <td>A383800</td>
+          <td>1</td>
+          <td>2</td>
+          <td>2</td>
+          <td>4</td>
+          <td>4</td>
+          <td>10</td>
+          <td>13</td>
+          <td>28</td>
+          <td>42</td>
+          <td>81</td>
+          <td>130</td>
+          <td>239</td>
+          <td>369</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+        <section>
+  <table style="font-size: 28px;">
+    <thead>
+      <tr>
+        <th>Polyhedron</th>
+        <th>Type</th>
+        <th>OEIS</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rhombic Dodecahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A333333(3,k)</td>
+        <td>1</td><td>1</td><td>3</td><td>4</td><td>9</td><td>14</td><td>19</td><td>16</td><td>9</td><td>4</td><td>1</td><td>1</td><td>-</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Triakis Octahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383800(n)</td>
+        <td>1</td><td>2</td><td>2</td><td>4</td><td>4</td><td>10</td><td>13</td><td>28</td><td>42</td><td>81</td><td>130</td><td>239</td><td>369</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383801(n)</td>
+        <td>1</td><td>2</td><td>3</td><td>5</td><td>7</td><td>15</td><td>24</td><td>48</td><td>81</td><td>149</td><td>255</td><td>458</td><td>730</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Tetrakis Hexahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383802(n)</td>
+        <td>1</td><td>2</td><td>2</td><td>6</td><td>8</td><td>21</td><td>36</td><td>84</td><td>164</td><td>356</td><td>691</td><td>1361</td><td>2342</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383803(n)</td>
+        <td>1</td><td>2</td><td>3</td><td>8</td><td>14</td><td>35</td><td>68</td><td>154</td><td>318</td><td>683</td><td>1362</td><td>2668</td><td>4645</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Deltoidal Icositetrahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383804(n)</td>
+        <td>1</td><td>2</td><td>4</td><td>10</td><td>23</td><td>65</td><td>166</td><td>453</td><td>1157</td><td>2849</td><td>6252</td><td>11894</td><td>18183</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383805(n)</td>
+        <td>1</td><td>2</td><td>6</td><td>16</td><td>41</td><td>119</td><td>321</td><td>880</td><td>2286</td><td>5640</td><td>12443</td><td>23668</td><td>36260</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Disdyakis Dodecahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383806(n)</td>
+        <td>1</td><td>3</td><td>3</td><td>9</td><td>14</td><td>38</td><td>74</td><td>184</td><td>406</td><td>981</td><td>2262</td><td>5398</td><td>12589</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383807(n)</td>
+        <td>2</td><td>3</td><td>6</td><td>13</td><td>28</td><td>66</td><td>148</td><td>348</td><td>812</td><td>1921</td><td>4524</td><td>10708</td><td>25178</td>
+      </tr>
+      <tr>
+        <td>Pentagonal Icositetrahedron</td>
+        <td>Rotation</td>
+        <td>A383808(n)</td>
+        <td>1</td><td>3</td><td>8</td><td>25</td><td>72</td><td>234</td><td>701</td><td>2119</td><td>5872</td><td>14772</td><td>31331</td><td>53512</td><td>68794</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Deltoidal Hexecontahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A340635(n)</td>
+        <td>1</td><td>2</td><td>4</td><td>10</td><td>27</td><td>80</td><td>238</td><td>751</td><td>2374</td><td>7608</td><td>24371</td><td>78341</td><td>251269</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383498(n)</td>
+        <td>1</td><td>2</td><td>6</td><td>16</td><td>48</td><td>149</td><td>460</td><td>1471</td><td>4702</td><td>15126</td><td>48607</td><td>156417</td><td>502137</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Rhombic Triacontahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383490(n)</td>
+        <td>1</td><td>1</td><td>3</td><td>4</td><td>12</td><td>24</td><td>65</td><td>156</td><td>422</td><td>1057</td><td>2708</td><td>6574</td><td>15399</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383491(n)</td>
+        <td>1</td><td>1</td><td>4</td><td>6</td><td>19</td><td>43</td><td>119</td><td>300</td><td>818</td><td>2083</td><td>5357</td><td>13078</td><td>?</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Triakis Icosahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383492(n)</td>
+        <td>1</td><td>2</td><td>2</td><td>4</td><td>4</td><td>10</td><td>13</td><td>29</td><td>47</td><td>99</td><td>175</td><td>358</td><td>669</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383493(n)</td>
+        <td>1</td><td>2</td><td>3</td><td>5</td><td>7</td><td>15</td><td>24</td><td>49</td><td>91</td><td>182</td><td>344</td><td>688</td><td>1328</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Pentakis Dodecahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383494(n)</td>
+        <td>1</td><td>2</td><td>2</td><td>6</td><td>10</td><td>27</td><td>56</td><td>149</td><td>352</td><td>915</td><td>2285</td><td>5919</td><td>15084</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383495(n)</td>
+        <td>1</td><td>2</td><td>3</td><td>8</td><td>18</td><td>46</td><td>108</td><td>280</td><td>694</td><td>1788</td><td>4544</td><td>11740</td><td>30105</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Disdyakis Triacontahedron</td>
+        <td>Rotation/Reflection</td>
+        <td>A383496(n)</td>
+        <td>1</td><td>3</td><td>3</td><td>9</td><td>14</td><td>38</td><td>74</td><td>185</td><td>414</td><td>1025</td><td>2430</td><td>6012</td><td>14640</td>
+      </tr>
+      <tr>
+        <td>Rotation</td>
+        <td>A383497(n)</td>
+        <td>2</td><td>3</td><td>6</td><td>13</td><td>28</td><td>66</td><td>148</td><td>349</td><td>828</td><td>2004</td><td>4860</td><td>11919</td><td>29280</td>
+      </tr>
+      <tr>
+        <td>Pentagonal Hexecontahedron</td>
+        <td>Rotation</td>
+        <td>A383786(n)</td>
+        <td>1</td><td>3</td><td>8</td><td>25</td><td>80</td><td>281</td><td>967</td><td>3451</td><td>12256</td><td>43924</td><td>157090</td><td>?</td><td>?</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+        <section>
+<h1 id="a-puzzle-on-a-triakis-icosahedron">A puzzle on a Triakis Icosahedron</h1>
+  <div>
+    <div class="grid five-col" style="width:1920px;">
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_10.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_1.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_2.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_4.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_8.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_3.glb">
+      </model-viewer>
+            <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_5.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_6.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_7.glb">
+      </model-viewer>
+
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TriakisIcosahedron6_9.glb">
+      </model-viewer>
+    </div>
+  </div>
+  <div class="abs" style="width:1520px; bottom:0px; right:200px;">
+    Up to rotation and reflection, there are \(10\) polyforms with \(6\) faces on the <em>triakis icosahedron</em>, which has \(10 \times 6 = 60\) isosceles triangular faces.
+  </div>
+</section>
+
+        <section>
+<h1 id="tetrakis-hexahedron">Tetrakis Hexahedron</h1>
+  <div>
+    <div class="abs grid three-col" style="width:1280px; left:320px;">
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TetrakisHexahedron_1.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TetrakisHexahedron_2.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TetrakisHexahedron_3.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TetrakisHexahedron_4.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TetrakisHexahedron_5.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/TetrakisHexahedron_6.glb">
+      </model-viewer>
+    </div>
+  </div>
+  <div class="abs" style="width:1520px; bottom:0px; right:200px;">
+    Up to rotation and reflection, there are \(6\) polyforms with \(4\) faces on the <em>tetrakis hexahedron</em>, which has \(6 \times 4 = 24\) isosceles triangular faces.
+  </div>
+</section>
+
+        <section>
+<h1 id="triakis-octahedron">Triakis Octahedron</h1>
+  <div class="abs" style="right:100px; width:1720px; top:100px;">
+    <div class="grid four-col">
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/polyformsTriOctRot_2_1.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/polyformsTriOctRot_2_2.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="2" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/polyformsTriOctRot_4_1.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="2" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/polyformsTriOctRot_4_2.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="2" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/polyformsTriOctRot_4_3.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="2" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/polyformsTriOctRot_4_4.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="2" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="270deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/polyformsTriOctRot_4_5.glb">
+      </model-viewer>
+    </div>
+  </div>
+  <div class="abs" style="width:1520px; bottom:40px; right:200px;">
+    Up to rotation (but not reflection), there are
+    <span style="color:#F8F;">
+      two \(2\)-forms</span>
+    <span class="fragment fade-in" data-fragment-index="2">
+      and <span style="color:#FB8;">five \(4\)-forms</span>
+    <span class="fragment fade-in" data-fragment-index="3">
+      on the faces of the <em>triakis octahedron</em>, which has \({\color{#F8F}2 \times 2} + {\color{#FB8}5 \times 4} = 24\) isosceles triangular faces.
+    </span>
+  </span></div>
+</section>
+
+        <section>
+<h1 id="rhombic-dodecahedron">Rhombic Dodecahedron</h1>
+  <div class="abs" style="right:320px; width:1280px; top:100px;">
+    <div class="grid three-col">
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/RhombicDodecahedron1_1.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="2" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/RhombicDodecahedron2_1.glb">
+      </model-viewer>
+      <div></div>
+      <model-viewer class="fragment fade-in" data-fragment-index="3" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/RhombicDodecahedron3_1.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="3" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/RhombicDodecahedron3_2.glb">
+      </model-viewer>
+      <model-viewer class="fragment fade-in" data-fragment-index="3" style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/RhombicDodecahedron3_3.glb">
+      </model-viewer>
+    </div>
+  </div>
+  <div class="abs" style="width:1520px; bottom:0px; right:200px;">
+    Up to rotation and reflection, there is
+    <span style="color:#F88;">
+      one \(1\)-form</span>,
+    <span class="fragment fade-in" data-fragment-index="2">
+      <span style="color:#88F;">one \(2\)-form</span>,
+    </span>
+    <span class="fragment fade-in" data-fragment-index="3">
+      and
+      <span style="color:#8F8;">
+        three \(3\)-forms
+      </span>
+    </span>
+    <span class="fragment fade-in" data-fragment-index="4">
+      on the faces of the <em>rhombic dodecahedron</em>, which has \({\color{#F88}1} + {\color{#88F}2} + {\color{#8F8}3 \times 3} = 12\) rhombic faces.
+    </span>
+  </div>
+</section>
+
+        <section>
+  <div class="abs" style="width:1920px;height:1080px;">
+    <img src="/assets/talks/2026-02-22/intro/G4G16Puzzle.jpg">
+  </div>
+  <div class="abs" style="left:100px; top:100px; width:760px;background-color:#000000C0;">
+    <h1 id="g4g-gift-exchange">
+      G4G Gift Exchange
+    </h1>
+    <div style="padding-left:50px; padding-right:50px; padding-bottom:50px">
+      Cut and fold puzzle! Cut out the net, glue it together, then cut out the pieces and see if you can cover the surface.
+    </div>
+    <div style="padding-left:50px; padding-right:50px; padding-bottom:50px">
+      If you solve it (or if you don't) reach out to me and I'll mail you a 3D printed version.
+    </div>
+  </div>
+</section>
+
+        <section>
+<h1 id="pentagonal-icositetrahedron">Pentagonal Icositetrahedron</h1>
+  <div>
+    <div class="abs grid four-col" style="left:200px; width:1520px;">
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron1.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron2.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron3.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron4.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron5.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron6.glb">
+      </model-viewer>
+            <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron7.glb">
+      </model-viewer>
+      <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" camera-orbit="90deg 90deg 40m" interaction-prompt="none" autoplay="" alt="Polytorus" src="/assets/talks/2026-02-22/intro/PentagonalIcositetrahedron8.glb">
+      </model-viewer>
+    </div>
+  </div>
+  <div class="abs" style="width:1520px; bottom:40px; right:200px;">
+    Up to rotation, there are \(8\) polyforms with \(3\) faces on the <em>pentagonal icositetrahedron</em>, which has \(8 \times 3 = 24\) pentagonal faces.
+  </div>
+</section>
+
+        <section>
+          <div class="abs" style="width:1920px; height:1080px;">
+            <model-viewer style="aspect-ratio:1;" camera-controls="" disable-zoom="" disable-pan="" autoplay="" camera-orbit="90deg 90deg auto" interaction-prompt="none" alt="Polytorus" src="/assets/talks/2026-02-22/PentagonalIcositetrahedronPuzzle_explosion.glb"></model-viewer>
+          </div>
+          <div class="abs fragment fade-in" style="width:1920px; height:1080px; background-color: #000000A0; justify-content: center; align-items: center;display:flex; font-size:300px;">
+            Thank you!
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="/vendor/reveal/reveal.js"></script>
+  <script src="/apps/scripts/talk_2026-02-12.js"></script>
+  <script>
+    document.querySelectorAll('model-viewer').forEach(el => {
+      el.addEventListener('touchstart', e => e.stopPropagation(), { passive: true });
+      el.addEventListener('touchmove',  e => e.stopPropagation(), { passive: true });
+      el.addEventListener('pointerdown', e => e.stopPropagation());
+      el.addEventListener('pointermove', e => e.stopPropagation());
+    });
+  </script>
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+</body>
+<!-- Catalan solids:
+A333333 ((row 3) rhombic dodecahedron, 12)
+1, 1, 3, 4,  9, 14,  19,  16,    9,     4,     1,      1
+
+A383800 (triakis octahedron, 24)
+1, 2, 2, 4, 4, 10, 13, 28, 42, 81, 130, 239, 369, 587, 817
+1, 2, 3, 5, 7, 15, 24, 48, 81, 149, 255, 458, 730
+
+A383802 (tetrakis hexahedron, 24)
+1, 2, 2, 6, 8, 21, 36, 84, 164, 356, 691, 1361
+1, 2, 3, 8, 14, 35, 68, 154, 318, 683
+
+A383804 (deltoidal icositetrahedron, 24)
+1, 2, 4, 10, 23, 65, 166, 453, 1157
+1, 2, 6, 16, 41, 119, 321, 880, 2286, 5640
+
+A383806 (disdyakis dodecahedron, 48)
+1, 3, 3, 9, 14, 38, 74, 184, 406, 981
+2, 3, 6, 13, 28, 66, 148, 348, 812, 1921, 4524, 10708
+
+----
+
+A340635 (deltoidal hexecontahedron, 60)
+1, 2, 4, 10, 27, 80, 238, 751, 2374, 7608
+
+A383490 (rhombic triacontahedron, 30)
+1, 1, 3, 4, 12, 24, 65, 156, 422, 1057
+1, 1, 4, 6, 19, 43, 119, 300, 818
+
+A383492 (triakis icosahedron, 60)
+1, 2, 2, 4, 4, 10, 13, 29, 47, 99, 175
+1, 2, 3, 5, 7, 15, 24, 49, 91, 182, 344
+
+A383494 (pentakis dodecahedron, 60)
+1, 2, 2, 6, 10, 27, 56, 149, 352, 915, 2285, 5919, 15084, 38908
+1, 2, 3, 8, 18, 46, 108, 280, 694
+
+A383496 (disdyakis triacontahedron, 120)
+1, 3, 3, 9, 14, 38, 74, 185, 414, 1025, 2430, 6012, 14640, 36294
+2, 3, 6, 13, 28, 66, 148, 349, 828, 2004 -->

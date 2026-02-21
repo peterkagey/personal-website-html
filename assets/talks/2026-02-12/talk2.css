@@ -45,7 +45,33 @@ model-viewer {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.five-col.grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .std {
   margin:20px;
   padding:20px;
+}
+
+table {
+  color: white;
+  border-collapse: collapse;
+  font-size: 45px;
+  width: auto;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #222;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #333;
 }
