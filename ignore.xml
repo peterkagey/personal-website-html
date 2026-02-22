@@ -4,7 +4,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/ignore.xml" rel="self" />
   <link href="https://example.com/" />
-  <updated>2025-12-27T00:00:00Z</updated>
+  <updated>2026-02-22T00:00:00Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Your Name</name>
@@ -4262,5 +4262,58 @@ Here are some colorized versions of the resulting tilings.
 &lt;h1 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;/h1&gt;
 Have thoughts or ideas or want a (free) postcard from me? Let me know on Bluesky &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt;.
 &lt;/a&gt;</content>
+  </entry>
+  <entry>
+    <title>G4G16 Gift Exchange</title>
+    <link href="https://example.com/blog/2026/02/G4G16/" />
+    <updated>2026-02-22T00:00:00Z</updated>
+    <id>https://example.com/blog/2026/02/G4G16/</id>
+    <content type="html">&lt;p&gt;
+  I participated in the Gathering 4 Gardner (G4G16) gift exchanges, where I made 170 cut-and-fold versions of my &lt;a href=&quot;https://example.com/blog/2025/10/pentagonal_icositetrahedron_puzzle/&quot;&gt;pentagonal icositetrahedron puzzle&lt;/a&gt;. I talked about this puzzle in my talk, which you can see &lt;a href=&quot;https://example.com/talks/2026-02-22/&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://example.com/assets/blog/2026-02-22/G4G16Puzzle.jpg&quot; alt=&quot;A photo of the puzzle from the exchange&quot;&gt;
+  &lt;figcaption&gt;A photo of the puzzle from the G4G15 gift exchange&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;
+  Did you solve the puzzle, or are you interested? Email me at pkagey@cpp.edu or send me a message &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt; on Bluesky and let me know&amp;mdash;I&#39;ll send you a satisfying 3D printed version of the puzzle for you to fiddle with!
+&lt;/p&gt;
+&lt;h3 id=&quot;stl-files&quot;&gt;
+  STL files
+&lt;/h3&gt;
+&lt;p&gt;
+  You can download &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/PentagonalI_cositetrahedron_Puzzle_Pieces.zip&quot;&gt;all pieces (ZIP download)&lt;/a&gt;, or you can download one at a time:
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece1.stl&quot;&gt;piece 1&lt;/a&gt;,
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece2.stl&quot;&gt;piece 2&lt;/a&gt;,
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece3.stl&quot;&gt;piece 3&lt;/a&gt;,
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece4.stl&quot;&gt;piece 4&lt;/a&gt;,
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece5.stl&quot;&gt;piece 5&lt;/a&gt;,
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece6.stl&quot;&gt;piece 6&lt;/a&gt;,
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece7.stl&quot;&gt;piece 7&lt;/a&gt;, and
+  &lt;a href=&quot;https://example.com/assets/blog/2026-02-22/piece8.stl&quot;&gt;piece 8&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h3 id=&quot;svg-files&quot;&gt;
+  SVG files
+&lt;/h3&gt;
+Here are SVG files that I printed for the G4G gift exchange that you can print, cut, fold, and glue (with liquid glue, not a gluestick!)
+&lt;div class=&quot;grid wide-two narrow-three&quot;&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2026-02-22/all_paper_pentagonal_icositetrahedron_pieces.min.svg&quot;&gt;
+    &lt;figcaption&gt;&lt;a href=&quot;https://example.com/assets/blog/2026-02-22/all_paper_pentagonal_icositetrahedron_pieces.min.svg&quot;&gt;Download SVG&lt;/a&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2026-02-22/paper_pentagonal_icositetrahedron_net.min.svg&quot;&gt;
+    &lt;figcaption&gt;
+      &lt;a hred=&quot;/assets/blog/2026-02-22/paper_pentagonal_icositetrahedron_net.min.svg&quot;&gt;Download SVG&lt;/a&gt;
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id=&quot;get-in-touch&quot;&gt;
+  Get in touch!
+&lt;/h3&gt;
+&lt;p&gt;
+  If you have thoughts, questions, or suggestions, reach out to me &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt; on Bluesky!
+&lt;/p&gt;
+</content>
   </entry>
 </feed>

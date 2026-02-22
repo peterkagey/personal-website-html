@@ -4,7 +4,7 @@
   <subtitle>Peter Kagey&#39;s math blog</subtitle>
   <link href="https://peterkagey.com/feed.xml" rel="self" />
   <link href="https://peterkagey.com/" />
-  <updated>2025-12-27T00:00:00Z</updated>
+  <updated>2026-02-22T00:00:00Z</updated>
   <id>https://peterkagey.com/</id>
   <author>
     <name>Peter Kagey</name>
@@ -310,5 +310,12 @@
     <updated>2025-12-27T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2025/12/potato_printing/</id>
     <content type="text">A postcard designed for the 2025 plotter postcard exchange #ptpx based on &#39;Potato Printing,&#39; a game that M.C. Escher played with his kids.</content>
+  </entry>
+  <entry>
+    <title>G4G16 Gift Exchange</title>
+    <link href="https://peterkagey.com/blog/2026/02/G4G16/" />
+    <updated>2026-02-22T00:00:00Z</updated>
+    <id>https://peterkagey.com/blog/2026/02/G4G16/</id>
+    <content type="text">The gift I made for Gathering 4 Gardner in 2026, together with files so you can make more at home.</content>
   </entry>
 </feed>
