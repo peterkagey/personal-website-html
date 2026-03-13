@@ -4,7 +4,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/ignore.xml" rel="self" />
   <link href="https://example.com/" />
-  <updated>2026-02-22T00:00:00Z</updated>
+  <updated>2026-03-13T00:00:00Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Your Name</name>
@@ -4322,6 +4322,686 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
   I also participated in the G4G15 gift exchange which you can read about &lt;a href=&quot;https://example.com/blog/2025/05/g4g15-gift-exchange-parity-triangles-from-the-oeis/&quot;&gt;on my blog&lt;/a&gt;.
   If you have thoughts, questions, or suggestions, reach out to me &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com&lt;/a&gt; on Bluesky!
 &lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Favorite Abstract Algebra problems</title>
+    <link href="https://example.com/blog/2026/03/favorite_problems_4170/" />
+    <updated>2026-03-13T00:00:00Z</updated>
+    <id>https://example.com/blog/2026/03/favorite_problems_4170/</id>
+    <content type="html">&lt;p&gt;
+  When I taught &lt;a href=&quot;https://catalog.cpp.edu/preview_course.php?catoid=68&amp;coid=356356&quot;&gt;&lt;b&gt;Introduction to Abstract Algebra I&lt;/b&gt;&lt;/a&gt; at Cal Poly Pomona in fall 2022, part of our homework assignments consisted of &quot;choice exercises,&quot; where students had many options to choose from.
+&lt;/p&gt;
+&lt;p&gt;
+  At the end of the term, I asked students to say what their favorite choice exercises from the term were, and I&#39;ve included their answers here, with some slightly edited. The number of stars corresponds to the number of students who chose that exercise.
+&lt;/p&gt;
+&lt;p&gt;
+  My personal favorite is probably HW 4.5! Click on the the problem numbers below to expand the text of the problem.
+&lt;/p&gt;
+&lt;div class=&quot;grid wide-two narrow-one&quot;&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2026-03-13/HW04_choice_exercise_p1.png&quot; alt=&quot;Screenshot of page 1 of HW 4 Choice Exercises&quot;&gt;
+    &lt;figcaption&gt;HW 4 Choice Exercises (page 1)&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure&gt;
+    &lt;img src=&quot;https://example.com/assets/blog/2026-03-13/HW04_choice_exercise_p2.png&quot; alt=&quot;Screenshot of page 2 of HW 4 Choice Exercises&quot;&gt;
+    &lt;figcaption&gt;HW 4 Choice Exercises (page 2)&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 1.9: Cayley table for &#92;(S_3&#92;) (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    Fill in all 36 cells of the Cayley table for the symmetric group on three elements, &#92;(S_3&#92;). Make sure to replace &lt;code&gt;(13)(12)&lt;/code&gt; with the corresponding element of &#92;(S_3&#92;) in cycle notation.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Here we are thinking of the elements of &#92;(S_3&#92;) as a &quot;left action,&quot; so we read the elements from right to left.
+  &lt;/p&gt;
+  &lt;p&gt;
+    We use the convention that the row element is on the left and the column element is on the right, as shown in the filled-in cell, and recall that we use the convention of evaluating the cycles right-to-left because we think of them as function applications.
+  &lt;/p&gt;
+  &lt;table style=&quot;border-collapse: collapse; text-align: center;&quot;&gt;
+    &lt;tr&gt;
+      &lt;th width=&quot;12%&quot;&gt;&lt;/th&gt;
+      &lt;th width=&quot;12%&quot;&gt;&#92;(e&#92;)&lt;/th&gt;
+      &lt;th width=&quot;12%&quot;&gt;&#92;((12)&#92;)&lt;/th&gt;
+      &lt;th width=&quot;12%&quot;&gt;&#92;((13)&#92;)&lt;/th&gt;
+      &lt;th width=&quot;12%&quot;&gt;&#92;((23)&#92;)&lt;/th&gt;
+      &lt;th width=&quot;12%&quot;&gt;&#92;((123)&#92;)&lt;/th&gt;
+      &lt;th width=&quot;12%&quot;&gt;&#92;((132)&#92;)&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&#92;(e&#92;)&lt;/th&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th&gt;&#92;((12)&#92;)&lt;/th&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th&gt;&#92;((13)&#92;)&lt;/th&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&#92;((13)(12)=&#92;)&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th&gt;&#92;((23)&#92;)&lt;/th&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th&gt;&#92;((123)&#92;)&lt;/th&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th&gt;&#92;((132)&#92;)&lt;/th&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;p&gt;
+    Here&#39;s some &#92;(&#92;LaTeX&#92;) code you can use:
+  &lt;/p&gt;
+  &lt;pre&gt;&lt;code&gt;&#92;[
+  &#92;begin{tabular}{|l||c|c|c|c|c|c|}
+    &#92;hline
+            &amp;     &#92;(e&#92;) &amp;  &#92;((12)&#92;) &amp;  &#92;((13)&#92;) &amp;  &#92;((23)&#92;) &amp; &#92;((123)&#92;) &amp; &#92;((132)&#92;) &#92;&#92;
+    &#92;hline &amp; &amp; &amp; &amp; &amp; &amp;&#92;&#92;[-1.1em] &#92;hline
+    &#92;(e&#92;)     &amp;         &amp;         &amp;         &amp;         &amp;         &amp;         &#92;&#92;
+    &#92;hline
+    &#92;((12)&#92;)  &amp;         &amp;         &amp;         &amp;         &amp;         &amp;         &#92;&#92;
+    &#92;hline
+    &#92;((13)&#92;)  &amp;         &amp;(13)(12)=&amp;         &amp;         &amp;         &amp;         &#92;&#92;
+    &#92;hline
+    &#92;((23)&#92;)  &amp;         &amp;         &amp;         &amp;         &amp;         &amp;         &#92;&#92;
+    &#92;hline
+    &#92;((123)&#92;) &amp;         &amp;         &amp;         &amp;         &amp;         &amp;         &#92;&#92;
+    &#92;hline
+    &#92;((132)&#92;) &amp;         &amp;         &amp;         &amp;         &amp;         &amp;         &#92;&#92;
+    &#92;hline
+  &#92;end{tabular}
+&#92;]&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 2.13: Is this a group? (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    Choose any subset &#92;(S&#92;) of the following exercises such that &#92;(|S| &#92;leq 5&#92;). (You get &#92;(1&#92;) point per exercise with a maximum of &#92;(5&#92;) points.)
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Prove or disprove that &#92;((&#92;{-1, 0, 1&#92;}, &#92;times)&#92;) is a group.&lt;/li&gt;
+    &lt;li&gt;Prove or disprove that &#92;((&#92;mathbb{Q} &#92;setminus &#92;{0&#92;}, &#92;times)&#92;) is a group where &#92;(&#92;mathbb{Q} &#92;setminus &#92;{0&#92;}&#92;) is the set of rational numbers with &#92;(0&#92;) removed.&lt;/li&gt;
+    &lt;li&gt;Prove or disprove that &#92;((&#92;{0&#92;}, +)&#92;) is a group.&lt;/li&gt;
+    &lt;li&gt;Prove or disprove that &#92;((&#92;{&#92;dots, &#92;frac{1}{16}, &#92;frac{1}{8}, &#92;frac{1}{4}, &#92;frac{1}{2}, 1, 2, 4, 8, 16, &#92;dots&#92;}, &#92;times)&#92;) is a group.&lt;/li&gt;
+    &lt;li&gt;Prove or disprove that if &#92;(G&#92;) and &#92;(H&#92;) are groups, then &#92;(G &#92;times H&#92;) is a group under the operation &#92;((g_1, h_1) &#92;cdot (g_2, h_2) = (g_1 &#92;cdot g_2, h_1 &#92;cdot h_2)&#92;).&lt;/li&gt;
+    &lt;li&gt;Prove or disprove that &#92;(&#92;{1, 5, 7, 11&#92;}&#92;) is a group under multiplication &#92;((&#92;text{mod } 12)&#92;).&lt;/li&gt;
+    &lt;li&gt;Prove or disprove that the set of &#92;(n &#92;times n&#92;) matrices with real valued entries forms a group under matrix multiplication.&lt;/li&gt;
+    &lt;li&gt;Prove or disprove that the set of &#92;(n &#92;times n&#92;) matrices with real valued entries and a determinant of &#92;(1&#92;) forms a group under matrix multiplication.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 3.7: Subgroups of the symmetries of a square (⭐️)
+  &lt;/summary&gt;
+    &lt;p&gt;
+    Here we will study the subgroups of the symmetries of the square, &#92;[
+      D_4 = &#92;{e, r, r^2, r^3, f, rf, r^2f, r^3f&#92;}
+    &#92;]
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Write down the (trivial) subgroup of order &#92;(1&#92;) and the (improper) subgroup of order &#92;(8&#92;), and say what these mean geometrically.&lt;/li&gt;
+    &lt;li&gt;Write down the five subgroups of order &#92;(2&#92;), and describe what they mean geometrically.&lt;/li&gt;
+    &lt;li&gt;Write down the three subgroups of order &#92;(4&#92;), and describe in words what they mean geometrically.&lt;/li&gt;
+    &lt;li&gt;What do you notice about the orders of the subgroups?&lt;/li&gt;
+    &lt;li&gt;Are any of these subgroups &quot;essentially similar&quot; to each other? If so, which ones?&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 4.5: A polyhedral Cayley diagram (⭐️⭐️⭐️⭐️)
+  &lt;/summary&gt;
+  In this problem, you will draw my favorite Cayley diagram.
+  &lt;ol&gt;
+    &lt;li&gt;
+      In the Cayley diagram for &#92;(S_4&#92;) below, four of the vertices have been specified: &#92;(e&#92;), &#92;((12)&#92;), &#92;((23)&#92;), and &#92;((34)&#92;). Use this to determine what the three different edges (&quot;arrows&quot;) correspond to.
+      &lt;figure&gt;
+        &lt;img src=&quot;https://example.com/assets/blog/2026-03-13/TO_Cayley_Diagram_simplified.min.svg&quot; alt=&quot;Cayley diagram for S_4&quot;&gt;
+        &lt;figcaption&gt;Cayley diagram for &#92;(S_4&#92;) generated by &quot;adjacent transpositions&quot;&lt;/figcaption&gt;
+      &lt;/figure&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      This Cayley graph (i.e. Cayley diagram) is called a &quot;polytope&quot; because the vertex/edge configuration can be mapped onto the vertices and edges of a polyhedron. Go look up the list of the &#92;(13&#92;) Archimedean solids, and determine which solid it corresponds to and state why. (This way of drawing a polyhedron is sometimes called a &quot;Schlegel diagram.&quot;)
+    &lt;/li&gt;
+    &lt;li&gt;
+      Edit the TikZ code below to change &#92;(g_i&#92;) to the resulting permutation in cycle notation for &#92;(i &#92;in &#92;{1, 2, &#92;dots, 21&#92;}&#92;).
+      &lt;pre style=&quot;max-height: 7.5em; overflow-y: auto;&quot;&gt;&lt;code&gt;&#92;begin{tikzpicture}[scale=2]
+  &#92;node[draw, circle] (G01) at ({3.7*cos(0)},   {3.7*sin(0)})   {&#92;(e&#92;)};
+  &#92;node[draw, circle] (G02) at ({3.7*cos(60)},  {3.7*sin(60)})  {&#92;((23)&#92;)};
+  &#92;node[draw, circle] (G03) at ({3.7*cos(120)}, {3.7*sin(120)}) {&#92;(g_1&#92;)};
+  &#92;node[draw, circle] (G04) at ({3.7*cos(180)}, {3.7*sin(180)}) {&#92;(g_2&#92;)};
+  &#92;node[draw, circle] (G05) at ({3.7*cos(240)}, {3.7*sin(240)}) {&#92;(g_3&#92;)};
+  &#92;node[draw, circle] (G06) at ({3.7*cos(300)}, {3.7*sin(300)}) {&#92;((12)&#92;)};
+
+  &#92;node[draw, circle] (G08) at ({2.7*cos(0)},   {2.7*sin(0)})   {&#92;((34)&#92;)};
+  &#92;node[draw, circle] (G09) at ({2.7*cos(60)},  {2.7*sin(60)})  {&#92;(g_{5}&#92;)};
+  &#92;node[draw, circle] (G12) at ({2.7*cos(120)}, {2.7*sin(120)}) {&#92;(g_{6}&#92;)};
+  &#92;node[draw, circle] (G11) at ({2.7*cos(180)}, {2.7*sin(180)}) {&#92;(g_{7}&#92;)};
+  &#92;node[draw, circle] (G10) at ({2.7*cos(240)}, {2.7*sin(240)}) {&#92;(g_{8}&#92;)};
+  &#92;node[draw, circle] (G07) at ({2.7*cos(300)}, {2.7*sin(300)}) {&#92;(g_{9}&#92;)};
+
+  &#92;node[draw, circle] (G17) at ({1.9*cos(15)},  {1.9*sin(15)})  {&#92;(g_{10}&#92;)};
+  &#92;node[draw, circle] (G16) at ({1.9*cos(45)},  {1.9*sin(45)})  {&#92;(g_{11}&#92;)};
+  &#92;node[draw, circle] (G13) at ({1.9*cos(135)}, {1.9*sin(135)}) {&#92;(g_{12}&#92;)};
+  &#92;node[draw, circle] (G18) at ({1.9*cos(165)}, {1.9*sin(165)}) {&#92;(g_{13}&#92;)};
+  &#92;node[draw, circle] (G15) at ({1.9*cos(255)}, {1.9*sin(255)}) {&#92;(g_{14}&#92;)};
+  &#92;node[draw, circle] (G14) at ({1.9*cos(285)}, {1.9*sin(285)}) {&#92;(g_{15}&#92;)};
+
+  &#92;node[draw, circle] (G22) at ({1*cos(0)},   {1*sin(0)})   {&#92;(g_{16}&#92;)};
+  &#92;node[draw, circle] (G23) at ({1*cos(60)},  {1*sin(60)})  {&#92;(g_{17}&#92;)};
+  &#92;node[draw, circle] (G24) at ({1*cos(120)}, {1*sin(120)}) {&#92;(g_{18}&#92;)};
+  &#92;node[draw, circle] (G19) at ({1*cos(180)}, {1*sin(180)}) {&#92;(g_{19}&#92;)};
+  &#92;node[draw, circle] (G20) at ({1*cos(240)}, {1*sin(240)}) {&#92;(g_{20}&#92;)};
+  &#92;node[draw, circle] (G21) at ({1*cos(300)}, {1*sin(300)}) {&#92;(g_{21}&#92;)};
+  &#92;draw[ultra thick, red]
+    (G01)--(G02) (G03)--(G04) (G05)--(G06)
+    (G09)--(G16) (G12)--(G13) (G23)--(G24)
+    (G10)--(G15) (G11)--(G18) (G19)--(G20)
+    (G07)--(G14) (G08)--(G17) (G21)--(G22)
+  ;
+  &#92;draw[ultra thick, dotted, blue]
+    (G06)--(G01) (G02)--(G03) (G04)--(G05)
+    (G09)--(G12) (G16)--(G23) (G13)--(G24)
+    (G10)--(G11) (G15)--(G20) (G18)--(G19)
+    (G07)--(G08) (G14)--(G21) (G17)--(G22)
+  ;
+  &#92;draw[ultra thick, dashed, green!50!black]
+    (G03)--(G12) (G04)--(G11) (G13)--(G18)
+    (G01)--(G08) (G02)--(G09) (G16)--(G17)
+    (G05)--(G10) (G06)--(G07) (G14)--(G15)
+    (G19)--(G24) (G20)--(G21) (G22)--(G23)
+  ;
+&#92;end{tikzpicture}&lt;/code&gt;&lt;/pre&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 4.6: Non-equivalence relations (⭐️⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    We begin with the definition of a &lt;em&gt;relation&lt;/em&gt;. Given a set &#92;(X&#92;) we say a relation &#92;(R&#92;) is a subset of the Cartesian product &#92;(R &#92;subseteq X &#92;times X&#92;) and we say that &#92;(a &#92;mathrel{R} b&#92;) if and only if &#92;((a,b) &#92;in R&#92;).
+  &lt;/p&gt;
+  &lt;p&gt;
+    For example, if &#92;(X = &#92;{1,2,3&#92;}&#92;) and &#92;(R&#92;) is the &quot;strictly less than&quot; relation, then formally, we write &#92;[
+      R = &#92;{(1,2),(1,3),(2,3)&#92;}.
+    &#92;]
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;i&gt;
+      Do any subset of the following. You&#39;ll get &#92;(1&#92;) point if you find at least four,
+      &#92;(2&#92;) points if you find at least six,
+      &#92;(3&#92;) points if you find exactly seven, and
+      &#92;(4&#92;) points if you find all eight.
+    &lt;/i&gt;
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Reflexive, symmetric, and transitive.&lt;/li&gt;
+    &lt;li&gt;Reflexive, symmetric, and not transitive.&lt;/li&gt;
+    &lt;li&gt;Reflexive, not symmetric, and transitive.&lt;/li&gt;
+    &lt;li&gt;Reflexive, not symmetric, and not transitive.&lt;/li&gt;
+    &lt;li&gt;Not reflexive, symmetric, and transitive.&lt;/li&gt;
+    &lt;li&gt;Not reflexive, symmetric, and not transitive.&lt;/li&gt;
+    &lt;li&gt;Not reflexive, not symmetric, and transitive.&lt;/li&gt;
+    &lt;li&gt;Not reflexive, not symmetric, and not transitive.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 4.7: Embedding a group (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    We can &lt;em&gt;embed&lt;/em&gt; the dihedral group &#92;(D_n&#92;) into &#92;(S_n&#92;). (In fact, Cayley&#39;s theorem states that we can embed any finite group &#92;(G&#92;) into &#92;(S_N&#92;) for large enough some &#92;(N&#92;).)
+
+    For example, if we mark the corners of the square &#92;(1&#92;), &#92;(2&#92;), &#92;(3&#92;), and &#92;(4&#92;), then rotating/reflecting the square permutes these numbers.
+  &lt;/p&gt;
+  &lt;figure&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;300px&quot; viewBox=&quot;0 0 200 200&quot;&gt;
+      &lt;rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;160&quot; height=&quot;160&quot; fill=&quot;none&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;&gt;&lt;/rect&gt;
+      &lt;text font-size=&quot;24&quot; x=&quot;30&quot; y=&quot;48&quot;&gt;1&lt;/text&gt;
+      &lt;text font-size=&quot;24&quot; x=&quot;155&quot; y=&quot;48&quot;&gt;2&lt;/text&gt;
+      &lt;text font-size=&quot;24&quot; x=&quot;30&quot; y=&quot;170&quot;&gt;3&lt;/text&gt;
+      &lt;text font-size=&quot;24&quot; x=&quot;155&quot; y=&quot;170&quot;&gt;4&lt;/text&gt;
+    &lt;/svg&gt;
+    &lt;figcaption&gt;The corners of the square, labeled.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      Write down the eight permutations in &#92;(S_4&#92;) (in cycle notation) corresponding to the eight symmetries of the square.
+    &lt;/li&gt;
+    &lt;li&gt;
+      We can also write this in terms of the generators of a subgroup. Find two elements &#92;(x, y &#92;in S_4&#92;) such that the eight permutations given above are equal to &#92;(&#92;langle x ,y &#92;rangle&#92;).
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 4.10: A matrix representation (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    In Linear Algebra, we described a &lt;em&gt;linear transformation&lt;/em&gt; using matrices. In particular, the linear transformation which sends the vector &#92;((1,0) &#92;mapsto (a_{11}, a_{21})&#92;) and &#92;((0,1) &#92;mapsto (a_{12}, a_{22})&#92;) is described by the matrix &#92;[
+      A = &#92;begin{bmatrix} a_{11} &amp; a_{12} &#92;&#92; a_{21} &amp; a_{22} &#92;end{bmatrix}.
+    &#92;]
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      Check that this is true by multiplying the column vectors
+      &#92;(&#92;vec{e}_1 = &#92;begin{bmatrix} 1 &#92;&#92; 0 &#92;end{bmatrix}&#92;)
+      and
+      &#92;(&#92;vec{e}_2 = &#92;begin{bmatrix} 0 &#92;&#92; 1 &#92;end{bmatrix}&#92;)
+      on the left by &#92;(A&#92;). (i.e. compute &#92;(A&#92;vec{e}_1&#92;) and &#92;(A&#92;vec{e}_2&#92;) and check that they match the above claim.)
+    &lt;/li&gt;
+    &lt;li&gt;
+      Use any tools you&#39;d like to learn how to use TikZ to draw the square centered at the origin with vertices &#92;((1,0)&#92;), &#92;((0,1)&#92;), &#92;((-1,0)&#92;), and &#92;((0,-1)&#92;).
+    &lt;/li&gt;
+    &lt;li&gt;
+      Give the matrix &#92;(R&#92;) that describes rotating by a positive &#92;(90^&#92;circ&#92;).
+    &lt;/li&gt;
+    &lt;li&gt;
+      Give the matrix &#92;(F&#92;) that describes reflecting horizontally (over the &#92;(y&#92;)-axis).
+    &lt;/li&gt;
+    &lt;li&gt;
+      Check that &#92;(&#92;det(R) = 1&#92;) and &#92;(&#92;det(F) = -1&#92;). State in words what this means geometrically.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Give the matrix &#92;(X&#92;) that describes rotating by a positive &#92;(90^&#92;circ&#92;) followed by a horizontal reflection. Check that this is given by the matrix &#92;(FR&#92;), and state why we&amp;rsquo;re reading right-to-left.
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 5.4: Homomorphisms and subgroups (⭐️⭐️⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    Do any subset of any subset of the following:
+    &lt;/p&gt;&lt;ol&gt;
+    &lt;li&gt;[≤4]
+      For each part, give an example of two groups &#92;(G_i&#92;) and &#92;(H_i&#92;) and a homomorphism &#92;({&#92;varphi_i&#92;colon G_i &#92;to H_i}&#92;) between them with the following properties.
+      &lt;ol&gt;
+        &lt;li&gt;The homomorphism &#92;(&#92;varphi_1&#92;colon G_1 &#92;to H_1&#92;) is an isomorphism.&lt;/li&gt;
+        &lt;li&gt;The homomorphism &#92;(&#92;varphi_2&#92;colon G_2 &#92;to H_2&#92;) is neither 1-to-1 nor onto.&lt;/li&gt;
+        &lt;li&gt;The homomorphism &#92;(&#92;varphi_3&#92;colon G_3 &#92;to H_3&#92;) is 1-to-1 but not onto.&lt;/li&gt;
+        &lt;li&gt;The homomorphism &#92;(&#92;varphi_4&#92;colon G_4 &#92;to H_4&#92;) is not 1-to-1 but is onto.&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;[≤4]
+      Give four examples of subgroups of &#92;(S_5&#92;).
+      &lt;ol&gt;
+        &lt;li&gt;&#92;(H_1 &#92;leq S_5&#92;) that is not a normal subgroup.&lt;/li&gt;
+        &lt;li&gt;&#92;(H_2 &#92;leq S_5&#92;) such that &#92;(H_2 &#92;cong C_5&#92;).&lt;/li&gt;
+        &lt;li&gt;&#92;(H_3 &#92;leq S_5&#92;) such that &#92;(H_3 &#92;cong C_6&#92;).&lt;/li&gt;
+        &lt;li&gt;&#92;(H_4 &#92;leq S_5&#92;) such that &#92;(H_4 &#92;cong &#92;mathbb{Z}/2&#92;mathbb{Z} &#92;times &#92;mathbb{Z}/2&#92;mathbb{Z}&#92;).&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 6.4: Test your intuition! (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    Attempt the following True/False questions and give explanations for your reasoning, then open the &quot;True/False answers&quot; at the end of the problem and check your answers. If you got the answer or explanation wrong, write the correct answer here and say something about why you got it wrong originally.
+    &lt;/p&gt;&lt;ol&gt;
+      &lt;li&gt;
+        Let &#92;(G&#92;) be a group with order &#92;(n&#92;), and denote the order of an element &#92;(g &#92;in G&#92;) by &#92;(|g|&#92;). Then the order of &#92;(G&#92;) is equal to &#92;[
+          &#92;gcd(|g_1|, |g_2|, &#92;dots, |g_n|) = n.
+        &#92;]
+      &lt;/li&gt;
+      &lt;li&gt;
+        If &#92;(&#92;phi&#92;colon G &#92;to H&#92;) is a homomorphism that is 1-to-1, then &#92;(&#92;phi&#92;colon G &#92;to &#92;operatorname{Im}(&#92;phi)&#92;) is a isomorphism.
+      &lt;/li&gt;
+      &lt;li&gt;
+        If &#92;(&#92;phi&#92;colon G &#92;to H&#92;) is a homomorphism that is onto, then &#92;(&#92;operatorname{Im}(&#92;phi) &#92;triangleleft H&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        If &#92;(G&#92;) is a non-abelian group and &#92;(H&#92;) is abelian, then the only homomorphism &#92;(&#92;phi &#92;colon G &#92;to H&#92;) is the trivial homomorphism defined by &#92;(&#92;phi(g) = e_H&#92;) for all &#92;(g &#92;in G&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        If &#92;(&#92;varphi &#92;colon G &#92;to H&#92;) is an isomorphism, then there always exists an isomorphism &#92;({&#92;psi &#92;colon H &#92;to G}&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        Let &#92;(G &#92;times H&#92;) be a direct product of groups. Then the set &#92;[
+          N = &#92;{(g, e_H) &#92;mid g &#92;in G&#92;} &#92;subseteq G &#92;times H
+        &#92;] is a normal subgroup of &#92;(G &#92;times H&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        If &#92;(G/N &#92;cong H&#92;) then &#92;(G &#92;cong N &#92;times H&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        The map &#92;(&#92;varphi&#92;colon &#92;mathbb{Z}/8&#92;mathbb{Z} &#92;to C_{16}&#92;) given by &#92;(&#92;varphi(1) = r &#92;in C_{16}&#92;) is a homomorphism.
+      &lt;/li&gt;
+      &lt;li&gt;
+        There is a homomorphism &#92;(&#92;psi&#92;colon D_6 &#92;to C_6&#92;) such that &#92;(&#92;psi(r) = r &#92;in C_6&#92;) and &#92;(&#92;psi(f) = e &#92;in C_6&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        There is a homomorphism &#92;(&#92;phi&#92;colon C_6 &#92;to D_6&#92;) such that &#92;(&#92;phi(r) = r &#92;in D_6&#92;).
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;p&gt;&lt;/p&gt;
+  &lt;details&gt;
+    &lt;summary class=&quot;favorite-problems&quot;&gt;
+      True/False answers
+    &lt;/summary&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;b&gt;False&lt;/b&gt;.
+        Consider &#92;(G = C_2 &#92;times C_2&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;True&lt;/b&gt;.
+        By definition, every map is (surjective) onto it&#39;s image, so this map is a bijective homomorphism.
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;True&lt;/b&gt;.
+        If it&#39;s onto, then &#92;(&#92;operatorname{Im}(&#92;phi) = H&#92;), and &#92;(H &#92;triangleleft H&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;False&lt;/b&gt;.
+        Let &#92;(G = D_3&#92;) and &#92;(H = &#92;mathbb{Z}/2&#92;mathbb{Z}&#92;). Then the map which sends &#92;(f &#92;to 1&#92;) and &#92;(r &#92;to 0&#92;) is onto but not the trivial map.
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;True&lt;/b&gt;.
+        The inverse map &#92;(&#92;psi = &#92;varphi^{-1}&#92;) exists (because it&#39;s an bijection) and it is structure preserving. (See Exercise 7.1.)
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;True&lt;/b&gt;.
+        For all &#92;(g_0 &#92;in G&#92;) and &#92;(h &#92;in H&#92;), &#92;((g_0, h) * (g, e_H) * (g_0, h)^{-1} = (g_0gg_0^{-1}, e_H) &#92;in N&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;False&lt;/b&gt;.
+        Use the example above in part 4. The kernel is &#92;(&#92;langle r &#92;rangle = &#92;{e, r, r^2&#92;}&#92;), and the image is &#92;(&#92;mathbb{Z}/2&#92;mathbb{Z}&#92;), but &#92;(&#92;langle r &#92;rangle &#92;times &#92;mathbb{Z}/2&#92;mathbb{Z}&#92;) is abelian, so it&#39;s not isomorphic to &#92;(D_3&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;False&lt;/b&gt;.
+        &#92;(e = &#92;varphi(0) = &#92;varphi(4 + 4) &#92;neq &#92;varphi(4) * &#92;varphi(4) = r^4 * r^4 = r^8&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;False&lt;/b&gt;.
+        Notice that &#92;(rf = fr^5&#92;), but &#92;(&#92;psi(rf) = &#92;psi(r) * &#92;psi(f) = r * e = r&#92;), but &#92;(&#92;psi(fr^5) = &#92;psi(f) * &#92;psi(r)^5 = r^5&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;True&lt;/b&gt;.
+        &#92;(C_6 = &#92;langle r_c &#92;mid r_c^6 &#92;rangle&#92;), and the map is structure preserving because &#92;(&#92;phi(r_c^6) = r_d^6 = e &#92;in D_6&#92;).
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/details&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 6.5: Disjoint cycles (⭐️⭐️⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    Do any subset of the following for 1 point each:
+    &lt;/p&gt;&lt;ol&gt;
+      &lt;li&gt;
+        Let &#92;(&#92;pi = (1&#92; 5&#92; 3&#92; 8&#92; 4&#92; 6) &#92;in S_9&#92;), prove that &#92;(|&#92;pi| = 6,&#92;) where &#92;(|&#92;pi|&#92;) is the order of the element &#92;(&#92;pi&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        Write in words how you know that if a cycle has length &#92;(k&#92;) then it has order &#92;(k&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        Prove that &#92;(&#92;langle &#92;pi &#92;rangle &#92;in S_9&#92;) is isomorphic to &#92;(C_6&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        Let &#92;(&#92;pi&#39; = (1&#92; 5)(3&#92; 8&#92; 4) &#92;in S_9&#92;), prove that the order of &#92;(&#92;pi&#39; = 6&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        Look up what it means for two cycles to be &lt;i&gt;disjoint&lt;/i&gt;. In particular, are &#92;((1&#92; 5&#92; 9&#92; 7)&#92;) and &#92;((3&#92; 8&#92; 4)&#92;) disjoint? Are &#92;((1&#92; 5&#92; 9&#92; 8)&#92;) and &#92;((3&#92; 8&#92; 4)&#92;) disjoint?
+      &lt;/li&gt;
+      &lt;li&gt;
+        Write in words how you know that &#92;((1&#92; 5&#92; 9&#92; 7)(3&#92; 8&#92; 4) = (3&#92; 8&#92; 4)(1&#92; 5&#92; 9&#92; 7)&#92;) but &#92;((1&#92; 5&#92; 9&#92; 8)(3&#92; 8&#92; 4) &#92;neq (3&#92; 8&#92; 4)(1&#92; 5&#92; 9&#92; 8)&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        Write in words how you know that &#92;[
+          &#92;left((1&#92; 5&#92; 9&#92; 7)(3&#92; 8&#92; 4)&#92;right)^7 = (1&#92; 5&#92; 9&#92; 7)^7(3&#92; 8&#92; 4)^7 = (1&#92; 5&#92; 9&#92; 7)^{-1}(3&#92; 8&#92; 4)^1 = (1&#92; 7&#92; 9&#92; 5)(3&#92; 8&#92; 4).
+        &#92;]
+      &lt;/li&gt;
+      &lt;li&gt;
+        Suppose that we write &#92;(&#92;sigma = c_1 c_2 &#92;dots c_n&#92;) as a product of disjoint cycles. Write &#92;(&#92;pi&#39;&#92;) (defined above) in this form.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Suppose that we write &#92;(&#92;sigma = c_1 c_2 &#92;dots c_n&#92;) as a product of disjoint cycles. Prove that the order of sigma &#92;(|&#92;sigma| &#92;leq &#92;operatorname{LCM}(|c_1|,|c_2|,&#92;dots,|c_n|)&#92;), where &#92;(|c_i|&#92;) is the order (equivalently length) of the cycle.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Give an example of a &#92;(3&#92;)-cycle and a &#92;(4&#92;)-cycle whose product is a &#92;(2&#92;)-cycle.
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 6.8: Coin-flipping groups (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    Suppose that you have three (indistinguishable) coins, and you can flip over any subset of them &lt;i&gt;and&lt;/i&gt; you can permute their places. Some examples of the states of these coins are
+    &lt;span style=&quot;color:#0A0;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot;color:#C00;&quot;&gt;T&lt;/span&gt;&lt;span style=&quot;color:#00C;&quot;&gt;T&lt;/span&gt;,
+    &lt;span style=&quot;color:#C00;&quot;&gt;T&lt;/span&gt;&lt;span style=&quot;color:#0A0;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot;color:#00C;&quot;&gt;T&lt;/span&gt;,
+    &lt;span style=&quot;color:#C00;&quot;&gt;T&lt;/span&gt;&lt;span style=&quot;color:#0A0;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot;color:#00C;&quot;&gt;T&lt;/span&gt;
+    and so on. Let&#39;s call this group &#92;(G&#92;).
+
+    We&#39;re going to show that this is related to the (Coxeter) group &#92;(B_3&#92;) of symmetries of the cube &#92;[
+      B_3 = &#92;langle r_1, r_2, r_3 &#92;mid r_1^2 = r_2^2 = r_3^2 = (r_1r_2)^4 = (r_2r_3)^3 = (r_1r_3)^2 = e&#92;rangle,
+    &#92;] where &#92;(B_3&#92;) consists of the &#92;(48&#92;) symmetries of the cube (including reflections).
+    &lt;/p&gt;&lt;ol&gt;
+      &lt;li&gt;
+        Show that &#92;(G&#92;) can be generated by the following three elements:
+        &lt;ol&gt;
+          &lt;li&gt;&#92;(x&#92;), which is flipping over the left coin,&lt;/li&gt;
+          &lt;li&gt;&#92;(s_1&#92;), which is swapping the left and middle coins, and&lt;/li&gt;
+          &lt;li&gt;&#92;(s_2&#92;), which is swapping the middle and right coins.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        Show that there is a homomorphism &#92;(&#92;varphi&#92;colon B_3 &#92;to G&#92;) with &#92;(&#92;varphi(r_1) = x&#92;), &#92;(&#92;varphi(r_2) = s_1&#92;), and &#92;(&#92;varphi(r_3) = s_2&#92;).
+      &lt;/li&gt;
+      &lt;li&gt;
+        How many ways are there to choose a face of the cube, followed by an edge on that face, followed by a vertex on that edge? (This structure of &#92;(v &#92;subset e &#92;subset f&#92;) is called a &quot;flag.&quot; And because the cube is &quot;flag transitive,&quot; the number of flags is equal to the number of symmetries.)
+      &lt;/li&gt;
+      &lt;li&gt;
+        Prove that the homomorphism &#92;(&#92;varphi&#92;colon B_3 &#92;to G&#92;) is an isomorphism.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Here&#39;s the generalization to the symmetries of the &#92;(n&#92;)-dimensional hypercube: &#92;[
+          B_n = &#92;langle r_1, r_2, &#92;dots, r_n &#92;mid r_i^2 = (r_1r_2)^4 = (r_jr_{j+1})^3 = (r_kr_&#92;ell)^2 = e, &#92;text{ for } 1 &lt; j &lt; n &#92;text{ and } |k - &#92;ell| &#92;geq 2 &#92;rangle.
+        &#92;] In this case, we&#39;re dealing with &#92;(n&#92;) coins, and the homomorphism &#92;(&#92;varphi&#92;colon G &#92;to B_n&#92;) sends &lt;ul&gt;
+          &lt;li&gt;&quot;flip over the leftmost coin&quot; to &#92;(r_1&#92;) and&lt;/li&gt;
+          &lt;li&gt;&quot;swap coins &#92;(k-1&#92;) and &#92;(k&#92;)&quot; to &#92;(r_k&#92;).&lt;/li&gt;
+        &lt;/ul&gt;
+        Show that &#92;(B_2&#92;) is isomorphic to &#92;(D_4&#92;), the dihedral group of the square.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Spend five minutes reading about or watching a YouTube video about &quot;Coxeter groups,&quot; and say what you learned or are curious about.
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 7.5: Tetrahedron group (⭐️⭐️⭐️⭐️)
+  &lt;/summary&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      Physically construct a tetrahedron, and label its corners &#92;(1&#92;), &#92;(2&#92;), &#92;(3&#92;), &#92;(4&#92;). Take a photo of it, and include it here using &lt;code&gt;&#92;includegraphics[]{}&lt;/code&gt;.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Describe each of the &#92;(12&#92;) rotational symmetries using words or a notation that you explain.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Is there a symmetry in this group that sends the vertex &#92;(1 &#92;mapsto 2&#92;), &#92;(2 &#92;mapsto 3&#92;), &#92;(3&#92;mapsto 4&#92;) and &#92;(4&#92;mapsto 1&#92;)? Why or why not?
+    &lt;/li&gt;
+    &lt;li&gt;
+      Find a subgroup (besides the trivial group and the whole group) and show that it is &lt;em&gt;not&lt;/em&gt; a normal subgroup.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Draw a Cayley diagram of the group of symmetries.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Which generators did you use for the Cayley diagram?
+    &lt;/li&gt;
+    &lt;li&gt;
+      Reflect on whether this is related to the group that you saw in Exam 1 that was defined as elements that can be written as an even number of &#92;(2&#92;)-cycles.
+      &lt;em&gt;(Any good-faith response for this part here receives full points.)&lt;/em&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 7.8: Cayley graph of free group (⭐️)
+  &lt;/summary&gt;
+  Do either (or both) of the problems about the &lt;i&gt;free group on &#92;(n&#92;) generators&lt;/i&gt; denoted &#92;[
+    F_n = &#92;langle g_1, g_2, &#92;dots, g_n &#92;rangle
+  &#92;] which is a group presentation with &lt;i&gt;no&lt;/i&gt; relations. For example, if &#92;(n = 2&#92;), then an example element of &#92;(F_2 &#92;cong &#92;langle a, b &#92;rangle&#92;) is &#92;(a^3b^{-1}a^{-4}b^{-1}a^2&#92;).
+  &lt;ol&gt;
+    &lt;li&gt;
+      This first part of this problem is about understanding the Cayley diagram of the free group &#92;(F_2&#92;), just because it&#39;s cool!
+      The free group is an infinite group, but (a finite chunk of) the Cayley diagram for &#92;(F_2&#92;) looks like this fractal (if we ignore the colors and directions of arrows):
+      &lt;figure class=&quot;standalone&quot;&gt;
+        &lt;img src=&quot;https://example.com/assets/blog/2026-03-13/freeGroup.min.svg&quot; alt=&quot;&quot;&gt;
+        &lt;figcaption&gt;
+          A Cayley diagram based on TikZ code from &lt;a href=&quot;https://tex.stackexchange.com/a/223033/153535&quot;&gt;TeX Stack Exchange user Paul Gaborit&lt;/a&gt;.
+        &lt;/figcaption&gt;
+      &lt;/figure&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          Draw a bit of the (infinite) Cayley diagram for &#92;(F_2&#92;) using the generators &#92;(a&#92;) and &#92;(b&#92;), (along with &quot;backward&quot; arrows for &#92;(a^{-1}&#92;) and &#92;(b^{-1}&#92;).) Make sure to include at least the elements &#92;(&#92;{e, a, a^{-1}, b, b^{-1}, a^2, ab, ab^{-1}&#92;}&#92;).
+        &lt;/li&gt;
+        &lt;li&gt;
+          Write a bit about how your picture does (or does not) correspond to the image above.
+        &lt;/li&gt;
+        &lt;li&gt;
+          Choose a vertex in the image above, and say what element of &#92;(F_2&#92;) it corresponds to.
+        &lt;/li&gt;
+        &lt;li&gt;
+          What does the Cayley graph for the free group on one generator look like?
+        &lt;/li&gt;
+        &lt;li&gt;
+          What do you think the Cayley graph for the free group on three generators might look like?
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      In this part, you&#39;ll study some subgroups and quotient groups of this group, which might not be as hard as you expect!
+      &lt;ol&gt;
+        &lt;li&gt;
+          Write some elements of the cyclic subgroup &#92;(H = &#92;langle ab &#92;rangle &#92;leq F_2&#92;).
+        &lt;/li&gt;
+        &lt;li&gt;
+          Is &#92;(H &#92;triangleleft F_2&#92;)? Why or why not?
+        &lt;/li&gt;
+        &lt;li&gt;
+          Consider the map &#92;(&#92;varphi &#92;colon F_2 &#92;to D_3&#92;) by &#92;(&#92;varphi(a) = r&#92;) and &#92;(&#92;varphi(b) = f&#92;). Is this map a homomorphism? An isomorphism?
+        &lt;/li&gt;
+        &lt;li&gt;
+          What is the image of &#92;(&#92;varphi&#92;)?
+        &lt;/li&gt;
+        &lt;li&gt;
+          Without explicitly describing &#92;(&#92;ker(&#92;varphi)&#92;), what does the first isomorphism have to say about the quotient group &#92;(F_2/&#92;ker(&#92;varphi)&#92;)?
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 7.9: Adjacent transpositions (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    In the symmetric group &#92;(S_n&#92;), an &lt;em&gt;adjacent transposition&lt;/em&gt; is a &#92;(2&#92;)-cycle where the indices differ by &#92;(1&#92;), which we write as &#92;(s_i = (i&#92; i+1)&#92;). For instance, &#92;(s_2 = (2&#92; 3)&#92;) or &#92;(s_8 = (8&#92; 9)&#92;) are adjacent transpositions, but &#92;((1&#92; 9)&#92;) is not. It turns out that every permutation in &#92;(S_n&#92;) can be written as a product of transpositions
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;[1]
+      Write the word &#92;(524316&#92;) as a product of adjacent transpositions. (Hint: what is the first letter of &#92;(s_1 &#92;circ s_2 &#92;circ s_3 &#92;circ s_4&#92;) written as a word?)
+    &lt;/li&gt;
+    &lt;li&gt;[1]
+      Check this result in WolframAlpha by inputting &lt;code&gt;permutation (1 2)(2 3)&lt;/code&gt; but with the transpositions found above. (Note that WolframAlpha reads the permutations left-to-right!)
+    &lt;/li&gt;
+    &lt;li&gt;[3]
+      If a permutation is written as a sequence of adjacent transpositions and there is no way to write it as a shorter sequence adjacent transpositions, then the sequence of adjacent transpositions is called a &lt;i&gt;reduced word&lt;/i&gt;. (Note: a reduced word is a product of transpositions, not to be confused with writing a permutation in word notation.) We can move between reduced words by using the two identities: &lt;ol&gt;
+        &lt;li&gt;
+          &#92;(s_i &#92;circ s_j = s_j &#92;circ s_i&#92;) if &#92;(|i - j| &gt; 2&#92;)
+        &lt;/li&gt;
+        &lt;li&gt;
+          &#92;(s_i &#92;circ s_{i+1} &#92;circ s_i = s_{i+1} &#92;circ s_i &#92;circ s_{i+1}&#92;) for all &#92;(1 &#92;leq i &lt; n - 1&#92;).
+        &lt;/li&gt;
+      &lt;/ol&gt;
+      Prove these two identities, and use them to give an example of a reduced word that is different from the reduced word &#92;(
+        s_1 &#92;circ s_3 &#92;circ s_2 &#92;circ s_3 &#92;circ s_4 &#92;circ s_3 &#92;circ s_2 &#92;circ s_1
+      &#92;)
+      but which is equal as a permutation.
+    &lt;/li&gt;
+    &lt;li&gt;[5]
+      Prove that every permutation in &#92;(S_n&#92;) can be written as a product of adjacent transpositions, and thus &#92;[
+        &#92;langle s_1, s_2, &#92;dots, s_{n-1} &#92;rangle = S_n.
+      &#92;]
+    &lt;/li&gt;
+    &lt;li&gt;[3]
+      While &#92;(S_6&#92;) cannot be generated by a single element, it can be generated by just two elements: &#92;[
+        &#92;langle (1&#92; 2)&#92;underbrace{(1&#92; 2&#92; 3&#92; 4&#92; 5&#92; 6)}_c &#92;rangle = S_6.
+      &#92;] Write the word &#92;(524316&#92;) in terms of &#92;(s_1&#92;) and &#92;(c&#92;).
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;favorite-problems&quot;&gt;
+    HW 9.7: A field extension (⭐️)
+  &lt;/summary&gt;
+  &lt;p&gt;
+    Let &#92;(&#92;sqrt{2}&#92;) be one of the roots of the polynomial &#92;(x^2 - 2&#92;).
+  &lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;
+      Use this to write &#92;(a_3&#92;) and &#92;(b_3&#92;) in terms of &#92;(a_1&#92;), &#92;(a_2&#92;), &#92;(b_1&#92;), and
+      &#92;(b_2&#92;) in the expression
+      &#92;[
+        (a_1 + b_1&#92;sqrt{2})(a_2 + b_2&#92;sqrt{2}) = a_3 + b_3&#92;sqrt{2},
+      &#92;]
+      where &#92;(a_i + b_i&#92;sqrt{2} &#92;in &#92;mathbb{Q}[&#92;sqrt{2}]&#92;).
+    &lt;/li&gt;
+    &lt;li&gt;
+      Show that this ring is actually a &lt;i&gt;field&lt;/i&gt; by checking that all nonzero
+      elements are units:
+      &#92;[
+        (a + b&#92;sqrt{2})^{-1} = &#92;frac{a}{a^2 - 2b^2} - &#92;frac{b}{a^2 - 2b^2}&#92;sqrt{2}
+        &#92;in &#92;mathbb{Q}[&#92;sqrt{2}].
+      &#92;]
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;
 </content>
   </entry>
 </feed>
