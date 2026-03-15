@@ -4688,7 +4688,7 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
     &lt;/p&gt;&lt;ol&gt;
       &lt;li&gt;
         Let &#92;(G&#92;) be a group with order &#92;(n&#92;), and denote the order of an element &#92;(g &#92;in G&#92;) by &#92;(|g|&#92;). Then the order of &#92;(G&#92;) is equal to &#92;[
-          &#92;gcd(|g_1|, |g_2|, &#92;dots, |g_n|) = n.
+          &#92;operatorname{LCM}(|g_1|, |g_2|, &#92;dots, |g_n|) = n.
         &#92;]
       &lt;/li&gt;
       &lt;li&gt;
