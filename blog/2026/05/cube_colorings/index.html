@@ -4,7 +4,7 @@
   <head>
   <meta charset="UTF-8">
   
-    <title>G4G16 Gift Exchange</title>
+    <title>Cube colorings</title>
   
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
@@ -13,26 +13,26 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <meta name="twitter:card" content="summary_large_image">
   
-  <meta property="og:title" content="G4G16 Gift Exchange">
-  <meta name="twitter:title" content="G4G16 Gift Exchange">
+  <meta property="og:title" content="Cube colorings">
+  <meta name="twitter:title" content="Cube colorings">
   
   
-  <meta property="og:description" content="The gift I made for Gathering 4 Gardner in 2026, together with files so you can make more at home.">
-  <meta name="twitter:description" content="The gift I made for Gathering 4 Gardner in 2026, together with files so you can make more at home.">
+  <meta property="og:description" content="A simplex and hypercube face-coloring bijection">
+  <meta name="twitter:description" content="A simplex and hypercube face-coloring bijection">
   
   
   <meta property="og:type" content="article">
   
   
   
-  <meta name="twitter:image" content="https://peterkagey.com/assets/blog/2026-02-22/cover_1200x630.jpeg">
-  <meta property="og:image" content="https://peterkagey.com/assets/blog/2026-02-22/cover_1200x630.jpeg">
+  <meta name="twitter:image" content="https://peterkagey.com/assets/blog/2026-05-02/cover_1200x630.png">
+  <meta property="og:image" content="https://peterkagey.com/assets/blog/2026-05-02/cover_1200x630.png">
   
   
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://peterkagey.com/blog/2026/02/G4G16/">
-  <meta name="twitter:url" content="https://peterkagey.com/blog/2026/02/G4G16/">
+  <meta property="og:url" content="https://peterkagey.com/blog/2026/05/cube_colorings/">
+  <meta name="twitter:url" content="https://peterkagey.com/blog/2026/05/cube_colorings/">
   <meta property="og:site_name" content="Peter Kagey">
   <meta property="og:locale" content="en_US">
 </head>
@@ -82,59 +82,80 @@
   </header>
   <main>
     
-    <h1 id="g4g16-gift-exchange">G4G16 Gift Exchange</h1>
+    <h1 id="cube-colorings">Cube colorings</h1>
     
     
-    <p>by Peter Kagey (2026-02-22)</p>
+    <p>by Peter Kagey (2026-05-02)</p>
     
     <heading-anchors>
-      <p>
-  I participated in the Gathering 4 Gardner (G4G16) gift exchange, where I made 170 cut-and-fold versions of my <a href="/blog/2025/10/pentagonal_icositetrahedron_puzzle/">pentagonal icositetrahedron puzzle</a>. I talked about this puzzle in my talk, which you can see <a href="/talks/2026-02-22/">here</a>.
+      <script type="module" src="/vendor/model-viewer.min.js"></script>
+<i>(A blog draft for Berit.)</i>
+
+<p>
+  This post gives two examples of from a family of bijections from certain-sized \(k\)-simplex numbers to \(n\) colorings of the faces of the \(k\)-dimensional hypercube. The numerical correspondence is suggested in a <a href="https://math.stackexchange.com/a/5732/121988">Math Stack Exchange answer</a> by user Robin Chapman: \[
+    \binom{
+      \binom{n+1}{2}+k-1
+    }{k}
+  \]
+  Below are some examples that can be visualized in \( \mathbb{R}^2 \) and \( \mathbb{R}^3 \).
 </p>
+<h2 id="edge-vertex-colorings-of-a-square">Edge/vertex colorings of a square</h2>
+
+<p>
+  The number of edge-colorings (equivalently vertex-colorings) of the square up to rotation and reflection is given by OEIS sequence <a href="https://oeis.org/A002817">A002817</a>, the "doubly triangular numbers": \[
+    A002817(n) = \binom{
+      \binom{n+1}{2}+1
+    }{2}.
+  \]
+
+  This suggests a bijection between these colorings and points in the triangle of the appropriate side length, which is illustrated below.
+</p>
+
 <figure>
-  <img src="/assets/blog/2026-02-22/G4G16Puzzle.jpg" alt="A photo of the puzzle from the exchange">
-  <figcaption>A photo of the puzzle from the G4G15 gift exchange</figcaption>
+  <div class="grid wide-four narrow-two">
+    <img src="tri2.png">
+    <img src="tri3.png">
+    <img src="tri4.png">
+    <img src="trin.png">
+  </div>
+  <figcaption>All of the \(2\)-colorings, \(3\)-colorings, \(4\)-colorings, and \(n\)-colorings of the edges/vertices of a square up to rotation and reflection.</figcaption>
 </figure>
+
+<h2 id="face-colorings-of-a-cube">Face colorings of a cube</h2>
 <p>
-  Did you solve the puzzle, or are you interested? Email me at pkagey@cpp.edu or send me a message <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a> on Bluesky and let me know&mdash;I'll send you a satisfying 3D printed version of the puzzle for you to fiddle with!
+  The number of face-colorings of the cube (equivalently vertex colorings of the octahedron) up to the \( 48 \) rotational and reflectional symmetries of the cube is given by OEIS sequence <a href="https://oeis.org/A198833">A198833</a>: \[
+    A198833(n) = \binom{
+      \binom{n+1}{2}+2
+    }{3}
+  \]
+  This suggests a bijection between these colorings and points in the tetrahedron of the appropriate side length, which is illustrated below.
 </p>
-<h3 id="stl-files">
-  STL files
-</h3>
-<p>
-  You can download <a href="/assets/blog/2026-02-22/PentagonalI_cositetrahedron_Puzzle_Pieces.zip">all pieces (ZIP download)</a>, or you can download one at a time:
-  <a href="/assets/blog/2026-02-22/piece1.stl">piece 1</a>,
-  <a href="/assets/blog/2026-02-22/piece2.stl">piece 2</a>,
-  <a href="/assets/blog/2026-02-22/piece3.stl">piece 3</a>,
-  <a href="/assets/blog/2026-02-22/piece4.stl">piece 4</a>,
-  <a href="/assets/blog/2026-02-22/piece5.stl">piece 5</a>,
-  <a href="/assets/blog/2026-02-22/piece6.stl">piece 6</a>,
-  <a href="/assets/blog/2026-02-22/piece7.stl">piece 7</a>, and
-  <a href="/assets/blog/2026-02-22/piece8.stl">piece 8</a>.
-</p>
-<h3 id="svg-files">
-  SVG files
-</h3>
-Here are SVG files that I printed for the G4G gift exchange that you can print, cut, fold, and glue (with liquid glue, not a gluestick!)
-<div class="grid wide-two narrow-three">
+<div class="grid wide-three">
   <figure>
-    <img src="/assets/blog/2026-02-22/all_paper_pentagonal_icositetrahedron_pieces.min.svg">
-    <figcaption><a href="/assets/blog/2026-02-22/all_paper_pentagonal_icositetrahedron_pieces.min.svg">Download SVG</a></figcaption>
+    <model-viewer id="viewer2" aspect-ratio="1" camera-controls="" disable-zoom="" alt="Tetrahedral number bijection to cube face coloring with two colors" src="tet2.glb"></model-viewer>
+    <figcaption>
+      Illustration of a bijection from a tetrahedral figure to the \(2\)-colorings of octahedral vertices
+      <br>
+      (<a onclick="document.getElementById('viewer2').requestFullscreen()">Fullscreen</a>)
+    </figcaption>
   </figure>
   <figure>
-    <img src="/assets/blog/2026-02-22/paper_pentagonal_icositetrahedron_net.min.svg">
+    <model-viewer id="viewer3" aspect-ratio="1" camera-controls="" disable-zoom="" background-color="black" alt="Tetrahedral number bijection to cube face coloring with 3 colors" src="tet3.glb"></model-viewer>
     <figcaption>
-      <a hred="/assets/blog/2026-02-22/paper_pentagonal_icositetrahedron_net.min.svg">Download SVG</a>
+      Illustration of a bijection from a tetrahedral figure to the \(3\)-colorings of octahedral vertices
+      <br>
+      (<a onclick="document.getElementById('viewer3').requestFullscreen()">Fullscreen</a>)
+    </figcaption>
+  </figure>
+  <figure>
+    <model-viewer id="viewer4" aspect-ratio="1" camera-controls="" disable-zoom="" alt="Tetrahedral number bijection to cube face coloring with 4 colors" src="tet4.glb"></model-viewer>
+    <figcaption>
+      Illustration of a bijection from a tetrahedral figure to the \(4\)-colorings of octahedral vertices
+      <br>
+      (<a onclick="document.getElementById('viewer4').requestFullscreen()">Fullscreen</a>)
     </figcaption>
   </figure>
 </div>
-<h3 id="get-in-touch">
-  Get in touch!
-</h3>
-<p>
-  I also participated in the G4G15 gift exchange which you can read about <a href="/blog/2025/05/g4g15-gift-exchange-parity-triangles-from-the-oeis/">on my blog</a>.
-  If you have thoughts, questions, or suggestions, reach out to me <a href="https://bsky.app/profile/peterkagey.com">@peterkagey.com</a> on Bluesky!
-</p>
 
     </heading-anchors>
     
@@ -142,36 +163,10 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
       <div>
         <div class="blog grid wide-two narrow-two">
         
-        <div class="blog-title-card">
-          <a href="/blog/2025/12/potato_printing/">
-            <img class="blog-title-card-image" src="/assets/blog/2025-12-27/cover_1200x630.jpeg" alt="">
-            <div class="blog-title-card-overlay">
-              <div class="blog-title-card-nav">Previous post</div>
-              <div class="blog-title-card-text">
-                Potato printing plot party postcards
-              </div>
-              <div class="blog-title-card-date">
-                (2025-12-27)
-              </div>
-            </div>
-          </a>
-        </div>
+        <div class="blog-title-card"></div>
         
         
-        <div class="blog-title-card">
-          <a href="/blog/2026/03/favorite_problems_4170/">
-            <img class="blog-title-card-image" src="/assets/blog/2026-03-13/cover_1200x630.png" alt="">
-            <div class="blog-title-card-overlay">
-              <div class="blog-title-card-nav">Next post</div>
-              <div class="blog-title-card-text">
-                Students&#39; favorite Abstract Algebra problems (Fall 2024)
-              </div>
-              <div class="blog-title-card-date">
-                (2026-03-13)
-              </div>
-            </div>
-          </a>
-        </div>
+        <div class="blog-title-card"></div>
         
         </div>
       </div>

@@ -3302,7 +3302,7 @@ Here are the eight ways of choosing three faces if you want to print them out yo
 &lt;p&gt;After being frustrated by the paper model, I &lt;em&gt;almost&lt;/em&gt; convinced myself that no solution exists, but I proved that intuition wrong when I found a solution in 21 seconds via a &lt;a href=&quot;https://example.com/assets/blog/2025-10-05/puzzle_solution_backtracking.wl&quot;&gt;backtracking algorithm in Mathematica&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&quot;columns&quot;&gt;
   &lt;figure&gt;
-    &lt;model-viewer ar=&quot;&quot; camera-controls=&quot;&quot; autoplay=&quot;&quot; alt=&quot;A 3D model of a solution to the pentagonal icositetrahedron puzzle.&quot; src=&quot;/assets/blog/2025-10-05/Puzzle2a.glb&quot;&gt;&lt;/model-viewer&gt;
+    &lt;model-viewer camera-controls=&quot;&quot; autoplay=&quot;&quot; alt=&quot;Model&quot; src=&quot;/assets/blog/2025-10-05/Puzzle2a.glb&quot;&gt;&lt;/model-viewer&gt;
     &lt;figcaption&gt;A 3D model of the solution, solved via the backtracking algorithm in 21 seconds.&lt;/figcaption&gt;
   &lt;/figure&gt;
   &lt;figure&gt;
@@ -4325,7 +4325,7 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
 </content>
   </entry>
   <entry>
-    <title>Students&#39; favorite Abstract Algebra problems</title>
+    <title>Students&#39; favorite Abstract Algebra problems (Fall 2024)</title>
     <link href="https://example.com/blog/2026/03/favorite_problems_4170/" />
     <updated>2026-03-13T00:00:00Z</updated>
     <id>https://example.com/blog/2026/03/favorite_problems_4170/</id>
