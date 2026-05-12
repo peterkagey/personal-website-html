@@ -4,7 +4,7 @@
   <subtitle>Peter Kagey&#39;s math blog</subtitle>
   <link href="https://peterkagey.com/feed.xml" rel="self" />
   <link href="https://peterkagey.com/" />
-  <updated>2026-03-13T00:00:00Z</updated>
+  <updated>2026-05-12T00:00:00Z</updated>
   <id>https://peterkagey.com/</id>
   <author>
     <name>Peter Kagey</name>
@@ -324,5 +324,12 @@
     <updated>2026-03-13T00:00:00Z</updated>
     <id>https://peterkagey.com/blog/2026/03/favorite_problems_4170/</id>
     <content type="text">A collection of students&#39; favorite problems from my fall 2022 Introduction to Abstract Algebra I class.</content>
+  </entry>
+  <entry>
+    <title>RSS Feeds</title>
+    <link href="https://peterkagey.com/blog/2026/05/rss_feeds/" />
+    <updated>2026-05-12T00:00:00Z</updated>
+    <id>https://peterkagey.com/blog/2026/05/rss_feeds/</id>
+    <content type="text">A list of many of the RSS feeds that I use.</content>
   </entry>
 </feed>

@@ -4,7 +4,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/ignore.xml" rel="self" />
   <link href="https://example.com/" />
-  <updated>2026-03-13T00:00:00Z</updated>
+  <updated>2026-05-12T00:00:00Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Your Name</name>
@@ -5002,6 +5002,567 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/details&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RSS Feeds</title>
+    <link href="https://example.com/blog/2026/05/rss_feeds/" />
+    <updated>2026-05-12T00:00:00Z</updated>
+    <id>https://example.com/blog/2026/05/rss_feeds/</id>
+    <content type="html">
+&lt;style&gt;
+  table.half-split {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  table.half-split td {
+    width: 50%;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;
+  Years ago, I pivoted away from getting news from social media and toward visiting dozens of newspaper and magazine homepages via a bookmark. Recently, I&#39;ve made another shift toward using RSS, and embracing open protocols and the &lt;a href=&quot;https://en.wikipedia.org/wiki/IndieWeb&quot;&gt;IndieWeb&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+  I use an RSS app called &lt;a href=&quot;https://feeder.co&quot;&gt;Feeder&lt;/a&gt;, which I chose more or less arbitrarily. It has a free tier, which comes with a Chromium addon and an iPhone app which sync up, and which I find useful.
+&lt;/p&gt;
+&lt;p&gt;
+  In addition to my &lt;a href=&quot;https://example.com/feed.xml&quot;&gt;RSS feed for this site&lt;/a&gt; and the feeds I have built which allow you to get &lt;a href=&quot;https://example.com/blog/2025/10/oeis_rss/&quot;&gt;RSS for the OEIS&lt;/a&gt;, I also have a list of more traditional media outlets to follow, which I suspect say something about me!
+&lt;/p&gt;
+&lt;p&gt;
+  When getting started, I found it tedious to build my collection of RSS feeds for the newspapers and magazines that I care about, so I wanted to share my own list below, which typically results in hundreds of new stories each day. (I manage these by saving the most interesting articles to my bookmark manager, &lt;a href=&quot;https://raindrop.io/&quot;&gt;Raindrop.io&lt;/a&gt;.)
+&lt;/p&gt;
+
+&lt;h2 id=&quot;rss-feeds&quot;&gt;RSS feeds&lt;/h2&gt;
+&lt;table class=&quot;half-split&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Aeon&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://aeon.co/feed.rss&quot;&gt;
+        https://aeon.co/feed.rss
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Aperture Foundation NY&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://aperture.org/feed/&quot;&gt;
+        https://aperture.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Atlantic&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.theatlantic.com/feed/all/&quot;&gt;
+        https://www.theatlantic.com/feed/all/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ars Technica&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://feeds.arstechnica.com/arstechnica/index/&quot;&gt;
+        http://feeds.arstechnica.com/arstechnica/index/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Baffler&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://thebaffler.com/feed&quot;&gt;
+        https://thebaffler.com/feed
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bloomberg CityLab&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://feeds.bloomberg.com/citylab/news.rss&quot;&gt;
+        https://feeds.bloomberg.com/citylab/news.rss
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Boston Review (Arts in Society)&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.bostonreview.net/topics/arts-in-society/feed/&quot;&gt;
+        https://www.bostonreview.net/topics/arts-in-society/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cabinet Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.cabinetmagazine.org/rss/rss.xml&quot;&gt;
+        https://www.cabinetmagazine.org/rss/rss.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Commonweal Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.commonwealmagazine.org/rss/all&quot;&gt;
+        https://www.commonwealmagazine.org/rss/all
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Current Affairs&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.currentaffairs.org/news/rss.xml&quot;&gt;
+        https://www.currentaffairs.org/news/rss.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Design Milk&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://design-milk.com/feed/&quot;&gt;
+        https://design-milk.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;designboom&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.designboom.com/feed/&quot;&gt;
+        https://www.designboom.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Dial&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.thedial.world/articles?format=rss&quot;&gt;
+        https://www.thedial.world/articles?format=rss
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dissent Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://dissentmagazine.org/feed/&quot;&gt;
+        https://dissentmagazine.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Drift&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.thedriftmag.com/feed/&quot;&gt;
+        https://www.thedriftmag.com/feed/
+      &lt;/a&gt;&quot;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dwell&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.dwell.com/@dwell/rss&quot;&gt;
+        https://www.dwell.com/@dwell/rss
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Foreign Policy&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://foreignpolicy.com/feed/&quot;&gt;
+        https://foreignpolicy.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Golden State&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.golden-state.org/rss/&quot;&gt;
+        https://www.golden-state.org/rss/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Granta&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://granta.com/feed/&quot;&gt;
+        https://granta.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Grist&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://grist.org/feed/&quot;&gt;
+        https://grist.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Harper&#39;s&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://harpers.org/feed/&quot;&gt;
+        https://harpers.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;High Country News&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.hcn.org/feed/&quot;&gt;
+        https://www.hcn.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Hyperallergic&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://hyperallergic.com/rss/&quot;&gt;
+        https://hyperallergic.com/rss/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Intercept&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://theintercept.com/feed/?lang=pt&quot;&gt;
+        https://theintercept.com/feed/?lang=pt
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Knowable Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://knowablemagazine.org/rss&quot;&gt;
+        https://knowablemagazine.org/rss
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;L.A. Reported&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://lareported.org/feed/&quot;&gt;
+        https://lareported.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Longreads&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://longreads.com/feed/&quot;&gt;
+        https://longreads.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;London Review of Books&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://lrb.co.uk/feeds/rss&quot;&gt;
+        https://lrb.co.uk/feeds/rss
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;MIT Technology Review&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.technologyreview.com/feed&quot;&gt;
+        https://www.technologyreview.com/feed
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Mother Jones&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.motherjones.com/feed/&quot;&gt;
+        https://www.motherjones.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;n+1&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.nplusonemag.com/feed/&quot;&gt;
+        https://www.nplusonemag.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Nautilus&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://nautil.us/feed/&quot;&gt;
+        https://nautil.us/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Nation&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.thenation.com/feed/?post_type=article&quot;&gt;
+        https://www.thenation.com/feed/?post_type=article
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;New Republic&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://newrepublic.com/rss.xml&quot;&gt;
+        https://newrepublic.com/rss.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;New Left Review&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://newleftreview.org/feed&quot;&gt;
+        https://newleftreview.org/feed
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The New York Review of Books&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://feeds.feedburner.com/nybooks&quot;&gt;
+        http://feeds.feedburner.com/nybooks
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The New Yorker&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://www.newyorker.com/services/rss/feeds/&quot;&gt;
+        http://www.newyorker.com/services/rss/feeds/
+      &lt;/a&gt;everything.xml
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The New York Times &gt; Home Page&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml&quot;&gt;
+        http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;NOEMA&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.noemamag.com/?feed=noemarss&quot;&gt;
+        https://www.noemamag.com/?feed=noemarss
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Orion Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://orionmagazine.org/article/feed/&quot;&gt;
+        https://orionmagazine.org/article/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Palladium&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.palladiummag.com/feed/index.xml&quot;&gt;
+        https://www.palladiummag.com/feed/index.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Paris Review&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://www.theparisreview.org/blog/feed/&quot;&gt;
+        http://www.theparisreview.org/blog/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Places Journal&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://feeds.feedburner.com/PlacesJournal&quot;&gt;
+        https://feeds.feedburner.com/PlacesJournal
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Point Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://thepointmag.com/feed/&quot;&gt;
+        https://thepointmag.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Popular Science&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.popsci.com/feed/&quot;&gt;
+        https://www.popsci.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ProPublica&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://feeds.propublica.org/propublica/main&quot;&gt;
+        http://feeds.propublica.org/propublica/main
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Public Books&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.publicbooks.org/feed/&quot;&gt;
+        https://www.publicbooks.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Quanta Magazine – Mathematics&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.quantamagazine.org/tag/mathematics/feed/&quot;&gt;
+        https://www.quantamagazine.org/tag/mathematics/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;RE:PUBLIC&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.republic.land/rss/&quot;&gt;
+        https://www.republic.land/rss/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Rest of World&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://restofworld.org/feed/latest&quot;&gt;
+        https://restofworld.org/feed/latest
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Salon&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.salon.com/feed&quot;&gt;
+        https://www.salon.com/feed
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Scientific American&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://rss.sciam.com/ScientificAmerican-Global&quot;&gt;
+        http://rss.sciam.com/ScientificAmerican-Global
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smithsonian&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.smithsonianmag.com/rss/latest_articles/&quot;&gt;
+        https://www.smithsonianmag.com/rss/latest_articles/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;T Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://rss.nytimes.com/services/xml/rss/nyt/tmagazine.&quot;&gt;
+        http://rss.nytimes.com/services/xml/rss/nyt/tmagazine.
+      &lt;/a&gt;xml
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The Verge&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.theverge.com/rss/index.xml&quot;&gt;
+        https://www.theverge.com/rss/index.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Vox&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.vox.com/rss/index.xml&quot;&gt;
+        https://www.vox.com/rss/index.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Wallpaper*&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.wallpaper.com/rss.xml&quot;&gt;
+        https://www.wallpaper.com/rss.xml
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;WIRED&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://www.wired.com/category/science/feed/&quot;&gt;
+        http://www.wired.com/category/science/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;The 19th&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://19thnews.org/feed/&quot;&gt;
+        https://19thnews.org/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;archives&quot;&gt;Archives&lt;/h2&gt;
+&lt;p&gt;
+  The following magazines are not in print any more, but there archives are worth knowing about.
+&lt;/p&gt;
+&lt;table class=&quot;half-split&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Hakai Magazine&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://www.hakaimagazine.com/feed/&quot;&gt;
+        https://www.hakaimagazine.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Popula&lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://popula.com/feed/&quot;&gt;
+        http://popula.com/feed/
+      &lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;wishlist&quot;&gt;Wishlist&lt;/h2&gt;
+&lt;p&gt;
+  A few magazines that I care about don&#39;t appear to have RSS feeds. If you find one for them, let me know!
+&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;https://emergencemagazine.org/&quot;&gt;Emergence Magazine&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;https://www.nationalgeographic.com/&quot;&gt;National Geographic&lt;/a&gt;
+  
+  &lt;/li&gt;&lt;li&gt;
+    &lt;a href=&quot;https://lamaterial.com/stories&quot;&gt;L.A. Material
+    &lt;/a&gt;
+  
+  &lt;/li&gt;&lt;li&gt;
+    &lt;a href=&quot;https://www.bookforum.com/&quot;&gt;Bookforum
+    &lt;/a&gt;
+  
+  &lt;/li&gt;&lt;li&gt;
+    &lt;a href=&quot;https://bombmagazine.org/&quot;&gt;BOMB Magazine
+    &lt;/a&gt;
+  
+&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2 id=&quot;reach-out&quot;&gt;Reach out!&lt;/h2&gt;
+Have thoughts, ideas, suggestions? Let me know &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com on Bluesky&lt;/a&gt;
 </content>
   </entry>
 </feed>
