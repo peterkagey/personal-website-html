@@ -5156,7 +5156,7 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
     &lt;td&gt;
       &lt;a href=&quot;https://www.thedriftmag.com/feed/&quot;&gt;
         https://www.thedriftmag.com/feed/
-      &lt;/a&gt;&quot;
+      &lt;/a&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -5330,9 +5330,9 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
   &lt;tr&gt;
     &lt;td&gt;The New Yorker&lt;/td&gt;
     &lt;td&gt;
-      &lt;a href=&quot;http://www.newyorker.com/services/rss/feeds/&quot;&gt;
-        http://www.newyorker.com/services/rss/feeds/
-      &lt;/a&gt;everything.xml
+      &lt;a href=&quot;http://www.newyorker.com/services/rss/feeds/everything.xml&quot;&gt;
+        http://www.newyorker.com/services/rss/feeds/everything.xml
+      &lt;/a&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -5546,20 +5546,23 @@ Here are SVG files that I printed for the G4G gift exchange that you can print, 
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a href=&quot;https://www.nationalgeographic.com/&quot;&gt;National Geographic&lt;/a&gt;
-  
-  &lt;/li&gt;&lt;li&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;a href=&quot;https://lamaterial.com/stories&quot;&gt;L.A. Material
     &lt;/a&gt;
-  
-  &lt;/li&gt;&lt;li&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;a href=&quot;https://www.bookforum.com/&quot;&gt;Bookforum
     &lt;/a&gt;
-  
-  &lt;/li&gt;&lt;li&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;a href=&quot;https://bombmagazine.org/&quot;&gt;BOMB Magazine
     &lt;/a&gt;
-  
-&lt;/li&gt;&lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;https://www.altaonline.com/&quot;&gt;Alta Journal&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;reach-out&quot;&gt;Reach out!&lt;/h2&gt;
 Have thoughts, ideas, suggestions? Let me know &lt;a href=&quot;https://bsky.app/profile/peterkagey.com&quot;&gt;@peterkagey.com on Bluesky&lt;/a&gt;
